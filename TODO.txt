@@ -1,0 +1,21 @@
+To Do:
+--------------------------------------------------
+
+Varchas procures a good backup hard drive	Daniel 9/30/2014
+
+Varchas downloads and install LaTex		Daniel 9/30/2014
+
+Varchas downloads and installs JabRef		Daniel 9/30/2014
+
+Daniel sends Varchas journal abbreviations file	Daniel 09/30/2014
+
+Varchas commits stuff to GitHub			Daniel 09/30/2014
+
+
+
+Done:
+--------------------------------------------------
+
+Daniel creates github repo for Varchas		Daniel 9/30/2014	Repo created 			Daniel 09/30/2014
+
+Varchas gets on GitHub repo			Daniel 9/30/2014	Done				Varchas 09/30/2014
