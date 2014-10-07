@@ -1,9 +1,17 @@
 To Do:
 --------------------------------------------------
+Daniel sends Varchas journal abbreviations file			Daniel 09/30/2014
 
-Daniel sends Varchas journal abbreviations file	Daniel 09/30/2014
+Varchas benchmarks efficiency of the program			Varchas 10/07/2014
 
-Varchas gets ChannelFlow working on a cluster Mac      Varchas 09/30/2014
+Varchas looks into running channelflow on multiple cores	Varchas 10/07/2014
+
+Varchas checks if MatLab is on the cluster+gets visualization working+maybe reverse engineer it if we dont have matlab 	   		Varchas 10/07/2014
+
+Varchas does some general reading+lit review  				Varchas 10/07/2014
+
+Varchas runs 'findsoln' on previously computed equilibria + some random variation  	Varchas 10/07/2014
+
 
 Done:
 --------------------------------------------------
@@ -19,3 +27,5 @@ Varchas downloads and installs JabRef		Daniel 9/30/2014	Done				Varchas 09/30/20
 Varchas procures a good backup hard drive	Daniel 9/30/2014	Done				Varchas 09/30/2014
 
 Varchas commits stuff to GitHub			Daniel 09/30/2014	Done				Varchas 09/30/2014
+
+Varchas gets ChannelFlow working on a cluster Mac      Varchas 09/30/2014 Done 				Varchas 10/06/2014
