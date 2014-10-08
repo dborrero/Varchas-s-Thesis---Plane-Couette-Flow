@@ -6,11 +6,22 @@ Varchas benchmarks efficiency of the program			Varchas 10/07/2014
 
 Varchas looks into running channelflow on multiple cores	Varchas 10/07/2014
 
-Varchas checks if MatLab is on the cluster+gets visualization working+maybe reverse engineer it if we dont have matlab 	   		Varchas 10/07/2014
+
 
 Varchas does some general reading+lit review  				Varchas 10/07/2014
 
 Varchas runs 'findsoln' on previously computed equilibria + some random variation  	Varchas 10/07/2014
+
+
+Potential Solutions????
+-------------------------------------------------
+
+Varchas checks if MatLab is on the cluster+gets visualization working 	   		Varchas 10/07/2014
+	- At least one computer in the ETC has MATLAB and is cooperating - just ran 
+	  a findsoln of a known equilibrium and a perturbation away from it,
+	  and visualized it. It looks good. The only problem is that I have to
+	  manually move stuff over. You can take a look if you'd like, I'll 
+	  put it under 'Results'
 
 
 Done:
