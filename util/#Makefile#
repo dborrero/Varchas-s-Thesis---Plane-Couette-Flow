@@ -1,0 +1,46 @@
+# Change the following variable if you installed channelflow elsewhere
+# or if your channelflow directory is labeled with a version number,
+# e.g. CHANNELDIR = $(HOME)/channelflow-1.3.2
+
+CHANNELDIR = $(HOME)/Varchas/channelflow-1.4.2
+
+CHANNELINC = -I$(CHANNELDIR)/include
+CHANNELLIB = -L$(CHANNELDIR)/lib -L/sw/lib
+
+# Define default C flags for optimized and debugging compilation
+# Possible additional flags: -mtune=pentium4, -mtune-=athlon64
+CFLAGS = -Wall -O2 -fomit-frame-pointer -DNDEBUG
+DCFLAGS = -Wall -g -O1 -fno-inline -DDEBUG
+PCFLAGS = -Wall -pg -O2 -DNDEBUG
+BINDIR  = bin
+OBJDIR = obj
+sR
+# Make optimized objects from source
+%.o : %.cpp
+	g++ $(CFLAGS) $(CHANNELINC) -c $<
+
+# Make debugging objects from source
+%.do : %.cpp
+	g++ $(DCFLAGS) $(CHANNELINC) -o $@ -c $<
+
+# Make debugging objects from source
+%.po : %.cpp
+	g++ $(PCFLAGS) $(CHANNELINC) -o $@ -c $<
+
+
+# Make optimized executables from objects and libraries
+%.x: %.o
+	g++ $(CFLAGS) -o $@ $< $(OBJECTS) $(CHANNELLIB) -lchflow -lfftw3
+
+# Make debugging executables from objects and libraries
+%.dx: %.do
+	g++ $(DCFLAGS) -o $@ $< $(OBJECTS) $(CHANNELLIB) -lchflow-debug -lfftw3
+
+# Make debugging executables from objects and libraries
+%.px: %.po
+	g++ $(PCFLAGS) -o $@ $< $(OBJECTS) $(CHANNELLIB) -lchflow-profile -lfftw3
+
+clean :
+	rm -f *.o *.x *.do *.dx *.asc *.bf *.ff *~
+install:
+	mv *.x bin/.
