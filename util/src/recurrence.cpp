@@ -41,9 +41,11 @@ int main(int argc, char* argv[]){
    for (Real t=T0; t<=T1; t+=dT){
      string ts =t2s(t,inttime);
      FlowField u(indir + label + ts);
-     fprintf(outfile,"%d",0);
+     FlowField v(indir + label + t2s(dT+t,inttime));
+     norm = L2Dist(u,v);
+     fprintf(outfile,"%f",norm);
      cout << "Computing recurrence graph for t = " << t << endl;
-     for(Real tp=dT; tp<=TRec; tp+=dT){
+     for(Real tp=2*dT; tp<=TRec; tp+=dT){
        string tps= t2s(tp+t,inttime);
        FlowField v(indir + label + tps);
        norm = L2Dist(u,v);
