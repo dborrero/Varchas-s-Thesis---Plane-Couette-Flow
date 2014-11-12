@@ -41,3 +41,42 @@
 \newcommand{\DBedit}[1]{{\color{red}#1}}
 \newcommand{\VGC}[2]{$\footnotemark\footnotetext{DB #1: {\color{blue}#2}}$} %date, comment
 \newcommand{\VGedit}[1]{{\color{blue}#1}}
+
+
+%%%% SUPER USEFUL COMMANDS THAT I'M USED TO HAVING%%%%%
+\let\Oldfrac\frac
+\renewcommand{\frac}[2]{\dfrac{#1}{#2}}
+
+\let\Oldsin\sin
+\renewcommand{\sin}[1]{\Oldsin{\left ( #1  \right ) }}
+
+\let\Oldcos\cos
+\renewcommand{\cos}[1]{\Oldcos{\left ( #1  \right ) }}
+
+\newcommand{\abs}[1]{\left | #1 \right |}
+\newcommand{\sqfrac}[2]{\sqrt{\frac{#1}{#2}}}
+\newcommand{\paren}[1]{\left ( #1 \right )}
+\newcommand{\sbrac}[1]{\left [ #1 \right ]}
+
+\let\Oldint\int
+\renewcommand{\int}[4]{\Oldint_{#1}^{#2} #3 \hspace{2mm}#4}
+\let\Oldsum\sum
+\renewcommand{\sum}[3]{\Oldsum\limits_{#1}^{#2} #3}
+
+
+\newcommand{\pder}[3]{\ifnum#1=1
+							\dfrac{\partial#2}{\partial#3}
+					   \else
+					   \ifnum#1>1\dfrac{\partial^{#1}#2}{\partial#3^{#1}} \fi \fi }
+\newcommand{\der}[3]{\ifnum#1=1
+							\dfrac{\text{d}#2}{\text{d}#3}
+					   \else
+					   \ifnum#1>1\dfrac{\text{d}^{#1}#2}{\text{d}#3^{#1}} \fi \fi }
+\newcommand{\Vector}[1]{\mathbf{#1}}
+\newcommand{\Tensor}[1]{\mathcal{#1}}
+\newcommand{\function}[2]{#1\!\paren{#2}}
+
+\newcommand{\Div}[1]{\nabla\!\cdot\!#1}
+\newcommand{\Grad}[1]{\nabla\!#1}
+\newcommand{\equationref}[1]{Equation~\ref{#1}}
+\newcommand{\figureref}[1]{Figure~\ref{#1}}
