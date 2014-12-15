@@ -4,7 +4,7 @@
 
 CHANNELDIR = $(HOME)/Varchas/channelflow-1.4.2
 
-CHANNELINC = -I$(CHANNELDIR)/include
+CHANNELINC = -I$(CHANNELDIR)/include -I/sw/include
 CHANNELLIB = -L$(CHANNELDIR)/lib -L/sw/lib
 
 # Define default C flags for optimized and debugging compilation
