@@ -46,10 +46,9 @@ foreach $randDir (@dirList){
     next if $pid = fork;
     die "fork failed: $!" unless defined $pid;
     system("mkdir $randDir/log");
-    system("randomfield $randparstr $randDir/random > $randDir/log/rand.log");
-    system("couette $coueparstr -o $randDir/data -l2 $randDir/random > $randDir/log/couette.log");
-    system("recurrence.x $recuparstr -d $randDir/data $randDir/rec > $randDir/log/rec.log");
-    system("git add $randDir/rec.csv");
+    system("randomfield $randparstr $randDir/$randDir > $randDir/log/rand.log");
+    system("couette $coueparstr -o $randDir/d$randDir -l2 $randDir/$randDir > $randDir/log/couette.log");
+    system("recurrence.x $recuparstr -d $randDir/d$randDir $randDir/r$randDir > $randDir/log/rec.log");
     exit;
     
 }
