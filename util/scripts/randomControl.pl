@@ -42,13 +42,19 @@ my $recuparstr = join(" ",map { "$_ $recupar{$_}" } keys %recupar);
 
 
 foreach $randDir (@dirList){
-    my $pid;
     next if $pid = fork;
     die "fork failed: $!" unless defined $pid;
+    my @array = split('m',$randDir);
+    srand();
+    my $seed = int(rand(3000000000));
     system("mkdir $randDir/log");
-    system("randomfield $randparstr $randDir/$randDir > $randDir/log/rand.log");
-    system("couette $coueparstr -o $randDir/d$randDir -l2 $randDir/$randDir > $randDir/log/couette.log");
-    system("recurrence.x $recuparstr -d $randDir/d$randDir $randDir/r$randDir > $randDir/log/rec.log");
+    my $randExec = "randomfield $randparstr -sd $seed $randDir/random.ff > $randDir/log/rand.log";
+    print "$randExec\n";
+    system($randExec);
+    my $coueExec = "couette $coueparstr -o $randDir/data -l2 $randDir/random.ff > $randDir/log/couette.log";
+    print "$coueExec\n";
+    system($coueExec);
+    system("recurrence.x $recuparstr -d $randDir/data $randDir/rec > $randDir/log/rec.log");
     exit;
     
 }
