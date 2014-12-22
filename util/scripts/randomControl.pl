@@ -12,7 +12,8 @@ foreach $randDir (@dirList){
     next if $pid = fork;
     die "fork failed: $!" unless defined $pid;
     print "Beginning in $randDir\n";
-    system("perl $randDir/Managers/master.pl");
+    chdir('$randDir/Managers');
+    system("perl master.pl");
     exit;
     
 }
