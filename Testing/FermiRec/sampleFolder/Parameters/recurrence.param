@@ -1,0 +1,7 @@
+-T0 0 
+-T1 1000 
+-TR 100 
+-dt 10 
+-az 
+-daz 0.1 
+-o ../recurrence
