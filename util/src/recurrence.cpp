@@ -39,6 +39,7 @@ int main(int argc, char* argv[]){
    const Real T0 = args.getreal("-T0","--T0",0.0, "start time");
    const Real T1 = args.getreal("-T1","--T1",100.0, "end time");
    const Real TRec = args.getreal("-TR","--TRec",10.0,"Maximum value of T in u(t+T). Make sure the phase space trajectory has been calculated from u(T0) to u(T1+TRec)");
+   const Real TRS = args.getreal("-TR0","--TRecStart",0.0,"Start value of T in u(t+T). Make sure that u(TR0) points to an existing field!");
    const Real dT = args.getreal("-dT","--dT",1.0, "save interval for recurrence time");
    const Real dt = args.getreal("-dt","--dt",1.0, "save interval for start time");
    const string outdir = args.getpath("-o","--out","", "output directory");
@@ -62,21 +63,23 @@ int main(int argc, char* argv[]){
    const bool inttime = (abs(dT - int(dT)) < 1e-12) ? true : false;
    FlowField difference;
    FlowDist distPhase;
-   string recnameI = recname+".csv";
+   string recnameI = outdir+"rec.csv";
    FILE* outfile = fopen(recnameI.c_str(),"w");
-   FILE* xPhase = fopen("xphase.csv","w");
-   FILE* zPhase = fopen("zphase.csv","w");
-
-   for (Real t=T0; t<=T1; t+=dt){
+   FILE* xPhase = fopen((outdir+"xphase.csv").c_str(),"w");
+   FILE* zPhase = fopen((outdir+"zphase.csv").c_str(),"w");
+   cout << "Allowing phase shifts in"<<endl;
+   cout << "x: "<<ax<<endl;
+   cout << "z: "<<az<<endl;
+   for (Real t=T0; t<T1; t+=dt){
      string ts =t2s(t,inttime);
      FlowField u(indir + label + ts);
-     FlowField v(indir + label + t2s(dT+t,inttime));
+     FlowField v(indir + label + t2s(t+TRS,inttime));
      distPhase = SymmetricDistance(u,v,ax,az,axmin,axmax,dax,azmin,azmax,daz);
      fprintf(outfile,"%f",distPhase.dist);
      fprintf(xPhase,"%f",distPhase.xphase);
      fprintf(zPhase,"%f",distPhase.zphase);
      cout << "Computing recurrence graph for t = "<<t<<endl;
-     for(Real tp=2*dT; tp<=TRec; tp+=dT){
+     for(Real tp=TRS+dT; tp<TRec; tp+=dT){
        string tps= t2s(tp+t,inttime);
        FlowField v(indir + label + tps);
        distPhase = SymmetricDistance(u,v,ax,az,axmin,axmax,dax,azmin,azmax,daz);
@@ -89,6 +92,8 @@ int main(int argc, char* argv[]){
 
      }
      fprintf(outfile,"\n");
+     fprintf(xPhase,"\n");
+     fprintf(zPhase,"\n");
    }
    fclose(outfile);
 }
@@ -107,9 +112,8 @@ FlowDist SymmetricDistance(FlowField u, FlowField v,bool ax, bool az, Real axmin
     distPhase = ZSymmetricDist(u,v,azmin,azmax,daz);
   else
     // no shifts
-    distPhase = NullSymmetricDist(u,v);
-    
-  
+    distPhase = NullSymmetricDist(u,v);    
+ 
   return distPhase;
 }
 
