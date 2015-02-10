@@ -1,0 +1,376 @@
+<?xml version="1.0" ?>
+<bibtex:file xmlns:bibtex="http://bibtexml.sf.net/">
+<!-- This file was exported from JabRef jabref.sf.net -->
+<!-- 2006-01-17 added DOI XML character formatting, because DOI can contain &lt; and &gt; -->
+
+<bibtex:entry id="Fischer1983">
+  <bibtex:article>
+    <bibtex:author>Fischer&#44; Sandra L and Fischer&#44; Sharon P</bibtex:author>
+
+    <bibtex:title>Mean corpuscular volume</bibtex:title>
+
+    <bibtex:journal>Archives of Internal Medicine</bibtex:journal>
+    <bibtex:publisher>American Medical Association</bibtex:publisher>
+    <bibtex:year>1983</bibtex:year>
+    <bibtex:volume>143</bibtex:volume>
+
+
+    <bibtex:pages>282&#x2013;283</bibtex:pages>
+    <bibtex:number>2</bibtex:number>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="Gibson2014">
+  <bibtex:techreport>
+    <bibtex:author>J. F. Gibson</bibtex:author>
+
+    <bibtex:title>Channelflow: A spectral Navier&#45;Stokes simulator in C++</bibtex:title>
+
+
+    <bibtex:publisher>J. F. Gibson</bibtex:publisher>
+    <bibtex:year>2014</bibtex:year>
+
+
+
+
+
+
+
+    <bibtex:institution>U. New Hampshire</bibtex:institution>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <bibtex:note>\tt Channelflow.org</bibtex:note>
+
+
+
+  </bibtex:techreport>
+</bibtex:entry>
+<bibtex:entry id="Gibson2008">
+  <bibtex:article>
+    <bibtex:author>Gibson&#44; John F and Halcrow&#44; Jonathan and Cvitanovi&#x0107;&#44; Predrag</bibtex:author>
+
+    <bibtex:title>Visualizing the geometry of state space in plane Couette flow</bibtex:title>
+
+    <bibtex:journal>Journal of Fluid Mechanics</bibtex:journal>
+    <bibtex:publisher>Cambridge Univ Press</bibtex:publisher>
+    <bibtex:year>2008</bibtex:year>
+    <bibtex:volume>611</bibtex:volume>
+
+
+    <bibtex:pages>107&#x2013;130</bibtex:pages>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="GIBSON2009">
+  <bibtex:article>
+    <bibtex:author>GIBSON&#44;J. F. and HALCROW&#44;J. and CVITANOVI&#262;&#44;P.</bibtex:author>
+
+    <bibtex:title>Equilibrium and travelling&#45;wave solutions of plane Couette flow</bibtex:title>
+
+    <bibtex:journal>Journal of Fluid Mechanics</bibtex:journal>
+
+    <bibtex:year>2009</bibtex:year>
+    <bibtex:volume>638</bibtex:volume>
+    <bibtex:month>11</bibtex:month>
+
+    <bibtex:pages>243&#x2013;266</bibtex:pages>
+
+
+
+
+
+
+
+
+
+    <bibtex:url>http://journals.cambridge.org/article&#95;S0022112009990863</bibtex:url>
+    <bibtex:doi>10.1017/S0022112009990863</bibtex:doi>
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="Hopf1948">
+  <bibtex:article>
+    <bibtex:author>Hopf&#44; Eberhard</bibtex:author>
+
+    <bibtex:title>A mathematical example displaying features of turbulence</bibtex:title>
+
+    <bibtex:journal>Commun. Pure Appl. Math.</bibtex:journal>
+    <bibtex:publisher>Wiley Online Library</bibtex:publisher>
+    <bibtex:year>1948</bibtex:year>
+    <bibtex:volume>1</bibtex:volume>
+
+
+    <bibtex:pages>303&#x2013;322</bibtex:pages>
+    <bibtex:number>4</bibtex:number>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="Karman1930">
+  <bibtex:article>
+    <bibtex:author>K&#225;rm&#225;n&#44; Th. von</bibtex:author>
+
+    <bibtex:title>Mechanische Aenlichkeit und Turbulenz</bibtex:title>
+
+    <bibtex:journal>Nachrichten von der Gesellschaft der Wissenschaften zu G&#246;ttingen&#44; Mathematisch&#45;Physikalische Klasse</bibtex:journal>
+
+    <bibtex:year>1930</bibtex:year>
+    <bibtex:volume>1930</bibtex:volume>
+
+
+    <bibtex:pages>58-76</bibtex:pages>
+
+
+
+
+
+
+
+
+
+    <bibtex:url>http://eudml.org/doc/59299</bibtex:url>
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="Kawahara2001">
+  <bibtex:article>
+    <bibtex:author>Kawahara&#44; Genta and Kida&#44; Shigeo</bibtex:author>
+
+    <bibtex:title>Periodic motion embedded in plane Couette turbulence: regeneration cycle and burst</bibtex:title>
+
+    <bibtex:journal>J. Fluid Mech.</bibtex:journal>
+    <bibtex:publisher>Cambridge Univ Press</bibtex:publisher>
+    <bibtex:year>2001</bibtex:year>
+    <bibtex:volume>449</bibtex:volume>
+
+
+    <bibtex:pages>291&#x2013;300</bibtex:pages>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="Kolmogorov1991">
+  <bibtex:article>
+    <bibtex:author>Kolmogorov&#44; Andrey Nikolaevich</bibtex:author>
+
+    <bibtex:title>The local structure of turbulence in incompressible viscous fluid for very large Reynolds numbers</bibtex:title>
+
+    <bibtex:journal>Proceedings of the Royal Society of London. Series A: Mathematical and Physical Sciences</bibtex:journal>
+    <bibtex:publisher>The Royal Society</bibtex:publisher>
+    <bibtex:year>1991</bibtex:year>
+    <bibtex:volume>434</bibtex:volume>
+
+
+    <bibtex:pages>9&#x2013;13</bibtex:pages>
+    <bibtex:number>1890</bibtex:number>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="Nagata1990">
+  <bibtex:article>
+    <bibtex:author>Nagata&#44; M</bibtex:author>
+
+    <bibtex:title>Three&#45;dimensional finite&#45;amplitude solutions in plane Couette flow: bifurcation from infinity</bibtex:title>
+
+    <bibtex:journal>J. Fluid Mech.</bibtex:journal>
+    <bibtex:publisher>Cambridge Univ Press</bibtex:publisher>
+    <bibtex:year>1990</bibtex:year>
+    <bibtex:volume>217</bibtex:volume>
+
+
+    <bibtex:pages>519&#x2013;527</bibtex:pages>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+<bibtex:entry id="Viswanath2007">
+  <bibtex:article>
+    <bibtex:author>Viswanath&#44; Divakar</bibtex:author>
+
+    <bibtex:title>Recurrent motions within plane Couette turbulence</bibtex:title>
+
+    <bibtex:journal>J. Fluid Mech.</bibtex:journal>
+    <bibtex:publisher>Cambridge Univ Press</bibtex:publisher>
+    <bibtex:year>2007</bibtex:year>
+    <bibtex:volume>580</bibtex:volume>
+
+
+    <bibtex:pages>339&#x2013;358</bibtex:pages>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  </bibtex:article>
+</bibtex:entry>
+</bibtex:file>

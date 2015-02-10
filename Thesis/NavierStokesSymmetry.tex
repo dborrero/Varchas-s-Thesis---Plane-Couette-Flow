@@ -1,0 +1,44 @@
+\chapter{Symmetry in \pCf}	
+\epigraph{Tyger! Tyger! burning bright, \\
+		In the forests of the night. \\
+		What immortal hand or eye,\\
+		Could frame thy fearful symmetry?}{William Blake, \emph{The Tyger}} 
+Dynamical systems in physics often display symmetry. The electron wavefunction in hydrogen, or the gravitational motion of a planet around a star, for instance, display very high degrees of spatial symmetry.  Understanding the symmetries of a system can be incredibly useful to an investigator, since they hint at conserved physical quantities (through Noether's Theorem), and can greatly reduce the complexity of the system in various ways\footnote{In quantum mechanics, for instance, symmetries in the Hamiltonian imply the existence of operators that commute with it, which can allow one to greatly simplify the Hamiltonian matrix via simultaneous diagonalization for computational problems}. Before I begin the discussion of the symmetries of \pCf, I will first define what `symmetry' means in this thesis. A system is said to be equivariant under a symmetric transformation of the dynamical system if a transformation that commutes with the time evolution of the system - that is, for a symmetric transformation $S$ and a dynamical system $\dot{x} = f(x)$, $S \dot{x} = Sf(x) = f(Sx)$ implies that the system is equivariant under $S$.
+
+The symmetry relations of \pCf have been derived extensively in \cite{GIBSON2009}, which I will present here for the sake of flow\footnote{haha}. 
+\section{Unbounded Navier-Stokes}
+
+If we do not impose boundary conditions on the Navier-Stokes equations on an infinite domain, the system will be equivariant under continuous rotational and translational symmetry, as well as the discrete {\bf pointwise inversion} symmetry$\sigma_{xz}$, which has the following action on the system:
+
+\begin{equation}\label{eq:pointwiseinversion}
+\sigma_{xz}\Vector{u}\paren{\Vector{x}} = -\Vector{u}\paren{-\Vector{x}}
+\end{equation}
+
+While the rotation or translation transformation can be easily conceptualized, the pointwise inversion can provide some difficulty. The easiest way of visualizing the transformation is to view it in a 2D domain instead of in the full 3D, as shown in \figureref{fig:pointwiseinversion}. The proof of the equivariance of these transformations can be found in \cite{a}.
+
+
+
+\section{\pCf}
+
+If the domain is limited to $\mathbb{R}^2 \times [-1,1]$ with the boundary conditions of \pCf, we lose some of the equivariant transformations of the full, unrestricted problem, leaving us with two basic discrete symmetries: a rotation by $pi$ about the $z$ axis (denoted $\sigma_x$ and a reflection about the $z$ axis (denoted $\sigma_z$)\footnote{The motivation for these subscripts will become apparent shortly}, with together form a discrete symmetry group $D = D_1 \times D_1 = \{e, \sigma_x,\sigma_z,\sigma_{xz}\}$ of order 4, where
+
+\begin{align}\label{eq:discretesymm}
+\sigma_x [u,v,w](x,y,z) &= [-u,-v,w](-x,-y,z)\\
+\sigma_z [u,v,w](x,y,z) &= [u,v,-w](x,y,-z)\\
+\sigma_{xz} [u,v,w](x,y,z) &= [-u,-v,-w](-x,-y,-z)
+\end{align}
+
+The continuous symmetries are the two parameter steamwise-spanwise translations, which, when provided periodic boundary conditions, form a continuous $SO(2)\times SO(2)$ symmetry group 
+\begin{equation}\label{eq:contsymm}
+\tau(l_x,l_z)[u,v,w](x,y,z) = [u,v,w](x+l_x,y,z+l_z).
+\end{equation}
+
+The group $\Gamma$ of equivariant solutions is then any combination of these symmetry operations, given by $\Gamma = SO(2)_x \ltimes D_{1,x} \times SO(2)_z \ltimes D_{1,z}$\footnote{$\ltimes$ is the semidirect product}. For a solution $\Vector{u}$ of \pCf, the group $s$ of symmetries that satisfies $s\Vector{u} = \Vector{u}$ is called the isotropy subgroup of $\Vector{u}$ and is said to fix $\Vector{u}$. Examples of such groups include the identity group $\{e\}$, which is typically the isotropy subgroup of turbulent solutions. Before I discuss the isotropy subgroup considered for this thesis, however, I will first highlight the useful properties of some particular symmetry subgroups to motivate the eventual choice of isotropy subgroup. 
+
+\section{Behavior of $\Gamma$}
+
+It should be evident that since \pCf is equivariant under the continuous translations given in \eqref{eq:contsymm}, trajectories can be traveling wave equilibria or relative periodic orbits: that is, if one moves into a different inertial frame, the trajectory is a regular equilibrium or periodic orbit. However, an initial condition that is fixed by $\sigma_z$ cannot be translated in the spanwise direction without losing $\sigma_z$ symmetry (except for the trivial case where $\pder{1}{\Vector{u}_z}{z} = 0$). Similarly, an initial condition that is fixed by $\sigma_x$ cannot be translated in the streamwise direction without losing $\sigma_x$ symmetry (and an initial condition that is fixed by$\sigma_{xz}$ symmetry cannot be translated at all without losing $\sigma_{xz}$ symmetry). Since these symmetries are also invariant\footnote{That is, if the symmetry is satisfied at time $t = t_0$, it must be satisfied for all times.}, a trajectory with one of the discrete symmetries cannot have traveling waves in the direction corresponding to its subscript. \\
+
+The presence of the periodic boundary conditions also implies that all solutions are fixed by the full-period translation $\tau(L_x,0)$ and $\tau(0,L_z)$. However, solutions can also be fixed by any rational translation of the form $\tau(\dfrac{m}{n}L_x,\dfrac{m'}{n'}L_z$, or by the continuous translations. In the latter case, the velocity field is necessarily constant along the translation direction, but in the former, it implies that the periodic cell is subdivided into repeating subcells. In this case, we can simply reduce the domain to the subcell, which implies that we need not fix $\Vector{u}$ under any translational symmetry other than the full period relation, which is required by the boundary conditions. \\
+
+Finally, we can reduce the number of unique subgroups of $\Gamma$ by considering its conjugacy groups. A group $N$ and $M$ are considered conjugate if for some $s \in \Gamma$, $N = s^{-1}Ms$ - that is, $N$ and $M$ are related by a coordinate transformation. This allows us to consider only one group out of a set of mutually conjugate groups (or a conjugacy class), since any other group in the class is simply related by the application of a symmetry transformation. 
