@@ -15,16 +15,16 @@ Gibson, J.~F. (2014).
 \newblock Tech. rep., U. New Hampshire.
 \newblock {\tt {Channelflow.org}}.
 
-\bibitem[{Gibson et~al.(2008)Gibson, Halcrow, \& Cvitanovi{\'c}}]{Gibson2008}
-Gibson, J.~F., Halcrow, J., \& Cvitanovi{\'c}, P. (2008).
-\newblock Visualizing the geometry of state space in plane couette flow.
-\newblock {\em Journal of Fluid Mechanics\/}, {\em 611\/}, 107--130.
-
 \bibitem[{GIBSON et~al.(2009)GIBSON, HALCROW, \& CVITANOVIĆ}]{GIBSON2009}
 GIBSON, J.~F., HALCROW, J., \& CVITANOVIĆ, P. (2009).
 \newblock Equilibrium and travelling-wave solutions of plane couette flow.
 \newblock {\em Journal of Fluid Mechanics\/}, {\em 638\/}, 243--266.
 \urlprefix\url{http://journals.cambridge.org/article_S0022112009990863}
+
+\bibitem[{Gibson et~al.(2008)Gibson, Halcrow, \& Cvitanovi{\'c}}]{Gibson2008}
+Gibson, J.~F., Halcrow, J., \& Cvitanovi{\'c}, P. (2008).
+\newblock Visualizing the geometry of state space in plane couette flow.
+\newblock {\em Journal of Fluid Mechanics\/}, {\em 611\/}, 107--130.
 
 \bibitem[{Hopf(1948)}]{Hopf1948}
 Hopf, E. (1948).
