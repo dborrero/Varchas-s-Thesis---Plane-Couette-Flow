@@ -1,5 +1,5 @@
-$parfile = "random.param";
-$executable = "randomfield";
+$parfile = "couetteZoom.param";
+$executable = "couette";
 
 my %keyval;
 open(PF,"../Parameters/$parfile") or die "Cannot find file";
@@ -9,9 +9,8 @@ while(<PF>){
     $keyval{$key} = $value;
 }
 close(PF);
-srand();
-$seed = int(rand(30000000));
+
 $parString = join(" ", map {"$_ $keyval{$_}"} keys %keyval);
-$execString = "$executable $parString -sd $seed ../random.ff";
+$execString = "$executable -l2 -o ../data $parString > ../logs/couette.log";
 print "$execString\n";
 system($execString);

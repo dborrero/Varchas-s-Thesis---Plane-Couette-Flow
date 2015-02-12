@@ -1,1 +1,1 @@
-Mon Dec 15 16:01:23 2014	/Users/admin/Varchas/channelflow-1.4.2/programs/.libs/couette -T1 10 -T0 0 -symms ../Parameters/symm.asc -l2 -o ../data ../random.ff 
+Tue Feb  3 14:25:37 2015	couette -l2 -o ../data -T1 580 -T0 430 -symms ../Parameters/symm.asc -dT 0.1 ../data/u430.h5 

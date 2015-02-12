@@ -1,4 +1,4 @@
-$parfile = "recurrence.param";
+$parfile = "recurrenceZoom.param";
 $executable = "recurrence.x";
 
 my %keyval;
@@ -10,6 +10,6 @@ while(<PF>){
 }
 close(PF);
 $parString = join(" ", map {"$_ $keyval{$_}"} keys %keyval);
-$execString = "$executable $parString -d ../data ../rec > ../log/recurrence.logs";
+$execString = "$executable $parString -d ../data ../rec > ../logs/recurrence.logs";
 print "$execString\n";
 system($execString);

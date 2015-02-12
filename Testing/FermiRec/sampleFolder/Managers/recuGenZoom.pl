@@ -1,5 +1,5 @@
-$parfile = "random.param";
-$executable = "randomfield";
+$parfile = "recurrenceZoom.param";
+$executable = "recurrence.x";
 
 my %keyval;
 open(PF,"../Parameters/$parfile") or die "Cannot find file";
@@ -9,9 +9,7 @@ while(<PF>){
     $keyval{$key} = $value;
 }
 close(PF);
-srand();
-$seed = int(rand(30000000));
 $parString = join(" ", map {"$_ $keyval{$_}"} keys %keyval);
-$execString = "$executable $parString -sd $seed ../random.ff";
+$execString = "$executable $parString > ../logs/recurrence.logs";
 print "$execString\n";
 system($execString);
