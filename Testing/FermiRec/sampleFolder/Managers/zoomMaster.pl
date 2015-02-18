@@ -1,4 +1,4 @@
 print("Integrating the Zoom\n");
-system("perl coueGenZoom.pl");
+system("perl zoomCoueGen.pl");
 system("Recurring over the Zoomed area\n");
-system("perl recuGenZoom.pl");
+system("perl zoomRecuGen.pl");

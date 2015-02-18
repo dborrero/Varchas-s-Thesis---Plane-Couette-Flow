@@ -25,8 +25,11 @@ while(<PF2>){
 close(PF2);
 
 for(my $i = 0; $i < 50; $i++){
+
+srand();
+$seed = int(rand(30000000));
 $parString2 = join(" ", map {"$_ $keyval2{$_}"} keys %keyval2);
-$execString2 = "$executable2 $parString2  ../random$i.ff > ../logs/random$i.log";
+$execString2 = "$executable2 $parString2 -sd $seed ../random$i.ff > ../logs/random$i.log";
 print "$execString2\n";
 system($execString2);
 

@@ -1,0 +1,15 @@
+====
+Quick Description of all the perl utilities here, and an idea of how the workflow is set up
+====
+
+~~~Directory Structure~~~
+Each run is isolated into its own folder (I name them random1, random2, perturb1, perturb2, etc.), and usually has its own screen session (google Linux Screen if this makes no sense). Inside this base folder are three initial folders - Managers, Parameters, and logs (data and rec are created during runs) I am not good enough at perl to figure out how to get it to execute in other folders, so you are /required/ to run all computations in the
+
+~~~Time Savers~~~
+master.pl - Runs randGen, coueGen and recuGen. A useful way of firing and forgetting, once you know all the components work
+zoomMaster.pl - Runs zoomCoueGen and zoomRecuGen.
+
+~~~Heavy Lifters~~~
+randGen - Reads Parameters/random.param to obtain all the necessary parameters to create a random initial field (hardcoded as 'random.ff')
+coueGen - Reads Parameters/couette.param to obtain all the necessary parameters for running the time integration /except/ the output folder (hardcoded to 'data'), the L2 print flag, and the input field (hardcoded to 'random.ff')
+recuGen - Reads Parameters/recurrence.param to obtain all the necessary parameters to generate the recurrence diagram /except/ the data folder and the output folder (hardcoded to 'data' and 'rec' respectively) 

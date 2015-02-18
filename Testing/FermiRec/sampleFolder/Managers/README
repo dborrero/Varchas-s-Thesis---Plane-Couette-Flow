@@ -1,0 +1,12 @@
+====
+Quick Description of all the perl utilities here, and an idea of how the workflow is set up
+====
+
+~~~Time Savers~~~
+master.pl - Runs randGen, coueGen and recuGen. A useful way of firing and forgetting, once you know all the components work
+zoomMaster.pl - Runs zoomCoueGen and zoomRecuGen.
+
+~~~Heavy Lifters~~~
+randGen - Reads Parameters/random.param to obtain all the necessary parameters to create a random initial field (hardcoded as 'random.ff')
+coueGen - Reads Parameters/couette.param to obtain all the necessary parameters for running the time integration /except/ the output folder (hardcoded to 'data'), the L2 print flag, and the input field (hardcoded to 'random.ff')
+recuGen - Reads Parameters/recurrence.param to obtain all the necessary parameters to generate the recurrence diagram /except/ 
