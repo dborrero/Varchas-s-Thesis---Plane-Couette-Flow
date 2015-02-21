@@ -1,3 +1,4 @@
+
 // License declaration at end of file
 
 #include <iostream>
@@ -88,6 +89,7 @@ int main(int argc, char* argv[]) {
   TimeStep dt(dtarg, dtmin, dtmax, dT, CFLmin, CFLmax, vardt);
   const bool inttime = (abs(dT - int(dT)) < 1e-12) && (abs(T0 - int(T0)) < 1e-12) ? true : false;
   const Real nu = 1.0/Reynolds;
+  bool terminateFlag = true;
 
   SymmetryList symms;
   if (symmstr.length() > 0) {
@@ -125,13 +127,21 @@ int main(int argc, char* argv[]) {
     dns.advance(u, q, dt.n());
     if( L2Norm(u) < terminate ){
       cout << "Terminated time integration at t = " << t << " as L2Norm(u) < TerminationNorm" << endl; 
+      terminateFlag = false;
       break; 
+    }
+    if( L2Norm(u) == NAN ){
+      cout << "Terminated time integration at t = " << t << " as the perturbtion grew too large" << endl;
+      terminateFlag = false;
+      break;
     }
 
     if (dt.adjust(dns.CFL()))
       dns.reset_dt(dt);
   }
-  cout << "done!" << endl;
+  if(terminateFlag)
+    cout << "Terminated time integration at t = " << T1 << " as t = T1" << endl; ;
+  cout << "Finished Integration" << endl;
 }
 
 void printdiagnostics(FlowField& u, const DNS& dns, Real t, const TimeStep& dt, Real nu,
