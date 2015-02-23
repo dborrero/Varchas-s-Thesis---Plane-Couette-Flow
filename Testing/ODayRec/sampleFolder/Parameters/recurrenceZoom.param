@@ -1,0 +1,14 @@
+
+-T0 430
+-T1 500
+-TR 75
+-TR0 55 
+-dt 0.1
+-dT 0.1 
+-az
+-daz 0.001
+-azmin 0.0
+-azmax 0.05 
+-d ../data
+-o ../zoomRecurrence
+zrec

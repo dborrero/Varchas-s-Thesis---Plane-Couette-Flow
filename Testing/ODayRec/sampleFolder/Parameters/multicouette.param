@@ -1,0 +1,4 @@
+-T0 0 
+-T1 1100 
+-symms ../Parameters/symm.asc
+-term 0.1
