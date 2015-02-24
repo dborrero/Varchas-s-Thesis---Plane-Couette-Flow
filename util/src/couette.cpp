@@ -49,7 +49,8 @@ int main(int argc, char* argv[]) {
   const Real dtarg    = args.getreal("-dt",     "--dt", 0.03125, "timestep");
   const Real dtmin    = args.getreal("-dtmin",  "--dtmin", 0.001, "minimum time step");
   /***/ Real dtmax    = args.getreal("-dtmax",  "--dtmax", dtarg,  "maximum time step");
-  /***/ Real dT       = args.getreal("-dT",     "--dT", 1.0, "save interval");
+  /***/ Real dT       = args.getreal("-dT",     "--dT", 1.0, "CFL adjust interval");
+  /***/ Real sF      = args.getreal("-sF",     "--saveFactor", 1.0, "Save to disk interval multiplier, so that it saves to disk every dT*sF time units");
   const bool adjustdT = args.getflag("-adT",    "--adjustdT", "tweak dT so that it evenly divides (T1-T0)");
   const Real CFLmin   = args.getreal("-CFLmin", "--CFLmin", 0.40, "minimum CFL number");
   const Real CFLmax   = args.getreal("-CFLmax", "--CFLmax", 0.60, "maximum CFL number");
@@ -164,22 +165,26 @@ int main(int argc, char* argv[]) {
 
   ChebyCoeff Ubase =  laminarProfile(flags.nu, flags.constraint, flags.dPdx, flags.Ubulk, 
 				     u.a(), u.b(), flags.ulowerwall, flags.uupperwall, u.Ny());
-
+  int saveCounter = 0;
   for (Real t=T0; t<=T1+dT/2; t += dT) { // just to make sure t==T1 is computed
 
     printdiagnostics(u, dns, t, dt, flags.nu, umin, term, vardt, pl2norm, pchnorm, pdissip,
 		     pshear, pdiverge, pUbulk, pubulk, pdPdx, pcfl);
 
-    u.save(outdir + label + t2s(t, inttime));
-    if (savep) 
+    if(saveCounter % iround(sF) == 0){
+      cout << "Saving u("<<t<<") to disk" << endl;
+      u.save(outdir + label + t2s(t, inttime));
+    }
+    if (savep)
       q.save(outdir + "p" + t2s(t, inttime));      
 
     dns.advance(u, q, dt.n());
 
     if (vardt && dt.adjust(dns.CFL()))
       dns.reset_dt(dt);
+    saveCounter++;
   }
-  cout << "done!" << endl;
+  cout << "Couette completed integrationn sucessfully at time t = " << T1 << endl;
 }
 
 void printdiagnostics(FlowField& u, const DNS& dns, Real t, const TimeStep& dt, Real nu,
