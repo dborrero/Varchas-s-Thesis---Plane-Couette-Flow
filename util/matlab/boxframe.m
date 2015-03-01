@@ -1,4 +1,4 @@
-function boxframe(x,y,z, u_yz, v_yz, w_yz, u_xy, v_xy, u_xz, w_xz, xstride, ystride, zstride, baseflow, quivscale, perspect)
+function boxframe(x,y,z, u_yz, v_yz, w_yz, u_xy, v_xy, u_xz, w_xz, xstride, ystride, zstride, baseflow, blackwhite, quivscale, perspect)
 % function boxframe(x,y,z, u_yz, v_yz, w_yz, u_xy, v_xy, u_xz, w_xz,
 %                   xstride, ystride, zstride, baseflow, quivscale, perspect)
 % plot a 3D plane Couette velocity field
@@ -14,9 +14,10 @@ function boxframe(x,y,z, u_yz, v_yz, w_yz, u_xy, v_xy, u_xz, w_xz, xstride, ystr
 % perspect    : 1 use perspective plot, 0 orthographic (default 1)
 % framedir    : directory for u_yz etc data (default to current dir).
 
-if nargin < 17 ; framedir = ''; end;
-if nargin < 16 ; perspect  = 1; end;
-if nargin < 15 ; quivscale = 0; end;
+if nargin < 18 ; framedir = ''; end;
+if nargin < 17 ; perspect  = 1; end;
+if nargin < 16 ; quivscale = 1; end;
+if nargin < 15 ; blackwhite = 0; end;
 if nargin < 14 ; baseflow = 1; end;
 if nargin < 13 ; zstride = 2; end
 if nargin < 12 ; ystride = 2; end
@@ -38,16 +39,43 @@ scrunchlevel = 1.0;
 %U_yz = zeros(Ny,Nz);
 %U_xy = zeros(Ny,Nx);
 
+% good for smooth color figs
+if blackwhite == 1;
+  ulim = [-2*umag:umag/5:2*umag];
+  ulim = [-2*umag:umag/5:2*umag];
+  ulim = [-umag:umag/5:umag];
+  %ulim = [-.8 -0.6 -0.4 -0.2 0.2 0.4 0.6 0.8];
+  linestyle = 'none';
+  if baseflow == 0
+    usign = -1;  
+    %    usign = 1;  
+    ulim = [-1.2:.2:1.2];
+    cax  = [-.8, .4];
+  else
+    usign = 1;
+    ulim = [-1:.2:1];
+    cax  = [-.8, 0.45];
+
+  end
+  colormap gray;
+else
+  cax = [-umag, umag];
+  ulim = [-2*umag:umag/15:umag*2];
+  linestyle = 'none';
+  usign = 1;
+  colormap jet;
+end
+
 if baseflow == 1
   U_yz = y * ones(1,Nz);
   U_xy = y * ones(1,Nx);
-  u_yx = scrunch(u_xy' + U_xy', scrunchlevel);
-  u_yz = scrunch(u_yz  + U_yz, scrunchlevel);
+  u_yx = usign*scrunch(u_xy' + U_xy', scrunchlevel);
+  u_yz = usign*scrunch(u_yz  + U_yz, scrunchlevel);
 else
-  u_yx = scrunch(u_xy', scrunchlevel);
-  u_yz = scrunch(u_yz,  scrunchlevel);
+  u_yx = usign*scrunch(u_xy', scrunchlevel);
+  u_yz = usign*scrunch(u_yz,  scrunchlevel);
 end
-u_xz = scrunch(u_xz', scrunchlevel);
+u_xz = usign*scrunch(u_xz', scrunchlevel);
 v_yx = v_xy';
 w_xz = w_xz';
 
@@ -62,29 +90,32 @@ w_xz = w_xz';
 % roll-streak structure in the HKW box looks good.
 if quivscale == 1
   uwscale = 3*sqrt(max(max(u_xz.*u_xz + w_xz.*w_xz)));
+  uvscale = 3*sqrt(max(max(u_xy.*u_xy + v_xy.*v_xy)));
   vwscale = 12*sqrt(max(max(v_yz.*v_yz + w_yz.*w_yz)));
 elseif quivscale == 0
   uwscale = 0;
+  uvscale = 0;
   vwscale = 0;
 else
   uwscale = quivscale;
+  uvscale = quivscale;
   vwscale = quivscale;
 end
 
 
 % if u fields are identically zero add a tiny bit of fuzz to make contourf plots behave
-if max(max(abs(u_xz))) < 1e-13
- [X,Z] = meshgrid(x,z);
- u_xz = u_xz + 1e-12*X.*Z;
-end
-if max(max(abs(u_yz))) < 1e-13
- [Y,Z] = meshgrid(y,z);
- u_yz = u_yz + 1e-12*Y.*Z;
-end
-if max(max(abs(u_yx))) < 1e-13
- [Y,X] = meshgrid(y,x);
- u_yx = u_yx + 1e-12*Y.*X;
-end
+% if max(max(abs(u_xz))) < 1e-13
+%  [X,Z] = meshgrid(x,z);
+%  u_xz = u_xz + 1e-12*X.*Z;
+% end
+% if max(max(abs(u_yz))) < 1e-13
+%  [Y,Z] = meshgrid(y,z);
+%  u_yz = u_yz + 1e-12*Y.*Z;
+% end
+% if max(max(abs(u_yx))) < 1e-13
+%  [Y,X] = meshgrid(y,x);
+%  u_yx = u_yx + 1e-12*Y.*X;
+% end
 
 %if max(max(abs(u_yz))) < 1e-13
 % [Y,Z] = meshgrid(y,z);
@@ -106,12 +137,11 @@ z2=z(nz2);
 xaxis = [1 0 0];
 yaxis = [0 1 0];
 zaxis = [0 0 1];
-cax = [-umag, umag];
-%ulim = [-2*umag:umag/15:umag*2];
-%ulim = [-2*umag:umag/5:umag*2];
-ulim = [-2*umag:umag/15:umag*2];
+%umag = 1;
+%c = 0.5;
+%cax = [-.5, 0.7];
+%ulim = [-umag:umag/5:umag];
 
-%cax = [-1 1];
 origin = [0 0 0];
 
 
@@ -129,13 +159,13 @@ else
   h = quiver('v6',z2a, y2, w_yz(ny2,nz2a), v_yz(ny2,nz2a), vwscale, 'k');
 end
 rotate(h, xaxis, 90, [0 0 0]);
-hold on
 view(3)
+hold on
 
 [C,h] = contourf('v6',z,y, u_yz, ulim);
-caxis(cax);
-set(h, 'LineStyle', 'none');
+set(h, 'LineStyle', linestyle);
 rotate(h, xaxis, 90, [0 0 0])
+
 
 nyHi = 1:ystride:((Ny-1)/2+1);
 yHi=y(nyHi);
@@ -151,7 +181,7 @@ nyHi = 1:1:((Ny-1)/2+1);
 yHi=y(nyHi);
 [C,h] = contourf('v6',z, yHi+max(x), u_yz(nyHi,:), ulim);
 caxis(cax);
-set(h, 'LineStyle', 'none');
+set(h, 'LineStyle', linestyle);
 rotate(h, xaxis, 90, [0 max(x) 0])
 
 
@@ -165,14 +195,19 @@ nx2a = 1:xstride:length(x)-xstride;
 x2a=x(nx2a);
 
 % no need to rescale xy quiver plots becuase they have unit vector at y=+-1
-h = quiver('v6',yHi,x2a, v_yx(nx2a,nyHi), u_yx(nx2a,nyHi), 'k');
+if uvscale == 0
+  h = quiver('v6',yHi,x2a, v_yx(nx2a,nyHi), u_yx(nx2a,nyHi), 'k');
+else
+  h = quiver('v6',yHi,x2a, v_yx(nx2a,nyHi), u_yx(nx2a,nyHi), uvscale, 'k');
+end
+
 rotate(h, yaxis, -90, [0 0 0])
 
 nyHi = 1:1:((Ny-1)/2+1);
 yHi=y(nyHi);
 [C,h] = contourf('v6', yHi, x, u_yx(:,nyHi), ulim);
 caxis(cax);
-set(h, 'LineStyle', 'none');
+set(h, 'LineStyle', linestyle);
 rotate(h, yaxis, -90, [0 0 0])
 
 nyLo = ((Ny-1)/2+1):ystride:Ny-5;
@@ -186,7 +221,10 @@ rotate(h, yaxis, -90, [max(z) 0 0])
 nyLo = ((Ny-1)/2+1):Ny;
 yLo=y(nyLo);
 [C,h] = contourf('v6', yLo+max(z), x, u_yx(:,nyLo), ulim);
-set(h, 'LineStyle', 'none');
+caxis(cax);
+%if blackwhite ~= 1 ; 
+set(h, 'LineStyle', linestyle);
+% end;
 rotate(h, yaxis, -90, [max(z) 0 0])
 
 
@@ -208,8 +246,7 @@ end
 
 %u_xzI = interp2(z3,x3,u_xz(nx3,nz3), z3,x3');
 [C,h] = contourf(z, x, u_xz, ulim);
-caxis(cax);
-set(h, 'LineStyle', 'none');
+set(h, 'LineStyle', linestyle);
 
 
 
@@ -291,5 +328,13 @@ view([32, 25]);
 
 if perspect == 1
   set(gca, 'Projection', 'Perspective');
+end;
+
+caxis(cax);
+
+if blackwhite == 1
+  colormap gray;
+else
+  colormap jet;
 end;
 alpha(1);

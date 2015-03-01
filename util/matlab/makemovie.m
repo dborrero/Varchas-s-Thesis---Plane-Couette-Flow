@@ -44,7 +44,7 @@ z = load(strcat(framedir, '/z.asc'));
 
 savemovie=true;
 
-set(gcf, 'renderer', 'zbuffer');
+set(gcf, 'renderer', 'opengl');
 %set(gcf, 'renderer', 'zbuffer');
 
 if (savemovie)
