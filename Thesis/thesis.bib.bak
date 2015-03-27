@@ -2,6 +2,38 @@
 % Encoding: UTF-8
 
 
+@Article{Daviaud1992,
+  Title                    = {Subcritical transition to turbulence in plane Couette flow},
+  Author                   = {Daviaud, F. and Hegseth, J. and Berg\'e, P.},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {1992},
+
+  Month                    = oct,
+  Pages                    = {2511--2514},
+  Volume                   = {69},
+
+  Doi                      = {10.1103/PhysRevLett.69.2511},
+  Issue                    = {17},
+  Numpages                 = {0},
+  Publisher                = {American Physical Society}
+}
+
+@Article{Eckhardt2008,
+  Title                    = {Dynamical systems and the transition to turbulence in linearly stable shear flows},
+  Author                   = {Eckhardt, Bruno and Faisst, Holger and Schmiegel, Armin and Schneider, Tobias M},
+  Journal                  = {Philosophical Transactions of the Royal Society of London A: Mathematical, Physical and Engineering Sciences},
+  Year                     = {2008},
+  Number                   = {1868},
+  Pages                    = {1297--1315},
+  Volume                   = {366},
+
+  Abstract                 = {Bruno Eckhardt1*, Holger Faisst1,2, Armin Schmiegel1 and Tobias M Schneider11Fachbereich Physik, Philipps-Universit{\"a}t Marburg35032 Marburg, Germany2Siemens VDO Automotive AG93055 Regensburg, GermanyAuthor for correspondence (bruno.eckhardt{at}physik.uni-marburg.de)AbstractPlane Couette flow and pressure-driven pipe flow are two examples of flows where turbulence sets in while the laminar profile is still linearly stable. Experiments and numerical studies have shown that the transition has features compatible with the formation of a strange saddle rather than an attractor. In particular, the transition depends sensitively on initial conditions and the turbulent state is not persistent but has an exponential distribution of lifetimes. Embedded within the turbulent dynamics are coherent structures, which transiently show up in the temporal evolution of the turbulent flow. Here we summarize the evidence for this transition scenario in these two flows, with an emphasis on lifetime studies in the case of plane Couette flow and on the coherent structures in pipe flow.Keywords: pipe flowstrange saddlesstrange attractorsFootnotesOne contribution of 6 to a Theme Issue {\textquoteleft}Experimental nonlinear dynamics II. Fluids{\textquoteright}.{\textcopyright} 2007 The Royal Society},
+  Doi                      = {10.1098/rsta.2007.2132},
+  ISBN                     = {1471-2962},
+  ISSN                     = {1364-503X},
+  Publisher                = {The Royal Society}
+}
+
 @Article{Fischer1983,
   Title                    = {Mean corpuscular volume},
   Author                   = {Fischer, Sandra L and Fischer, Sharon P},
@@ -12,6 +44,18 @@
   Volume                   = {143},
 
   Publisher                = {American Medical Association}
+}
+
+@Article{Foias1988,
+  Title                    = {Inertial manifolds for nonlinear evolutionary equations},
+  Author                   = {Foias, Ciprian and Sell, George R and Temam, Roger},
+  Journal                  = {Journal of Differential Equations},
+  Year                     = {1988},
+  Number                   = {2},
+  Pages                    = {309--353},
+  Volume                   = {73},
+
+  Publisher                = {Elsevier}
 }
 
 @TechReport{Gibson2014,
@@ -37,18 +81,17 @@
 
 @Article{GIBSON2009,
   Title                    = {Equilibrium and travelling-wave solutions of plane Couette flow},
-  Author                   = {GIBSON,J. F. and HALCROW,J. and CVITANOVIĆ,P.},
+  Author                   = {Gibson,J. F. and Halcrow,J. and Cvitanovic,P.},
   Journal                  = {Journal of Fluid Mechanics},
   Year                     = {2009},
 
-  Month                    = {11},
+  Month                    = nov,
   Pages                    = {243--266},
   Volume                   = {638},
 
   Doi                      = {10.1017/S0022112009990863},
   ISSN                     = {1469-7645},
-  Numpages                 = {24},
-  Url                      = {http://journals.cambridge.org/article_S0022112009990863}
+  Numpages                 = {24}
 }
 
 @Article{Hopf1948,
@@ -68,7 +111,7 @@
   Author                   = {Karman, Th. von},
   Journal                  = {Nachrichten von der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische Klasse},
   Year                     = {1930},
-  Pages                    = {58-76},
+  Pages                    = {58--76},
   Volume                   = {1930},
 
   Language                 = {ger},
@@ -98,6 +141,36 @@
   Publisher                = {The Royal Society}
 }
 
+@Article{Lorenz1963,
+  Title                    = {Deterministic nonperiodic flow},
+  Author                   = {Lorenz, Edward N},
+  Journal                  = {Journal of the atmospheric sciences},
+  Year                     = {1963},
+  Number                   = {2},
+  Pages                    = {130--141},
+  Volume                   = {20},
+
+  __markedentry            = {[Varchas:1]}
+}
+
+@Article{Manneville2015,
+  Title                    = {{On the transition to turbulence of wall-bounded flows in general, and plane Couette flow in particular}},
+  Author                   = {{Manneville}, P.},
+  Journal                  = {European Journal of Mechanics B Fluids},
+  Year                     = {2015},
+
+  Month                    = jan,
+  Pages                    = {345--362},
+  Volume                   = {49},
+
+  Adsnote                  = {Provided by the SAO/NASA Astrophysics Data System},
+  Adsurl                   = {http://adsabs.harvard.edu/abs/2015EJMF...49..345M},
+  Archiveprefix            = {arXiv},
+  Doi                      = {10.1016/j.euromechflu.2014.03.017},
+  Eprint                   = {1403.6374},
+  Primaryclass             = {physics.flu-dyn}
+}
+
 @Article{Nagata1990,
   Title                    = {Three-dimensional finite-amplitude solutions in plane Couette flow: bifurcation from infinity},
   Author                   = {Nagata, M},
@@ -109,6 +182,17 @@
   Publisher                = {Cambridge Univ Press}
 }
 
+@Book{Pope2000,
+  Title                    = {Turbulent Flows},
+  Author                   = {Pope, S.B.},
+  Publisher                = {Cambridge University Press},
+  Year                     = {2000},
+
+  ISBN                     = {9780521598866},
+  Lccn                     = {99044583},
+  Url                      = {http://books.google.com/books?id=HZsTw9SMx-0C}
+}
+
 @Article{Viswanath2007,
   Title                    = {Recurrent motions within plane Couette turbulence},
   Author                   = {Viswanath, Divakar},
@@ -118,5 +202,21 @@
   Volume                   = {580},
 
   Publisher                = {Cambridge Univ Press}
+}
+
+@Article{Waleffe2001,
+  Title                    = {Exact coherent structures in channel flow},
+  Author                   = {Waleffe,Fabian},
+  Journal                  = {Journal of Fluid Mechanics},
+  Year                     = {2001},
+
+  Month                    = {5},
+  Pages                    = {93--102},
+  Volume                   = {435},
+
+  Doi                      = {10.1017/S0022112001004189},
+  ISSN                     = {1469-7645},
+  Numpages                 = {10},
+  Url                      = {http://journals.cambridge.org/article_S0022112001004189}
 }
 

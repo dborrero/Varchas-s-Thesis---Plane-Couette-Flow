@@ -1,62 +1,91 @@
 \relax 
-\citation{Kolmogorov1991}
-\citation{Karman1930}
-\citation{Hopf1948}
 \@writefile{toc}{\contentsline {chapter}{Introduction}{1}}
-\@writefile{toc}{\contentsline {section}{\numberline {0.1}Dynamical Systems and Hopf's Dream}{1}}
+\@writefile{toc}{\contentsline {section}{Transition to Turbulence}{1}}
+\citation{Eckhardt2008,Manneville2015}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Representations of cylinder wakes at various \ensuremath  {Re}. Notice that the flow goes from laminar in (a) to turbulent in (c), with two prominent vorticies. Reproduced from the Feynman Lectures on Physics, Chapter 41.}}{2}}
+\newlabel{fig:cylinderWake}{{1}{2}}
+\@writefile{toc}{\contentsline {section}{Plane Couette Flow}{2}}
+\citation{Daviaud1992}
+\citation{Pope2000}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces A diagram of the plane Couette geometry. The upper and lower plates extend infinitely in the plane, as does the fluid filling the gap.}}{3}}
+\newlabel{fig:planeCouette}{{2}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces A cross-sectional representation of plane Couette flow, with the laminar velocity profile shown. By symmetry, the laminar profile must be the same everywhere.}}{3}}
+\newlabel{fig:planeCouetteBulk}{{3}{3}}
+\@writefile{toc}{\contentsline {section}{Tackling Turbulence}{3}}
+\citation{Foias1988}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces At each point in the fluid volume, the velocity field has a value that is described by three numbers, thus requiring three dimensions to track over time.}}{4}}
+\newlabel{fig:VectorSpace}{{4}{4}}
+\citation{Lorenz1963}
+\citation{Aubry1988}
+\citation{Dauchot2000}
 \citation{Nagata1990}
+\citation{Waleffe2001}
 \citation{Kawahara2001}
 \citation{Viswanath2007}
 \citation{Gibson2008}
 \citation{Gibson2014}
-\@writefile{toc}{\contentsline {section}{\numberline {0.2}Computers and the Future}{2}}
-\@writefile{toc}{\contentsline {chapter}{Chapter 1: Equations of Flow}{3}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces A turbulent trajectory in black appears chaotic in isolation, but is in fact guided by exact coherent structures\nobreakspace  {}of the flow}}{5}}
+\newlabel{fig:guidedTurbulence}{{5}{5}}
+\@writefile{toc}{\contentsline {chapter}{Chapter 1: Equations of Flow}{7}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {1.1}Formalisms}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}The Control Volume}{3}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.1}Formalisms}{7}}
+\newlabel{eq:NSL}{{1.1}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.1}The Eulerian Formulation}{7}}
 \citation{Fischer1983}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}The Fluid Particle}{4}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.2}Mass Conservation}{4}}
-\newlabel{eq:consMassFull}{{1.8}{5}}
-\newlabel{eq:expandedMass}{{1.10}{5}}
-\newlabel{eq:consMassIncomp}{{1.11}{5}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.3}Conservation of Linear Momentum}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Stress}{6}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Strain}{6}}
-\newlabel{eq:constitutive}{{1.14}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Surface Forces}{7}}
-\newlabel{eq:surfaceForce}{{1.15}{7}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}Newton's Second Law}{7}}
-\newlabel{eq:CauchyEOM}{{1.19}{7}}
-\newlabel{eq:NS}{{1.20}{7}}
-\@writefile{toc}{\contentsline {section}{\numberline {1.4}Plane Couette Flow}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}The Laminar Version}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Non-Dimensionalization}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Turbulent Perturbations}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.1.2}The Fluid Particle}{8}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.2}Mass Conservation}{9}}
+\newlabel{eq:consMassFull}{{1.8}{9}}
+\newlabel{eq:expandedMass}{{1.9}{9}}
+\newlabel{eq:consMassIncomp}{{1.10}{9}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.3}Conservation of Linear Momentum}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.1}Stress}{10}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.2}Strain}{10}}
+\newlabel{eq:constitutive}{{1.13}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.3}Surface Forces}{11}}
+\newlabel{eq:surfaceForce}{{1.14}{11}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.3.4}Newton's Second Law}{11}}
+\newlabel{eq:CauchyEOM}{{1.18}{11}}
+\newlabel{eq:NS}{{1.19}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {1.4}Plane Couette Flow}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.1}The Laminar Version}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.2}Non-Dimensionalization}{12}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {1.4.3}Turbulent Perturbations}{13}}
 \citation{GIBSON2009}
-\@writefile{toc}{\contentsline {chapter}{Chapter 2: Symmetry in plane Couette flow}{11}}
+\@writefile{toc}{\contentsline {chapter}{Chapter 2: Symmetry in plane Couette flow}{15}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {2.1}Unbounded Navier-Stokes}{11}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.1}Unbounded Navier-Stokes}{15}}
 \citation{a}
-\newlabel{eq:pointwiseinversion}{{2.1}{12}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.2}Plane Couette Flow}{12}}
-\newlabel{eq:discretesymm}{{2.2}{12}}
-\newlabel{eq:contsymm}{{2.5}{12}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.3}Properties of $\Gamma $}{12}}
-\@writefile{toc}{\contentsline {section}{\numberline {2.4}Symmetry Groups of this Thesis}{14}}
+\newlabel{eq:pointwiseinversion}{{2.1}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.2}Plane Couette Flow}{16}}
+\newlabel{eq:discretesymm}{{2.2}{16}}
+\newlabel{eq:contsymm}{{2.5}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.3}Properties of $\Gamma $}{16}}
+\@writefile{toc}{\contentsline {section}{\numberline {2.4}Symmetry Groups of this Thesis}{18}}
+\@writefile{toc}{\contentsline {chapter}{Chapter 3: Numerics}{19}}
+\@writefile{lof}{\addvspace {10\p@ }}
+\@writefile{lot}{\addvspace {10\p@ }}
 \citation{*}
-\bibstyle{APA/apa-good}
+\bibstyle{apalike}
 \bibdata{thesis}
-\bibcite{Fischer1983}{{1}{1983}{{Fischer \& Fischer}}{{}}}
-\bibcite{Gibson2014}{{2}{2014}{{Gibson}}{{}}}
-\bibcite{GIBSON2009}{{3}{2009}{{GIBSON et~al.}}{{GIBSON, HALCROW, \& CVITANOVIĆ}}}
-\bibcite{Gibson2008}{{4}{2008}{{Gibson et~al.}}{{Gibson, Halcrow, \& Cvitanovi{\'c}}}}
-\bibcite{Hopf1948}{{5}{1948}{{Hopf}}{{}}}
-\bibcite{Karman1930}{{6}{1930}{{Karman}}{{}}}
-\bibcite{Kawahara2001}{{7}{2001}{{Kawahara \& Kida}}{{}}}
-\bibcite{Kolmogorov1991}{{8}{1991}{{Kolmogorov}}{{}}}
-\bibcite{Nagata1990}{{9}{1990}{{Nagata}}{{}}}
-\bibcite{Viswanath2007}{{10}{2007}{{Viswanath}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{References}{15}}
+\bibcite{Aubry1988}{{1}{1988}{{Aubry et~al.}}{{}}}
+\bibcite{Dauchot2000}{{2}{2000}{{Dauchot and Vioujard}}{{}}}
+\bibcite{Daviaud1992}{{3}{1992}{{Daviaud et~al.}}{{}}}
+\bibcite{Eckhardt2008}{{4}{2008}{{Eckhardt et~al.}}{{}}}
+\bibcite{Fischer1983}{{5}{1983}{{Fischer and Fischer}}{{}}}
+\bibcite{Foias1988}{{6}{1988}{{Foias et~al.}}{{}}}
+\bibcite{Gibson2014}{{7}{2014}{{Gibson}}{{}}}
+\bibcite{Gibson2008}{{8}{2008}{{Gibson et~al.}}{{}}}
+\bibcite{GIBSON2009}{{9}{2009}{{Gibson et~al.}}{{}}}
+\bibcite{Hopf1948}{{10}{1948}{{Hopf}}{{}}}
+\bibcite{Karman1930}{{11}{1930}{{Karman}}{{}}}
+\bibcite{Kawahara2001}{{12}{2001}{{Kawahara and Kida}}{{}}}
+\bibcite{Kolmogorov1991}{{13}{1991}{{Kolmogorov}}{{}}}
+\@writefile{toc}{\contentsline {chapter}{References}{21}}
+\bibcite{Lorenz1963}{{14}{1963}{{Lorenz}}{{}}}
+\bibcite{Manneville2015}{{15}{2015}{{Manneville}}{{}}}
+\bibcite{Nagata1990}{{16}{1990}{{Nagata}}{{}}}
+\bibcite{Pope2000}{{17}{2000}{{Pope}}{{}}}
+\bibcite{Viswanath2007}{{18}{2007}{{Viswanath}}{{}}}
+\bibcite{Waleffe2001}{{19}{2001}{{Waleffe}}{{}}}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.7)  10 FEB 2015 11:29
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2013.7.7)  27 MAR 2015 15:53
 entering extended mode
 **C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
 (C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
@@ -306,12 +306,18 @@ Non-PDF special ignored!
 
 ]
 (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\introduction.tex
-Underfull \hbox (badness 10000) in paragraph at lines 10--11
+<Figs/CylinderReFlow.pdf, id=15, 491.8375pt x 543.02875pt>
+File: Figs/CylinderReFlow.pdf Graphic file (type pdf)
 
- []
+<use Figs/CylinderReFlow.pdf>
+Package pdftex.def Info: Figs/CylinderReFlow.pdf used on input line 15.
+(pdftex.def)             Requested size: 196.7315pt x 217.20764pt.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 21--22
 
  []
 
@@ -319,134 +325,180 @@ Underfull \hbox (badness 10000) in paragraph at lines 16--17
 
 
 
-]
+] <Figs/planeCouetteDiagram.pdf, id=25, 603.15437pt x 314.29318pt>
+File: Figs/planeCouetteDiagram.pdf Graphic file (type pdf)
 
-LaTeX Warning: Reference `sec:channelflow' on page 2 undefined on input line 20
-.
+<use Figs/planeCouetteDiagram.pdf>
+Package pdftex.def Info: Figs/planeCouetteDiagram.pdf used on input line 26.
+(pdftex.def)             Requested size: 241.25748pt x 125.71504pt.
 
-) (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\NavierStokesDerivation.tex
+Underfull \vbox (badness 1189) has occurred while \output is active []
+
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2]
-Chapter 1.
-[3
+[2 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/CylinderReFlow.pdf>]
+<Figs/planeCouetteMeanFlow.pdf, id=55, 378.80621pt x 167.18762pt>
+File: Figs/planeCouetteMeanFlow.pdf Graphic file (type pdf)
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
+<use Figs/planeCouetteMeanFlow.pdf>
+Package pdftex.def Info: Figs/planeCouetteMeanFlow.pdf used on input line 39.
+(pdftex.def)             Requested size: 227.28548pt x 100.31334pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--46
 
  []
 
+[3 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/planeCouetteDiagram.pdf> <
+C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/planeCouetteMeanFlow.pdf>]
+<Figs/VectorSpace.pdf, id=125, 580.13736pt x 399.35297pt>
+File: Figs/VectorSpace.pdf Graphic file (type pdf)
 
+<use Figs/VectorSpace.pdf>
+Package pdftex.def Info: Figs/VectorSpace.pdf used on input line 50.
+(pdftex.def)             Requested size: 348.0851pt x 239.61362pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 47--54
+
+ []
+
+[4 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/VectorSpace.pdf>]
+Missing character: There is no â in font cmr12!
+Missing character: There is no € in font cmr12!
+Missing character: There is no œ in font cmr12!
+
+<Figs/phaseSpaceTraj.png, id=183, 443.40656pt x 181.42781pt>
+File: Figs/phaseSpaceTraj.png Graphic file (type png)
+
+<use Figs/phaseSpaceTraj.png>
+Package pdftex.def Info: Figs/phaseSpaceTraj.png used on input line 60.
+(pdftex.def)             Requested size: 354.72572pt x 145.14244pt.
+) [5 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/phaseSpaceTraj.png>]
+(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\NavierStokesDerivation.tex
+[6]
+Chapter 1.
+
+Underfull \hbox (badness 10000) in paragraph at lines 9--11
+
+ []
+
+[7
+
+]
 Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[4] [5]
+[8] [9]
 
-LaTeX Warning: Reference `fig:shear' on page 6 undefined on input line 76.
+LaTeX Warning: Reference `fig:shear' on page 10 undefined on input line 71.
 
-[6]
+[10]
 
-LaTeX Warning: Reference `eq;consMassFull' on page 7 undefined on input line 11
-4.
+LaTeX Warning: Reference `eq;consMassFull' on page 11 undefined on input line 1
+10.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 125--126
-
- []
-
-[7]
-Underfull \hbox (badness 10000) in paragraph at lines 139--141
+Underfull \hbox (badness 10000) in paragraph at lines 121--122
 
  []
 
-[8]) (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\NavierStokesSymmetry.tex
-[9] [10
+[11]
+Underfull \hbox (badness 10000) in paragraph at lines 135--137
+
+ []
+
+[12]) (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\NavierStokesSymmetry.tex
+[13] [14
 
 ]
 Chapter 2.
-[11]
+[15]
 
-LaTeX Warning: Reference `fig:pointwiseinversion' on page 12 undefined on input
+LaTeX Warning: Reference `fig:pointwiseinversion' on page 16 undefined on input
  line 17.
 
 
-Package natbib Warning: Citation `a' on page 12 undefined on input line 17.
+Package natbib Warning: Citation `a' on page 16 undefined on input line 17.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 40--41
 
  []
 
-[12]
+[16]
 Underfull \hbox (badness 10000) in paragraph at lines 42--43
 
  []
 
 
-LaTeX Warning: Reference `fig:notabelian' on page 13 undefined on input line 44
+LaTeX Warning: Reference `fig:notabelian' on page 17 undefined on input line 44
 .
 
 
-LaTeX Warning: Reference `fig:notabelian' on page 13 undefined on input line 44
+LaTeX Warning: Reference `fig:notabelian' on page 17 undefined on input line 44
 .
 
-
+[17]
 Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
  []
 
-[13]) [14] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl
-Missing character: There is no Ä in font cmr12!
-Missing character: There is no † in font cmr12!
+) (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\Numerics.tex [18]
+Chapter 3.
+) [19
+
+] [20
+
+] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl
 Missing character: There is no Ã in font cmti12!
 Missing character: There is no ¶ in font cmti12!
-)
+ [21
+
+])
 
 Package natbib Warning: There were undefined citations.
 
-[15
-
-
-] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux)
+[22] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3279 strings out of 493921
- 41624 string characters out of 3144871
- 102865 words of memory out of 3000000
- 6490 multiletter control sequences out of 15000+200000
+ 3348 strings out of 493921
+ 43074 string characters out of 3144871
+ 101324 words of memory out of 3000000
+ 6548 multiletter control sequences out of 15000+200000
  18821 words of font info for 76 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 29i,12n,45p,2166b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
-:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTe
-X 2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX 
-2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
-pe1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (19 pages, 263766 bytes).
+ 29i,12n,45p,1759b,286s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiK
+TeX 2.9/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmti12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
+1/public/amsfonts/cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (26 pages, 1758277 bytes).
 PDF statistics:
- 140 PDF objects out of 1000 (max. 8388607)
+ 315 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,26 +1,26 @@
+\setcounter{secnumdepth}{3}
 \chapter{Equations of Flow}
     	 	\epigraph{For every action, there is an equal and opposite regulatory body}{Anonymous}
 \section{Formalisms}
-At the heart of fluid dynamics lie the Navier-Stokes equation, first derived by George Stokes in 1845, after a series of refinements leading back to Newton. Now if we were considering a point particle, we would begin with Newton's Second Law - 
-\begin{equation}
-\pder{1}{\Vector{p}}{t} = \Vector{F}, 
+%At the heart of fluid dynamics lies the Navier-Stokes equation, first derived by George Stokes in 1845, after a series of refinements leading back to Newton.
+If we were considering the dynamics of a point particle, we would begin with Newton's Second Law - 
+\begin{equation}\label{eq:NSL}
+\der{1}{\Vector{p}}{t} = \Vector{F}, 
 \end{equation}
-write down the body force as a function of position, time, etc., and have our differential equation. With fluids, however, the treatment becomes somewhat more subtle - we are more concerned with the time-rate of deformation of the fluid particle than we are with the actual deformation - this being the difference between the Eulerian and Lagrangian descriptions of motion. Classical mechanics is typically framed in the Lagrangian context, so we will take a step back to develop the Eulerian context further. 
+write down the body force as a function of position, time, etc., and have our differential equation, whose solution may be analytic or numeric, but is nevertheless trvial. While we can in principle use this approach to describe the behavior of a large collection of particles making up the fluid, practical considerations prevent us from modelling the behavior of each individual particle, for the following reason -- in a milliliter of water, there are approximately $10^{22}$ molecules of water, each with 6 degrees of freedom\footnote{If we ignore the vibrations of the O-H bond}. Applying \eqref{eq:NSL} to all these particles would result in about $10^{23}$ coupled partial differential equations. Such a set of equations would be hard to write down, let alone solve! Clearly, a more intelligent approach is needed. \\
 
-\subsection{The Control Volume}
+\subsection{The Eulerian Formulation}
 
-When asked to consider the mechanical evolution of some collection of bodies, two obvious methods would be readily apparent - we could either follow a particle (or collection of particles) on their merry way through space and time (the systems approach), or we could situate ourselves at some point in space, extend a 'bubble' around ourselves, and observe the properties of particles that enter and exit our bubble over time (the control volume approach). The systems approach will be familiar to anyone with a basic physics education, since it lends itself readily towards analysis of rigid-body motion. When considering fluids, however, the question of which fluid particle we should follow becomes non-trivial (Should we follow all? That be computationally difficult. Just one? Which one?) if we are using a systems approach, while the control volume approach remains as easy (or hard) as it was for rigid body motion. Historically, then, the control volume approach, also referred to as an {\bf Eulerian} approach has been used to describe fluid dynamics (though work has been done on Lagrangian fluid mechanics), and this thesis will follow historical precedent.  
+When asked to consider the mechanical evolution of some collection of bodies, two obvious methods would be readily apparent - we could either follow a collection of particles on their way through space and time (the {\bf Lagrangian} formulation), or we could situate ourselves at some point in space and observe the properties of particles that pass through the surrounding region (the {\bf control volme}) over time (the {\bf Eulerian} formulation). The Lagrangian formulation will be familiar to anyone with a basic physics education, since it lends itself readily towards analysis of rigid-body motion. When considering fluids, however, the disadvantgaes of the Lagrangian formulation (noted above) stand in contrast to the ease of analysis afforded by the Eulerian formulation, which remains as easy (or hard) as it was for rigid body motion. For this reason, I will focus on the Eulerian formulation of fluid mechanics in this thesis. 
 
 \subsection{The Fluid Particle}
-
-"Well", you might say, "All this talk of control volumes is all fine and dandy, but how do you plan to describe the motion of each molecule? Isn't that what you mean when you referred to fluid particles?" The answer, dear reader, is given by the continuum hypothesis. As you may have guessed, describing the motion of each and every molecule of fluid would be absurd - there are approximately $10^{21}$ atoms per milliliter of water, with six degrees of freedom each - solving $10^{21}$ coupled equations doesn't sound pleasant, or feasible. Furthermore, even if we ere able to write down this set of equations, finding the initial conditions of the fluid would be impossible (how was molecule \# 19364829008283716 moving at time $t=0$?). \\
-
-Instead, we consider a fictitious "particle" of fluid, large enough so that we can take an average of the externally measurable quantities within (pressure, temperature, velocity, energy, etc.), but small enough so that we can approximately consider all these (averaged) variables as continuous. Perhaps this vagueness bothers you - does such a fluid particle even exist? As an example, let us consider water, with $10^{28}$ atoms per cubic meter. Imagine our fluid particles as cubes filling up space, with sides of length $dl$, giving a total volume of $dl^3$. First, let us make $dl$ small enough that the external variables appear continuous - how about one micron? That gives the volume of a fluid particle as one cubic micrometer. For scale, consider that the reference volume of the human red blood cell ranges from 80-100 cubic micrometers\cite{Fischer1983} - this seems acceptably small. The number of water molecules within each fluid particle is then 
+As a consequence of the Eulerian formulation, we cannot know the full timeline of any individual particle over its lifetime -- we only know the properties of particles within the control volume. As a result, the principle quantity of consideration for the Eulerian formulation is therefore the {velocity field}\footnote{As opposed to particle trajectories $\Vector{x}(t)$ in the Lagrangian formulation.} $\Vector{v}(\Vector{x},t) = v_x(\Vector{x},t) \Vector{\hat{x}} + v_y (\Vector{x},t)\Vector{\hat{y}} + v_z(\Vector{x},t) \Vector{\hat{z}}$, along with the pressure and density fields, which are the average values of the property in a control volume surrounding a point. A subtle issue arises in doing this, however. Since the velocity field is continuous, it has a well defined value at every point in space, which we would want to be associated with the velocity of a particle at that point in space. But there are finite number of particles in any collection of fluid with a finite spatial extent - so it would appear that the formulation assigns multiple different velocities to a single particle! The resolution to this is the continuum hypothesis, which suggests that the control volume (the `{\bf fluid parcel}') can be chosen such that it is large enough to form a meaningful average of the quantities within, but small enough that the properties do not vary significantly over the parcel, and that from a macroscopic perspective, the properties appear continuous. 
+Can such a  parcel even exist? As an example, let us consider water, with approximately $10^{22}$ atoms per cubic centimeter. Imagine our fluid parcels as cubes filling up space, with sides of length $dl$, giving a total volume of $dl^3$. First, let us make $dl$ small enough that the macroscopic properties appear continuous - how about one micron? That gives the volume of a fluid particle as one cubic micrometer. For scale, consider that the volume of the human red blood cell ranges from 80-100 cubic micrometers\cite{Fischer1983} - this seems acceptably small for considering, say, the flow around a ship.\footnote{The validity of the continuum hypothesis is clearly dependent on the density of the fluid and the length scale of the phenomenon to be modelled, but holds up even for the sparse gas clouds of protoplanetary disks} The number of water molecules within each fluid parcel is then 
 \begin{equation}
-10^{28}dl^3 = 10^{28} \times 10^{-15} = 10^{13},
+10^{22}dl^3 = 10^{22} \times 10^{-12} = 10^{10},
 \end{equation}   
 
-or about 10 trillion water molecules, which is certainly sufficient to achieve a meaningful average. Having defined a fluid particle in this way allows us to behave as if these external variables have well defined values at every point in space, which greatly simplifies the following analysis. 
+or about 10 billion water molecules, which is certainly sufficient to achieve a meaningful average. Having defined a fluid parcel in this way allows us to behave as if these external variables have well defined values at every point in space, which greatly simplifies the following analysis. 
 
 \section{Mass Conservation}
 While not technically a part of the Navier-Stokes equation (which is a statement about conservation of linear momentum), conservation of mass is nevertheless essential in solving fluid problems, and will serve as an easy demonstration of the control volume principle. Consider a volume $\Omega$ which is fixed in space, and has some mass density $\rho = \rho(\Vector{x},t)$ and some fluid velocity $\Vector{v} = \Vector{v}(\Vector{x} ,t)$ that are generically functions of time and space, allowing us to define the {\bf mass current density} $\Vector{m} = \Vector{v}\rho$. We would prefer that our equations do not allow mass to disappear (excluding high-energy physics, naturally), and would additionally prefer a mathematical form of this statement. \\
@@ -35,23 +35,18 @@ M_{flow} = \int{d\Omega}{}{\Vector{m}\cdot\Vector{n}}{dA} = \int{\Omega}{}{\Div{
 \end{equation}
 by the divergence theorem .  Now if mass is conserved, the sum of the rate of mass flow into (or out of) the volume and the rate of change of mass inside the volume must be zero, giving
 \begin{equation}
-\pder{1}{M}{t} + M_{flow} = 0,
+\pder{1}{M_{encl}}{t} + M_{flow} = 0,
 \end{equation}
 \begin{equation}
 \pder{1}{}{t}\paren{\int{\Omega}{}{\rho}{dV}} + \int{\Omega}{}{\Div{\paren{\rho\Vector{v}}}}{dV} =0,
 \end{equation}
-but since $V$ is time independent, the time derivative commutes with the integral, giving 
+but since $\Omega$ is time independent, the time derivative commutes with the integral, giving 
 \begin{equation}
 \int{\Omega}{}{\pder{1}{\rho}{t} + \Div{\paren{\rho\Vector{v}}}}{dV} = 0,
 \end{equation}
 but since $\Omega$ is arbitrary, the integrand must be zero everywhere, giving the statement of conservation of mass in differential form:
 \begin{equation}\label{eq:consMassFull}
 \pder{1}{\rho}{t} + \Div{\paren{\rho\Vector{v}} }= 0.
-\end{equation}
-
-Other conservation laws can be written in a similar way; the generic form for a conserved quantity $\Phi$ with density $\phi$ and current $\Vector{\psi}$ is 
-\begin{equation}
-\pder{1}{\phi}{t} + \Div{\paren{\phi\Vector{\psi}}} = 0.
 \end{equation}
 
 Now, \equationref{eq:consMassFull} can be expanded further by using the chain rule for divergence, giving
@@ -63,7 +58,7 @@ If the flow is (approximately) incompressible, which will be true for small Mach
 \begin{equation}\label{eq:consMassIncomp}
 \Div{\Vector{v}} = 0,
 \end{equation}
-for both steady and unsteady flows (Steady, compressible flows would only drop the first term from \equationref{eq:consMassFull}).
+for both steady and unsteady flows.
 
 \section{Conservation of Linear Momentum} 
 
@@ -73,7 +68,7 @@ For a control volume $\Omega$ with boundary $d\Omega$, there are in general thre
 \begin{enumerate}
 \item{Bulk, 'convective' flow across $d\Omega$}
 \item{Surface-normal transfer through elastic collisions between molecules. This is the microscopic origin of pressure.}
-\item{Transfer through stochastic motion of molecules through $d\Omega$, as in \figureref{fig:shear}. Since it is stochastic, time-averaged mass does not change, but momentum can still be transferred. THis leads to viscous stresses, and can be both normal and tangential (shear).}
+\item{Transfer through stochastic motion of molecules through $d\Omega$, as in \figureref{fig:shear}. Since it is stochastic, time-averaged mass does not change, but momentum can still be transferred. This leads to viscous stresses, and can be both normal and tangential (shear).}
 \end{enumerate}
 
 We define positive stress as stress that acts towards the control volume, and negative if they act away. Now, a stress on a fluid volume is not quite a vector, like force. Not only does it have a magnitude and direction, but it also has a plane that it acts from. Since there are three directions and three planes of action, stress objects generally have nine elements, and is a {\bf second rank tensor}. That is, the viscous stress tensor $\Tensor{T}$ is identified by two subscripts, where the first subscript indicates the plane of action, and the second the direction of action. So $\Tensor{T}_{xy}$ would represent the viscous force on the $(y,z)$ plane acting in the $y$ direction. Note than in a Cartesian coordinate system, a second rank tensor can be written as a matrix. 
@@ -83,7 +78,7 @@ Now that we can consider the forces on a fluid particle, we need to link these f
 \begin{equation}
 \Vector{\sigma} = \Tensor{C}\Vector{\epsilon},
 \end{equation}
-where $\Vector{\sigma}$ is the Cauchy stress tensor, $\Tensor{C}$ is the (fourth order) stiffness tensor and $\Vector{\epsilon}$ is the infinitesimal strain tensor. However, for fluids, this is not the case - you can imagine that if you applied a constant force to a cube of water, it would deform continuously, without offering any resistance. Newton theorized that for continuously deformable fluids, the 1-D relationship between stress $\Tensor{T}$ and strain $\Tensor{S}$ should have the following form:
+where $\Vector{\sigma}$ is the Cauchy stress tensor, $\Tensor{C}$ is the (fourth rank) stiffness tensor and $\Vector{\epsilon}$ is the infinitesimal strain tensor. However, for fluids, this is not the case - you can imagine that if you applied a constant force to a cube of water, it would deform continuously, without offering any resistance. Newton theorized that for continuously deformable fluids, the 1-D relationship between stress $\Tensor{T}$ and strain $\Tensor{S}$ should have the following form:
 \begin{equation}
 \mu \der{1}{\Tensor{S}}{t} = \mu \der{1}{u}{x}=\Tensor{T}, 
 \end{equation}
@@ -100,22 +95,23 @@ Having written down the stress tensor $\Tensor{T}$ as a function of the velocity
 \end{equation}
 where $\Vector{n}$ is the surface normal. 
 \subsection{Newton's Second Law}
-Newton's second law can be restated in a more useful form - assuming that mass is conserved,
+For a fluid parcel $\Omega$, Newton's Second Law can be rewritten as
 \begin{equation}
-\sum{}{}{\Vector{F}} = M\Vector{a},
+\sum{}{}{\Vector{F}} = \int{\Omega}{}{
+							\pder{1}{\Vector{p}}{t}}{dV}
 \end{equation}
-where the sum is over all possible external forces. For a fluid particle, we have two kinds of forces - body forces, like gravity or electromagnetism, and surface forces due to stress. We group the body forces $\Vector{F}_b$ as \begin{equation}
+where the sum is over all possible external forces. We can further split $\Vector{F}$ into two kinds of forces - body forces, like gravity or electromagnetism, and surface forces due to stress. We group the body forces $\Vector{F}_b$ as \begin{equation}
 \Vector{F}_b = \int{\Omega}{}{\rho\Vector{f}}{dV},
 \end{equation}
 where $\Vector{f}$ is the {\bf body force density}. Using \equationref{eq:surfaceForce} to express the surface forces, Newton's Second Law becomes
 \begin{equation}
-\int{\Omega}{}{\rho\paren{\Vector{f}-\Vector{a}}}{dV} + \int{d\Omega}{}{\Tensor{T}\cdot\Vector{n}}{dA} = 0,
+\int{\Omega}{}{\rho{\Vector{f}-\pder{1}{\Vector{p}}{t}}}{dV} + \int{d\Omega}{}{\Tensor{T}\cdot\Vector{n}}{dA} = 0,
 \end{equation}
 which can be written in differential form by the same trick used to generate \equationref{eq;consMassFull}, giving Cauchy's Equation of Motion
 \begin{equation}\label{eq:CauchyEOM}
-\rho\paren{\Vector{f}-\Vector{a}} + \Div{\Tensor{T}} = 0.
+\rho{\Vector{f}-\pder{1}{\Vector{p}}{t} } + \Div{\Tensor{T}} = 0.
 \end{equation}
-From this, the Navier-Stokes equation arise by a substitution of \equationref{eq:constitutive} into \equationref{eq:CauchyEOM}, giving (after tedious rearrangement by components),
+From this, the incompressible Navier-Stokes equation arise by a substitution of \equationref{eq:constitutive} into \equationref{eq:CauchyEOM}, giving (after tedious rearrangement by components),
 \begin{equation}\label{eq:NS}
 \pder{1}{\Vector{V}}{t} + \paren{\Vector{V}\cdot\nabla}\Vector{V} = \Vector{f} - \frac{1}{\rho}\Grad{p} + \frac{\mu}{\rho}\nabla^2\Vector{V}
 \end{equation}

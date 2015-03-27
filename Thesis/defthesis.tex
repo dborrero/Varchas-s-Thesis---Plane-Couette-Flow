@@ -1,6 +1,26 @@
 
 %%%% REFERENCES %%%%%
 \newcommand{\rf}     [1] {~\cite{#1}}
+\newif\ifimagesSep
+\newcommand*{\rfs}[1]{%
+  \par\noindent[begin images]\\\relax
+  \imagesSepfalse
+  \imagesScan#1\relax\relax\relax
+  [end images]\par
+}
+\newcommand{\imagesScan}[3]{%
+  \ifx\relax#1\empty
+  \else
+    \ifimagesSep
+      [separation]\\\relax
+    \else
+      \imagesSeptrue
+    \fi
+    [image: #1 #2 #3]\\\relax
+    \expandafter\imagesScan
+  \fi
+}
+
 \newcommand{\refref} [1] {ref.~\cite{#1}}
 \newcommand{\refRef} [1] {Ref.~\cite{#1}}
 \newcommand{\refrefs}[1] {refs.~\cite{#1}}
@@ -28,7 +48,8 @@
 %%%% SYMBOLS %%%%
 \newcommand{\ReN}{\ensuremath{Re}} % Reynolds number
 \newcommand{\pCf}{plane Couette flow} % plane Couette flow
-
+\newcommand{\ecs}{exact coherent structures}
+\newcommand{\Ecs}{Exact coherent structures}
 %%%% ABBREVIATIONS %%%%%
 \newcommand{\etc}{{etc.}}       % APS
 \newcommand{\etal}{{\em et al.}}    % etal in italics, APS too

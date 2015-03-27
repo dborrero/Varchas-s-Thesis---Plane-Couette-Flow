@@ -36,7 +36,7 @@
 \usepackage{chemarr} %% Useful for one reaction arrow, useless if you're not a chem major
 \usepackage[hyphens]{url}
 \usepackage{rotating}
-\usepackage{natbib}
+\usepackage[numbers]{natbib}
 \usepackage{color}
 \usepackage{epigraph}
 \usepackage{tensor}
@@ -51,10 +51,10 @@
 
 \input{defthesis} % Load thesis specific macros
 
-\title{Fall Semester Thesis Draft}
+\title{Symmetry Reduced Exact Coherent Structures in Plane Couette Flow}
 \author{Varchas Gopalaswamy}
 % The month and year that you submit your FINAL draft TO THE LIBRARY (May or December)
-\date{December 2014}
+\date{\today}
 \division{Mathematics and Natural Sciences}
 \advisor{Daniel Borrero}
 %If you have two advisors for some reason, you can use the following
@@ -114,6 +114,7 @@
 
 	\input{NavierStokesSymmetry}
 
+	\input{Numerics}
 	%\input{tablesandgraphics}
 
 	%\input{./Conclusion/conclusion}
@@ -141,8 +142,9 @@
 %  \bibliographystyle{plainnat}
 % replace ``plainnat'' with the style of choice. You can refer to files in the bsts or APA 
 % subfolder, e.g. 
- \bibliographystyle{APA/apa-good}  % or
- \bibliography{thesis}
+% \bibliographystyle{bsts/ScienceReedWeb}  % or
+\bibliographystyle{apalike} 
+\bibliography{thesis}
  % Comment the above two lines and uncomment the next line to use biblatex-chicago.
  %\printbibliography[heading=bibintoc]
 
