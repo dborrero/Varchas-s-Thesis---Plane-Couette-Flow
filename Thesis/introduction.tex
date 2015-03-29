@@ -29,7 +29,7 @@ The second, more complex transition is the subcritical transition. In the subcri
 
 \section{Plane Couette Flow} 
 
-The geometry of the full plane Couette system is extremely simple, with only one geometrical parameter $h$, the half-distance between the parallel plates, and one kinematic parameter $V$, the velocity of the upper plate\footnote{While in principle the upper and lower plate can have different velocities, there should always be a reference frame in which the upper plate has velocity $V$, and the lower plate is at rest.}, giving the Reynolds number as 
+The geometry of the full plane Couette system is extremely simple, with only one geometrical parameter $h$, the half-distance between the parallel plates, and one kinematic parameter $V$, the velocity of the upper plate\footnote{While in principle the upper and lower plate can have different velocities, there should always be a reference frame in which the upper plate has velocity $V$, and the lower plate has velocity $-V$.}, giving the Reynolds number as 
 \begin{equation}
 \ReN = \frac{hV}{\nu},
 \end{equation}
@@ -62,3 +62,8 @@ barred". It would take until 1963 and the derivation of the Lorenz attractor for
 \end{figure}
 
 While there has been a great deal of progess in this field, much of it has been computational, though experiments by Hof and de Lozar are at present the only direct experimental verifications for the existence of \ecs~in nature. However, indirect results, such as the resemblence of the upper branch solution to the roll-streak structure seen in DNS\rf{Gibson2008}, and the potential role of the stable manifold of the lower branch solution in separating the turbulent and laminar basins of attraction suggest that \ecs likely play a fundamental role in the behavior and evolution of turbulent flow states. Advances in computing power, along with the development of CFD algorithms such as Channelflow\rf{Gibson2014} have also made the computation of these structures generally feasible, and allow for the investigation of reduced symmetry \ecs. In order to computute the orginal \ecs, substantial symmetry constraints were placed upon the dynamics. This had the benefit of greatly reduced computational complexity, but resulted in \ecs~that flanked the turbulent basin of attraction. While these structures can provide insight into turbulent transitions, they cannot provide a great deal of insight into trajectories within the turbulent basin. 
+\begin{figure}
+\centerline{
+\includegraphics[scale=0.4]{Figs/stateSpace}}
+\caption{A 2D projection of the upper, lower and newbie branch solutions.The area in between the UB and LB solutions and their symmetric translations is the area of interest.  Adapted from\rf{Gibson2008}}\label{fig:UBLBStateSpace}
+\end{figure}

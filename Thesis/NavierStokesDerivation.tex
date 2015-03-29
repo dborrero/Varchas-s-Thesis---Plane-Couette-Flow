@@ -49,12 +49,12 @@ but since $\Omega$ is arbitrary, the integrand must be zero everywhere, giving t
 \pder{1}{\rho}{t} + \Div{\paren{\rho\Vector{v}} }= 0.
 \end{equation}
 
-Now, \equationref{eq:consMassFull} can be expanded further by using the chain rule for divergence, giving
+Now, \refeq{eq:consMassFull} can be expanded further by using the chain rule for divergence, giving
 \begin{equation}\label{eq:expandedMass}
 \pder{1}{\rho}{t} + \rho\Div{\Vector{v}} + \Vector{v}\Grad{\rho}=0.
 \end{equation}
 
-If the flow is (approximately) incompressible, which will be true for small Mach numbers\footnote{The Mach number is the ratio of the fluid velocity to the speed of sound in the fluid. $v_{sound}$ for water is 1497 ms$^{-1}$ at room temperature and pressure.}, then $\rho$ must be constant, and \equationref{eq:expandedMass} becomes 
+If the flow is (approximately) incompressible, which will be true for small Mach numbers\footnote{The Mach number is the ratio of the fluid velocity to the speed of sound in the fluid. $v_{sound}$ for water is 1497 ms$^{-1}$ at room temperature and pressure.}, then $\rho$ must be constant, and \refeq{eq:expandedMass} becomes 
 \begin{equation}\label{eq:consMassIncomp}
 \Div{\Vector{v}} = 0,
 \end{equation}
@@ -62,16 +62,10 @@ for both steady and unsteady flows.
 
 \section{Conservation of Linear Momentum} 
 
-As mentioned earlier, the Navier-Stokes equations are simply a statement of conservation of linear momentum, along with certain assumptions about stress (an object that contains information about forces) and strain (an object that contains information about deformation), which are presented below. 
+As mentioned earlier, the Navier-Stokes equations are simply a statement of conservation of linear momentum, along with certain assumptions about stress  and strain, which are presented below. 
 \subsection{Stress}
-For a control volume $\Omega$ with boundary $d\Omega$, there are in general three ways in which momentum can be change over time in $\Omega$ by transport through $d\Omega$ (i.e., forces on $d\Omega$): 
-\begin{enumerate}
-\item{Bulk, 'convective' flow across $d\Omega$}
-\item{Surface-normal transfer through elastic collisions between molecules. This is the microscopic origin of pressure.}
-\item{Transfer through stochastic motion of molecules through $d\Omega$, as in \figureref{fig:shear}. Since it is stochastic, time-averaged mass does not change, but momentum can still be transferred. This leads to viscous stresses, and can be both normal and tangential (shear).}
-\end{enumerate}
 
-We define positive stress as stress that acts towards the control volume, and negative if they act away. Now, a stress on a fluid volume is not quite a vector, like force. Not only does it have a magnitude and direction, but it also has a plane that it acts from. Since there are three directions and three planes of action, stress objects generally have nine elements, and is a {\bf second rank tensor}. That is, the viscous stress tensor $\Tensor{T}$ is identified by two subscripts, where the first subscript indicates the plane of action, and the second the direction of action. So $\Tensor{T}_{xy}$ would represent the viscous force on the $(y,z)$ plane acting in the $y$ direction. Note than in a Cartesian coordinate system, a second rank tensor can be written as a matrix. 
+Stress contains information about the forces on an object. As with force, we define positive stress as stress that acts towards the control volume, and negative if they act away. Unlike force, stress objects are not vectors. Not only do they have a magnitude and direction, but they also have a plane that they act from. Since there are three directions and three planes of action, stress objects generally have nine elements, and are {\bf second rank tensors}. For example, the viscous stress tensor $\Tensor{T}$ is identified by two subscripts, where the first subscript indicates the plane of action, and the second the direction of action. So $\Tensor{T}_{xy}$ would represent the viscous force on the $(y,z)$ plane acting in the $y$ direction. Note than in a Cartesian coordinate system, a second rank tensor can be written as a matrix. 
 
 \subsection{Strain}
 Now that we can consider the forces on a fluid particle, we need to link these forces back to our external variables. In solids, this is easy - Hooke's Law, for instance, sets the strain proportional to the stress:
@@ -103,52 +97,57 @@ For a fluid parcel $\Omega$, Newton's Second Law can be rewritten as
 where the sum is over all possible external forces. We can further split $\Vector{F}$ into two kinds of forces - body forces, like gravity or electromagnetism, and surface forces due to stress. We group the body forces $\Vector{F}_b$ as \begin{equation}
 \Vector{F}_b = \int{\Omega}{}{\rho\Vector{f}}{dV},
 \end{equation}
-where $\Vector{f}$ is the {\bf body force density}. Using \equationref{eq:surfaceForce} to express the surface forces, Newton's Second Law becomes
+where $\Vector{f}$ is the {\bf body force density}. Using \refeq{eq:surfaceForce} to express the surface forces, Newton's Second Law becomes
 \begin{equation}
 \int{\Omega}{}{\rho{\Vector{f}-\pder{1}{\Vector{p}}{t}}}{dV} + \int{d\Omega}{}{\Tensor{T}\cdot\Vector{n}}{dA} = 0,
 \end{equation}
-which can be written in differential form by the same trick used to generate \equationref{eq;consMassFull}, giving Cauchy's Equation of Motion
+which can be written in differential form by the same trick used to generate \refeq{eq:consMassFull}, giving Cauchy's Equation of Motion
 \begin{equation}\label{eq:CauchyEOM}
 \rho{\Vector{f}-\pder{1}{\Vector{p}}{t} } + \Div{\Tensor{T}} = 0.
 \end{equation}
-From this, the incompressible Navier-Stokes equation arise by a substitution of \equationref{eq:constitutive} into \equationref{eq:CauchyEOM}, giving (after tedious rearrangement by components),
+From this, the incompressible Navier-Stokes equation arise by a substitution of \refeq{eq:constitutive} into \refeq{eq:CauchyEOM}, giving (after tedious rearrangement by components),
 \begin{equation}\label{eq:NS}
-\pder{1}{\Vector{V}}{t} + \paren{\Vector{V}\cdot\nabla}\Vector{V} = \Vector{f} - \frac{1}{\rho}\Grad{p} + \frac{\mu}{\rho}\nabla^2\Vector{V}
+\pder{1}{\Vector{V}}{t} + \paren{\Vector{V}\cdot\nabla}\Vector{V} = \Vector{f} - \frac{1}{\rho}\Grad{p} + \frac{\mu}{\rho}\nabla^2\Vector{V}.
 \end{equation}
 
+By using the substitutions
+\begin{align}
+\Vector{x} &\Rightarrow L\Vector{s}\\
+\Vector{V} &\Rightarrow U\Vector{u}\\
+t &\Rightarrow \frac{L}{U}\tau\\
+p &\Rightarrow \rho U^2p',
+\end{align}
+and neglecting body forces, we obtain the nondimensional version of \refeq{eq:NS} --
+\begin{equation}\label{eq:NSND}
+\pder{1}{\Vector{u}}{\tau} + \paren{\Vector{u}\cdot\nabla}\Vector{u} = -\Grad{p'} + \frac{1}{\ReN}\nabla^2\Vector{u},
+\end{equation}
+where \begin{equation}\label{eq:ReN}\ReN= \frac{UL\rho}{\mu}.\end{equation}. In practice, the values of $L$ and $U$ are chosen by convention to reflect the natural scales of the problem at hand.
+ 
 \section{Plane Couette Flow}
-\subsection{The Laminar Version}
-While \equationref{eq:NS} is always correct (for Newtonian fluids), it is not always useful. \equationref{eq:NS} is highly nonlinear, and difficult to solve analytically, outside of highly idealized scenarios\footnote{In fact, there is no proof that there are smooth solutions for all initial conditions to the Navier-Stokes equation}. These idealized scenarios, however, can be useful as an approximate model to real phenomena. We have already made such an approximation in deriving \equationref{eq:NS}, when we assumed that the fluid was incompressible. \\
-
-One such idealized flow is called {\bf \pCf}, and is the focus of this thesis. In \pCf, we model the (steady) incompressible flow between two infinite parallel plates, situated at $y = \pm h$, which can move in their own plane with some constant velocity. We can simplify the analysis by moving into the inertial reference frame of one of the plates, and re-orienting the axis so that one of the plates (say, the lower) is at rest, and the upper plate moves with a constant velocity along one coordinate axis (the 'streamwise' x-axis), with the y-axis as the 'wall-normal' coordinate, and the z-axis as the 'spanwise' coordinate. We then assume that the flow is purely streamwise (that is, $\Vector{V} = u(x,y,z)\Vector{\hat{x}}$), and that there are no pressure gradients in the fluid. Then, by symmetry, $u(x,y,z) = u(y)$, which reduces the Navier-Stokes equations to 
+The Navier-Stokes equation for plane Couette flow is given by 
+\begin{equation}\label{eq:NSPCF}
+\pder{1}{\Vector{u}}{\tau} + \paren{\Vector{u}\cdot\nabla}\Vector{u} = \frac{1}{\ReN}\nabla^2\Vector{u},
+\end{equation}
+with geometry as pictured in \refFig{fig:planeCouette}. We nondimensionalize by the velocity of either plate and the half-plate distance, with the Reynolds number then defined as in \refeq{eq:ReN}. Since \pCf is a shear driven flow, we set the pressure gradient to zero, with no slip boundary conditions at the walls. In order to derive the laminar velocity profile shown earlier in \refFig{fig:planeCouetteBulk}, note that at very low \ReN, the left hand side of \refeq{eq:NSPCF} dominates. If we assume that the flow is unidirectional and steady, so that $\Vector{u} = u_x \Vector{\hat{x}}$, and since by symmetry considerations the velocity field can only be a function of height, the Navier-Stokes equation reduces to 
 \begin{equation}
-\pder{2}{u}{y} = 0,
+\pder{2}{u_x}{y} = 0,
 \end{equation}
 with no-slip boundary conditions 
 \begin{align}
-u(0) &= 0,\\
-u(h) &= V_h,
+u(-1) &= -1,\\
+u(1) &= 1,
 \end{align}
-which gives the laminar flow profile 
+which gives the linear laminar flow profile 
 \begin{equation}
-u(y) = V_h\frac{y}{h}.
+\Vector{u}(y) = y\Vector{\hat{x}}.
 \end{equation}
-Consider then a small, potentially unsteady perturbation $\Vector{v}(x,y,z,t)$ from this laminar state, so that the initial field is $\Vector{u}(x,y,z,t) = \Vector{v} (x,y,z,t)+ y\Vector{\hat{x}}$. Does this perturbation grow? Does it shrink? Does it oscillate periodically, or does it veer off chaotically? How can we characterize the state space of $\Vector{v}$? This is the principle question of the work that this thesis is a part of. \\
-
-\subsection{Non-Dimensionalization} 
-We are almost ready to model the system, but we must first address scale-invariance. The problem is as follows - there are currently 3 parameters in the model: the plate velocity $V_h$, the plate separation $2h$, and the viscosity $\nu = \frac{\mu}{\rho}$. Suppose we were to try to experimentally verify the results of a computational survey, but had to use a different plate velocity due to physical constraints - how could we be sure that the results of the experiment would correctly match the computational survey? The answer is that we non-dimensionalize all the dynamical variables using our parameters as a typical scale. If we do this, we find that our parameters have also shrunk, and we are left with just one - the Reynolds number 
-\begin{equation}
-\ReN = \frac{V_h h}{\nu}.
-\end{equation}
-
-\subsection{Turbulent Perturbations}
-Using the perturbed, unsteady velocity field $\Vector{u}(x,y,z,t) = \Vector{v} (x,y,z,t)+ y\Vector{\hat{x}}$ in the non-dimensionalized \equationref{eq:NS}, we get 
+Consider then a perturbation $\Vector{v}(x,y,z,t)$ from this laminar state, so that the initial field is $\Vector{u}(x,y,z,t) = \Vector{v} (x,y,z,t)+ y\Vector{\hat{x}}$. Substituting this into \refeq{eq:NSND}, we get 
 \begin{align}
-\pder{1}{\Vector{v}}{t} + y\pder{1}{\Vector{v}}{x} + v\Vector{\hat{x}} + \Vector{v}\cdot\Grad{\Vector{v}} &= -\Grad{p} + \frac{1}{\ReN} \nabla^2\Vector{v},\\
+\pder{1}{\Vector{v}}{\tau} + y\pder{1}{\Vector{v}}{x} + v\Vector{\hat{x}} + \Vector{v}\cdot\Grad{\Vector{v}} &= \frac{1}{\ReN} \nabla^2\Vector{v},\label{eq:PertND}\\
 \Div{\Vector{v}} &= 0,
 \end{align}
 with boundary conditions 
 \begin{equation}
-\Vector{v}(x,\pm 1,z,t) = 0.
+\Vector{v}(x,\pm 1,z,t) = 0
 \end{equation}
-A note on nomenclature - I will refer to the unsteady perturbation as the 'velocity', and the full velocity as the 'total velocity' in the interests of brevity. 
+ as the equation of motion for the perturbing velocity field. Since the laminar profile is steady, understanding the turbulent field's trajectory in state space now reduces to understanding the behavior of the turbulent perturbation, and the structure of its inertial manifold. 
