@@ -1,0 +1,9 @@
+\contentsline {figure}{\numberline {1}{\ignorespaces Representations of cylinder wakes at various \ensuremath {Re}. Notice that the flow goes from laminar in (a) to turbulent in (c), with two prominent vorticies. Reproduced from the Feynman Lectures on Physics, Chapter 41.}}{2}
+\contentsline {figure}{\numberline {2}{\ignorespaces A diagram of the plane Couette geometry. The upper and lower plates extend infinitely in the plane, as does the fluid filling the gap.}}{3}
+\contentsline {figure}{\numberline {3}{\ignorespaces A cross-sectional representation of plane Couette flow, with the laminar velocity profile shown. By symmetry, the laminar profile must be the same everywhere.}}{3}
+\contentsline {figure}{\numberline {4}{\ignorespaces At each point in the fluid volume, the velocity field has a value that is described by three numbers, thus requiring three dimensions to track over time.}}{4}
+\contentsline {figure}{\numberline {5}{\ignorespaces A 2D projection of the upper, lower and newbie branch solutions and trajectories resulting from slight perturbations off the equilibria.The area in between the UB and LB solutions and their symmetric translations is the area of interest. Red and green trajectories remain turbulent for the duration of the simulation, while black trajectories rapidly relaminarize. Adapted from\nobreakspace {}\cite {Gibson2008}.}}{5}
+\contentsline {figure}{\numberline {6}{\ignorespaces A turbulent trajectory in black appears chaotic in isolation, but is in fact guided by exact coherent structures\nobreakspace {}of the flow.}}{7}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\addvspace {10\p@ }

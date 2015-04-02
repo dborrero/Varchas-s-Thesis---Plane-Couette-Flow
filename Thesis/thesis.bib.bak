@@ -2,6 +2,34 @@
 % Encoding: UTF-8
 
 
+@Article{Aubry1988,
+  Title                    = {The dynamics of coherent structures in the wall region of a turbulent boundary layer},
+  Author                   = {Aubry,Nadine and Holmes,Philip and Lumley,John L. and Stone,Emily},
+  Journal                  = {Journal of Fluid Mechanics},
+  Year                     = {1988},
+
+  Month                    = {7},
+  Pages                    = {115--173},
+  Volume                   = {192},
+
+  Doi                      = {10.1017/S0022112088001818},
+  ISSN                     = {1469-7645},
+  Numpages                 = {59},
+  Url                      = {http://journals.cambridge.org/article_S0022112088001818}
+}
+
+@Article{Dauchot2000,
+  Title                    = {Phase space analysis of a dynamical model for the subcritical transition to turbulence in plane Couette flow},
+  Author                   = {Dauchot, O and Vioujard, N},
+  Journal                  = {The European Physical Journal B-Condensed Matter and Complex Systems},
+  Year                     = {2000},
+  Number                   = {2},
+  Pages                    = {377--381},
+  Volume                   = {14},
+
+  Publisher                = {Springer}
+}
+
 @Article{Daviaud1992,
   Title                    = {Subcritical transition to turbulence in plane Couette flow},
   Author                   = {Daviaud, F. and Hegseth, J. and Berg\'e, P.},
@@ -180,6 +208,14 @@
   Volume                   = {217},
 
   Publisher                = {Cambridge Univ Press}
+}
+
+@Book{Peyret2002,
+  Title                    = {Spectral methods for incompressible viscous flow},
+  Author                   = {Peyret, Roger},
+  Publisher                = {Springer Science \& Business Media},
+  Year                     = {2002},
+  Volume                   = {148}
 }
 
 @Book{Pope2000,

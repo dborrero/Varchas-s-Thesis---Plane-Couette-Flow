@@ -1,0 +1,24 @@
+\contentsline {chapter}{Introduction}{1}
+\contentsline {section}{Transitions to and from Turbulence}{1}
+\contentsline {section}{Plane Couette Flow}{3}
+\contentsline {section}{Tackling Turbulence}{3}
+\contentsline {chapter}{Chapter 1: Equations of Flow}{9}
+\contentsline {section}{\numberline {1.1}Formalisms}{9}
+\contentsline {subsection}{\numberline {1.1.1}The Eulerian Formulation}{9}
+\contentsline {subsection}{\numberline {1.1.2}The Fluid Particle}{10}
+\contentsline {section}{\numberline {1.2}Mass Conservation}{11}
+\contentsline {section}{\numberline {1.3}Conservation of Linear Momentum}{12}
+\contentsline {subsection}{\numberline {1.3.1}Stress}{12}
+\contentsline {subsection}{\numberline {1.3.2}Strain}{12}
+\contentsline {subsection}{\numberline {1.3.3}Surface Forces}{13}
+\contentsline {subsection}{\numberline {1.3.4}Newton's Second Law}{13}
+\contentsline {section}{\numberline {1.4}Plane Couette Flow}{14}
+\contentsline {chapter}{Chapter 2: Symmetry in plane Couette flow}{17}
+\contentsline {section}{\numberline {2.1}Unbounded Navier-Stokes}{17}
+\contentsline {section}{\numberline {2.2}Plane Couette Flow}{18}
+\contentsline {section}{\numberline {2.3}Properties of $\Gamma $}{18}
+\contentsline {section}{\numberline {2.4}Symmetry Groups of this Thesis}{20}
+\contentsline {chapter}{Chapter 3: Numerics and Workflow}{21}
+\contentsline {section}{\numberline {3.1}The Spectral Method}{21}
+\contentsline {subsection}{\numberline {3.1.1}The Residual}{21}
+\contentsline {chapter}{References}{25}

@@ -68,7 +68,7 @@ As mentioned earlier, the Navier-Stokes equations are simply a statement of cons
 Stress contains information about the forces on an object. As with force, we define positive stress as stress that acts towards the control volume, and negative if they act away. Unlike force, stress objects are not vectors. Not only do they have a magnitude and direction, but they also have a plane that they act from. Since there are three directions and three planes of action, stress objects generally have nine elements, and are {\bf second rank tensors}. For example, the viscous stress tensor $\Tensor{T}$ is identified by two subscripts, where the first subscript indicates the plane of action, and the second the direction of action. So $\Tensor{T}_{xy}$ would represent the viscous force on the $(y,z)$ plane acting in the $y$ direction. Note than in a Cartesian coordinate system, a second rank tensor can be written as a matrix. 
 
 \subsection{Strain}
-Now that we can consider the forces on a fluid particle, we need to link these forces back to our external variables. In solids, this is easy - Hooke's Law, for instance, sets the strain proportional to the stress:
+Now that we can consider the forces on a fluid particle, we need to link these forces back to our external variables. In solids, this is easy - Hooke's Law for elastic substances, for instance, sets the strain proportional to the stress:
 \begin{equation}
 \Vector{\sigma} = \Tensor{C}\Vector{\epsilon},
 \end{equation}
@@ -147,7 +147,9 @@ Consider then a perturbation $\Vector{v}(x,y,z,t)$ from this laminar state, so t
 \Div{\Vector{v}} &= 0,
 \end{align}
 with boundary conditions 
-\begin{equation}
-\Vector{v}(x,\pm 1,z,t) = 0
-\end{equation}
- as the equation of motion for the perturbing velocity field. Since the laminar profile is steady, understanding the turbulent field's trajectory in state space now reduces to understanding the behavior of the turbulent perturbation, and the structure of its inertial manifold. 
+\begin{align}
+\Vector{v}(x,\pm 1,z,t) = 0\\
+\Vector{v}(x,y,z,t) = \Vector{v}(x+L_x,y,z,t)\label{eq:periodicBCx}\\
+\Vector{v}(x,y,z,t) = \Vector{v}(x,y,z+L_z,t)\label{eq:periodicBCz}
+\end{align}
+ as the equation of motion for the perturbing velocity field.  \refeq{eq:periodicBCx} and \refeq{eq:periodicBCz} are boundary conditions that are imposed in order to make the problem computationally tractable, since a truly infinite domain cannot be simulated computationally. Since the laminar profile is steady, understanding the turbulent field's trajectory in state space now reduces to understanding the behavior of the turbulent perturbation, and the structure of its inertial manifold. 

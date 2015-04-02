@@ -6,6 +6,18 @@ Aubry, N., Holmes, P., Lumley, J.~L., and Stone, E. (1988).
   boundary layer.
 \newblock {\em Journal of Fluid Mechanics}, 192:115--173.
 
+\bibitem[Bottin and Chat{\'e}, 1998]{Bottin1998}
+Bottin, S. and Chat{\'e}, H. (1998).
+\newblock Statistical analysis of the transition to turbulence in plane couette
+  flow.
+\newblock {\em The European Physical Journal B-Condensed Matter and Complex
+  Systems}, 6(1):143--155.
+
+\bibitem[Brosa, 1989]{Brosa1989}
+Brosa, U. (1989).
+\newblock Turbulence without strange attractor.
+\newblock {\em Journal of Statistical Physics}, 55(5-6):1303--1312.
+
 \bibitem[Dauchot and Vioujard, 2000]{Dauchot2000}
 Dauchot, O. and Vioujard, N. (2000).
 \newblock Phase space analysis of a dynamical model for the subcritical
@@ -51,6 +63,12 @@ Gibson, J.~F., Halcrow, J., and Cvitanovic, P. (2009).
 \newblock Equilibrium and travelling-wave solutions of plane couette flow.
 \newblock {\em Journal of Fluid Mechanics}, 638:243--266.
 
+\bibitem[Hof et~al., 2008]{Hof2008}
+Hof, B., de~Lozar, A., Kuik, D.~J., and Westerweel, J. (2008).
+\newblock Repeller or attractor? selecting the dynamical model for the onset of
+  turbulence in pipe flow.
+\newblock {\em Phys. Rev. Lett.}, 101:214501.
+
 \bibitem[Hopf, 1948]{Hopf1948}
 Hopf, E. (1948).
 \newblock A mathematical example displaying features of turbulence.
@@ -91,6 +109,11 @@ Nagata, M. (1990).
 \newblock Three-dimensional finite-amplitude solutions in plane couette flow:
   bifurcation from infinity.
 \newblock {\em J. Fluid Mech.}, 217:519--527.
+
+\bibitem[Peyret, 2002]{Peyret2002}
+Peyret, R. (2002).
+\newblock {\em Spectral methods for incompressible viscous flow}, volume 148.
+\newblock Springer Science \& Business Media.
 
 \bibitem[Pope, 2000]{Pope2000}
 Pope, S. (2000).
