@@ -1,133 +1,128 @@
-\begin{thebibliography}{}
+\begin{thebibliography}{10}
 
-\bibitem[Aubry et~al., 1988]{Aubry1988}
-Aubry, N., Holmes, P., Lumley, J.~L., and Stone, E. (1988).
-\newblock The dynamics of coherent structures in the wall region of a turbulent
-  boundary layer.
-\newblock {\em Journal of Fluid Mechanics}, 192:115--173.
+\bibitem{Taneda1956}
+S.~Taneda, ``Experimental investigation of the wake behind a sphere at low
+  reynolds numbers,'' {\em Journal of the Physical Society of Japan}, vol.~11,
+  no.~10, pp.~1104--1108, 1956.
 
-\bibitem[Bottin and Chat{\'e}, 1998]{Bottin1998}
-Bottin, S. and Chat{\'e}, H. (1998).
-\newblock Statistical analysis of the transition to turbulence in plane couette
-  flow.
-\newblock {\em The European Physical Journal B-Condensed Matter and Complex
-  Systems}, 6(1):143--155.
+\bibitem{Eckhardt2008}
+B.~Eckhardt, H.~Faisst, A.~Schmiegel, and T.~M. Schneider, ``Dynamical systems
+  and the transition to turbulence in linearly stable shear flows,'' {\em
+  Philosophical Transactions of the Royal Society of London A: Mathematical,
+  Physical and Engineering Sciences}, vol.~366, no.~1868, pp.~1297--1315, 2008.
 
-\bibitem[Brosa, 1989]{Brosa1989}
-Brosa, U. (1989).
-\newblock Turbulence without strange attractor.
-\newblock {\em Journal of Statistical Physics}, 55(5-6):1303--1312.
+\bibitem{Manneville2015}
+P.~{Manneville}, ``{On the transition to turbulence of wall-bounded flows in
+  general, and plane Couette flow in particular},'' {\em European Journal of
+  Mechanics B Fluids}, vol.~49, pp.~345--362, Jan. 2015.
 
-\bibitem[Dauchot and Vioujard, 2000]{Dauchot2000}
-Dauchot, O. and Vioujard, N. (2000).
-\newblock Phase space analysis of a dynamical model for the subcritical
-  transition to turbulence in plane couette flow.
-\newblock {\em The European Physical Journal B-Condensed Matter and Complex
-  Systems}, 14(2):377--381.
+\bibitem{Brosa1989}
+U.~Brosa, ``Turbulence without strange attractor,'' {\em Journal of Statistical
+  Physics}, vol.~55, no.~5-6, pp.~1303--1312, 1989.
 
-\bibitem[Daviaud et~al., 1992]{Daviaud1992}
-Daviaud, F., Hegseth, J., and Berg\'e, P. (1992).
-\newblock Subcritical transition to turbulence in plane couette flow.
-\newblock {\em Phys. Rev. Lett.}, 69:2511--2514.
+\bibitem{Hof2008}
+B.~Hof, A.~de~Lozar, D.~J. Kuik, and J.~Westerweel, ``Repeller or attractor?
+  selecting the dynamical model for the onset of turbulence in pipe flow,''
+  {\em Phys. Rev. Lett.}, vol.~101, p.~214501, Nov 2008.
 
-\bibitem[Eckhardt et~al., 2008]{Eckhardt2008}
-Eckhardt, B., Faisst, H., Schmiegel, A., and Schneider, T.~M. (2008).
-\newblock Dynamical systems and the transition to turbulence in linearly stable
-  shear flows.
-\newblock {\em Philosophical Transactions of the Royal Society of London A:
-  Mathematical, Physical and Engineering Sciences}, 366(1868):1297--1315.
+\bibitem{Bottin1998}
+S.~Bottin and H.~Chat{\'e}, ``Statistical analysis of the transition to
+  turbulence in plane couette flow,'' {\em The European Physical Journal
+  B-Condensed Matter and Complex Systems}, vol.~6, no.~1, pp.~143--155, 1998.
 
-\bibitem[Fischer and Fischer, 1983]{Fischer1983}
-Fischer, S.~L. and Fischer, S.~P. (1983).
-\newblock Mean corpuscular volume.
-\newblock {\em Archives of Internal Medicine}, 143(2):282--283.
+\bibitem{Daviaud1992}
+F.~Daviaud, J.~Hegseth, and P.~Berg\'e, ``Subcritical transition to turbulence
+  in plane couette flow,'' {\em Phys. Rev. Lett.}, vol.~69, pp.~2511--2514,
+  Oct. 1992.
 
-\bibitem[Foias et~al., 1988]{Foias1988}
-Foias, C., Sell, G.~R., and Temam, R. (1988).
-\newblock Inertial manifolds for nonlinear evolutionary equations.
-\newblock {\em Journal of Differential Equations}, 73(2):309--353.
+\bibitem{Pope2000}
+S.~Pope, {\em Turbulent Flows}.
+\newblock Cambridge University Press, 2000.
 
-\bibitem[Gibson, 2014]{Gibson2014}
-Gibson, J.~F. (2014).
-\newblock {Channelflow}: {A} spectral {Navier-Stokes} simulator in {C}++.
-\newblock Technical report, U. New Hampshire.
+\bibitem{Hopf1948}
+E.~Hopf, ``A mathematical example displaying features of turbulence,'' {\em
+  Commun. Pure Appl. Math.}, vol.~1, no.~4, pp.~303--322, 1948.
+
+\bibitem{Foias1988}
+C.~Foias, G.~R. Sell, and R.~Temam, ``Inertial manifolds for nonlinear
+  evolutionary equations,'' {\em Journal of Differential Equations}, vol.~73,
+  no.~2, pp.~309--353, 1988.
+
+\bibitem{Grassberger2004}
+P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
+  attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
+  Springer, 2004.
+
+\bibitem{Lorenz1963}
+E.~N. Lorenz, ``Deterministic nonperiodic flow,'' {\em Journal of the
+  atmospheric sciences}, vol.~20, no.~2, pp.~130--141, 1963.
+
+\bibitem{Aubry1988}
+N.~Aubry, P.~Holmes, J.~L. Lumley, and E.~Stone, ``The dynamics of coherent
+  structures in the wall region of a turbulent boundary layer,'' {\em Journal
+  of Fluid Mechanics}, vol.~192, pp.~115--173, 7 1988.
+
+\bibitem{Dauchot2000}
+O.~Dauchot and N.~Vioujard, ``Phase space analysis of a dynamical model for the
+  subcritical transition to turbulence in plane couette flow,'' {\em The
+  European Physical Journal B-Condensed Matter and Complex Systems}, vol.~14,
+  no.~2, pp.~377--381, 2000.
+
+\bibitem{Nagata1990}
+M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane couette
+  flow: bifurcation from infinity,'' {\em J. Fluid Mech.}, vol.~217,
+  pp.~519--527, 1990.
+
+\bibitem{Waleffe2001}
+F.~Waleffe, ``Exact coherent structures in channel flow,'' {\em Journal of
+  Fluid Mechanics}, vol.~435, pp.~93--102, 5 2001.
+
+\bibitem{Kawahara2001}
+G.~Kawahara and S.~Kida, ``Periodic motion embedded in plane couette
+  turbulence: regeneration cycle and burst,'' {\em J. Fluid Mech.}, vol.~449,
+  pp.~291--300, 2001.
+
+\bibitem{Viswanath2007}
+D.~Viswanath, ``Recurrent motions within plane couette turbulence,'' {\em J.
+  Fluid Mech.}, vol.~580, pp.~339--358, 2007.
+
+\bibitem{Gibson2008}
+J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
+  state space in plane couette flow,'' {\em Journal of Fluid Mechanics},
+  vol.~611, pp.~107--130, 2008.
+
+\bibitem{Gibson2014}
+J.~F. Gibson, ``{Channelflow}: {A} spectral {Navier-Stokes} simulator in
+  {C}++,'' tech. rep., U. New Hampshire, 2014.
 \newblock {\tt {Channelflow.org}}.
 
-\bibitem[Gibson et~al., 2008]{Gibson2008}
-Gibson, J.~F., Halcrow, J., and Cvitanovi{\'c}, P. (2008).
-\newblock Visualizing the geometry of state space in plane couette flow.
-\newblock {\em Journal of Fluid Mechanics}, 611:107--130.
+\bibitem{Fischer1983}
+S.~L. Fischer and S.~P. Fischer, ``Mean corpuscular volume,'' {\em Archives of
+  Internal Medicine}, vol.~143, no.~2, pp.~282--283, 1983.
 
-\bibitem[Gibson et~al., 2009]{GIBSON2009}
-Gibson, J.~F., Halcrow, J., and Cvitanovic, P. (2009).
-\newblock Equilibrium and travelling-wave solutions of plane couette flow.
-\newblock {\em Journal of Fluid Mechanics}, 638:243--266.
+\bibitem{GIBSON2009}
+J.~F. Gibson, J.~Halcrow, and P.~Cvitanovic, ``Equilibrium and travelling-wave
+  solutions of plane couette flow,'' {\em Journal of Fluid Mechanics},
+  vol.~638, pp.~243--266, Nov. 2009.
 
-\bibitem[Hof et~al., 2008]{Hof2008}
-Hof, B., de~Lozar, A., Kuik, D.~J., and Westerweel, J. (2008).
-\newblock Repeller or attractor? selecting the dynamical model for the onset of
-  turbulence in pipe flow.
-\newblock {\em Phys. Rev. Lett.}, 101:214501.
+\bibitem{Gusyatnikova1989}
+V.~Gusyatnikova and V.~Yumaguzhin, ``Symmetries and conservation laws of
+  navier—stokes equations,'' in {\em Symmetries of Partial Differential
+  Equations}, pp.~65--81, Springer, 1989.
 
-\bibitem[Hopf, 1948]{Hopf1948}
-Hopf, E. (1948).
-\newblock A mathematical example displaying features of turbulence.
-\newblock {\em Commun. Pure Appl. Math.}, 1(4):303--322.
+\bibitem{Peyret2002}
+R.~Peyret, {\em Spectral methods for incompressible viscous flow}, vol.~148.
+\newblock Springer Science \& Business Media, 2002.
 
-\bibitem[Karman, 1930]{Karman1930}
-Karman, T.~v. (1930).
-\newblock Mechanische aenlichkeit und turbulenz.
-\newblock {\em Nachrichten von der Gesellschaft der Wissenschaften zu
-  Göttingen, Mathematisch-Physikalische Klasse}, 1930:58--76.
+\bibitem{Karman1930}
+T.~v. Karman, ``Mechanische aenlichkeit und turbulenz,'' {\em Nachrichten von
+  der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische
+  Klasse}, vol.~1930, pp.~58--76, 1930.
 
-\bibitem[Kawahara and Kida, 2001]{Kawahara2001}
-Kawahara, G. and Kida, S. (2001).
-\newblock Periodic motion embedded in plane couette turbulence: regeneration
-  cycle and burst.
-\newblock {\em J. Fluid Mech.}, 449:291--300.
-
-\bibitem[Kolmogorov, 1991]{Kolmogorov1991}
-Kolmogorov, A.~N. (1991).
-\newblock The local structure of turbulence in incompressible viscous fluid for
-  very large reynolds numbers.
-\newblock {\em Proceedings of the Royal Society of London. Series A:
-  Mathematical and Physical Sciences}, 434(1890):9--13.
-
-\bibitem[Lorenz, 1963]{Lorenz1963}
-Lorenz, E.~N. (1963).
-\newblock Deterministic nonperiodic flow.
-\newblock {\em Journal of the atmospheric sciences}, 20(2):130--141.
-
-\bibitem[{Manneville}, 2015]{Manneville2015}
-{Manneville}, P. (2015).
-\newblock {On the transition to turbulence of wall-bounded flows in general,
-  and plane Couette flow in particular}.
-\newblock {\em European Journal of Mechanics B Fluids}, 49:345--362.
-
-\bibitem[Nagata, 1990]{Nagata1990}
-Nagata, M. (1990).
-\newblock Three-dimensional finite-amplitude solutions in plane couette flow:
-  bifurcation from infinity.
-\newblock {\em J. Fluid Mech.}, 217:519--527.
-
-\bibitem[Peyret, 2002]{Peyret2002}
-Peyret, R. (2002).
-\newblock {\em Spectral methods for incompressible viscous flow}, volume 148.
-\newblock Springer Science \& Business Media.
-
-\bibitem[Pope, 2000]{Pope2000}
-Pope, S. (2000).
-\newblock {\em Turbulent Flows}.
-\newblock Cambridge University Press.
-
-\bibitem[Viswanath, 2007]{Viswanath2007}
-Viswanath, D. (2007).
-\newblock Recurrent motions within plane couette turbulence.
-\newblock {\em J. Fluid Mech.}, 580:339--358.
-
-\bibitem[Waleffe, 2001]{Waleffe2001}
-Waleffe, F. (2001).
-\newblock Exact coherent structures in channel flow.
-\newblock {\em Journal of Fluid Mechanics}, 435:93--102.
+\bibitem{Kolmogorov1991}
+A.~N. Kolmogorov, ``The local structure of turbulence in incompressible viscous
+  fluid for very large reynolds numbers,'' {\em Proceedings of the Royal
+  Society of London. Series A: Mathematical and Physical Sciences}, vol.~434,
+  no.~1890, pp.~9--13, 1991.
 
 \end{thebibliography}

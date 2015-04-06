@@ -18,6 +18,30 @@
   Url                      = {http://journals.cambridge.org/article_S0022112088001818}
 }
 
+@Article{Bottin1998,
+  Title                    = {Statistical analysis of the transition to turbulence in plane Couette flow},
+  Author                   = {Bottin, Sabine and Chat{\'e}, Hugues},
+  Journal                  = {The European Physical Journal B-Condensed Matter and Complex Systems},
+  Year                     = {1998},
+  Number                   = {1},
+  Pages                    = {143--155},
+  Volume                   = {6},
+
+  Publisher                = {Springer}
+}
+
+@Article{Brosa1989,
+  Title                    = {Turbulence without strange attractor},
+  Author                   = {Brosa, U},
+  Journal                  = {Journal of Statistical Physics},
+  Year                     = {1989},
+  Number                   = {5-6},
+  Pages                    = {1303--1312},
+  Volume                   = {55},
+
+  Publisher                = {Springer}
+}
+
 @Article{Dauchot2000,
   Title                    = {Phase space analysis of a dynamical model for the subcritical transition to turbulence in plane Couette flow},
   Author                   = {Dauchot, O and Vioujard, N},
@@ -120,6 +144,41 @@
   Doi                      = {10.1017/S0022112009990863},
   ISSN                     = {1469-7645},
   Numpages                 = {24}
+}
+
+@InCollection{Grassberger2004,
+  Title                    = {Measuring the strangeness of strange attractors},
+  Author                   = {Grassberger, Peter and Procaccia, Itamar},
+  Booktitle                = {The Theory of Chaotic Attractors},
+  Publisher                = {Springer},
+  Year                     = {2004},
+  Pages                    = {170--189}
+}
+
+@InCollection{Gusyatnikova1989,
+  Title                    = {Symmetries and Conservation Laws of Navier—Stokes Equations},
+  Author                   = {Gusyatnikova, VN and Yumaguzhin, VA},
+  Booktitle                = {Symmetries of Partial Differential Equations},
+  Publisher                = {Springer},
+  Year                     = {1989},
+  Pages                    = {65--81}
+}
+
+@Article{Hof2008,
+  Title                    = {Repeller or Attractor? Selecting the Dynamical Model for the Onset of Turbulence in Pipe Flow},
+  Author                   = {Hof, Bj\"orn and de Lozar, Alberto and Kuik, Dirk Jan and Westerweel, Jerry},
+  Journal                  = {Phys. Rev. Lett.},
+  Year                     = {2008},
+
+  Month                    = {Nov},
+  Pages                    = {214501},
+  Volume                   = {101},
+
+  Doi                      = {10.1103/PhysRevLett.101.214501},
+  Issue                    = {21},
+  Numpages                 = {4},
+  Publisher                = {American Physical Society},
+  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.101.214501}
 }
 
 @Article{Hopf1948,
@@ -227,6 +286,18 @@
   ISBN                     = {9780521598866},
   Lccn                     = {99044583},
   Url                      = {http://books.google.com/books?id=HZsTw9SMx-0C}
+}
+
+@Article{Taneda1956,
+  Title                    = {Experimental investigation of the wake behind a sphere at low Reynolds numbers},
+  Author                   = {Taneda, Sadatoshi},
+  Journal                  = {Journal of the Physical Society of Japan},
+  Year                     = {1956},
+  Number                   = {10},
+  Pages                    = {1104--1108},
+  Volume                   = {11},
+
+  Publisher                = {The Physical Society of Japan}
 }
 
 @Article{Viswanath2007,
