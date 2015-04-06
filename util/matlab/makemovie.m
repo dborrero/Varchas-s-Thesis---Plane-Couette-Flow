@@ -1,5 +1,5 @@
 function makemovie(f0, df, f1, T0, dT, fps, filename, title, credit, ...
-		   xstride, ystride, zstride, perspect, framedir);
+		   xstride, ystride, zstride, perspect, framedir,baseflow,quivscale);
 % makemovie(f0, df, f1, T0, dT, fps, filename, title, credit,
 % xstride, ystride, zstride, perspect, framedir);
 %   make a 3D-box movie of velocity fields from output of movieframes.x
@@ -17,6 +17,8 @@ function makemovie(f0, df, f1, T0, dT, fps, filename, title, credit, ...
 %   zstride  : z-granularity for quiver plots (defaults to 2)
 %   perspect : 0 for orthographic, 1 for perspective plots
 %   framedir : directory containing data for plotting frames
+%   baseflow : include base flow? 0 for no base flow
+%   quivscale : rescale quivers? 0 for no rescaling 
 %   solilequy
 
 if nargin <  1 ; f0 = 0; end
@@ -31,12 +33,10 @@ if nargin <  9 ; credit = ''; end
 if nargin < 10 ; xstride = 2; end
 if nargin < 11 ; ystride = 2; end
 if nargin < 12 ; zstride = 2; end
-if nargin < 13 ; perspect = 1; end
+if nargin < 13 ; perspect = 0; end
 if nargin < 14 ; framedir = 'frames'; end
-
-
-baseflow = 1;
-quivscale = 0;
+if nargin < 15 ; baseflow = 1; end
+if nargin < 16 ; quivscale = 0; end
 
 x = load(strcat(framedir, '/x.asc'));
 y = load(strcat(framedir, '/y.asc'));
@@ -44,8 +44,8 @@ z = load(strcat(framedir, '/z.asc'));
 
 savemovie=true;
 
-set(gcf, 'renderer', 'opengl');
-%set(gcf, 'renderer', 'zbuffer');
+%set(gcf, 'renderer', 'opengl');
+set(gcf, 'renderer', 'zbuffer');
 
 if (savemovie)
   aviobj = avifile(filename, 'fps', fps);

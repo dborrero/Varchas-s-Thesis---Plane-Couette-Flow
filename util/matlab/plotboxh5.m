@@ -8,7 +8,7 @@ if nargin < 3; ymax = 1.1; end
   azel = [52, 34];
   %azel = [0, 90];
 
-  [z,x,y,u] = loadhdf5(strcat('u', name));
+  [z,x,y,u] = loadhdf5(name);
   
   clf()
   xmax = max(x);

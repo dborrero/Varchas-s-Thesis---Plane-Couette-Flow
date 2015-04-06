@@ -1,0 +1,5 @@
+function projectionFraction(varargin);
+for i = 1:(nargin)
+	[tempe0,tempe1,tempe2,tempe3] = textread(varargin{i},'%f%f%f%f','headerlines',2);
+end
+hold off;
