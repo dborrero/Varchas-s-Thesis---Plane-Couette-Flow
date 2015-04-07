@@ -14,11 +14,11 @@
 \contentsline {subsection}{\numberline {1.3.4}Newton's Second Law}{13}
 \contentsline {section}{\numberline {1.4}Plane Couette Flow}{14}
 \contentsline {chapter}{Chapter 2: Symmetry in plane Couette flow}{17}
-\contentsline {section}{\numberline {2.1}Unbounded Navier-Stokes}{17}
-\contentsline {section}{\numberline {2.2}Plane Couette Flow}{18}
+\contentsline {section}{\numberline {2.1}Unbounded Navier-Stokes}{18}
+\contentsline {section}{\numberline {2.2}Plane Couette Flow}{19}
 \contentsline {section}{\numberline {2.3}Properties of $\Gamma $}{19}
-\contentsline {section}{\numberline {2.4}Symmetry Groups of this Thesis}{20}
-\contentsline {chapter}{Chapter 3: Numerics and Workflow}{23}
-\contentsline {section}{\numberline {3.1}The Spectral Method}{23}
-\contentsline {subsection}{\numberline {3.1.1}The Residual}{23}
-\contentsline {chapter}{References}{27}
+\contentsline {section}{\numberline {2.4}Symmetry Groups of this Thesis}{23}
+\contentsline {chapter}{Chapter 3: Numerics and Workflow}{25}
+\contentsline {section}{\numberline {3.1}The Spectral Method}{25}
+\contentsline {subsection}{\numberline {3.1.1}The Residual}{25}
+\contentsline {chapter}{References}{29}

@@ -110,6 +110,13 @@
   Publisher                = {Elsevier}
 }
 
+@Book{Frisch1995,
+  Title                    = {Turbulence: the legacy of AN Kolmogorov},
+  Author                   = {Frisch, Uriel},
+  Publisher                = {Cambridge university press},
+  Year                     = {1995}
+}
+
 @TechReport{Gibson2014,
   Title                    = {{Channelflow}: {A} spectral {Navier-Stokes} simulator in {C}++},
   Author                   = {J. F. Gibson},
@@ -146,6 +153,18 @@
   Numpages                 = {24}
 }
 
+@Book{Granger1995,
+  Title                    = {Fluid Mechanics},
+  Author                   = {Granger, R.A.},
+  Publisher                = {Dover Publications},
+  Year                     = {1995},
+  Series                   = {Dover Books on Physics Series},
+
+  ISBN                     = {9780486683560},
+  Lccn                     = {lc94039737},
+  Url                      = {http://books.google.com/books?id=o6fAL6bxLBIC}
+}
+
 @InCollection{Grassberger2004,
   Title                    = {Measuring the strangeness of strange attractors},
   Author                   = {Grassberger, Peter and Procaccia, Itamar},
@@ -162,6 +181,13 @@
   Publisher                = {Springer},
   Year                     = {1989},
   Pages                    = {65--81}
+}
+
+@Book{Halcrow2008,
+  Title                    = {Charting the state space of plane Couette flow: Equilibria, relative equilibria, and heteroclinic connections},
+  Author                   = {Halcrow, Jonathan J},
+  Publisher                = {ProQuest},
+  Year                     = {2008}
 }
 
 @Article{Hof2008,
@@ -286,6 +312,18 @@
   ISBN                     = {9780521598866},
   Lccn                     = {99044583},
   Url                      = {http://books.google.com/books?id=HZsTw9SMx-0C}
+}
+
+@Book{Rotman1995,
+  Title                    = {An Introduction to the Theory of Groups},
+  Author                   = {Rotman, J.J.},
+  Publisher                = {Springer},
+  Year                     = {1995},
+  Series                   = {Graduate Texts in Mathematics},
+
+  ISBN                     = {9780387942858},
+  Lccn                     = {94006507},
+  Url                      = {http://books.google.com/books?id=vb9kUfHqQigC}
 }
 
 @Article{Taneda1956,

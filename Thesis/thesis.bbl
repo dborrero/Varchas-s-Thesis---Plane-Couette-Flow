@@ -5,6 +5,11 @@ S.~Taneda, ``Experimental investigation of the wake behind a sphere at low
   reynolds numbers,'' {\em Journal of the Physical Society of Japan}, vol.~11,
   no.~10, pp.~1104--1108, 1956.
 
+\bibitem{Grassberger2004}
+P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
+  attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
+  Springer, 2004.
+
 \bibitem{Eckhardt2008}
 B.~Eckhardt, H.~Faisst, A.~Schmiegel, and T.~M. Schneider, ``Dynamical systems
   and the transition to turbulence in linearly stable shear flows,'' {\em
@@ -47,11 +52,6 @@ E.~Hopf, ``A mathematical example displaying features of turbulence,'' {\em
 C.~Foias, G.~R. Sell, and R.~Temam, ``Inertial manifolds for nonlinear
   evolutionary equations,'' {\em Journal of Differential Equations}, vol.~73,
   no.~2, pp.~309--353, 1988.
-
-\bibitem{Grassberger2004}
-P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
-  attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
-  Springer, 2004.
 
 \bibitem{Lorenz1963}
 E.~N. Lorenz, ``Deterministic nonperiodic flow,'' {\em Journal of the
@@ -96,33 +96,34 @@ J.~F. Gibson, ``{Channelflow}: {A} spectral {Navier-Stokes} simulator in
   {C}++,'' tech. rep., U. New Hampshire, 2014.
 \newblock {\tt {Channelflow.org}}.
 
+\bibitem{Granger1995}
+R.~Granger, {\em Fluid Mechanics}.
+\newblock Dover Books on Physics Series, Dover Publications, 1995.
+
 \bibitem{Fischer1983}
 S.~L. Fischer and S.~P. Fischer, ``Mean corpuscular volume,'' {\em Archives of
   Internal Medicine}, vol.~143, no.~2, pp.~282--283, 1983.
+
+\bibitem{Rotman1995}
+J.~Rotman, {\em An Introduction to the Theory of Groups}.
+\newblock Graduate Texts in Mathematics, Springer, 1995.
 
 \bibitem{GIBSON2009}
 J.~F. Gibson, J.~Halcrow, and P.~Cvitanovic, ``Equilibrium and travelling-wave
   solutions of plane couette flow,'' {\em Journal of Fluid Mechanics},
   vol.~638, pp.~243--266, Nov. 2009.
 
-\bibitem{Gusyatnikova1989}
-V.~Gusyatnikova and V.~Yumaguzhin, ``Symmetries and conservation laws of
-  navier—stokes equations,'' in {\em Symmetries of Partial Differential
-  Equations}, pp.~65--81, Springer, 1989.
+\bibitem{Halcrow2008}
+J.~J. Halcrow, {\em Charting the state space of plane Couette flow: Equilibria,
+  relative equilibria, and heteroclinic connections}.
+\newblock ProQuest, 2008.
+
+\bibitem{Frisch1995}
+U.~Frisch, {\em Turbulence: the legacy of AN Kolmogorov}.
+\newblock Cambridge university press, 1995.
 
 \bibitem{Peyret2002}
 R.~Peyret, {\em Spectral methods for incompressible viscous flow}, vol.~148.
 \newblock Springer Science \& Business Media, 2002.
-
-\bibitem{Karman1930}
-T.~v. Karman, ``Mechanische aenlichkeit und turbulenz,'' {\em Nachrichten von
-  der Gesellschaft der Wissenschaften zu Göttingen, Mathematisch-Physikalische
-  Klasse}, vol.~1930, pp.~58--76, 1930.
-
-\bibitem{Kolmogorov1991}
-A.~N. Kolmogorov, ``The local structure of turbulence in incompressible viscous
-  fluid for very large reynolds numbers,'' {\em Proceedings of the Royal
-  Society of London. Series A: Mathematical and Physical Sciences}, vol.~434,
-  no.~1890, pp.~9--13, 1991.
 
 \end{thebibliography}
