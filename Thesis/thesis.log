@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2007.5.18)  6 APR 2015 22:51
+This is pdfTeXk, Version 3.141592-1.40.3 (Web2C 7.5.6) (format=pdflatex 2007.5.18)  7 APR 2015 12:15
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -319,57 +319,52 @@ File: Figs/ReCylinder.png Graphic file (type png)
 
 <use Figs/ReCylinder.png>
 
+pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/planeCouetteDiagram.pdf): PDF
+ inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<Figs/planeCouetteDiagram.pdf, id=33, 603.15437pt x 314.29318pt>
+File: Figs/planeCouetteDiagram.pdf Graphic file (type pdf)
+
+<use Figs/planeCouetteDiagram.pdf>
+
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
- []
-
-[1
+ [1
 
 
 ]
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/planeCouetteMeanFlow.pdf): PD
+F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
+<Figs/planeCouetteMeanFlow.pdf, id=38, 378.80621pt x 167.18762pt>
+File: Figs/planeCouetteMeanFlow.pdf Graphic file (type pdf)
+
+<use Figs/planeCouetteMeanFlow.pdf>
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
 
 Package Fancyhdr Warning: \headheight is too small (12.0pt): 
  Make it at least 14.49998pt.
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[2 <./Figs/ReCylinder.png>]
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/planeCouetteDiagram.pdf): PDF
- inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<Figs/planeCouetteDiagram.pdf, id=44, 603.15437pt x 314.29318pt>
-File: Figs/planeCouetteDiagram.pdf Graphic file (type pdf)
-
-<use Figs/planeCouetteDiagram.pdf>
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/planeCouetteMeanFlow.pdf): PD
-F inclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<Figs/planeCouetteMeanFlow.pdf, id=45, 378.80621pt x 167.18762pt>
-File: Figs/planeCouetteMeanFlow.pdf Graphic file (type pdf)
-
-<use Figs/planeCouetteMeanFlow.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 49--50
-
- []
-
-[3 <./Figs/planeCouetteDiagram.pdf>]
+[2 <./Figs/ReCylinder.png>] [3 <./Figs/planeCouetteDiagram.pdf> <./Figs/planeCo
+uetteMeanFlow.pdf>]
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/VectorSpace.pdf): PDF inclusi
 on: found PDF version <1.5>, but at most version <1.4> allowed
-<Figs/VectorSpace.pdf, id=96, 580.13736pt x 399.35297pt>
+<Figs/VectorSpace.pdf, id=116, 580.13736pt x 399.35297pt>
 File: Figs/VectorSpace.pdf Graphic file (type pdf)
 
 <use Figs/VectorSpace.pdf>
-<Figs/LorenzAttractor.pdf, id=97, 1444.39626pt x 724.7075pt>
+<Figs/LorenzAttractor.pdf, id=117, 1444.39626pt x 724.7075pt>
 File: Figs/LorenzAttractor.pdf Graphic file (type pdf)
 
-<use Figs/LorenzAttractor.pdf> [4 <./Figs/planeCouetteMeanFlow.pdf>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
+<use Figs/LorenzAttractor.pdf> [4 <./Figs/VectorSpace.pdf>]
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no œ in font cmr12!
@@ -377,22 +372,26 @@ Missing character: There is no œ in font cmr12!
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/ECSClassification.pdf): PDF i
 nclusion: found PDF version <1.5>, but at most version <1.4> allowed
-<Figs/ECSClassification.pdf, id=122, 717.81273pt x 676.93301pt>
+<Figs/ECSClassification.pdf, id=175, 717.81273pt x 676.93301pt>
 File: Figs/ECSClassification.pdf Graphic file (type pdf)
 
-<use Figs/ECSClassification.pdf> [5 <./Figs/VectorSpace.pdf>] [6 <./Figs/Lorenz
-Attractor.pdf>]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [7 <./Figs/ECSClassification.pdf>]
+<use Figs/ECSClassification.pdf> [5 <./Figs/LorenzAttractor.pdf>]
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/phaseSpaceTraj.pdf): PDF incl
 usion: found PDF version <1.5>, but at most version <1.4> allowed
-<Figs/phaseSpaceTraj.pdf, id=220, 397.485pt x 164.73308pt>
+<Figs/phaseSpaceTraj.pdf, id=185, 397.485pt x 164.73308pt>
 File: Figs/phaseSpaceTraj.pdf Graphic file (type pdf)
 
-<use Figs/phaseSpaceTraj.pdf>) (./NavierStokesDerivation.tex [8 <./Figs/phaseSp
-aceTraj.pdf
+<use Figs/phaseSpaceTraj.pdf>
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+)
+Underfull \vbox (badness 3343) has occurred while \output is active []
+
+ [6]
+(./NavierStokesDerivation.tex [7 <./Figs/ECSClassification.pdf>] [8 <./Figs/pha
+seSpaceTraj.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/phaseSpaceTraj.pdf): PDF incl
 usion: Page Group detected which pdfTeX can't handle. Ignoring it.
@@ -438,7 +437,7 @@ found PDF version <1.5>, but at most version <1.4> allowed
 File: ./Figs/SubCell.pdf Graphic file (type pdf)
 
 <use ./Figs/SubCell.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 88--95
+Underfull \hbox (badness 10000) in paragraph at lines 91--98
 
  []
 
@@ -459,12 +458,7 @@ DF inclusion: found PDF version <1.5>, but at most version <1.4> allowed
 <./Figs/shiftReflectCommuting.pdf, id=346, 666.20795pt x 309.45712pt>
 File: ./Figs/shiftReflectCommuting.pdf Graphic file (type pdf)
 
-<use ./Figs/shiftReflectCommuting.pdf>
-Underfull \hbox (badness 10000) in paragraph at lines 136--137
-
- []
-
-[21]
+<use ./Figs/shiftReflectCommuting.pdf>) (./Numerics.tex [21]
 
 LaTeX Warning: Text page 22 contains only floats.
 
@@ -480,49 +474,45 @@ pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/shiftReflectNotCommuting.pdf)
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./Figs/shiftReflectCommuting.pdf): P
 DF inclusion: Page Group detected which pdfTeX can't handle. Ignoring it.
->]) (./Numerics.tex [23] [24
-
-]
+>]
 Chapter 3.
-[25] [26]) [27] [28
+[23
 
-] (./thesis.bbl [29
+] [24]) [25] [26
 
-] [30]) [31] (./thesis.aux)
+] (./thesis.bbl [27
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
- ) 
+]) [28] (./thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 3039 strings out of 94073
- 37932 string characters out of 1162984
- 93750 words of memory out of 1500000
- 6217 multiletter control sequences out of 10000+50000
+ 3037 strings out of 94073
+ 37907 string characters out of 1162984
+ 94813 words of memory out of 1500000
+ 6215 multiletter control sequences out of 10000+50000
  18998 words of font info for 77 fonts, out of 1200000 for 2000
  645 hyphenation exceptions out of 8191
- 28i,12n,45p,2009b,355s stack positions out of 5000i,500n,6000p,200000b,5000s
-</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx10.pfb></usr/l
-ocal/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx12.pfb></usr/local/texl
-ive/2007/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></usr/local/texlive/2007/
-texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/texlive/2007/texmf-dis
-t/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texlive/2007/texmf-dist/fonts/t
-ype1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blues
-ky/cm/cmmi8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr1
-0.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr12.pfb></us
-r/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr17.pfb></usr/local/te
-xlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></usr/local/texlive/2007/
-texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/texlive/2007/texmf-dist/
-fonts/type1/bluesky/cm/cmsl12.pfb></usr/local/texlive/2007/texmf-dist/fonts/typ
-e1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesk
-y/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsy8
-.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmti10.pfb></us
-r/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmti12.pfb></usr/local/t
-exlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt10.pfb></usr/local/texlive/20
-07/texmf-dist/fonts/type1/bluesky/cm/cmtt12.pfb></usr/local/texlive/2007/texmf-
-dist/fonts/type1/bluesky/ams/msbm10.pfb>
-Output written on thesis.pdf (39 pages, 3061988 bytes).
+ 28i,12n,45p,2009b,286s stack positions out of 5000i,500n,6000p,200000b,5000s
+</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky
+/cm/cmbx10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmbx1
+2.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmex10.pfb></u
+sr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi10.pfb></usr/local/
+texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmmi12.pfb></usr/local/texlive/2
+007/texmf-dist/fonts/type1/bluesky/cm/cmmi7.pfb></usr/local/texlive/2007/texmf-
+dist/fonts/type1/bluesky/cm/cmmi8.pfb></usr/local/texlive/2007/texmf-dist/fonts
+/type1/bluesky/cm/cmr10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blu
+esky/cm/cmr12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cm
+r17.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr7.pfb></u
+sr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmr8.pfb></usr/local/te
+xlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmsl12.pfb></usr/local/texlive/200
+7/texmf-dist/fonts/type1/bluesky/cm/cmsy10.pfb></usr/local/texlive/2007/texmf-d
+ist/fonts/type1/bluesky/cm/cmsy7.pfb></usr/local/texlive/2007/texmf-dist/fonts/
+type1/bluesky/cm/cmsy8.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/blue
+sky/cm/cmti10.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cm
+ti12.pfb></usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt10.pfb>
+</usr/local/texlive/2007/texmf-dist/fonts/type1/bluesky/cm/cmtt12.pfb></usr/loc
+al/texlive/2007/texmf-dist/fonts/type1/bluesky/ams/msbm10.pfb>
+Output written on thesis.pdf (36 pages, 3056779 bytes).
 PDF statistics:
- 528 PDF objects out of 1000 (max. 8388607)
+ 516 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 131072)
  56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -10,30 +10,9 @@ P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
   attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
   Springer, 2004.
 
-\bibitem{Eckhardt2008}
-B.~Eckhardt, H.~Faisst, A.~Schmiegel, and T.~M. Schneider, ``Dynamical systems
-  and the transition to turbulence in linearly stable shear flows,'' {\em
-  Philosophical Transactions of the Royal Society of London A: Mathematical,
-  Physical and Engineering Sciences}, vol.~366, no.~1868, pp.~1297--1315, 2008.
-
-\bibitem{Manneville2015}
-P.~{Manneville}, ``{On the transition to turbulence of wall-bounded flows in
-  general, and plane Couette flow in particular},'' {\em European Journal of
-  Mechanics B Fluids}, vol.~49, pp.~345--362, Jan. 2015.
-
-\bibitem{Brosa1989}
-U.~Brosa, ``Turbulence without strange attractor,'' {\em Journal of Statistical
-  Physics}, vol.~55, no.~5-6, pp.~1303--1312, 1989.
-
-\bibitem{Hof2008}
-B.~Hof, A.~de~Lozar, D.~J. Kuik, and J.~Westerweel, ``Repeller or attractor?
-  selecting the dynamical model for the onset of turbulence in pipe flow,''
-  {\em Phys. Rev. Lett.}, vol.~101, p.~214501, Nov 2008.
-
-\bibitem{Bottin1998}
-S.~Bottin and H.~Chat{\'e}, ``Statistical analysis of the transition to
-  turbulence in plane couette flow,'' {\em The European Physical Journal
-  B-Condensed Matter and Complex Systems}, vol.~6, no.~1, pp.~143--155, 1998.
+\bibitem{Borrero2014}
+D.~Borrero, ``Subcritical transition to turbulence in taylor-couette flow,''
+  2014.
 
 \bibitem{Daviaud1992}
 F.~Daviaud, J.~Hegseth, and P.~Berg\'e, ``Subcritical transition to turbulence
@@ -86,6 +65,11 @@ G.~Kawahara and S.~Kida, ``Periodic motion embedded in plane couette
 D.~Viswanath, ``Recurrent motions within plane couette turbulence,'' {\em J.
   Fluid Mech.}, vol.~580, pp.~339--358, 2007.
 
+\bibitem{Hof2008}
+B.~Hof, A.~de~Lozar, D.~J. Kuik, and J.~Westerweel, ``Repeller or attractor?
+  selecting the dynamical model for the onset of turbulence in pipe flow,''
+  {\em Phys. Rev. Lett.}, vol.~101, p.~214501, Nov 2008.
+
 \bibitem{Gibson2008}
 J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
   state space in plane couette flow,'' {\em Journal of Fluid Mechanics},
@@ -95,6 +79,11 @@ J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
 J.~F. Gibson, ``{Channelflow}: {A} spectral {Navier-Stokes} simulator in
   {C}++,'' tech. rep., U. New Hampshire, 2014.
 \newblock {\tt {Channelflow.org}}.
+
+\bibitem{Halcrow2008}
+J.~J. Halcrow, {\em Charting the state space of plane Couette flow: Equilibria,
+  relative equilibria, and heteroclinic connections}.
+\newblock ProQuest, 2008.
 
 \bibitem{Granger1995}
 R.~Granger, {\em Fluid Mechanics}.
@@ -112,11 +101,6 @@ J.~Rotman, {\em An Introduction to the Theory of Groups}.
 J.~F. Gibson, J.~Halcrow, and P.~Cvitanovic, ``Equilibrium and travelling-wave
   solutions of plane couette flow,'' {\em Journal of Fluid Mechanics},
   vol.~638, pp.~243--266, Nov. 2009.
-
-\bibitem{Halcrow2008}
-J.~J. Halcrow, {\em Charting the state space of plane Couette flow: Equilibria,
-  relative equilibria, and heteroclinic connections}.
-\newblock ProQuest, 2008.
 
 \bibitem{Frisch1995}
 U.~Frisch, {\em Turbulence: the legacy of AN Kolmogorov}.

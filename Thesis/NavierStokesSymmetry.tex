@@ -42,12 +42,15 @@ is known as the {\bf isotropy subgroup} of $\Vector{u}$, and $\Vector{u}$ is sai
 \begin{define}
 If a group $(G,\ast)$ has the further property that for all $a,b \in G$, $a \ast b = b \ast a$, then the group is {\bf abelian}
 \end{define}
-\begin{define}
+\begin{define}\label{def:conjugacy}
 Two subgroups $(J,\ast)$ and $(H,\ast)$ of $(G,\ast)$ are considered {\bf conjugate} if for some $a \in G$,
 \begin{equation}
 a\ast J \ast a^{-1} = H.
 \end{equation} 
-A set of mutually conjugate groups makes up a {\bf conjugacy class}, and since the action of members of a conjugacy class on a particular state $\Vector{u}$ can be considered equivalent, only one member of a conjugacy class needs to be considered. 
+A set of mutually conjugate groups makes up a {\bf conjugacy class}, and since the action of members of a conjugacy class on a particular state $\Vector{u}$ can be considered equivalent, only one representative member of a conjugacy class needs to be considered. 
+\end{define}
+\begin{define}
+A set $\mathcal{G}$ is said to {\bf generate} a group $(G,\ast)$ if repeated applications of the group law between elements of $\mathcal{G}$ produced all the elements of $G$.
 \end{define}
 The symmetry relations of \pCf\ are discussed extensively in\rf{GIBSON2009,Halcrow2008}, which I will present here for the sake of flow\footnote{haha}. To keep things terse, the group action and group law operator is omitted and can be inferred from context, and a group $(G,\ast)$ is referred to by the set $G$. 
 \section{Unbounded Navier-Stokes}
@@ -82,8 +85,8 @@ The continuous symmetries are the two parameter steamwise-spanwise translations,
 \tau(l_x,l_z)[u,v,w](x,y,z) = [u,v,w](x+l_x,y,z+l_z).
 \end{equation}
 
-The complete symmetry group is then any combination of these symmetry operations, given by $\Gamma = SO(2)_x \ltimes D_{1,x} \times SO(2)_z \ltimes D_{1,z}$\footnote{$\ltimes$ is the semidirect product}. 
-\section{Properties of $\Gamma$}
+The complete symmetry group is then any combination of these symmetry operations, given by $\Sigma = SO(2)_x \ltimes D_{1,x} \times SO(2)_z \ltimes D_{1,z}$\footnote{$\ltimes$ is the semidirect product}. 
+\section{Properties and Isotropy Subgroups of $\Sigma$}
 
 It should be evident that since \pCf\ is equivariant under the continuous translations given in \eqref{eq:contsymm}, trajectories can be traveling wave equilibria or relative periodic orbits: that is, if one moves into a different reference frame, the trajectory is a regular equilibrium or periodic orbit. However, an initial condition that is fixed by $\sigma_z$ cannot be translated in the spanwise direction without losing $\sigma_z$ symmetry (except for the trivial case where $\pder{1}{\Vector{u}_z}{z} = 0$). Similarly, an initial condition that is fixed by $\sigma_x$ cannot be translated in the streamwise direction without losing $\sigma_x$ symmetry (and an initial condition that is fixed by $\sigma_{xz}$ symmetry cannot be translated at all without losing $\sigma_{xz}$ symmetry). Since these symmetries are also invariant\footnote{That is, if the symmetry is satisfied at time $t = t_0$, it must be satisfied for all times. This is trivially true from \refDef{def:equivariance}}, a trajectory with one of the discrete symmetries cannot be a traveling wave in the direction corresponding to its subscript. \\
  \begin{figure}[t!]
@@ -93,7 +96,7 @@ It should be evident that since \pCf\ is equivariant under the continuous transl
 \end{figure}
 The presence of the periodic boundary conditions also implies that all solutions are fixed by the full-period translation $\tau(L_x,0)$ and $\tau(0,L_z)$. However, solutions can also be fixed by any rational translation of the form $\tau(a L_x,b L_z)$, where $a,b \in \mathbb{Q}$, or by the continuous translations. If we fix $\Vector{u}$ by a continuous translation, we force it to have a zero derivative along that axis\footnote{That is, if we fix $\Vector{u}$ by $\tau{l_x,0}$ for any real $l_x$, then $\pder{1}{\Vector{u}}{x} = 0$, and similarly for $z$.}, and such solutions tend to be uninteresting as they are equivalent to low-dimensional problems. If $\Vector{u}$ is fixed instead by rational translations, the periodic cell is tiled with repeating subcells , as in \refFig{fig:rationalTranslation}. This implies that we can restrict ourselves to full box length translations, which are in any case required by the periodic boundary conditions.\\
 
-There is one further reason to restrict the translation symmetry - the unrestricted $\Gamma$ is not an abelian group, as demonstrated in \refFig{fig:notabelian}, so the order of application of symmetry transformations matters in general, which is undesirable, especially when trying to consider the conjugacy classes. From \refeqs{eq:discretesymm}{eq:contsymm} however, it is evident that the following relation between the $\sigma$ and $\tau$ holds:
+There is one further reason to restrict the translation symmetry - the unrestricted $\Sigma$ is not an abelian group, as demonstrated in \refFig{fig:notabelian}, so the order of application of symmetry transformations matters in general, which is undesirable, especially when trying to consider the conjugacy classes. From \refeqs{eq:discretesymm}{eq:contsymm} however, it is evident that the following relation between the $\sigma$ and $\tau$ holds:
 \begin{equation}
 \sigma_{i}\tau_{i} = \tau_i^{-1}\sigma_i,
 \end{equation}
@@ -103,18 +106,26 @@ where $i$ can index the $x$,$z$ or $xz$ symmetries. Left-multiplication by $\tau
 \end{equation}
 If $\tau_i$ is restricted to \emph{half}-box shifts, then \refeq{eq:pscom} becomes
 \begin{equation}
-\sigma_i\tau_{i,1/2}^2 = \sigma_i\tau_{i,1} = \sigma_i = \tau_{i,1/2}^{-1}\sigma_{i}\tau_{i,1/2},
+\sigma_i\tau_{i,2}^2 = \sigma_i\tau_{i,1} = \sigma_i = \tau_{i,2}^{-1}\sigma_{i}\tau_{i,2},
 \end{equation}
-where the second subscript on $\tau$ represents the fraction of box shifted. Right multiplication by $\tau_{i,1/2}$ yields
+where the second subscript on $\tau$ represents the spatial periodicity imposed by $\tau$. Right multiplication by $\tau_{i,2}$ yields
 \begin{equation}
-\tau_{i,1/2}\sigma_{i} = \sigma_{i}\tau_{i,1/2}.
+\tau_{i,2}\sigma_{i} = \sigma_{i}\tau_{i,2}.
 \end{equation}
-So if $\tau$ is restricted to half-integer box shifts, $\Gamma$ is an abelian group, which I will denote $\Gamma_{2}$. Now that $\Gamma_2$ is abelian, we can consider its conjugacy classes. 
-Finally, we can reduce the number of unique subgroups of $\Gamma$ by considering its {\bf conjugacy groups}. A group $N$ and $M$ are considered conjugate if for some $s \in \Gamma$, $N = s^{-1}Ms$ - that is, $N$ and $M$ are related by a coordinate transformation. This allows us to consider only one group out of a set of mutually conjugate groups (known as a conjugacy class), since any other group in the class is simply related by the application of a symmetry transformation. This becomes especially important when considering $O(2) =  SO(2) \ltimes D_{1}$, since it is not an abelian group as reflections and translations about the same axis are noncommutative (\refFig{fig:notabelian}). However, we can still recover a psuedo-commutative relation by considering \figureref{fig:abelian}. We can see that $\sigma_z\tau_z$ results in the object moving by $l_z$ to the right, and the being mirrored across the $z$ axis, at which point it is mirrored and $l_z$ to the left of the origin. We can achieve the same effect by mirroring the object and moving it to the left - that is, applying the operation $\tau_z^{-1}\sigma_z$, leading us to conclude that $\sigma\tau = \tau^{-1}\sigma$. We can rewrite this as $\sigma\tau^2 = \tau^{-1}\sigma\tau$, so
+So if $\tau$ is restricted to half-integer box shifts, $\Sigma_2 \subset \Sigma$ is an abelian group, as demonstrated in \refFig{fig:abelian}\footnote{Note that this also implies that $\tau_{i,2}$ is its own inverse.}. The subgroups of $\Sigma_2$, which form the isotropy subgroups for \pCf, are of order $\{1,2,4,8,16\}$. There is only one order 1 subgroup: $\{ e \}$, which is the typical isotropy group for turbulent flows\footnote{Since it lacks any symmetry}. There are 15 subgroups of order 2, 35 subgroups of order 4, 15 subgroups of order 8, and one subgroup of order 16, giving 67 subgroups. Luckily, consideration of conjugacy classes greatly lowers the number of subgroups we need to consider. For instance, the subgroups $\{ e, \sigma_x\}$ and $\{e, \sigma_x\tau_{x,2}\}$ belong to the same conjugacy class.
+\begin{proof}
+Following \refDef{def:conjugacy}, choose $a = \tau_{x,4} \in \Sigma$. Then
 \begin{equation}
-\sigma_x\tau(l_x,0) = \tau^{-1}(l_x/2,0)\sigma_x\tau(l_x/2,0),
+\tau_{x,4}^{-1}\{ e, \sigma_x\}\tau_{x,4} = \{ \tau_{x,4}^{-1}\tau_{x,4},\tau_{x,4}^{-1}\sigma_x\tau_{x,4}\} =\{e,\tau_{x,4}^{-1}\sigma_x\tau_{x,4}\} .
 \end{equation}
+But by \refeq{eq:pscom},
+\begin{equation}
+\{ e,\tau_{x,4}^{-1}\sigma_x\tau_{x,4}\} = \{ e, \sigma_x\tau_{x,2}\}.
+\end{equation}
+So $\{ e, \sigma_x\}$ and $\{e, \sigma_x\tau_{x,2}\}$ belong to the same conjugacy class.
+\end{proof}
 
+So there are only eight conjugacy classes of order 2, with representatives generated by $\tau_x,\tau_z,\tau_{xz}, \sigma_x,\sigma_z,\sigma_{xz},\sigma_{x}\tau_z,\sigma_z\tau_x$. The conjugacy classes of pure translations can be disregarded, since they are equivalent to considering smaller cells, so we are left with five order 2 conjugacy classes. Of these, the two  generated by $\sigma_x$ and $\sigma_x\tau_z$ do not permit streamwise traveling waves, the two generated by $\sigma_z$ and $\sigma_z\tau_x$ do not permit spanwise traveling waves, and one generated by  $\sigma_{xz}$ permits no traveling waves at all. Furthermore, groups of higher order go not have any conjugacy classes that permit symmetry breaking, so we will ignore those groups entirely, although a particular order 4 group, $S = \{ e, \sigma_z\tau_x,\sigma_x\tau_{xz},\sigma_{xz}\tau_z\}$, which has been the isotropy subgroup of many previous results\rf{GIBSON2009}, and is used as a starting point for some of the results for this thesis. The important \ecs\ of this thesis have isotropy subgroups $S_x = \{ e, \sigma_x\tau_{xz}\}$ and $S_z = \{e, \sigma_z\tau_{xz}\}$. 
 \begin{figure}[t!]
 \includegraphics[width=\textwidth]{shiftReflectNotCommuting}
 \caption{A simple demonstration that shifts and reflects do not commute in general. a) shows an object with a dashed outline that is translated to the right, and then reflected across the vertical, while b) shows the same object reflected before it is translated to the right. Notice that the final positions of the object are not the same.}\label{fig:notabelian}
@@ -122,17 +133,6 @@ Finally, we can reduce the number of unique subgroups of $\Gamma$ by considering
 
 \begin{figure}[t!]
 \includegraphics[width=\textwidth]{shiftReflectCommuting}
-\caption{When periodic boundary conditions are imposed and translations are fixed to half-period lengths, shifts and reflects commute. a) shows an object that is shifted and then reflected across the vertical, while b) shows the same object reflected across the vertical and then shifted. Notice that the final positions are the same, even if the indermediaries are not.}\label{fig:abelian}
+\caption{When periodic boundary conditions are imposed and translations are fixed to half-period lengths, shifts and reflects commute. a) shows an object that is shifted and then reflected across the vertical, while b) shows the same object reflected across the vertical and then shifted. Notice that the final positions are the same, even if the intermediaries are not.}\label{fig:abelian}
 \end{figure}
-which implies that $\sigma_x$ and $\sigma_x\tau_x$ are part of the same conjugacy class - so if a isotropy group contains $\sigma_x\tau_x$, there is a simpler version of that group which contains $\sigma_x$ instead. Note that if $l_x = L_x$, then we have $\sigma_x = \tau_x^{-1}\sigma_X\tau_x$, so reflection and translations commute for any half-integer cell shifts. In this thesis, I will work with either half-cell or or null shifts. The group of half cell shifts is denoted $C_2$, so the group 
-\begin{align}
-G &= D_{1,x} \times C_{2,x} \times D_{1,z} \times C_{2,z} \subset \Gamma
-\end{align} 
-
-is an abelian group of order 16, containing both the isotropy groups of half-cell and null shifts.
-
-\section{Symmetry Groups of this Thesis}
-
-We can categorize the conjugacy classes of $G$ by their order - in this thesis, we will work with order 2 and 4 classes. There are 15 subgrups of order-2 (since there are 15 non-identity elements in $G$), 35 subgroups of order 4 ($(15\cdot14) /(3\cdot2)$), 15 subgroups of order 8 and 1 subgroup of order 16, giving 67 subgroups of $G$. Luckily, the existence of conjugacy classes allow us to greatly simplify the number of distinct groups we need to consider. For order-2 subgroups, conjugacy between $\sigma_x$ and $\sigma_x\tau_x$ and $\sigma_z\tau_z$ allows us to simplify down to just 8 distinct groups, which are generated by $\sigma_x,\sigma_z,\sigma_{xz},\sigma_x\tau_z,\sigma_z\tau_x,\tau_x,\tau_z,\tau_{xz}$. Recalling the behavior of these symmetries, we can see that only $\sigma_{xy}$ generates a group without travelling waves, $\sigma_z$ and $\sigma_z\tau_x$ generate groups that allow travelling waves in the $x$ direction, $\sigma_x\tau_z$ and $\sigma_x\tau_z$ generate groups that allow travelling waves in the $z$ direction, and the pure translations allow travelling waves in any (in-plane) direction. \\
-
   
