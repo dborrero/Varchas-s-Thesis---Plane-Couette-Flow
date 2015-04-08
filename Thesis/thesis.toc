@@ -19,4 +19,6 @@
 \contentsline {chapter}{Chapter 3: Numerics and Workflow}{23}
 \contentsline {section}{\numberline {3.1}The Spectral Method}{23}
 \contentsline {subsection}{\numberline {3.1.1}The Residual}{23}
+\contentsline {subsection}{\numberline {3.1.2}Basis Functions}{24}
+\contentsline {subsection}{\numberline {3.1.3}Spatio-Temporal Discretization}{26}
 \contentsline {chapter}{References}{27}

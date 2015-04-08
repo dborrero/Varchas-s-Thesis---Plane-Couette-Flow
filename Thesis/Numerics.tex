@@ -30,7 +30,11 @@ as expected. While it may seem logical to require $R_N = 0$, this is not possibl
 \begin{equation}
 \scprod{R_N}{\phi_i(x)}{w^*} = R_N(x_i) = 0,
 \end{equation}
-for some set of $x_i$. If $\phi_i(x) = \delta(x-x_i)$ and $w^* = 1$, then we have the colocation method, which forces the approximation to match the platonic function at a set of points. If $\phi_i(x) = \psi_i(x)$ and $w^* = w$, then we have the Galerkin method, which forces the mean residual to be zero. In the spectral method, the basis functions are trigonometric functions. The advantage of trigonometric functions over polynomials is the rapid convergence of the series coefficients -- the Fourier coefficients converge exponentially fast, so we can achieve extremely high accuracy with a lower number of modes\rf{Peyret2002}.\footnote{Spectral methods are inappropriate when the boundary geometry is highly complex, as is the case in the majority of industrial applications, where more general finite element methods are used.} {\tt Channelflow} uses Fourier series in the streamwise-spanwise directions, where the basis functions and spectral projection are given by 
+for some set of $x_i$. If $\phi_i(x) = \delta(x-x_i)$ and $w^* = 1$, then we have the colocation method, which forces the approximation to match the platonic function at a set of points. If $\phi_i(x) = \psi_i(x)$ and $w^* = w$, then we have the Galerkin method, which forces the mean residual to be zero. 
+
+\subsection{Basis Functions}
+
+In the spectral method, the basis functions are trigonometric functions. The advantage of trigonometric functions over polynomials is the rapid convergence of the series coefficients -- the Fourier coefficients converge exponentially fast, so we can achieve extremely high accuracy with a lower number of modes\rf{Peyret2002}.\footnote{Spectral methods are inappropriate when the boundary geometry is highly complex, as is the case in the majority of industrial applications, where more general finite element methods are used.} {\tt Channelflow} uses Fourier series in the streamwise-spanwise directions, where the basis functions and spectral projection are given by 
 \begin{align}
 F_k(x) = \exp{ikx}\\
 u_K(x) = \sum{k=-K}{K}\hat{u}_k\exp{ikx},
@@ -58,3 +62,20 @@ While Fourier expansions are the easiest to deal with, they are best used on per
 \begin{equation}
 \Vector{u}_{KJL}(x,y,z) = \sum{k=-K}{K}{\hat{u}_k(x)\exp{ikx}}\sum{j=-J}{J}{\hat{u}_j(z)\exp{ijz}}\sum{l=0}{L}{\hat{u}_l(y)T_l(y)}.
 \end{equation}
+
+\subsection{Spatio-Temporal Discretization} 
+
+Under the (Galerkin) spectral approximation 
+\begin{equation}
+\Vector{u}(x,y,z) = \Vector{u}_{KJL}(x,y,z),
+\end{equation}
+the partial differential equation
+\begin{equation}
+\pder{1}{\Vector{u}}{t} = f_T(\Vector{u}),
+\end{equation}
+where $f_T(\Vector{u})$ is the forward time map of the Navier-Stokes equation, becomes an ordinary differential equation (ODE)
+\begin{equation}
+\der{1}{\Vector{U_{KJL}}}{t} = F_T(U_{KJL}), 
+\end{equation}
+where $F_T(\Vector{U}_{KJL})$ is the spectral approximation of $\Vector{U}_{KJL}$. The temporal ODE can be solved in any number of ways -- {\tt Channelflow} allows the user to choose from Crank-Nicolson Forward Euler, Crank-Nicolson Adams-Bashforth, Spalart-Moser Runge-Kutta and Semi-implicit Backwards Differentiation of orders 1 to 4. The order 3 Semi-implicit Backwards Differentiation (SBDF3) was chosen by default, and no reason to change this was anticipated, since SBDF3 is known to have a relatively large time step and low error for large \ReN\rf{Ascher1995}.
+
