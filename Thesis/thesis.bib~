@@ -78,16 +78,6 @@
   Publisher                = {Elsevier}
 }
 
-@inproceedings{Frigo1998,
-  title={FFTW: An adaptive software architecture for the FFT},
-  author={Frigo, Matteo and Johnson, Steven G},
-  booktitle={Acoustics, Speech and Signal Processing, 1998. Proceedings of the 1998 IEEE International Conference on},
-  volume={3},
-  pages={1381--1384},
-  year={1998},
-  organization={IEEE}
-}
-
 @Book{Frisch1995,
   Title                    = {Turbulence: the legacy of AN Kolmogorov},
   Author                   = {Frisch, Uriel},

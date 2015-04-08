@@ -2,11 +2,11 @@
 
     	 	\epigraph{On two occasions I have been asked, ``Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?" ... I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.}{Charles Babbage, Passages from the Life of a Philosopher}
 
-Computational studies of Navier-Stokes, especially as a dynamical system is difficult for many reasons, but most important among them is the high degree of complexity inherent in the numerical tools required to efficiently simulate it. As mentioned earlier, the two major approaches towards simulating Navier-Stokes  is modelling, where some assumptions are made to reduce the difficult of simulation, and direct numerical simulation (DNS), where no assumptions beyond those used to derive Navier-Stokes and set up the boundary conditions are used. DNS is naturally more accurate (since the physicality of some modelling assumptions can be suspect), but since it fully resolves Navier-Stokes, it is significantly more expensive than modeling, and methods that attempt to offset this extra cost tend to be extremely complex. For this reason, I use the open source library {\tt Channelflow}\rf{Gibson2014}, which has been essential in making any headway in this thesis. {\tt Channelflow} is a spectral DNS library, with additional utilities to find, parametrically continue, and analyze \ecs, which I will lay out in some detail below.
+Computational studies of Navier-Stokes, especially as a dynamical system, are difficult for many reasons, but most important among them is the high degree of complexity inherent in the numerical tools required to maintain efficiency. As mentioned earlier, the two major approaches towards simulating Navier-Stokes are modeling, where some assumptions are made to reduce the difficult of simulation, and direct numerical simulation (DNS), where no assumptions beyond those used to derive Navier-Stokes and set up the boundary conditions are used. DNS is naturally more accurate (since the physicality of some modeling assumptions can be suspect), but since it fully resolves Navier-Stokes, it is significantly more expensive than modeling, and methods that attempt to offset this extra cost tend to be extremely complex. For this reason, I use the open source library {\tt Channelflow}\rf{Gibson2014}, which has been essential in making any headway in this thesis. {\tt Channelflow} is a spectral DNS library, with additional utilities to find, parametrically continue, and analyze \ecs, which I will lay out in some detail below.
 \section{The Spectral Method}
 \subsection{The Residual}
 
-Spectral methods are, like finite element methods, part of a larger class of numerical methods known as {\bf weighted residual methods}. In this class of methods, functions are approximated by a truncated series expansion, with the restriction that a quantity related to the residual be zero (instead of the residual itself). The quantity used for the sprectral method is the scalar product 
+Spectral methods are, like finite element methods, part of a larger class of numerical methods known as {\bf weighted residual methods}. In this class of methods, functions are approximated by a truncated series expansion, with the restriction that a quantity related to the residual be zero (instead of the residual itself). The quantity used for the spectral method is the scalar product 
 \begin{equation}\label{eq:scalarProduct}
 \scprod{u}{v}{w} = \int{a}{b}{uvw}{dx},
 \end{equation}
@@ -26,28 +26,35 @@ where $D$ is some arbitrary differential operator and $f(x)$ is some arbitrary s
 \begin{equation}
 R_N = Du_N,
 \end{equation}
-as expected. While it may seem logical to require $R_N = 0$, this is not possible in general for finite $N$, so we instead require 
+as expected. While it may seem logical to require $R_N = 0$, this is not possible in general for finite $N$, so we instead require that for a set of test functions $\phi_i(x)$ and weighting function $w^*$, 
 \begin{equation}
-\scprod{R_N}{\delta(x-x_i)}{1} = R_N(x_i) = 0,
+\scprod{R_N}{\phi_i(x)}{w^*} = R_N(x_i) = 0,
 \end{equation}
-for some set of $x_i$. This method of minimizing the residual is known as the collocation method, has the effect of forcing the series expansion to match the platonic function at some set of points.\footnote{The other popular method of minimizing the residual, the Galerkin method, sets the mean residual as zero} In the spectral method, the basis functions are trignometric functions. The advantage of trignometric functions over polynomials is the rapid convergence of the series coefficients -- the Fourier coefficients converge exponentially fast, so we can achieve extremely high accuracy with a lower number of modes\rf{Peyret2002}.\footnote{Spectral methods are inappropriate when the boundary geometry is highly complex, as is the case in the majority of industrial applications, where more general finite element methods are used.} {\tt Channelflow} uses Fourier series, where the basis functions are given by 
+for some set of $x_i$. If $\phi_i(x) = \delta(x-x_i)$ and $w^* = 1$, then we have the colocation method, which forces the approximation to match the platonic function at a set of points. If $\phi_i(x) = \psi_i(x)$ and $w^* = w$, then we have the Galerkin method, which forces the mean residual to be zero. In the spectral method, the basis functions are trigonometric functions. The advantage of trigonometric functions over polynomials is the rapid convergence of the series coefficients -- the Fourier coefficients converge exponentially fast, so we can achieve extremely high accuracy with a lower number of modes\rf{Peyret2002}.\footnote{Spectral methods are inappropriate when the boundary geometry is highly complex, as is the case in the majority of industrial applications, where more general finite element methods are used.} {\tt Channelflow} uses Fourier series in the streamwise-spanwise directions, where the basis functions and spectral projection are given by 
+\begin{align}
+F_k(x) = \exp{ikx}\\
+u_K(x) = \sum{k=-K}{K}\hat{u}_k\exp{ikx},
+\end{align}
+and Chebyshev polynomials of the first kind in the wall-normal direction, where the basis functions and spectral projection are given by
+\begin{align}
+T_k(x) = \cos{k\arccos{x}}\\
+u_N(x) = \sum{k=0}{(2k-1)/2}\hat{u}_kT_k(x).
+\end{align}
+\par The Fourier series expansion is particularly nice since the derivative $\partial_x F_k(x) = ikF(x)$ is especially easy to calculate, as are the Fourier coefficients by virtue of the Fast Fourier Transform, implemented in the Fastest Fourier Transform in the West (FFTW)\rf{Frigo1998}.\\
+
+For Chebyshev polynomials, the derivative is slightly more complicated, since 
 \begin{equation}
-F_k(x) = \exp{ikx},
+\partial_x T_k(x) = 2k\sum{n=0}{K}{\frac{1}{c_{k-1-2n}} T_{k-1-2n}(x)},
 \end{equation}
-and Chebyshev polynomials of the first kind, where the basis functions satisfy
-\begin{equation}
-T_k(x) = \cos{k\arccos{x}}.
-\end{equation}
-The Fourier series expansion is particularly nice since the derivative $\partial_x F_k(x) = ikF(x)$. To see how the spectral method is applied to solving nonlinear partial differential equations, consider the 1D Swift-Hohenburg equation
-\begin{equation}\label{eq:SHOG}
-\pder{1}{u}{t} = \kappa u - \paren{1+\pder{2}{}{x}}^2u-u^2.
-\end{equation}
-Expanding \refeq{eq:SHOG}, we get 
-\begin{equation}\label{eq:SHEX}
-\pder{1}{u}{t} = \paren{\kappa -1}u - 2\pder{2}{u}{x}-\pder{4}{u}{x} - u^2.
-\end{equation}
-If we assume a Fourier series approximation to $u$, and denote the approximation at time $n\Delta t$ by $u_K^n(x)$, then using a forward-difference method to discretize \refeq{eq:SHEX}, we get the residual 
-\begin{equation}
-R_K = \frac{u_K^{n+1}-u_K^n}{\Delta t} + (\kappa-1)u_K^n 
-\end{equation}
+where $c_k = 1$ if $k=1$ and $2$ if $k > 1$. Since the derivative of a single Chebyshev term becomes a sum of Chebyshev terms, the derivative of the Chebyshev representation of a function 
+\begin{align}
+\partial_x \sum{k=0}{N}\hat{u}_kT_k(x) &= \sum{k=0}{N}\hat{u}_k^{(1)}T_k(x),\\
+\hat{u}_k^{(1)} &= \frac{2}{c_k}\sum{\substack{p = k+1\\(p+k) \mathrm{~odd}}}{N} p \hat{u}_p, \hspace{0.25cm} k \neq N,\\
+\hat{u}^{(1)}_N &= 0.
+\end{align}
+As with the Fourier decomposition, however, Chebyshev coefficients can be calculated by a discrete cosine transform\rf{Halcrow2008}, which is a special case of the discrete Fourier transform, and is thus also computed by FFTW. 
+
 While Fourier expansions are the easiest to deal with, they are best used on periodic boundaries, since the imposition of aperiodic boundary conditions on a Fourier series expansion can lead to Gibbs oscillations that can make the simulation aphysical\rf{Peyret2002}. For this reason, the velocity field is expanded as a Fourier series in the plane, and as a Chebyshev polynomial in the wall-normal direction. The velocity field is then represented as 
+\begin{equation}
+\Vector{u}_{KJL}(x,y,z) = \sum{k=-K}{K}{\hat{u}_k(x)\exp{ikx}}\sum{j=-J}{J}{\hat{u}_j(z)\exp{ijz}}\sum{l=0}{L}{\hat{u}_l(y)T_l(y)}.
+\end{equation}
