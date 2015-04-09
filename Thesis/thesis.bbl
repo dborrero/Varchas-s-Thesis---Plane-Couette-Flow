@@ -126,4 +126,13 @@ W.~H. Press, {\em Numerical recipes 3rd edition: The art of scientific
   computing}.
 \newblock Cambridge university press, 2007.
 
+\bibitem{Dembo1982}
+R.~S. Dembo, S.~C. Eisenstat, and T.~Steihaug, ``Inexact newton methods,'' {\em
+  SIAM Journal on Numerical analysis}, vol.~19, no.~2, pp.~400--408, 1982.
+
+\bibitem{Saad1986}
+Y.~Saad and M.~H. Schultz, ``Gmres: A generalized minimal residual algorithm
+  for solving nonsymmetric linear systems,'' {\em SIAM Journal on scientific
+  and statistical computing}, vol.~7, no.~3, pp.~856--869, 1986.
+
 \end{thebibliography}

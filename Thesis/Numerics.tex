@@ -99,10 +99,28 @@ In higher dimensions, \refeqs{eq:NRS1D}{eq:NR1D} are replaced by the matrix equa
 \end{align}
 where $\mathbb{J}_{f,\Vector{x_n}}$ is the Jacobian of the Navier-Stokes equation at $\Vector{x}_n$.\\
  
-Newton's method is extremely fast and converges quadratically on the root\rf{Press2007}, but is not guaranteed to do so - a simple example is if the $n$-th guess is at (or very close to) a local minimum, in which case the adjustment term of \refeq{eq:NR1D} will explode, taking us very far away from the initial, good guess. As a result, 
+Newton's method is extremely fast and converges quadratically on the root\rf{Press2007}, but is not guaranteed to do so - a simple example is if the $n$-th guess is at (or very close to) a local minimum, in which case the adjustment term of \refeq{eq:NR1D} will explode, taking us very far away from the initial, good guess. Furthermore, in a system with around $10^5$ unknowns, inverting the Jacobian in \refeq{eq:NRSND} becomes very time consuming. To speed this up, we can trade off accuracy for speed by replacing  \refeq{eq:NRSND}  with a minimization problem
+\begin{equation}
+||\Vector{f}(\Vector{x}_n) + \mathbb{J}_{f,\Vector{x_n}}\Vector{dx}_n|| = r_n< \epsilon ||\Vector{f}(\Vector{x}_n)||,
+\end{equation}
+where $r_n$ is the $n$-th residual, $\Vector{dx}_n = \Vector{x}_{n+1} - \Vector{x}_n$ and $\epsilon$ is some small parameter that controls how accurate we want the minimization to be\rf{Dembo1982}. Note that if $\epsilon = 0$, we recover \refeq{eq:NRSND}. 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{NRMethod}
 \caption{A demonstration of Newton's method in 1D on a simple function with the root at $x_r \approx 8.98$. Starting at $x_0$ = 13, the method converges to $10^{-4}$ in just three steps.}\label{fig:Newton}
 \end{figure}  
+\subsection{The Generalized Minimum Residual Method}
 
+There are a vast quantity of residual minimization algorithms in existence, each typically optimized for a particular class of problem. {\tt Channelflow} uses the {\bf G}eneralized {\bf M}inimum {\bf RES}idual (GMRES) method, a Krylov subspace method developed in 1986 by Saad and Schultz\rf{Saad1986}. To illustrate the principle of GMRES, consider the least squares problem of finding the $\Vector{x}$ that solves
+\begin{equation}
+\mathbb{A}\Vector{x} = b.
+\end{equation}
 
+\subsubsection{The Krylov Subspace}
+Instead of searching for $\Vector{x}$ in the full vector space of the problem, Krylov methods restrict the space to a {\bf Krylov subspace}. The $k$-th Krylov subspace for a matrix $\mathbb{A}$ and a vector $\Vector{c}$ is defined
+\begin{equation}
+\mathcal{K}_k(\mathbb{A},\Vector{c}) = \mathrm{span}\paren{\Vector{c},\mathbb{A}\Vector{c},\mathbb{A}^2\Vector{c}...,\mathbb{A}^{k-1}\Vector{c}}
+ \end{equation}
+ 
+ 
+ 
+ 
