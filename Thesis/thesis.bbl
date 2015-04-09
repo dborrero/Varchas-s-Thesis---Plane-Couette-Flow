@@ -121,4 +121,9 @@ U.~M. Ascher, S.~J. Ruuth, and B.~T. Wetton, ``Implicit-explicit methods for
   time-dependent partial differential equations,'' {\em SIAM Journal on
   Numerical Analysis}, vol.~32, no.~3, pp.~797--823, 1995.
 
+\bibitem{Press2007}
+W.~H. Press, {\em Numerical recipes 3rd edition: The art of scientific
+  computing}.
+\newblock Cambridge university press, 2007.
+
 \end{thebibliography}

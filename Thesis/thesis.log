@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  8 APR 2015 01:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2014.5.25)  9 APR 2015 00:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -368,15 +368,20 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 \openout4 = `thesis.lof'.
 
 
-[4] (./introduction.tex
-<Figs/ReCylinder.png, id=33, 477.28313pt x 617.30624pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [4]
+[5] [6
+
+] (./introduction.tex
+<Figs/ReCylinder.png, id=42, 477.28313pt x 617.30624pt>
 File: Figs/ReCylinder.png Graphic file (type png)
 
 <use Figs/ReCylinder.png>
 Package pdftex.def Info: Figs/ReCylinder.png used on input line 15.
 (pdftex.def)             Requested size: 190.90987pt x 246.91812pt.
 
-<Figs/planeCouetteDiagram.pdf, id=35, 603.15437pt x 314.29318pt>
+<Figs/planeCouetteDiagram.pdf, id=44, 603.15437pt x 314.29318pt>
 File: Figs/planeCouetteDiagram.pdf Graphic file (type pdf)
 
 <use Figs/planeCouetteDiagram.pdf>
@@ -386,14 +391,9 @@ Package pdftex.def Info: Figs/planeCouetteDiagram.pdf used on input line 20.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
+[1
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
-
-
-]
-<Figs/planeCouetteMeanFlow.pdf, id=40, 378.80621pt x 167.18762pt>
+] <Figs/planeCouetteMeanFlow.pdf, id=49, 378.80621pt x 167.18762pt>
 File: Figs/planeCouetteMeanFlow.pdf Graphic file (type pdf)
 
 <use Figs/planeCouetteMeanFlow.pdf>
@@ -411,47 +411,59 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [2 <./Figs/ReCylinder.png>] [3 <./Figs/planeCouetteDiagram.pdf> <./Figs/planeCo
-uetteMeanFlow.pdf>] <Figs/VectorSpace.pdf, id=118, 580.13736pt x 399.35297pt>
+uetteMeanFlow.pdf>] <Figs/VectorSpace.pdf, id=126, 580.13736pt x 399.35297pt>
 File: Figs/VectorSpace.pdf Graphic file (type pdf)
 
 <use Figs/VectorSpace.pdf>
 Package pdftex.def Info: Figs/VectorSpace.pdf used on input line 44.
 (pdftex.def)             Requested size: 348.0851pt x 239.61362pt.
 
-<Figs/LorenzAttractor.pdf, id=119, 1444.39626pt x 724.7075pt>
+<Figs/LorenzAttractor.pdf, id=127, 1444.39626pt x 724.7075pt>
 File: Figs/LorenzAttractor.pdf Graphic file (type pdf)
 
 <use Figs/LorenzAttractor.pdf>
 Package pdftex.def Info: Figs/LorenzAttractor.pdf used on input line 50.
 (pdftex.def)             Requested size: 722.19637pt x 362.35286pt.
  [4 <./Figs/VectorSpace.pdf>]
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no œ in font cmr12!
 
-<Figs/ECSClassification.pdf, id=177, 717.81273pt x 676.93301pt>
+Underfull \hbox (badness 10000) in paragraph at lines 54--57
+
+ []
+
+<Figs/ECSClassification.pdf, id=186, 717.81273pt x 676.93301pt>
 File: Figs/ECSClassification.pdf Graphic file (type pdf)
 
 <use Figs/ECSClassification.pdf>
-Package pdftex.def Info: Figs/ECSClassification.pdf used on input line 58.
+Package pdftex.def Info: Figs/ECSClassification.pdf used on input line 60.
 (pdftex.def)             Requested size: 358.90549pt x 338.46568pt.
- [5 <./Figs/LorenzAttractor.pdf>]
-<Figs/phaseSpaceTraj.pdf, id=186, 397.485pt x 164.73308pt>
+
+Underfull \vbox (badness 3746) has occurred while \output is active []
+
+ [5]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [6 <./Figs/LorenzAttractor.pdf>]
+<Figs/phaseSpaceTraj.pdf, id=198, 397.485pt x 164.73308pt>
 File: Figs/phaseSpaceTraj.pdf Graphic file (type pdf)
 
 <use Figs/phaseSpaceTraj.pdf>
-Package pdftex.def Info: Figs/phaseSpaceTraj.pdf used on input line 67.
+Package pdftex.def Info: Figs/phaseSpaceTraj.pdf used on input line 69.
 (pdftex.def)             Requested size: 433.62pt x 179.71384pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-)
-Underfull \vbox (badness 3343) has occurred while \output is active []
 
- [6]
-(./NavierStokesDerivation.tex [7 <./Figs/ECSClassification.pdf>] [8 <./Figs/pha
-seSpaceTraj.pdf>]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7 <./Figs/ECSClassification.pdf>]) (./NavierStokesDerivation.tex [8 <./Figs/p
+haseSpaceTraj.pdf>]
 Chapter 1.
 
 Underfull \hbox (badness 10000) in paragraph at lines 9--11
@@ -465,7 +477,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 26--27
 
  []
 
-[10] [11] [12] [13] [14]) (./NavierStokesSymmetry.tex [15] [16
+[10] [11] [12]
+
+LaTeX Warning: Reference `eq:NSLInt' on page 13 undefined on input line 95.
+
+[13] [14]) (./NavierStokesSymmetry.tex [15] [16
 
 ]
 Chapter 2.
@@ -474,7 +490,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
  []
 
-[17] <./Figs/pointwiseinversion.pdf, id=290, 624.16489pt x 197.79999pt>
+[17] <./Figs/pointwiseinversion.pdf, id=297, 624.16489pt x 197.79999pt>
 File: ./Figs/pointwiseinversion.pdf Graphic file (type pdf)
 
 <use ./Figs/pointwiseinversion.pdf>
@@ -484,7 +500,7 @@ Package pdftex.def Info: ./Figs/pointwiseinversion.pdf used on input line 67.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-[18] <./Figs/SubCell.pdf, id=294, 540.6087pt x 257.99187pt>
+[18] <./Figs/SubCell.pdf, id=301, 540.6087pt x 257.99187pt>
 File: ./Figs/SubCell.pdf Graphic file (type pdf)
 
 <use ./Figs/SubCell.pdf>
@@ -499,7 +515,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 91--98
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20 <./Figs/SubCell.pdf>]
-<./Figs/shiftReflectNotCommuting.pdf, id=347, 693.3835pt x 420.71881pt>
+<./Figs/shiftReflectNotCommuting.pdf, id=353, 693.3835pt x 420.71881pt>
 File: ./Figs/shiftReflectNotCommuting.pdf Graphic file (type pdf)
 
 <use ./Figs/shiftReflectNotCommuting.pdf>
@@ -507,7 +523,7 @@ Package pdftex.def Info: ./Figs/shiftReflectNotCommuting.pdf used on input line
  130.
 (pdftex.def)             Requested size: 433.62pt x 263.10268pt.
 
-<./Figs/shiftReflectCommuting.pdf, id=348, 666.20795pt x 309.45712pt>
+<./Figs/shiftReflectCommuting.pdf, id=354, 666.20795pt x 309.45712pt>
 File: ./Figs/shiftReflectCommuting.pdf Graphic file (type pdf)
 
 <use ./Figs/shiftReflectCommuting.pdf>
@@ -531,49 +547,89 @@ Chapter 3.
 [23
 
 ] [24]
+LaTeX Font Info:    Try loading font information for U+euf on input line 46.
+ (/usr/local/texlive/2014/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
 Underfull \hbox (badness 10000) in paragraph at lines 47--48
 
  []
 
-[25]) [26] (./thesis.bbl [27
+[25]
+Overfull \hbox (5.72437pt too wide) in paragraph at lines 79--81
+\OT1/cmr/m/n/12 where $\OML/cmm/m/it/12 f[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 u\
+OT1/cmr/m/n/12 )$ is the for-ward time evo-lu-tion of the Navier-Stokes equa-ti
+on, and $\OML/cmm/m/it/12 F[]\OT1/cmr/m/n/12 (\OT1/cmr/bx/n/12 U[]\OT1/cmr/m/n/
+12 )$
+ []
 
 
-]) [28] (./thesis.aux) ) 
+Underfull \hbox (badness 10000) in paragraph at lines 87--89
+
+ []
+
+[26]
+Underfull \hbox (badness 10000) in paragraph at lines 99--101
+
+ []
+
+<./Figs/NRMethod.pdf, id=458, 551.05875pt x 348.30125pt>
+File: ./Figs/NRMethod.pdf Graphic file (type pdf)
+
+<use ./Figs/NRMethod.pdf>
+Package pdftex.def Info: ./Figs/NRMethod.pdf used on input line 104.
+(pdftex.def)             Requested size: 433.62pt x 274.0814pt.
+) [27 <./Figs/NRMethod.pdf>] [28
+
+] (./thesis.bbl
+[29
+
+]) [30] (./thesis.aux)
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+ ) 
 Here is how much of TeX's memory you used:
- 3799 strings out of 493117
- 50649 string characters out of 6135433
- 118948 words of memory out of 5000000
- 7120 multiletter control sequences out of 15000+600000
- 18989 words of font info for 77 fonts, out of 8000000 for 9000
+ 3830 strings out of 493117
+ 51175 string characters out of 6135433
+ 118034 words of memory out of 5000000
+ 7144 multiletter control sequences out of 15000+600000
+ 20405 words of font info for 83 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 38i,15n,45p,2009b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/
-amsfonts/cm/cmbx10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmbx12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/am
-sfonts/cm/cmbx8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmex10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmmi12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmmi7.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/
-cm/cmmi8.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmr10.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/c
-mr12.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr
-17.pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.
-pfb></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb
-></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb>
-</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><
-/usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></u
-sr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr
-/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/l
-ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/lo
-cal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/loc
-al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/loca
-l/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local
-/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on thesis.pdf (36 pages, 3149920 bytes).
+ 38i,15n,45p,1739b,286s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
+></usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+</usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx6.pfb></
+usr/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></us
+r/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr
+/local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/
+local/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/l
+ocal/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/loc
+al/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/local
+/texlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/local/t
+exlive/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/tex
+live/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/local/texli
+ve/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/local/texlive
+/2014/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/local/texlive/20
+14/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/local/texlive/2014/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmsl12.pfb></usr/local/texlive/2014/t
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2014/te
+xmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb></usr/local/texlive/2014/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014/texmf-
+dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/local/texlive/2014/texmf-di
+st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2014/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/local/texlive/2014/texmf-dist/
+fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/local/texlive/2014/texmf-dist/f
+onts/type1/public/amsfonts/euler/eufm10.pfb></usr/local/texlive/2014/texmf-dist
+/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on thesis.pdf (40 pages, 3240441 bytes).
 PDF statistics:
- 530 PDF objects out of 1000 (max. 8388607)
- 274 compressed objects within 3 object streams
+ 574 PDF objects out of 1000 (max. 8388607)
+ 307 compressed objects within 4 object streams
  0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 61 words of extra memory for PDF output out of 10000 (max. 10000000)
 

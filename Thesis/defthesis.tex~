@@ -41,7 +41,7 @@
 %%%%% EDITING COMMANDS %%%%%
 \newcommand{\DB}[2]{$\footnotemark\footnotetext{DB #1: {\color{red}#2}}$} %date, comment
 \newcommand{\DBedit}[1]{{\color{red}#1}}
-\newcommand{\VGC}[2]{$\footnotemark\footnotetext{VG #1: {\color{blue}#2}}$} %date, comment
+\newcommand{\VGC}[2]{$\footnotemark\footnotetext{DB #1: {\color{blue}#2}}$} %date, comment
 \newcommand{\VGedit}[1]{{\color{blue}#1}}
 
 

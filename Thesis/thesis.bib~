@@ -1,6 +1,16 @@
 % This file was created with JabRef 2.10.
 % Encoding: UTF-8
 
+@article{Ascher1995,
+  title={Implicit-explicit methods for time-dependent partial differential equations},
+  author={Ascher, Uri M and Ruuth, Steven J and Wetton, Brian TR},
+  journal={SIAM Journal on Numerical Analysis},
+  volume={32},
+  number={3},
+  pages={797--823},
+  year={1995},
+  publisher={SIAM}
+}
 
 @Article{Aubry1988,
   Title                    = {The dynamics of coherent structures in the wall region of a turbulent boundary layer},
@@ -76,6 +86,16 @@
   Volume                   = {73},
 
   Publisher                = {Elsevier}
+}
+
+@inproceedings{Frigo1998,
+  title={FFTW: An adaptive software architecture for the FFT},
+  author={Frigo, Matteo and Johnson, Steven G},
+  booktitle={Acoustics, Speech and Signal Processing, 1998. Proceedings of the 1998 IEEE International Conference on},
+  volume={3},
+  pages={1381--1384},
+  year={1998},
+  organization={IEEE}
 }
 
 @Book{Frisch1995,
