@@ -103,14 +103,10 @@ Newton's method is extremely fast and converges quadratically on the root\rf{Pre
 \begin{equation}
 ||\Vector{f}(\Vector{x}_n) + \mathbb{J}_{f,\Vector{x_n}}\Vector{dx}_n|| = r_n< \epsilon ||\Vector{f}(\Vector{x}_n)||,
 \end{equation}
-where $||\Vector{x}|| = \sqrt{\Vector{x} \cdot \Vector{x}}$ is the norm of $\Vector{x}$, $r_n$ is the $n$-th residual, $\Vector{dx}_n = \Vector{x}_{n+1} - \Vector{x}_n$ and $\epsilon$ is some small parameter that controls how accurate we want the minimization to be\rf{Dembo1982}. Note that if $\epsilon = 0$, we recover \refeq{eq:NRSND}. Newton's method can be terminated when 
-\begin{equation}
-\Vector{x}_{n} - \Vector{x}_n \leq \eta, 
-\end{equation}
-
+where $||\Vector{x}|| = \sqrt{\Vector{x} \cdot \Vector{x}}$ is the norm of $\Vector{x}$, $r_n$ is the $n$-th residual, $\Vector{dx}_n = \Vector{x}_{n+1} - \Vector{x}_n$ and $\epsilon$ is some small parameter that controls how accurate we want the minimization to be\rf{Dembo1982}. Note that if $\epsilon = 0$, we recover \refeq{eq:NRSND}. Newton's method can be terminated either when successive steps fail to refine $f(\Vector{x})$ sufficiently, or when $f(\Vector{x})$ is sufficiently small.
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{NRMethod}
-\caption{A demonstration of Newton's method in 1D on a simple function with the root at $x_r \approx 8.98$. Starting at $x_0$ = 13, the method converges to $10^{-4}$ in just three steps.}\label{fig:Newton}
+\caption{A demonstration of Newton's method in 1D on a simple function with the root at $x_r \approx 8.98$. Starting at $x_0$ = 13, the method converges to within $10^{-4}$ in just three steps.}\label{fig:Newton}
 \end{figure}  
 \subsection{The Generalized Minimum Residual Method}
 
@@ -190,8 +186,59 @@ where $\Vector{e}_1$ is the first standard basis vector. This changes the least 
 
  {\bf GMRES-2} may seem nonsensical - why have we put this much effort into getting an equation similar to \refeq{eq:AXB}? The key lies in realizing that the minimization problem in  {\bf GMRES-2} has a dimension of $k$, whereas \refeq{eq:AXB} has a dimension on the order of $10^5$. Since the matrix inversion problem scales as dimension to the third power, this reduction is extremely powerful -- especially since GMRES converges quickly -- in this thesis, GMRES rarely took more than 20 iterations to converge. The minimization step in  {\bf GMRES-2} can be solved via a QR decomposition, with a time complexity of $O(n)$\rf{Trefethen1997}.  
  
+ \subsection{The Hookstep}
  
+ While the Newton method is incredibly powerful, it needs to be provided a sufficiently good guess to stand a chance of converging to a solution. However, in practice, we may be limited in our ability to provide good guesses with our computing resources, and thus need a method of dealing with less than ideal guesses. One major issue with a suboptimal guess is that the linear model used in deriving Newton's method may not be valid for the Newton step $\Vector{dx}_N$, as in \refFig{fig:NewtonOvershoot}. 
+  \begin{figure}[h]
+ \includegraphics[width=\textwidth]{NewtonOvershoot}
+ \caption{If we assume the linear model remains valid for the entire step, we can sometimes be led astray. Because the function becomes rapidly nonlinear, the Newton step takes us very far away from the actual root we are trying to find, and will likely never converge.}\label{fig:NewtonOvershoot}
+ \end{figure}
  
+ If this is the case, switching to a constrained {\bf hookstep} can force the algorithm to take artificially smaller steps, until the linear model becomes locally accurate. In {\tt Channelflow}, the equation of constraint for the hookstep $\Vector{dx}_H$ is 
+ \begin{equation}\label{eq:HSEOC}
+ ||\Vector{dx}_H|| \leq \delta,
+ \end{equation}
+ where $\delta$ is the {\bf trust region} of the linear model, which is recomputed whenever the linear model changes significantly. The hookstep is further restricted to lie in the $k$-th Krylov subspace, so that 
+ \begin{equation}\label{eq:HSKRYPROJ}
+ \Vector{dx}_H = \mathbb{Q}_{k}\Vector{s},
+ \end{equation} 
+ where $\Vector{s}$ is now the $k$-dimensional step we need to take. As with the Newton step, the hookstep is determined using GMRES. Unlike the Newton step, the minimization stage  {\bf GMRES-2} is not computed via the QR decomposition\rf{Gibson2014}\rf{Viswanath2007}. Instead, we substitute \eqref{eq:Qiter} and \eqref{eq:HSKRYPROJ} into \eqref{eq:AXB}, giving the residual which we wish to minimize with respect to $\Vector{s}$,
+ \begin{equation}\label{eq:HSRes}
+ ||\mathbb{Q}^{T}_{k+1}\Vector{b}-\mathbb{\tilde{H}}_k\Vector{s}|| = r.
+ \end{equation}
+ Applying the singular value decomposition $\mathbb{\tilde{H}}_k = \mathbb{U}\mathbb{D}\mathbb{V}^T$ transforms \eqref{eq:HSRes} intro
+ \begin{equation}
+ || \Vector{\hat{b}}-\mathbb{D}\Vector{\hat{s}} || = r,
+ \end{equation}
+ where $\Vector{\hat{s}} = \mathbb{V}^T\Vector{s}$, $\Vector{\hat{b}} = \mathbb{U}^T\mathbb{Q}^T_{k+1}\Vector{b}$, $\mathbb{U},\mathbb{V}$ are square, unitary matricides and $\mathbb{D}$ is a rectangular diagonal matrix. Using Lagrange multipliers, the minimization problems yields the solution\rf{Gibson2014}
+ \begin{equation}
+ {\hat{s}}_i = \frac{{\hat{b}}_i {D}_{ii}}{{D}_{ii}^2 + \mu},
+ \end{equation}
+ where $\mu$ minimizes 
+ \begin{equation}
+ ||\Vector{\hat{s}}(\mu)||^2 - \delta^2 = \mathfrak{r},
+ \end{equation}
+ which can be trivially solved by a 1D Newton method. 
+ 
+ \section{Recurrence Diagrams}
+ 
+ While the augmentation of the Newton-Krylov method by the hookstep makes it more resilitent against poor guesses, the Newton-Krylov-Hookstep (NKH) method remains extremely sensitive to initial conditions. As a result, an method to generate decent guesses to kickstart the NKH solver is vital. The method used in this thesis is as follows:
+ \begin{enumerate}
+ \item Begin with an initial condition. This can be chosen by randomly generating a field, or making a slight random perturbation off a known \ecs.
+ \item Integrate this initial condition forward in time using SBDF3 to obtain a trajectory 
+ \item Project this trajectory into some low dimensional basis which naturally provides insight into the dynamical structure
+ \item Extract some number of good guesses from this projection, and pass them along to the NKH solver.
+ \end{enumerate}
+ The key here is then to find an intelligent low dimensional projection. One possibility is to view the trajectory in the dissipation and energy input plane, as in\rf{Viswanath2007}, which has proven successful in the past. A better approach, however, is to consider the {\bf recurrence diagram} of the trajectory. \\
+ 
+ The recurrence diagram of a trajectory is a method by which the spatio-temporal separation of successive flow states in a trajectory can be visually analyzed. The recurrence diagram is a 2D plot of the values of the function 
+ \begin{equation}
+ \mathfrak{R}(t,T) = ||\Vector{u}(t+T) - \Vector{t}||,
+ \end{equation}
+ where minima of $\mathfrak{R}$ indicate the existence of \ecs. 
+ \section{Parametric Continuation} 
+ 
+
  
  
  
