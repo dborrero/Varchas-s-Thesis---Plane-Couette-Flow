@@ -25,4 +25,5 @@
 \contentsline {subsection}{\numberline {3.2.1}Newton's Method}{26}
 \contentsline {subsection}{\numberline {3.2.2}The Generalized Minimum Residual Method}{27}
 \contentsline {subsubsection}{\numberline {3.2.2.1}The Krylov Subspace}{27}
-\contentsline {chapter}{References}{29}
+\contentsline {subsubsection}{\numberline {3.2.2.2}The Arnoldi Iteration}{28}
+\contentsline {chapter}{References}{31}

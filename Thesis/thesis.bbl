@@ -135,4 +135,12 @@ Y.~Saad and M.~H. Schultz, ``Gmres: A generalized minimal residual algorithm
   for solving nonsymmetric linear systems,'' {\em SIAM Journal on scientific
   and statistical computing}, vol.~7, no.~3, pp.~856--869, 1986.
 
+\bibitem{Ipsen1998}
+I.~C. Ipsen and C.~D. Meyer, ``The idea behind krylov methods,'' {\em American
+  Mathematical Monthly}, pp.~889--899, 1998.
+
+\bibitem{Trefethen1997}
+L.~N. Trefethen and D.~Bau~III, {\em Numerical linear algebra}, vol.~50.
+\newblock Siam, 1997.
+
 \end{thebibliography}

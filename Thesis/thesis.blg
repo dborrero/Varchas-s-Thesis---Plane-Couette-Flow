@@ -4,45 +4,45 @@ The top-level auxiliary file: thesis.aux
 The style file: ieeetr.bst
 Database file #1: thesis.bib
 Warning--empty journal in Borrero2014
-You've used 29 entries,
+You've used 31 entries,
             1876 wiz_defined-function locations,
-            684 strings with 7837 characters,
-and the built_in function-call counts, 8010 in all, are:
-= -- 876
-> -- 202
+            698 strings with 8056 characters,
+and the built_in function-call counts, 8501 in all, are:
+= -- 928
+> -- 218
 < -- 0
-+ -- 82
-- -- 53
-* -- 518
-:= -- 1072
-add.period$ -- 37
-call.type$ -- 29
-change.case$ -- 23
++ -- 88
+- -- 57
+* -- 546
+:= -- 1138
+add.period$ -- 40
+call.type$ -- 31
+change.case$ -- 24
 chr.to.int$ -- 0
-cite$ -- 30
-duplicate$ -- 426
-empty$ -- 777
-format.name$ -- 53
-if$ -- 1998
+cite$ -- 32
+duplicate$ -- 451
+empty$ -- 827
+format.name$ -- 57
+if$ -- 2122
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 35
-newline$ -- 98
-num.names$ -- 29
-pop$ -- 77
+int.to.str$ -- 31
+missing$ -- 38
+newline$ -- 105
+num.names$ -- 31
+pop$ -- 85
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 316
+skip$ -- 334
 stack$ -- 0
-substring$ -- 639
-swap$ -- 195
+substring$ -- 671
+swap$ -- 205
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 1
-while$ -- 87
-width$ -- 31
-write$ -- 296
+while$ -- 92
+width$ -- 33
+write$ -- 315
 (There was 1 warning)

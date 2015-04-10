@@ -64,6 +64,17 @@
   Publisher                = {American Physical Society}
 }
 
+@article{Dembo1982,
+  title={Inexact newton methods},
+  author={Dembo, Ron S and Eisenstat, Stanley C and Steihaug, Trond},
+  journal={SIAM Journal on Numerical analysis},
+  volume={19},
+  number={2},
+  pages={400--408},
+  year={1982},
+  publisher={SIAM}
+}
+
 @Article{Fischer1983,
   Title                    = {Mean corpuscular volume},
   Author                   = {Fischer, Sandra L and Fischer, Sharon P},
@@ -268,6 +279,17 @@
   ISBN                     = {9780387942858},
   Lccn                     = {94006507},
   Url                      = {http://books.google.com/books?id=vb9kUfHqQigC}
+}
+
+@article{Saad1986,
+  title={GMRES: A generalized minimal residual algorithm for solving nonsymmetric linear systems},
+  author={Saad, Youcef and Schultz, Martin H},
+  journal={SIAM Journal on scientific and statistical computing},
+  volume={7},
+  number={3},
+  pages={856--869},
+  year={1986},
+  publisher={SIAM}
 }
 
 @Article{Taneda1956,
