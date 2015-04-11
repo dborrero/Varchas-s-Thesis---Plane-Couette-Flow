@@ -27,4 +27,6 @@
 \contentsline {subsubsection}{\numberline {3.2.2.1}The Krylov Subspace}{27}
 \contentsline {subsubsection}{\numberline {3.2.2.2}The Arnoldi Iteration}{28}
 \contentsline {subsection}{\numberline {3.2.3}The Hookstep}{30}
+\contentsline {section}{\numberline {3.3}Recurrence Diagrams}{31}
+\contentsline {section}{\numberline {3.4}Parametric Continuation}{32}
 \contentsline {chapter}{References}{33}
