@@ -204,7 +204,7 @@ and is solved by \refAlg{alg:GMRES}.
  \begin{equation}\label{eq:HSKRYPROJ}
  \Vector{dx}_H = \mathbb{Q}_{k}\Vector{s},
  \end{equation} 
- where $\Vector{s}$ is now the $k$-dimensional step we need to take. As with the Newton step, the hookstep is determined using GMRES. Unlike the Newton step, the minimization stage of \refAlg{alg:GMRES} is not computed via the QR decomposition\rf{Gibson2014}\rf{Viswanath2007}. Instead, we substitute \eqref{eq:Qiter} and \eqref{eq:HSKRYPROJ} into \eqref{eq:AXB}, giving the residual which we wish to minimize with respect to $\Vector{s}$,
+ where $\Vector{s}$ is now the $k$-dimensional step we need to take. As with the Newton step, the hookstep is determined using GMRES. Unlike the Newton step, the minimization stage of \refAlg{alg:GMRES} is not computed via the QR decomposition\rf{Gibson2014}. Instead, we substitute \eqref{eq:Qiter} and \eqref{eq:HSKRYPROJ} into \eqref{eq:AXB}, giving the residual which we wish to minimize with respect to $\Vector{s}$,
  \begin{equation}\label{eq:HSRes}
  ||\mathbb{Q}^{T}_{k+1}\Vector{b}-\mathbb{\tilde{H}}_k\Vector{s}|| = r.
  \end{equation}
@@ -251,7 +251,15 @@ and is solved by \refAlg{alg:GMRES}.
  
  \section{Parametric Continuation} 
  
- If we have a solution to \refeq{eq:NRResidual} for some control parameters, such as \ReN\ or the cell size, we may wish to see how these solutions vary with these control parameters. Considering the difficulty of running through the 
+ If we have a solution to \refeq{eq:NRResidual} for some control parameters, such as \ReN\ or the cell size, we may wish to see how these solutions vary with these control parameters. For example, if we know that a solution $S$  exists for $\ReN = 400$, we might want to know how this solution differs from the solution , $S'$ at $\ReN = 200$, assuming that $S'$ exists. One of the most efficient ways to find these solutions is via \refAlg{alg:parCont}, known as {\bf parametric continuation}.
+ \begin{algorithm}\label{alg:parCont}
+ If we have a solution $S_{\mu_0}$ with a control parameter $\mu_0$,  some solution finding method $\mathfrak{S}(S,\mu)$, then $S_{\mu_k}$ can be found by
+ \begin{enumerate}
+ \item choosing a $\mu_{i+1} = \mu_{i} + \mathrm{d}\mu$ such that the residual $\mathfrak{S}(S_{\mu_{i}},\mu_{i+1})$ is small,
+ \item and then using $S_{\mu_i}$ as a guess for $\mathfrak{S}$ to find $S_{\mu_{i+1}}$,
+ \end{enumerate}
+ for $i = 1,2,..,k-1$.
+ \end{algorithm}
 
  
  

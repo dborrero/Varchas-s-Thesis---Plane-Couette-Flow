@@ -1,9 +1,8 @@
 \begin{thebibliography}{10}
 
-\bibitem{Taneda1956}
-S.~Taneda, ``Experimental investigation of the wake behind a sphere at low
-  reynolds numbers,'' {\em Journal of the Physical Society of Japan}, vol.~11,
-  no.~10, pp.~1104--1108, 1956.
+\bibitem{Choi2006}
+K.-S. Choi, ``Fluid dynamics: The rough with the smooth,'' {\em Nature},
+  vol.~440, no.~7085, pp.~754--754, 2006.
 
 \bibitem{Grassberger2004}
 P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
@@ -142,5 +141,10 @@ I.~C. Ipsen and C.~D. Meyer, ``The idea behind krylov methods,'' {\em American
 \bibitem{Trefethen1997}
 L.~N. Trefethen and D.~Bau~III, {\em Numerical linear algebra}, vol.~50.
 \newblock Siam, 1997.
+
+\bibitem{Taneda1956}
+S.~Taneda, ``Experimental investigation of the wake behind a sphere at low
+  reynolds numbers,'' {\em Journal of the Physical Society of Japan}, vol.~11,
+  no.~10, pp.~1104--1108, 1956.
 
 \end{thebibliography}
