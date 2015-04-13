@@ -9,6 +9,11 @@ P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
   attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
   Springer, 2004.
 
+\bibitem{Nagata1990}
+M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane couette
+  flow: bifurcation from infinity,'' {\em J. Fluid Mech.}, vol.~217,
+  pp.~519--527, 1990.
+
 \bibitem{Borrero2014}
 D.~Borrero, ``Subcritical transition to turbulence in taylor-couette flow,''
   2014.
@@ -45,11 +50,6 @@ O.~Dauchot and N.~Vioujard, ``Phase space analysis of a dynamical model for the
   subcritical transition to turbulence in plane couette flow,'' {\em The
   European Physical Journal B-Condensed Matter and Complex Systems}, vol.~14,
   no.~2, pp.~377--381, 2000.
-
-\bibitem{Nagata1990}
-M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane couette
-  flow: bifurcation from infinity,'' {\em J. Fluid Mech.}, vol.~217,
-  pp.~519--527, 1990.
 
 \bibitem{Waleffe2001}
 F.~Waleffe, ``Exact coherent structures in channel flow,'' {\em Journal of
@@ -92,6 +92,10 @@ R.~Granger, {\em Fluid Mechanics}.
 S.~L. Fischer and S.~P. Fischer, ``Mean corpuscular volume,'' {\em Archives of
   Internal Medicine}, vol.~143, no.~2, pp.~282--283, 1983.
 
+\bibitem{Clarke2007}
+C.~Clarke and B.~Carswell, {\em Principles of astrophysical fluid dynamics}.
+\newblock Cambridge University Press, 2007.
+
 \bibitem{Rotman1995}
 J.~Rotman, {\em An Introduction to the Theory of Groups}.
 \newblock Graduate Texts in Mathematics, Springer, 1995.
@@ -102,17 +106,17 @@ J.~F. Gibson, J.~Halcrow, and P.~Cvitanovic, ``Equilibrium and travelling-wave
   vol.~638, pp.~243--266, Nov. 2009.
 
 \bibitem{Frisch1995}
-U.~Frisch, {\em Turbulence: the legacy of AN Kolmogorov}.
-\newblock Cambridge university press, 1995.
+U.~Frisch, {\em Turbulence: the legacy of {A}.{N}. Kolmogorov}.
+\newblock Cambridge University Press, 1995.
 
 \bibitem{Peyret2002}
 R.~Peyret, {\em Spectral methods for incompressible viscous flow}, vol.~148.
 \newblock Springer Science \& Business Media, 2002.
 
 \bibitem{Frigo1998}
-M.~Frigo and S.~G. Johnson, ``Fftw: An adaptive software architecture for the
-  fft,'' in {\em Acoustics, Speech and Signal Processing, 1998. Proceedings of
-  the 1998 IEEE International Conference on}, vol.~3, pp.~1381--1384, IEEE,
+M.~Frigo and S.~G. Johnson, ``{FFTW}: An adaptive software architecture for the
+  {FFT},'' in {\em Acoustics, Speech and Signal Processing, 1998. Proceedings
+  of the 1998 IEEE International Conference on}, vol.~3, pp.~1381--1384, IEEE,
   1998.
 
 \bibitem{Ascher1995}

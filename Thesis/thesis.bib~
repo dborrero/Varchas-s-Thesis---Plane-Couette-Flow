@@ -36,6 +36,17 @@
   Publisher                = {Georgia Institute of Technology}
 }
 
+@article{Choi2006,
+  title={Fluid dynamics: The rough with the smooth},
+  author={Choi, Kwing-So},
+  journal={Nature},
+  volume={440},
+  number={7085},
+  pages={754--754},
+  year={2006},
+  publisher={Nature Publishing Group}
+}
+
 @Article{Dauchot2000,
   Title                    = {Phase space analysis of a dynamical model for the subcritical transition to turbulence in plane Couette flow},
   Author                   = {Dauchot, O and Vioujard, N},

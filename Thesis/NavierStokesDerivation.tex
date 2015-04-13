@@ -1,13 +1,13 @@
 \setcounter{secnumdepth}{3}
 \chapter{Equations of Flow}
-    	 	\epigraph{For every action, there is an equal and opposite regulatory body}{Anonymous}
+    	 	\epigraph{For every action, there is an equal and opposite regulatory body.}{Anonymous}
 \section{Formalisms}
 %At the heart of fluid dynamics lies the Navier-Stokes equation, first derived by George Stokes in 1845, after a series of refinements leading back to Newton.
-If we were to describe the dynamics of a point particle, we would begin with Newton's Second Law - 
+If we were to describe the dynamics of a point particle, we would begin with Newton's Second Law,
 \begin{equation}\label{eq:NSL}
 \der{1}{\Vector{p}}{t} = \Vector{F}, 
 \end{equation}
-writing down the body force as a function of position, time, etc. The trajectory could then be calculated via analytic or numeric integration of \refeq{eq:NSL}. While in principle we can use this approach to describe the behavior of a large collection of particles making up the fluid, practical considerations prevent us from modeling the behavior of each individual particle, for the following reason -- in a milliliter of water, there are approximately $10^{22}$ molecules of water, each with 6 degrees of freedom\footnote{If we ignore the vibrations of the O-H bonds}. Applying \eqref{eq:NSL} to all these particles would result in about $10^{23}$ coupled ordinary differential equations. Such a set of equations would be hard to write down, let alone solve! Clearly, a more intelligent approach is needed -- the formalism that I will present here begins by modeling the fluid as a continuum. My derivation is based off that in\rf{Granger1995}. \\
+and writing down the body force as a function of position, time, etc. The trajectory could then be calculated via analytic or numeric integration of \refeq{eq:NSL}. While in principle we can use this approach to describe the behavior of a large collection of particles making up the fluid, practical considerations prevent us from modeling the behavior of each individual particle, for the following reason -- in a milliliter of water, there are approximately $10^{22}$ molecules of water, each with 6 degrees of freedom\footnote{If we ignore the vibrations of the O-H bonds}. Applying \eqref{eq:NSL} to all these particles would result in about $10^{23}$ coupled ordinary differential equations. Such a set of equations would be hard to write down, let alone solve! Clearly, a more intelligent approach is needed -- the formalism that I will present here begins by modeling the fluid as a continuum. My derivation is based off that in\rf{Granger1995}. \\
 
 \subsection{The Eulerian Formulation}
 
@@ -15,7 +15,7 @@ When asked to consider the mechanical evolution of some collection of bodies, tw
 
 \subsection{The Fluid Particle}
 A consequence of the Eulerian formulation is that we cannot know the full timeline of any individual particle over its lifetime -- we only know the properties of particles within the control volume. Therefore, the principle quantity in the Eulerian formulation is the {velocity field}\footnote{As opposed to particle trajectories $\Vector{x}(t)$ in the Lagrangian formulation.} $\Vector{v}(\Vector{x},t) = v_x(\Vector{x},t) \Vector{\hat{x}} + v_y (\Vector{x},t)\Vector{\hat{y}} + v_z(\Vector{x},t) \Vector{\hat{z}}$, along with the pressure and density fields, which are the average values of the property in a control volume surrounding a point. A subtle issue arises in doing this, however. Since the velocity field is continuous, it has a well-defined value at every point in space, which we would want to be associated with the velocity of a particle at that point in space. However, there are finite number of particles in any collection of fluid with a finite spatial extent. If these particles have some finite volume, then the formulation assigns multiple velocities to a single particle - and if the particles are infinitesimal, then the formulation assigns velocities to empty space! This issue can be resolved by appealing to the continuum hypothesis, which suggests that a control volume (the `{\bf fluid parcel}') can be chosen such that it is large enough to form a meaningful average of the quantities within, but small enough that the properties do not vary significantly over the parcel, and that from a macroscopic perspective, the properties appear continuous. 
-The reader may ask ``Can such a  parcel even exist?". As an example, let us consider water, with approximately $10^{22}$ molecules per cubic centimeter. Imagine our fluid parcels as tiling the volume with cubes of length $dl$, giving a total volume of $dl^3$ per parcel. First, let us make $dl$ small enough that the macroscopic properties appear continuous - how about one micron? That gives the volume of a fluid particle as one cubic micrometer. For scale, consider that the volume of the human red blood cell ranges from 80-100 cubic micrometers\cite{Fischer1983} - this seems acceptably small for considering, say, the flow around a ship.\footnote{The validity of the continuum hypothesis is clearly dependent on the density of the fluid and the length scale of the phenomenon to be modeled, but holds up even for the sparse gas clouds of protoplanetary disks} The number of water molecules within each fluid parcel is then 
+The reader may ask ``Can such a  parcel even exist?". As an example, let us consider water, with approximately $10^{22}$ molecules per cubic centimeter. Imagine our fluid parcels as tiling the volume with cubes of length $dl$, giving a total volume of $dl^3$ per parcel. First, let us make $dl$ small enough that the macroscopic properties appear continuous - how about one micron? That gives the volume of a fluid particle as one cubic micrometer. For scale, consider that the volume of the human red blood cell ranges from 80-100 cubic micrometers\rf{Fischer1983} - this seems acceptably small for considering, say, the flow around a ship.\footnote{The validity of the continuum hypothesis is clearly dependent on the density of the fluid and the length scale of the phenomenon to be modeled, but holds up even for the sparse gas clouds of protoplanetary disks\rf{Clarke2007}.} The number of water molecules within each fluid parcel is then 
 \begin{equation}
 10^{22}dl^3 = 10^{22} \times 10^{-12} = 10^{10},
 \end{equation}   
@@ -23,9 +23,7 @@ The reader may ask ``Can such a  parcel even exist?". As an example, let us cons
 or about 10 billion water molecules, which is certainly sufficient to achieve a meaningful average. Having defined a fluid parcel in this way allows us to behave as if these macroscopic variables have well-defined values at every point in space, which greatly simplifies the following analysis. 
 
 \section{Mass Conservation}
-While not formally a part of the Navier-Stokes equation (which is a statement about conservation of linear momentum), conservation of mass is nevertheless essential in solving fluid problems, and will serve as a demonstration of the control volume method. Consider a volume $\Omega$ which is fixed in space, and has some mass density $\rho = \rho(\Vector{x},t)$ and some fluid velocity $\Vector{v} = \Vector{v}(\Vector{x} ,t)$ that are generically functions of time and space, allowing us to define the {\bf mass current density} $\Vector{m} = \Vector{v}\rho$. We would prefer that our equations not allow mass to disappear (excluding high-energy physics, naturally), and would additionally prefer a mathematical form of this statement. \\
-
-The mass contained within the volume $\Omega$ is given by 
+While not formally a part of the Navier-Stokes equation (which is a statement about conservation of linear momentum), conservation of mass is nevertheless essential in solving fluid problems, and will serve as a demonstration of the control volume method. Consider a volume $\Omega$ which is fixed in space, and has some mass density $\rho = \rho(\Vector{x},t)$ and some fluid velocity $\Vector{v} = \Vector{v}(\Vector{x} ,t)$ that are generically functions of time and space, allowing us to define the {\bf mass current density} $\Vector{m} = \Vector{v}\rho$. The mass contained within the volume $\Omega$ is then given by 
 \begin{equation}
 M = \int{\Omega}{}{\rho}{dV}.
 \end{equation}
@@ -33,7 +31,7 @@ The flow of mass out of the volume through the surface $d\Omega$ of $\Omega$ is 
 \begin{equation}
 \mathcal{M}_{flow} = \int{d\Omega}{}{\Vector{m}\cdot\Vector{n}}{dA} = \int{\Omega}{}{\Div{\paren{\rho\Vector{v}}}}{dV},
 \end{equation}
-by the divergence theorem.  Now if mass is conserved, the sum of the rate of mass flow into (or out of) the volume and the rate of change of mass inside the volume $M_{encl}$ must be zero, giving
+by the divergence theorem.  Now in classical physics, mass should not appear or disappear, so the sum of the rate of mass flow into (or out of) the volume and the rate of change of mass inside the volume $M_{encl}$ must be zero, giving
 \begin{equation}
 \pder{1}{M_{encl}}{t} + \mathcal{M}_{flow} = 0,
 \end{equation}
@@ -120,7 +118,7 @@ and neglecting body forces, we obtain the nondimensional version of \refeq{eq:NS
 where \begin{equation}\label{eq:ReN}\ReN= \frac{UL\rho}{\mu}.\end{equation} In practice, the values of $L$ and $U$ are chosen by convention to reflect the natural scales of the problem at hand.
  
 \section{Plane Couette Flow}
-Since \pCf\ is a shear driven flow, we set the pressure gradient to zero and use no slip boundary conditions at the walls, which sets the surface tangential velocity equal to the surface velocity. The Navier-Stokes equation for \pCf\ is then given by 
+Since \pCf\ is a shear driven flow, we set the pressure gradient to zero and use no-slip boundary conditions at the walls, which sets the surface tangential velocity equal to the surface velocity. The Navier-Stokes equation for \pCf\ is then given by 
 \begin{equation}\label{eq:NSPCF}
 \pder{1}{\Vector{u}}{t} + \paren{\Vector{u}\cdot\nabla}\Vector{u} = \frac{1}{\ReN}\nabla^2\Vector{u},
 \end{equation}

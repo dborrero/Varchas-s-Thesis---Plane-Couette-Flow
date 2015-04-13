@@ -10,7 +10,7 @@ Spectral methods are, like finite element methods, part of a larger class of num
 \begin{equation}\label{eq:scalarProduct}
 \scprod{u}{v}{w} = \int{a}{b}{uvw}{dx},
 \end{equation}
-where  $u(x),v(x)$ are some functions on the interval $[a,b]$, and $w(x)$ is a weighting function. If we then imagine some platonic function\footnote{That is, the function that is to be approximated} $u(x)$ that we attempt to approximate via a finite series expansion, so that
+where  $u(x),v(x)$ are some functions on the interval $[a,b]$, and $w(x)$ is a weighting function. If we then imagine some platonic function\footnote{That is, the function that is to be approximated.} $u(x)$ that we attempt to approximate via a finite series expansion, so that
 \begin{equation}\label{eq:seriesExpansion}
 u_N(x) = \sum{k=0}{N}{\hat{u}_k \psi_k(x)},
 \end{equation}
@@ -44,7 +44,7 @@ and Chebyshev polynomials of the first kind in the wall-normal direction, where 
 T_k(x) = \cos{k\arccos{x}}\\
 u_N(x) = \sum{k=0}{(2k-1)/2}\hat{\mathfrak{u}}_kT_k(x).
 \end{align}
-\par The Fourier series expansion is particularly nice since the derivative $\partial_x F_k(x) = ikF(x)$ is especially easy to calculate, as are the Fourier coefficients by virtue of the Fast Fourier Transform, implemented in the Fastest Fourier Transform in the West (FFTW)\rf{Frigo1998}.\\
+\par The Fourier series expansion is particularly nice since the derivative $\partial_x F_k(x) = ikF(x)$ is especially easy to calculate, as are the Fourier coefficients by virtue of the Fast Fourier Transform, implemented in the Fastest Fourier Transform in the West (FFTW) library\rf{Frigo1998}.\\
 
 For Chebyshev polynomials, the derivative is slightly more complicated, since 
 \begin{equation}
@@ -87,7 +87,7 @@ In order to find \ecs\, it is necessary to solve the equation
 \end{equation}
 which is easiest tackled by root-finding algorithms. The root finding method used by {\tt Channelflow} is based on Newton's method, with some additional refinements. \\
 \subsection{Newton's Method}
-The principle behind Newton's method is as follows: Suppose we have $f(x)$ be a smooth and differentiable function, and an initial, `good' guess\footnote{How good a guess needs to be is highly dependent on the problem. Through this thesis, an initial condition that gave $R_T(\Vector{u}) < 0.001$ was considered a sufficiently good guess.}  $x_0$ for the root of $f$. Then we can find a better guess for the root of $f$ by finding the root of the tangent line at $f(x_0)$ (\refFig{fig:Newton}). Mathematically, 
+The principle behind Newton's method is as follows: Suppose we have $f(x)$ be a smooth and differentiable function, and an initial, `good' guess $x_0$ for the root of $f$.\footnote{How good a guess needs to be is highly dependent on the problem. For this thesis, an initial condition that gave $R_T(\Vector{u}) < 0.001$ was considered a sufficiently good guess.}  Then we can find a better guess for the root of $f$ by finding the root of the tangent line at $f(x_0)$ (\refFig{fig:Newton}). Mathematically, 
 \begin{align}
 f(x_n) + f'(x_n)\paren{x_{n+1} - x_n} = 0,\label{eq:NRS1D}\\ 
 x_{n+1} = x_n - \frac{f(x_n)}{f'(x_n)}.\label{eq:NR1D}
@@ -190,7 +190,7 @@ and is solved by \refAlg{alg:GMRES}.
  
  \subsection{The Hookstep}
  
- While the Newton method is incredibly powerful, it needs to be provided a sufficiently good guess to stand a chance of converging to a solution. However, in practice, we may be limited in our ability to provide good guesses with our computing resources, and thus need a method of dealing with less than ideal guesses. One major issue with a suboptimal guess is that the linear model used in deriving Newton's method may not be valid for the Newton step $\Vector{dx}_N$, as in \refFig{fig:NewtonOvershoot}. 
+ While Newton's method is incredibly powerful, it needs to be provided a sufficiently good guess to stand a chance of converging to a solution. However, in practice, we may be limited in our ability to provide good guesses with our computing resources, and thus need a method of dealing with less than ideal guesses. One major issue with a suboptimal guess is that the linear model used in deriving Newton's method may not be valid for the Newton step $\Vector{dx}_N$, as in \refFig{fig:NewtonOvershoot}. 
   \begin{figure}[h]
  \includegraphics[width=\textwidth]{NewtonOvershoot}
  \caption{If we assume the linear model remains valid for the entire step, we can sometimes be led astray. Because the function becomes rapidly nonlinear, the Newton step takes us very far away from the actual root we are trying to find, and will likely never converge.}\label{fig:NewtonOvershoot}
@@ -251,7 +251,7 @@ and is solved by \refAlg{alg:GMRES}.
  
  \section{Parametric Continuation} 
  
- If we have a solution to \refeq{eq:NRResidual} for some control parameters, such as \ReN\ or the cell size, we may wish to see how these solutions vary with these control parameters. For example, if we know that a solution $S$  exists for $\ReN = 400$, we might want to know how this solution differs from the solution , $S'$ at $\ReN = 200$, assuming that $S'$ exists. One of the most efficient ways to find these solutions is via \refAlg{alg:parCont}, known as {\bf parametric continuation}.
+ If we have a solution to \refeq{eq:NRResidual} for some control parameters, such as \ReN\ or the cell size, we may wish to see how these solutions vary with these control parameters. For example, if we know that a solution $S$  exists for $\ReN = 400$, we might want to know how this solution differs from the solution , $S'$ at $\ReN = 200$, assuming that $S'$ exists. The solution may, for example vary as in \refFig{fig:bifurcations},  One of the most efficient ways to find these solutions is via \refAlg{alg:parCont}, known as {\bf parametric continuation}.
  \begin{algorithm}\label{alg:parCont}
  If we have a solution $S_{\mu_0}$ with a control parameter $\mu_0$,  some solution finding method $\mathfrak{S}(S,\mu)$, then $S_{\mu_k}$ can be found by
  \begin{enumerate}
@@ -261,6 +261,9 @@ and is solved by \refAlg{alg:GMRES}.
  for $i = 1,2,..,k-1$.
  \end{algorithm}
 
- 
+ \begin{figure}[h]
+ \includegraphics[width=\textwidth]{BifurcationDiagram}
+ \caption{A schematic of a 1D bifurcation, that shows the variation of a solution $x^*$ as a function of a control parameter $r$. While the control parameter $r < 2$, there is only one, stable solution, on the left. At a critical value $r = 2$, however, a new solution emerges at $x^* = 1$ in a {\bf saddle-node bifurcation}. When $2 < r < 4$, the saddle-node splits into two, producing a stable solution (solid) on the right, and an unstable solution (dashed) on the left. As $r$ approaches 4, the original stable solution and the new unstable solution approach each other until at $r=$, they annihilate in another saddle node bifurcation, leaving only the new stable solution. In higher dimensions, bifurcations can be incredibly complex, but we can nevertheless observe bifurcations of this form. }\label{fig:bifurcations}
+ \end{figure}
  
  
