@@ -10,17 +10,19 @@ P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
   Springer, 2004.
 
 \bibitem{Nagata1990}
-M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane couette
+M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane {Couette}
   flow: bifurcation from infinity,'' {\em J. Fluid Mech.}, vol.~217,
   pp.~519--527, 1990.
 
 \bibitem{Borrero2014}
-D.~Borrero, ``Subcritical transition to turbulence in taylor-couette flow,''
-  2014.
+D.~Borrero-Echeverry, {\em Subcritical Transition to Turbulence in
+  Taylor-{Couette} Flow}.
+\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
+  Atlanta, GA 30332, 2014.
 
 \bibitem{Daviaud1992}
 F.~Daviaud, J.~Hegseth, and P.~Berg\'e, ``Subcritical transition to turbulence
-  in plane couette flow,'' {\em Phys. Rev. Lett.}, vol.~69, pp.~2511--2514,
+  in plane {Couette} flow,'' {\em Phys. Rev. Lett.}, vol.~69, pp.~2511--2514,
   Oct. 1992.
 
 \bibitem{Pope2000}
@@ -47,7 +49,7 @@ N.~Aubry, P.~Holmes, J.~L. Lumley, and E.~Stone, ``The dynamics of coherent
 
 \bibitem{Dauchot2000}
 O.~Dauchot and N.~Vioujard, ``Phase space analysis of a dynamical model for the
-  subcritical transition to turbulence in plane couette flow,'' {\em The
+  subcritical transition to turbulence in plane {Couette} flow,'' {\em The
   European Physical Journal B-Condensed Matter and Complex Systems}, vol.~14,
   no.~2, pp.~377--381, 2000.
 
@@ -56,12 +58,12 @@ F.~Waleffe, ``Exact coherent structures in channel flow,'' {\em Journal of
   Fluid Mechanics}, vol.~435, pp.~93--102, 5 2001.
 
 \bibitem{Kawahara2001}
-G.~Kawahara and S.~Kida, ``Periodic motion embedded in plane couette
+G.~Kawahara and S.~Kida, ``Periodic motion embedded in plane {Couette}
   turbulence: regeneration cycle and burst,'' {\em J. Fluid Mech.}, vol.~449,
   pp.~291--300, 2001.
 
 \bibitem{Viswanath2007}
-D.~Viswanath, ``Recurrent motions within plane couette turbulence,'' {\em J.
+D.~Viswanath, ``Recurrent motions within plane {Couette} turbulence,'' {\em J.
   Fluid Mech.}, vol.~580, pp.~339--358, 2007.
 
 \bibitem{Hof2008}
@@ -71,7 +73,7 @@ B.~Hof, A.~de~Lozar, D.~J. Kuik, and J.~Westerweel, ``Repeller or attractor?
 
 \bibitem{Gibson2008}
 J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
-  state space in plane couette flow,'' {\em Journal of Fluid Mechanics},
+  state space in plane {Couette} flow,'' {\em Journal of Fluid Mechanics},
   vol.~611, pp.~107--130, 2008.
 
 \bibitem{Gibson2014}
@@ -80,9 +82,10 @@ J.~F. Gibson, ``{Channelflow}: {A} spectral {Navier-Stokes} simulator in
 \newblock {\tt {Channelflow.org}}.
 
 \bibitem{Halcrow2008}
-J.~J. Halcrow, {\em Charting the state space of plane Couette flow: Equilibria,
-  relative equilibria, and heteroclinic connections}.
-\newblock ProQuest, 2008.
+J.~J. Halcrow, {\em Charting the state space of plane {{Couette}} flow:
+  {Equilibria}, relative equilibria, and heteroclinic connections}.
+\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
+  Atlanta, GA 30332, 2008.
 
 \bibitem{Granger1995}
 R.~Granger, {\em Fluid Mechanics}.
@@ -102,7 +105,7 @@ J.~Rotman, {\em An Introduction to the Theory of Groups}.
 
 \bibitem{GIBSON2009}
 J.~F. Gibson, J.~Halcrow, and P.~Cvitanovic, ``Equilibrium and travelling-wave
-  solutions of plane couette flow,'' {\em Journal of Fluid Mechanics},
+  solutions of plane {Couette} flow,'' {\em Journal of Fluid Mechanics},
   vol.~638, pp.~243--266, Nov. 2009.
 
 \bibitem{Frisch1995}
