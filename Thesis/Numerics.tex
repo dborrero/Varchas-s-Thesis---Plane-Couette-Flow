@@ -2,39 +2,51 @@
 
     	 	\epigraph{On two occasions I have been asked, ``Pray, Mr. Babbage, if you put into the machine wrong figures, will the right answers come out?" ... I am not able rightly to apprehend the kind of confusion of ideas that could provoke such a question.}{Charles Babbage, Passages from the Life of a Philosopher}
 
-Computational studies of Navier-Stokes, especially as a dynamical system, are difficult for many reasons, but most important among them is the high degree of complexity inherent in the numerical tools required to maintain efficiency. As mentioned earlier, the two major approaches towards simulating Navier-Stokes are modeling, where some assumptions are made to reduce the difficult of simulation, and direct numerical simulation (DNS), where no assumptions beyond those used to derive Navier-Stokes and set up the boundary conditions are used. DNS is naturally more accurate (since the physicality of some modeling assumptions can be suspect), but since it fully resolves Navier-Stokes, it is significantly more expensive than modeling, and methods that attempt to offset this extra cost tend to be extremely complex. For this reason, I use the open source library {\tt Channelflow}\rf{Gibson2014}, which has been essential in making any headway in this thesis. {\tt Channelflow} is a spectral DNS library, with additional utilities to find, parametrically continue, and analyze \ecs, which I will lay out in some detail below.
+Computational studies of the Navier-Stokes equations, especially as a dynamical system, are difficult for many reasons, but most important among them is the high degree of complexity inherent in the numerical tools required to maintain efficiency. As mentioned earlier, the two major approaches towards simulating Navier-Stokes are modeling, where some assumptions are made to reduce the difficult of simulation, and direct numerical simulation (DNS), where no assumptions beyond those used to derive Navier-Stokes and set up the boundary conditions are used. DNS is naturally more accurate (since the physicality of some modeling assumptions can be suspect), but in order to fully resolve the Navier-Stokes equations, it is significantly more computationally expensive than modeling. For this reason, I use the open source library {\tt Channelflow}\rf{Gibson2014}, which has been essential in making any headway in this thesis. {\tt Channelflow} is a spectral DNS library, with additional utilities to find, parametrically continue, and analyze \ecs, which I will lay out in some detail below.
 \section{The Spectral Method}
 \subsection{The Residual}
 
-Spectral methods are, like finite element methods, part of a larger class of numerical methods known as {\bf weighted residual methods}. In this class of methods, functions are approximated by a truncated series expansion, with the restriction that a quantity related to the residual be zero (instead of the residual itself). The quantity used for the spectral method is the scalar product 
+{\bf Spectral methods} are  part of a larger class of numerical methods known as {\bf weighted residual methods}. In this class of methods, functions are approximated by a truncated series expansion, with the restriction that a quantity related to the residual be zero (instead of the residual itself). The quantity used in spectral methods is the scalar product 
 \begin{equation}\label{eq:scalarProduct}
 \scprod{u}{v}{w} = \int{a}{b}{uvw}{dx},
 \end{equation}
-where  $u(x),v(x)$ are some functions on the interval $[a,b]$, and $w(x)$ is a weighting function. If we then imagine some platonic function\footnote{That is, the function that is to be approximated.} $u(x)$ that we attempt to approximate via a finite series expansion, so that
+where  $u(x),v(x)$ are some functions on the interval $[a,b]$, and $w(x)$ is a weighting function. If we then imagine some platonic function (The function that is to be approximated) $u(x)$ that we attempt to approximate via a finite series expansion, so that
 \begin{equation}\label{eq:seriesExpansion}
-u_N(x) = \sum{k=0}{N}{\hat{u}_k \psi_k(x)},
+u_K(x) = \sum{k=0}{K}{\hat{u}_k \psi_k(x)},
 \end{equation}
 for some set of orthogonal basis functions $\psi_k(x)$, then the residual is given by
 \begin{equation}
-R_N = u(x)-u_N(x),
+R_K = u(x)-u_K(x).
 \end{equation} 
-and for some differential equation
+For a differential equation
 \begin{equation}
 Du = f,
 \end{equation}
 where $D$ is some arbitrary differential operator and $f(x)$ is some arbitrary source function, the residual is defined
 \begin{equation}
-R_N = Du_N,
+R_K = Du_K - f.
 \end{equation}
-as expected. While it may seem logical to require $R_N = 0$, this is not possible in general for finite $N$, so we instead require that for a set of test functions $\phi_i(x)$ and weighting function $w^*$, 
+While it may seem logical to require $R_N = 0$, this is not possible in general for finite $N$, so we instead require that for a set of test functions $\phi_i(x)$ and weighting function $w^*$, the residual satisfies
 \begin{equation}\label{eq:SpectralZero}
 \scprod{R_N}{\phi_i(x)}{w^*} = R_N(x_i) = 0,
 \end{equation}
-for some set of $x_i$. If $\phi_i(x) = \delta(x-x_i)$ and $w^* = 1$, then we have the colocation method, which forces the approximation to match the platonic function at a set of points. If $\phi_i(x) = \psi_i(x)$ and $w^* = w$, then we have the Galerkin method, which forces the mean residual to be zero. 
+for some set of $x_i$. If $\phi_i(x) = \delta(x-x_i)$ and $w^* = 1$, where
+\begin{equation}
+\delta(x-x') = 
+\begin{cases}
+0 &\text{if } x \neq x'\\
+\infty &\text{if } x = x',
+\end{cases}
+\end{equation}
+and
+\begin{equation}
+ \int{-\infty}{\infty}{\delta(x-x') = 1}{\textrm{d}x},
+\end{equation}
+ then we have the {\bf colocation method}, which forces the approximation to match the platonic function at a set of points. If $\phi_i(x) = \psi_i(x)$ and $w^* = w$, then we have the {\bf Galerkin method}, which forces the mean residual to be zero. 
 
 \subsection{Basis Functions}
 
-In the spectral method, trigonometric functions are chosen as the basis. The advantage of trigonometric functions over polynomials is the rapid convergence of the series coefficients -- the Fourier coefficients converge exponentially fast, so we can achieve extremely high accuracy with a lower number of modes\rf{Peyret2002}.\footnote{Spectral methods are inappropriate when the boundary geometry is highly complex, as is the case in the majority of industrial applications, where more general finite element methods are used.} {\tt Channelflow} uses Fourier series in the streamwise-spanwise directions, where the basis functions and spectral projection are given by 
+In the spectral method, trigonometric functions are chosen as the basis. The advantage of trigonometric functions over polynomials is the rapid convergence of the series coefficients -- the Fourier coefficients converge exponentially fast, so we can achieve extremely high accuracy with a lower number of modes\rf{Peyret2002}. However, spectral methods are inappropriate when the boundary geometry is highly complex, as is the case in the majority of industrial applications, where more general weighted residual methods are used. Since the plane Couette geometry is relatively simple, {\tt Channelflow} can make good use of the superior convergence rate of the spectral decomposition. {\tt Channelflow} uses Fourier series in the streamwise-spanwise directions, where the basis functions and spectral projection are given by 
 \begin{align}
 F_k(x) = \exp{ikx}\\
 u_K(x) = \sum{k=-K}{K}\hat{u}_k\exp{ikx},
