@@ -137,7 +137,11 @@ with boundary conditions
 \begin{equation}\label{eq:PCBC}
 \Vector{u}(x,\pm1,z,t) = \paren{\pm1,0,0},
 \end{equation}
-and geometry as pictured in \refFig{fig:planeCouette}. We nondimensionalize by the velocity $V$ of either plate and the half-plate distance $h$, with the Reynolds number
+and
+\begin{equation}\label{eq:NPBC}
+\pder{1}{}{y}\Vector{u}(x,\pm1,z,t) = \paren{a,0,b},
+\end{equation}
+for some constant $a$ and $b$ and geometry as pictured in \refFig{fig:planeCouette}. We nondimensionalize by the velocity $V$ of either plate and the half-plate distance $h$, with the Reynolds number
 \begin{equation}
 \ReN = \frac{hV\rho}{\mu}.
 \end{equation} In order to derive the laminar velocity profile shown in \refFig{fig:planeCouetteBulk}, note that at very low \ReN, the right hand side of \refeq{eq:NSPCF} dominates. If we assume that the flow is unidirectional and steady, so that $\Vector{u} = u_x \Vector{\hat{x}}$, symmetry considerations tell us that the velocity field can only be a function of height, so that the Navier-Stokes equation reduces to 
@@ -153,10 +157,11 @@ which corresponds to the laminar flow profile shown in \refFig{fig:planeCouetteB
 \pder{1}{\Vector{v}}{\tau} + y\pder{1}{\Vector{v}}{x} + v\Vector{\hat{x}} + \Vector{v}\cdot\Grad{\Vector{v}} &= \frac{1}{\ReN} \nabla^2\Vector{v},\label{eq:PertND}\\
 \Div{\Vector{v}} &= 0.
 \end{align}
-Adapting the no-slip boundary conditions from \refeq{eq:PCBC}, we get
-\begin{equation}
-\Vector{v}(x,\pm 1,z,t) = 0.
-\end{equation}
+Adapting the no-slip boundary conditions from \refeq{eq:PCBC} and no-penetration boundary from \refeq{eq:NPBC}, we get
+\begin{align}
+\Vector{v}(x,\pm 1,z,t) = 0,\\
+\pder{1}{}{y}\Vector{v}(x,\pm 1,z,t) = (a,0,b).
+\end{align}
 At this point we need to introduce artificial boundary conditions to  render the infinite planar domain into a computationally tractable form. We use the periodic boundary conditions 
 \begin{align}
 \Vector{v}(x,y,z,t) = \Vector{v}(x+L_x,y,z,t),\label{eq:periodicBCx},\\

@@ -22,16 +22,16 @@
 \contentsline {subsection}{\numberline {3.1.2}Basis Functions}{28}
 \contentsline {subsection}{\numberline {3.1.3}Spatio-Temporal Discretization}{30}
 \contentsline {section}{\numberline {3.2}Newton-Krylov-Hookstep Method}{30}
-\contentsline {subsection}{\numberline {3.2.1}Newton's Method}{30}
-\contentsline {subsection}{\numberline {3.2.2}The Generalized Minimum Residual Method}{31}
-\contentsline {subsubsection}{\numberline {3.2.2.1}The Krylov Subspace}{31}
-\contentsline {subsubsection}{\numberline {3.2.2.2}The Arnoldi Iteration}{32}
-\contentsline {subsection}{\numberline {3.2.3}The Hookstep}{34}
-\contentsline {section}{\numberline {3.3}Recurrence Diagrams}{35}
-\contentsline {section}{\numberline {3.4}Parametric Continuation}{36}
-\contentsline {chapter}{Chapter 4: Results}{39}
-\contentsline {section}{\numberline {4.1}Periodic Orbits}{39}
-\contentsline {subsection}{\numberline {4.1.1}Visualizations}{39}
-\contentsline {chapter}{Conclusion}{45}
-\contentsline {section}{\numberline {4.1}More info}{45}
-\contentsline {chapter}{References}{47}
+\contentsline {subsection}{\numberline {3.2.1}Newton's Method}{31}
+\contentsline {subsection}{\numberline {3.2.2}The Generalized Minimum Residual Method}{32}
+\contentsline {subsubsection}{\numberline {3.2.2.1}The Krylov Subspace}{33}
+\contentsline {subsubsection}{\numberline {3.2.2.2}The Arnoldi Iteration}{33}
+\contentsline {subsection}{\numberline {3.2.3}The Hookstep}{35}
+\contentsline {section}{\numberline {3.3}Recurrence Diagrams}{36}
+\contentsline {section}{\numberline {3.4}Parametric Continuation}{39}
+\contentsline {chapter}{Chapter 4: Results}{41}
+\contentsline {section}{\numberline {4.1}Periodic Orbits}{41}
+\contentsline {subsection}{\numberline {4.1.1}Visualizations}{41}
+\contentsline {chapter}{Conclusion}{47}
+\contentsline {section}{\numberline {4.1}More info}{47}
+\contentsline {chapter}{References}{49}

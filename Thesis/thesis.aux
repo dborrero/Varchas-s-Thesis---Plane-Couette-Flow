@@ -77,9 +77,10 @@
 \@writefile{toc}{\contentsline {section}{\numberline {1.4}Plane Couette Flow}{16}}
 \newlabel{eq:NSPCF}{{1.27}{16}}
 \newlabel{eq:PCBC}{{1.28}{16}}
-\newlabel{eq:PertND}{{1.32}{17}}
-\newlabel{eq:periodicBCx}{{1.35}{17}}
-\newlabel{eq:periodicBCz}{{1.36}{17}}
+\newlabel{eq:NPBC}{{1.29}{16}}
+\newlabel{eq:PertND}{{1.33}{17}}
+\newlabel{eq:periodicBCx}{{1.37}{17}}
+\newlabel{eq:periodicBCz}{{1.38}{17}}
 \citation{Rotman1995}
 \@writefile{toc}{\contentsline {chapter}{Chapter 2: Symmetry in plane Couette flow}{19}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -122,61 +123,68 @@
 \citation{Ascher1995}
 \@writefile{toc}{\contentsline {subsection}{\numberline {3.1.3}Spatio-Temporal Discretization}{30}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.2}Newton-Krylov-Hookstep Method}{30}}
-\newlabel{eq:NRResidual}{{3.21}{30}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Newton's Method}{30}}
+\newlabel{eq:NRResidual}{{3.22}{30}}
 \citation{Press2007}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.1}Newton's Method}{31}}
+\newlabel{eq:NRS1D}{{3.23}{31}}
+\newlabel{eq:NR1D}{{3.24}{31}}
+\newlabel{eq:NRSND}{{3.25}{31}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces A demonstration of Newton's method in 1D on a simple function with the root at $x_r \approx 8.98$. Starting at $x_0$ = 13, the first tangent (black) has a zero at $x_1 \approx 10.5$, the second tangent (red) has a zero at $x_2 \approx 9.4$, and the third tangent (green) has a zero at $x_3 \approx 8.99$. The method converges to within approximately $10^{-4}$ in just three steps.}}{31}}
+\newlabel{fig:Newton}{{3.1}{31}}
 \citation{Dembo1982}
 \citation{Saad1986}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces If we assume the linear model remains valid for the entire step, we can sometimes be led astray. Because the function is linear only in the vicinity of the initial guess, the Newton step takes us very far away from the actual root we are trying to find, and will likely never converge.}}{32}}
+\newlabel{fig:NewtonOvershoot}{{3.2}{32}}
+\newlabel{eq:minimizeNewt}{{3.27}{32}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}The Generalized Minimum Residual Method}{32}}
 \citation{Ipsen1998}
-\newlabel{eq:NRS1D}{{3.22}{31}}
-\newlabel{eq:NR1D}{{3.23}{31}}
-\newlabel{eq:NRSND}{{3.24}{31}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.2}The Generalized Minimum Residual Method}{31}}
-\newlabel{eq:AXB}{{3.27}{31}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2.1}The Krylov Subspace}{31}}
-\newlabel{eq:krylov}{{3.28}{31}}
-\citation{Ipsen1998}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.1}{\ignorespaces A demonstration of Newton's method in 1D on a simple function with the root at $x_r \approx 8.98$. Starting at $x_0$ = 13, the method converges to within $10^{-4}$ in just three steps.}}{32}}
-\newlabel{fig:Newton}{{3.1}{32}}
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2.2}The Arnoldi Iteration}{32}}
-\newlabel{alg:Arnoldi}{{1}{32}}
-\citation{Ipsen1998}
-\citation{Trefethen1997}
+\newlabel{eq:AXB}{{3.28}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2.1}The Krylov Subspace}{33}}
+\newlabel{eq:krylov}{{3.29}{33}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2.2}The Arnoldi Iteration}{33}}
+\newlabel{alg:Arnoldi}{{1}{33}}
 \newlabel{eq:Qiter}{{3.31}{33}}
-\newlabel{eq:GMRESMIN}{{3.35}{33}}
-\newlabel{alg:GMRES}{{2}{33}}
+\newlabel{eq:shutUpMatt}{{3.34}{34}}
+\newlabel{eq:UNIMATRIX}{{3.35}{34}}
+\newlabel{eq:QS}{{3.37}{34}}
+\newlabel{eq:GMRESMIN}{{3.40}{34}}
+\newlabel{alg:GMRES}{{2}{34}}
+\citation{Trefethen1997}
 \citation{Gibson2014}
 \citation{Gibson2014}
-\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}The Hookstep}{34}}
-\newlabel{eq:HSEOC}{{3.36}{34}}
-\newlabel{eq:HSKRYPROJ}{{3.37}{34}}
-\newlabel{eq:HSRes}{{3.38}{34}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2.3}The Hookstep}{35}}
+\newlabel{eq:HSEOC}{{3.41}{35}}
+\newlabel{eq:HSKRYPROJ}{{3.42}{35}}
+\newlabel{eq:HSRes}{{3.43}{35}}
 \citation{Viswanath2007}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.2}{\ignorespaces If we assume the linear model remains valid for the entire step, we can sometimes be led astray. Because the function becomes rapidly nonlinear, the Newton step takes us very far away from the actual root we are trying to find, and will likely never converge.}}{35}}
-\newlabel{fig:NewtonOvershoot}{{3.2}{35}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.3}Recurrence Diagrams}{35}}
-\newlabel{alg:rec}{{3}{35}}
-\newlabel{eq:recurrenceEQ}{{3.42}{36}}
-\newlabel{eq:4DrecurrenceEQ}{{3.43}{36}}
-\@writefile{toc}{\contentsline {section}{\numberline {3.4}Parametric Continuation}{36}}
-\newlabel{alg:parCont}{{4}{37}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces A schematic of a 1D bifurcation, that shows the variation of a solution $x^*$ as a function of a control parameter $r$. While the control parameter $r < 2$, there is only one, stable solution, on the left. At a critical value $r = 2$, however, a new solution emerges at $x^* = 1$ in a {\bf  saddle-node bifurcation}. When $2 < r < 4$, the saddle-node splits into two, producing a stable solution (solid) on the right, and an unstable solution (dashed) on the left. As $r$ approaches 4, the original stable solution and the new unstable solution approach each other until at $r=$, they annihilate in another saddle node bifurcation, leaving only the new stable solution. In higher dimensions, bifurcations can be incredibly complex, but we can nevertheless observe bifurcations of this form. }}{37}}
-\newlabel{fig:bifurcations}{{3.3}{37}}
-\@writefile{toc}{\contentsline {chapter}{Chapter 4: Results}{39}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.3}Recurrence Diagrams}{36}}
+\newlabel{alg:rec}{{3}{36}}
+\newlabel{eq:recurrenceEQ}{{3.47}{36}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.3}{\ignorespaces A recurrence plot which was used to find one of the new periodic orbits (P60) presented in this thesis. At each point, the value of $\mathfrak  {R}(t,T) = ||\mathbf  {u}(t+T) - \mathbf  {u}(t)||$ is plotted. Light colorations correspond to low values, and vice versa. Notice the long, thin streak of low values from $t = 200$ to $t = 450$ for $T \approx 60$. A guess sourced from this band was the initial guess that led to the discovery of P60.}}{37}}
+\newlabel{fig:recurrenceMinimum}{{3.3}{37}}
+\newlabel{eq:4DrecurrenceEQ}{{3.48}{37}}
+\newlabel{alg:recBroke}{{4}{38}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces A flow chart that lays out the procedure used to find exact coherent structures. We begin by selecting a random initial state for the trajectory. This initial state can either be found by generating a truly random state, or by applying a small, random perturbation to a known exact coherent structures. The desired symmetry constraints are then enforced, and the trajectory is integrated from $t = 0$ to $t=t'$. After every time step, if the state's norm has dropped below some threshold $R$, we assume that the trajectory has relaminarized, and find a new initial condition to work with. Once the integration is over, we generate the recurrence diagram according to (3.47\hbox {}), for some $T_{\textrm  {max}}$, and attempt to find any patterns we would associate with exact coherent structures. If no patterns are found, we find another initial state and repeat the process. If there are some candidate patterns, we calculate the minimum $\mathfrak  {R}$ of that feature. If it is below some threshold, we accept it as a potential solution, and pass it to the NKH solver. If $\mathfrak  {R}$ is not low enough, it is likely not a sufficiently good guess to cause the NKH solver to converge in a reasonable time, so we zoom in on the pattern and calculate a refined recurrence graph, until either the minimum value of the pattern is low enough, or it becomes apparent that the pattern is unlikely to produce a meaningful initial guess}}{38}}
+\newlabel{fig:FlowChart}{{3.4}{38}}
+\@writefile{toc}{\contentsline {section}{\numberline {3.4}Parametric Continuation}{39}}
+\newlabel{alg:parCont}{{5}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.5}{\ignorespaces A schematic of a 1D bifurcation, that shows the variation of a solution $x^*$ as a function of a control parameter $r$. While the control parameter $r < 2$, there is only one, stable solution, on the left. At a critical value $r = 2$, however, a new solution emerges at $x^* = 1$ in a {\bf  saddle-node bifurcation}. When $2 < r < 4$, the saddle-node splits into two, producing a stable solution (solid) on the right, and an unstable solution (dashed) on the left. As $r$ approaches 4, the original stable solution and the new unstable solution approach each other until at $r=$, they annihilate in another saddle node bifurcation, leaving only the new stable solution. In higher dimensions, bifurcations can be incredibly complex, but we can nevertheless observe bifurcations of this form. }}{40}}
+\newlabel{fig:bifurcations}{{3.5}{40}}
+\@writefile{toc}{\contentsline {chapter}{Chapter 4: Results}{41}}
 \@writefile{lof}{\addvspace {10\p@ }}
 \@writefile{lot}{\addvspace {10\p@ }}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}Periodic Orbits}{39}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Visualizations}{39}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces A}}{40}}
-\newlabel{fig:p85}{{4.1}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces B}}{41}}
-\newlabel{fig:p60}{{4.2}{41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces C}}{42}}
-\newlabel{fig:p32}{{4.3}{42}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces D}}{43}}
-\newlabel{fig:p8}{{4.4}{43}}
-\@writefile{toc}{\contentsline {chapter}{Conclusion}{45}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}More info}{45}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}Periodic Orbits}{41}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Visualizations}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces A}}{42}}
+\newlabel{fig:p85}{{4.1}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces B}}{43}}
+\newlabel{fig:p60}{{4.2}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces C}}{44}}
+\newlabel{fig:p32}{{4.3}{44}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces D}}{45}}
+\newlabel{fig:p8}{{4.4}{45}}
+\@writefile{toc}{\contentsline {chapter}{Conclusion}{47}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}More info}{47}}
 \citation{*}
 \bibstyle{ieeetr}
 \bibdata{thesis}
@@ -193,7 +201,7 @@
 \bibcite{Waleffe2001}{{11}{}{{}}{{}}}
 \bibcite{Kawahara2001}{{12}{}{{}}{{}}}
 \bibcite{Viswanath2007}{{13}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{References}{47}}
+\@writefile{toc}{\contentsline {chapter}{References}{49}}
 \bibcite{Borrero2014}{{14}{}{{}}{{}}}
 \bibcite{Hof2008}{{15}{}{{}}{{}}}
 \bibcite{Gibson2008}{{16}{}{{}}{{}}}
