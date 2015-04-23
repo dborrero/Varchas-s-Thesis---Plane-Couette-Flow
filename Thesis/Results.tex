@@ -3,7 +3,7 @@
 
 \section{Periodic Orbits}
 
-Four new periodic orbits P85, P60, P32 and P8 (\refFigsss{fig:p85}{fig:p60}{fig:p32}{fig:p8}) have been found, with periods $T= 85.50, 60.86, 32.00, 8.32$, for $\ReN = 400$, and periodic cell length $(\alpha,\gamma) = (2\pi/L_x,2\pi/L_z) = (1.14,1.67)$ with a grid discretization of $(N_x,N_y,N_z) = (48,33,48)$. This  set of cell parameters is known as the HKW cell. P85 and P60 were the first orbits found, and are in the fully symmetric subspace. P32 was the next orbit to be found, and is in the streamwise-asymmetric subspace $S_x$. P8 was the last orbit found, and is in the spanwise-asymmetric subspace $S_z$. I was unable to find any \ecs\ in the unconstrained phase space. 
+Four new periodic orbits P85, P60, P32 and P8 (\refFigsss{fig:p85}{fig:p60}{fig:p32}{fig:p8}) have been found, with periods $T= 85.50, 60.86, 32.00,$ and $8.32$ for $\ReN = 400$, and periodic cell length $(\alpha,\gamma) = (2\pi/L_x,2\pi/L_z) = (1.14,1.67)$ with a grid discretization of $(N_x,N_y,N_z) = (48,33,48)$. This  set of cell parameters is known as the HKW cell. P85 and P60 were the first orbits found, and are in the fully symmetric subspace. P32 was the next orbit to be found, and is in the streamwise-asymmetric subspace $S_x$. P8 was the last orbit found, and is in the spanwise-asymmetric subspace $S_z$. I was unable to find any \ecs\ in the unconstrained phase space. 
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{p85noBase.pdf}}
@@ -43,7 +43,7 @@ If we have a set of $k$ basis vectors $\Vector{q}_i$ that are orthonormal and sp
 \begin{equation}
 \Vector{v}_k = \sum{i = 1}{k}{c_i \Vector{q}_i},
 \end{equation}
-where $c_i = \Vector{v} \cdot \Vector{q}_i$. When $k$ is either 2 or 3, we can visualize the $n$-dimensional trajectory as a 2 or 3 dimensional trajectory instead. While we lose information by this projection, we can still gain a great deal of valuable information about trajectories. Projecting the four periodic orbits in \refFigsss{fig:p85}{fig:p60}{fig:p32}{fig:p8} onto a basis constructed from orthonormalizing the initial conditions of each orbit results in the state space projection in \refFig{fig:POStateSpace}. The main issue with the state space projection method, however, is that a state must be {\bf congruent} to a basis to be project - that is, both the box length and grid discretization must be the same for both the state and the projection basis. Many previous results\rf{Gibson2008,Halcrow2008} have results in the W03 cell, where $(\alpha,\gamma) = (1.14,2.5)$, with corresponding state space projections. In order to compare to these results, I attempted to use \refAlg{alg:parCont} to continue the four periodic orbits into the W03 cell, which leads me to the next important result.
+where $c_i = \Vector{v} \cdot \Vector{q}_i$. When $k$ is either 2 or 3, we can visualize the $n$-dimensional trajectory as a 2 or 3 dimensional trajectory instead. While we lose information by this projection, we can still gain a great deal of valuable information about trajectories. Projecting the four periodic orbits in \refFigsss{fig:p85}{fig:p60}{fig:p32}{fig:p8} onto a basis constructed from orthonormalizing the initial conditions of each orbit results in the state space projection in \refFig{fig:POStateSpace}. The main issue with the state space projection method, however, is that a state must be {\bf congruent} to a basis to be project - that is, both the box length and grid discretization must be the same for both the state and the projection basis. While this is not true for $\ReN$ continuation, none of the orbits proved very susceptible to \ReN continuation, and thus did not produce much in the way of results. Many previous results\rf{Gibson2008,Halcrow2008} have results in the W03 cell, where $(\alpha,\gamma) = (1.14,2.5)$, with corresponding state space projections. In order to compare to these results, I attempted to use \refAlg{alg:parCont} to continue the four periodic orbits into the W03 cell, which leads me to the next important result.
 
 \section{Spanwise Continuation}
 
@@ -58,13 +58,37 @@ When \refAlg{alg:parCont} was used to continue P8 down to the W03 cell, the data
 \end{figure}
  Attempts to continue the other three periodic orbits down generally failed, the cause of which is unclear. The similarity of \refFig{fig:LZBif} to \refFig{fig:bifurcations} is striking, and led me to suspect the possibility that P8 undergoes some form of bifurcation at $L_z \approx 2.8$ and $L_z \approx 2.95$. However, \refAlg{alg:parCont} relaxes the convergence criteria to speed up the parametric continuation process, so I verified the existence of multiple distinct solutions for $L_z = 2.925$ and $(N_x,N_y,N_z) = (62,53,62)$ to $10^{-14}$. However, this in and of itself does not necessarily prove that a bifurcation exists -- for example, the continuation algorithm may have simply found \emph{another} periodic orbit's trajectory and hopped onto that. When a bifurcation occurs, the qualitative behavior of solutions pre and post-bifurcation tend to be markedly different. For low-dimensional systems, this is easy to evaluate, since one can visually identify changes in the phase space, as in \refFig{fig:phasePortrait}. For higher-dimensional systems, such an approach is infeasible. 
 
-\subsection{Stability Analysis}
+\subsection{Linear Stability Analysis}
 
-We can instead turn to {\bf stability analysis}. 
+We can instead turn to {\bf linear stability analysis}. If $\Vector{u}$ is a periodic orbit with period $T$, then for a small perturbation ${\bf \textrm{d}}\Vector{u}$, 
+\begin{equation}\label{eq:linearStable}
+ f_T(\Vector{u} + {\bf \textrm{d}}\Vector{u}) - \Vector{u} =  f_T(\Vector{u}) - \Vector{u} + \mathbb{J}_{T,\Vector{u}}{\bf \textrm{d}}\Vector{u} =  \mathbb{J}_{T,\Vector{u}}{\bf \textrm{d}}\Vector{u},
+\end{equation} 
+where $ \mathbb{J}_{T,\Vector{u}}$ is the Jacobian of the Navier-Stokes forward-time map evaluated at $\Vector{u}$. The stability of the orbit is determined by how  ${\bf \textrm{d}}\Vector{u}$ changes over time - if it shrinks, then the orbit is stable, but if it grows, it is unstable. Writing  ${\bf \textrm{d}}\Vector{u}$ as a linear combination of the eigenvectors $\Vector{v}_i$ of  $ \mathbb{J}_{T,\Vector{u}}$, the right-hand side of \eqref{eq:linearStable} becomes
+\begin{equation}\label{eq:oneOrbit}
+ \mathbb{J}_{T,\Vector{u}}{\bf \textrm{d}}\Vector{u} =  \mathbb{J}_{T,\Vector{u}}\sum{i = 1}{n}{c_i\Vector{v}_i} = \sum{i = 1}{n}{c_i\lambda_i\Vector{v}_i},
+\end{equation}  
+where the $\lambda_i$ are the corresponding eigenvalues, known as the {\bf Floquet exponents}, whose real parts measure the exponential rate of decay or growth of the corresponding eigenvector.\footnote{The real parts are known as the {\bf Lyapunov exponents}. The imaginary part contributes only to the oscillatory behavior.}   From this definition, it is clear that the periodic orbit can only be stable against infinitesimal perturbations if $\textrm{Re}[\lambda_i]  \leq 0~\forall~i$, and unstable otherwise. The eigenvalues for the Navier-Stokes forward-time map can be calculated by \refAlg{alg:Arnoldi}. The eigenvalues of P8 in the HKW cell at $\ReN=400$ are shown in \refFig{fig:P8Eigenvals}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{P8Eigenvals}
+\caption{All 20 unstable eigenvalues, and the 80 largest stable or marginal eigenvalues of P8, in the HKW cell at $\ReN=400$. Note that the eigenvalues come in conjugate pairs. Since there are eigenvalues with positive real parts, the periodic orbit is unstable, as expected. Note that since the Jacobian likely has full rank, and likely also has no repeating nonzero eigenvalues, there are several orders of magnitude more stable eigenvalues than there are unstable. Since the Arnoldi iteration will find the larger eigenvalues first, all the unstable eigenvalues are shown, whereas only the weakly stable eigenvalues are calculated.}\label{fig:P8Eigenvals}
+\end{figure}
+
+In general, we would expect that as the control parameter changes, the Lyapunov exponents would also. In particular, if a change in the control parameter resulted in the Lyapunov exponent changing sign, the qualitative behavior of the periodic orbit would change, resulting in a bifurcation. Applying the Arnoldi iteration to the states near the turning points of \refFig{fig:LZBif} results in \refFig{fig:P8FirstBifurcation} and \refFig{fig:P8SecondBifurcation}. 
+\clearpage
+ \refFigs{fig:P8FirstBifurcation}{fig:P8SecondBifurcation} have a set of eigenvalues that switch sign at $L_z$ values that are reasonably consistent with turning point data from \refFig{fig:LZBif}. It therefore seems likely that these turning points do in fact correspond to bifurcations. Qualitative differences between the upper and lower branch are also apparent from observations of movies of the periodic orbit\footnote{Available at {\tt https://youtu.be/gQLlyF7J6yY}.}. From the video, it appears that the upper branch has more energy concentrated in the streaks than the transition branch, which in turn appears to have more energy in the mid-plane. 
+\begin{figure}[t]
+\includegraphics[width=\textwidth]{P8FirstBifurcation}
+\caption{Eigenvalues of P8 as a function of $L_z$ at the first turning point. Of interest are the eigenvalues with imaginary part $\approx \pm 0.3$. From left to right, the eigenvalues of $L_z = 2.8088757,$ $2.8087205,$ $2.8087115,$ $2.8096095,$ $2.8116723,$ $2.8147572,$ $2.8184122,$ $2.8221628$ and $2.8257047$. The real part of the eigenvalue likely switches sign at some $L_z \in [2.81476,2.81841]$, compared to the first turning point, which likely occurs for $L_z \in [2.8087205, 2.8096095]$  }\label{fig:P8FirstBifurcation}
+\end{figure}
 
 
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{P8SecondBifurcation}
+\caption{Eigenvalues of P8 as a function of $L_z$ at the second turning point. From left to right, the eigenvalues of  $L_z =  2.9612911,$ $2.9614915,$ $2.961412,$ $2.9605641,$ $2.9589117,$ $2.9564639,$ and $2.9532518$. Two sets of eigenvalues have real parts that switch signs, at $L_z \in [2.961412,2.9605641]$ and $L_z \in [ 2.9612911,2.9614915]$. This is consistent with analysis of the turning point, which indicates that the bifurcation occurs for $L_z \in [ 2.9612911, 2.961412]$.}\label{fig:P8SecondBifurcation}
+\end{figure}
 
-\section{\ReN\ Continuation}
 
 
 

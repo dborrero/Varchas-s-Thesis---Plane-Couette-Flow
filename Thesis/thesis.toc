@@ -35,7 +35,7 @@
 \contentsline {subsubsection}{\numberline {4.1.1.1}Orthographic Projection}{39}
 \contentsline {subsubsection}{\numberline {4.1.1.2}State Space Projection}{44}
 \contentsline {section}{\numberline {4.2}Spanwise Continuation}{45}
-\contentsline {section}{\numberline {4.3}\ensuremath {Re}\ Continuation}{46}
-\contentsline {chapter}{Conclusion}{47}
-\contentsline {section}{\numberline {4.1}More info}{47}
-\contentsline {chapter}{References}{49}
+\contentsline {subsection}{\numberline {4.2.1}Linear Stability Analysis}{46}
+\contentsline {chapter}{Conclusion}{51}
+\contentsline {section}{\numberline {4.1}More info}{51}
+\contentsline {chapter}{References}{53}

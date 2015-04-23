@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  22 APR 2015 20:49
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  23 APR 2015 03:46
 entering extended mode
 **C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
 (C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
@@ -700,26 +700,54 @@ File: ./Figs/phasePortraitTransition.pdf Graphic file (type pdf)
 Package pdftex.def Info: ./Figs/phasePortraitTransition.pdf used on input line 
 56.
 (pdftex.def)             Requested size: 433.62pt x 148.33269pt.
- [45 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/TLzBD.pdf>])
-(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\Conclusion.tex [46 <C:/Users/Varch
-as/Desktop/Reed/Thesis/Thesis/Figs/phasePortraitTransition.pdf>]) [47
+ [45 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/TLzBD.pdf>] [46 <C:/User
+s/Varchas/Desktop/Reed/Thesis/Thesis/Figs/phasePortraitTransition.pdf>]
+<./Figs/P8Eigenvals.pdf, id=1191, 903.375pt x 565.11125pt>
+File: ./Figs/P8Eigenvals.pdf Graphic file (type pdf)
 
-] [48
+<use ./Figs/P8Eigenvals.pdf>
+Package pdftex.def Info: ./Figs/P8Eigenvals.pdf used on input line 74.
+(pdftex.def)             Requested size: 433.62pt x 271.25894pt.
+ [47 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/P8Eigenvals.pdf>]
+<./Figs/P8FirstBifurcation.pdf, id=1210, 361.35pt x 229.85875pt>
+File: ./Figs/P8FirstBifurcation.pdf Graphic file (type pdf)
 
-]
-(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl [49
+<use ./Figs/P8FirstBifurcation.pdf>
+Package pdftex.def Info: ./Figs/P8FirstBifurcation.pdf used on input line 82.
+(pdftex.def)             Requested size: 433.62pt x 275.8326pt.
 
-] [50]) [51]
-(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux)
+<./Figs/P8SecondBifurcation.pdf, id=1211, 1527.7075pt x 950.55125pt>
+File: ./Figs/P8SecondBifurcation.pdf Graphic file (type pdf)
+
+<use ./Figs/P8SecondBifurcation.pdf>
+Package pdftex.def Info: ./Figs/P8SecondBifurcation.pdf used on input line 88.
+(pdftex.def)             Requested size: 433.62pt x 269.79309pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+) (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\Conclusion.tex [48
+
+ <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/P8FirstBifurcation.pdf>] [49
+ <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/P8SecondBifurcation.pdf>] [5
+0
+
+]) [51]
+[52
+
+] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl [53
+
+] [54])
+[55] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3621 strings out of 493921
- 48537 string characters out of 3144870
- 104578 words of memory out of 3000000
- 6775 multiletter control sequences out of 15000+200000
+ 3641 strings out of 493921
+ 49074 string characters out of 3144870
+ 104634 words of memory out of 3000000
+ 6792 multiletter control sequences out of 15000+200000
  20877 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,16n,45p,1850b,417s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -750,9 +778,9 @@ s/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/eu
 ler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on thesis.pdf (65 pages, 57905681 bytes).
+Output written on thesis.pdf (69 pages, 57991803 bytes).
 PDF statistics:
- 1292 PDF objects out of 1440 (max. 8388607)
+ 1350 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 136 words of extra memory for PDF output out of 10000 (max. 10000000)
 
