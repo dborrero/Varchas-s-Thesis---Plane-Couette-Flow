@@ -260,7 +260,7 @@ that is solved by \refAlg{alg:GMRES}.
   \begin{algorithm}\label{alg:rec}
   \textcolor{white}{haha}
  \begin{enumerate}
- \item Begin with an initial condition. This can be chosen by randomly generating a field, or making a slight random perturbation off a known \ecs.
+ \item Begin with an initial condition. This can be chosen by randomly generating a velocity field, or making a slight random perturbation off of a known \ecs.
  \item Integrate this initial condition forward in time using SBDF3 to obtain a trajectory 
  \item Calculate some metric of the trajectory that provides insight into its dynamical structure
  \item Extract some number of good guesses from this metric, and pass them along to the NKH solver.
@@ -309,9 +309,9 @@ For a trajectory $\Vector{u}(t)$ with a recurrence domain   $[t_0,t']\times [0,T
  for $i = 1,2,..,k-1$.
  \end{algorithm}
 \par
-At this point, the underlying numerical framework has been laid bare to the point that it is at the very least, a slightly gray box. Applying the methods of the previous chapters took a great deal of trial and error\footnote{More of the latter}, but has nevertheless proven successful. In the following chapter, I will present four new periodic orbits for \pCf\, and discuss their properties.   
+At this point, the underlying numerical framework has been laid bare to the point that it is at the very least, a slightly gray box. Applying the methods of the previous chapters took a great deal of trial and error\footnote{Mostly the latter.}, but has nevertheless proven successful. In the following chapter, I will present four new periodic orbits for \pCf\, and discuss their properties.   
  \begin{figure}[h]
- \includegraphics[width=\textwidth]{BifurcationDiagram}
+ \centerline{\includegraphics[scale=1]{BifurcationDiagram}}
  \caption{A schematic of a 1D bifurcation, that shows the variation of a solution $x^*$ as a function of a control parameter $r$. While the control parameter $r < 2$, there is only one, stable solution, on the left. At a critical value $r = 2$, however, a new solution emerges at $x^* = 1$ in a {\bf saddle-node bifurcation}. When $2 < r < 4$, the saddle-node splits into two, producing a stable solution (solid) on the right, and an unstable solution (dashed) on the left. As $r$ approaches 4, the original stable solution and the new unstable solution approach each other until at $r=$, they annihilate in another saddle node bifurcation, leaving only the new stable solution. In higher dimensions, bifurcations can be incredibly complex, but we can nevertheless observe bifurcations of this form. }\label{fig:bifurcations}
  \end{figure}
  

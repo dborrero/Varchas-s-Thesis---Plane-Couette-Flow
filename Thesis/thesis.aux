@@ -3,6 +3,7 @@
 \citation{Grassberger2004}
 \citation{Borrero2014}
 \citation{Nagata1990}
+\citation{Halcrow2008}
 \citation{Choi2006}
 \citation{Choi2006}
 \@writefile{toc}{\contentsline {chapter}{Introduction}{1}}
@@ -175,16 +176,29 @@
 \@writefile{lot}{\addvspace {10\p@ }}
 \@writefile{toc}{\contentsline {section}{\numberline {4.1}Periodic Orbits}{39}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.1.1}Visualizations}{39}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces A}}{40}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.1}Orthographic Projection}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.1}{\ignorespaces P85 is a fully symmetric orbit with period 85.50 in the HKW cell with $\ensuremath  {Re}=400$. Note the extreme symmetry of the prominent streaks visible in the mid-plane. The velocity field pictured here is the turbulent perturbation only, with no laminar flow added.}}{40}}
 \newlabel{fig:p85}{{4.1}{40}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces B}}{41}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.2}{\ignorespaces P60 is another fully symmetric orbit with period 60.86 in the HKW cell with $\ensuremath  {Re}= 400$. While it displays an ellipsoid streak structure similar to P85, the energy of these streaks are lower. The velocity field pictured here is the turbulent perturbation only, with no laminar flow added.}}{41}}
 \newlabel{fig:p60}{{4.2}{41}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces C}}{42}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.3}{\ignorespaces P32 is a streamwise asymmetric periodic orbit fixed by the symmetry group $S_z$, which is functionally a mirror symmetry about the streamwise axis. In the HKW cell at $\ensuremath  {Re}=400$, the period is 32.00, and the streamwise relative velocity is $-0.5$ cell lengths per period. The velocity field pictured here is the turbulent perturbation only, with no laminar flow added.}}{42}}
 \newlabel{fig:p32}{{4.3}{42}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces D}}{43}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.4}{\ignorespaces P8 is a spanwise asymmetric periodic orbit fixed by the symmetry group $S_x$, which is functionally a rotation by $\pi $ about the spanwise axis. In the HKW cell at $\ensuremath  {Re}= 400$, the period is 8.32, and the spanwise relative velocity is $2.29\times 10^{-7}$ cell lengths per period. This number may seem low, but if it is not accounted for, the NKH solver cannot converge. P8 also has a rather low period, almost an order of magnitude lower than most orbits available on {\tt  channelflow.org}. Since the Arnoldi iteration has a time cost that scales linearly with the period, P8 has been the least computationally demanding period orbit to analyze.}}{43}}
 \newlabel{fig:p8}{{4.4}{43}}
-\@writefile{toc}{\contentsline {chapter}{Conclusion}{45}}
-\@writefile{toc}{\contentsline {section}{\numberline {4.1}More info}{45}}
+\citation{Halcrow2008}
+\citation{Halcrow2008}
+\citation{Gibson2008,Halcrow2008}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 2D state space projection of all four periodic orbits and some reference equibliria. The basis for the projection was constructed by orthonormalizing the initial states of each of the periodic orbits. The equbiliria are fully symmetric, and were found by\nobreakspace  {}\cite  {Halcrow2008}. Notice that the P8 orbit is separated by the equilibria from P85, P60 and P32, a feature that holds true in the other 5 projections.}}{44}}
+\newlabel{fig:POStateSpace}{{4.5}{44}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {4.1.1.2}State Space Projection}{44}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.2}Spanwise Continuation}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Period as a function of spanwise cell length for P8. Initially, the continuation algorithm decreases $L_z$ and increases $T$, but at $L_z \approx 2.8$, the algorithm reverses itself, decreasing $T$ and increasing $L_z$, until $L_z \approx 2.95$, when the algorithm resumes decreasing $L_z$ and increasing $T$. Since we expect that the period of an orbit ought to uniquely define the orbit, the existence of multiple, distinct orbits for $2.8 \leq L_z \leq 2.96$ hints at a bifurcation.}}{45}}
+\newlabel{fig:LZBif}{{4.6}{45}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Phase portrait of the Van Der Pol oscillator and its Hopf bifurcation. (a), for negative values of the bifurcation parameter, the single periodic orbit is unstable, so an initial condition that begins near the orbit spirals away from it. (b), when the bifurcation parameter is zero, there is no periodic orbit. (c), for positive values of the bifurcation parameter, the periodic orbit is stable, and initial conditions are attracted into the orbit.}}{46}}
+\newlabel{fig:phasePortrait}{{4.7}{46}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.3}\ensuremath  {Re}\ Continuation}{46}}
+\@writefile{toc}{\contentsline {chapter}{Conclusion}{47}}
+\@writefile{toc}{\contentsline {section}{\numberline {4.1}More info}{47}}
 \citation{*}
 \bibstyle{ieeetr}
 \bibdata{thesis}
@@ -201,7 +215,7 @@
 \bibcite{Waleffe2001}{{11}{}{{}}{{}}}
 \bibcite{Kawahara2001}{{12}{}{{}}{{}}}
 \bibcite{Viswanath2007}{{13}{}{{}}{{}}}
-\@writefile{toc}{\contentsline {chapter}{References}{47}}
+\@writefile{toc}{\contentsline {chapter}{References}{49}}
 \bibcite{Borrero2014}{{14}{}{{}}{{}}}
 \bibcite{Hof2008}{{15}{}{{}}{{}}}
 \bibcite{Gibson2008}{{16}{}{{}}{{}}}

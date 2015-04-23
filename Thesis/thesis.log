@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  20 APR 2015 00:58
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  22 APR 2015 20:49
 entering extended mode
 **C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
 (C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
@@ -313,21 +313,33 @@ Non-PDF special ignored!
 ] [3] [4
 
 ]
-(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.toc [1
+(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\acknowledgements.tex
+Underfull \hbox (badness 10000) in paragraph at lines 6--7
+
+ []
 
 
-])
+Underfull \hbox (badness 10000) in paragraph at lines 8--9
+
+ []
+
+) [1
+
+
+] [2
+
+] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.toc [3])
 \tf@toc=\write3
- [2]
+ [4]
 (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.lof
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [3
+ [5
 
 ]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [4]
+ [6]
 LaTeX Font Info:    Try loading font information for U+euf on input line 18.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
@@ -335,18 +347,23 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 )
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [5])
+ [7]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [8])
 \tf@lof=\write4
 
-[6] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\introduction.tex
-<Figs/laminarTurbulent.jpg, id=42, 602.25pt x 241.90375pt>
+[9] [10
+
+] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\introduction.tex
+<Figs/laminarTurbulent.jpg, id=57, 602.25pt x 241.90375pt>
 File: Figs/laminarTurbulent.jpg Graphic file (type jpg)
 
 <use Figs/laminarTurbulent.jpg>
 Package pdftex.def Info: Figs/laminarTurbulent.jpg used on input line 15.
 (pdftex.def)             Requested size: 433.62pt x 174.17793pt.
 
-<Figs/planeCouetteDiagram.pdf, id=43, 603.15437pt x 314.29318pt>
+<Figs/planeCouetteDiagram.pdf, id=58, 603.15437pt x 314.29318pt>
 File: Figs/planeCouetteDiagram.pdf Graphic file (type pdf)
 
 <use Figs/planeCouetteDiagram.pdf>
@@ -361,7 +378,6 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 [1
 
-
 ]
 Overfull \vbox (5.01242pt too high) has occurred while \output is active []
 
@@ -374,7 +390,7 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
 
 [2 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/laminarTurbulent.jpg> <C:/
 Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/planeCouetteDiagram.pdf>]
-<Figs/planeCouetteMeanFlow.pdf, id=98, 378.80621pt x 167.18762pt>
+<Figs/planeCouetteMeanFlow.pdf, id=115, 378.80621pt x 167.18762pt>
 File: Figs/planeCouetteMeanFlow.pdf Graphic file (type pdf)
 
 <use Figs/planeCouetteMeanFlow.pdf>
@@ -386,7 +402,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 39--40
  []
 
 [3 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/planeCouetteMeanFlow.pdf>]
-<Figs/VectorSpace.pdf, id=125, 580.13736pt x 399.35297pt>
+<Figs/VectorSpace.pdf, id=141, 580.13736pt x 399.35297pt>
 File: Figs/VectorSpace.pdf Graphic file (type pdf)
 
 <use Figs/VectorSpace.pdf>
@@ -398,7 +414,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 51--52
  []
 
 [4 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/VectorSpace.pdf>]
-<Figs/LorenzAttractor.pdf, id=184, 1444.39626pt x 724.7075pt>
+<Figs/LorenzAttractor.pdf, id=200, 1444.39626pt x 724.7075pt>
 File: Figs/LorenzAttractor.pdf Graphic file (type pdf)
 
 <use Figs/LorenzAttractor.pdf>
@@ -413,7 +429,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 60--63
  []
 
 [5 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/LorenzAttractor.pdf>]
-<Figs/ECSClassification.pdf, id=192, 717.81273pt x 676.93301pt>
+<Figs/ECSClassification.pdf, id=209, 717.81273pt x 676.93301pt>
 File: Figs/ECSClassification.pdf Graphic file (type pdf)
 
 <use Figs/ECSClassification.pdf>
@@ -425,14 +441,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--72
  []
 
 [6 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/ECSClassification.pdf>]
-<Figs/phaseSpaceTraj.pdf, id=224, 397.485pt x 164.73308pt>
+<Figs/phaseSpaceTraj.pdf, id=241, 397.485pt x 164.73308pt>
 File: Figs/phaseSpaceTraj.pdf Graphic file (type pdf)
 
 <use Figs/phaseSpaceTraj.pdf>
 Package pdftex.def Info: Figs/phaseSpaceTraj.pdf used on input line 75.
 (pdftex.def)             Requested size: 433.62pt x 179.71384pt.
 
-<Figs/rollStreak.png, id=225, 397.485pt x 345.29pt>
+<Figs/rollStreak.png, id=242, 397.485pt x 345.29pt>
 File: Figs/rollStreak.png Graphic file (type png)
  <use Figs/rollStreak.png>
 Package pdftex.def Info: Figs/rollStreak.png used on input line 80.
@@ -483,7 +499,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 6--7
 
 [17] [18
 
-] <./Figs/pointwiseinversion.pdf, id=300, 624.16489pt x 197.79999pt>
+] <./Figs/pointwiseinversion.pdf, id=317, 624.16489pt x 197.79999pt>
 File: ./Figs/pointwiseinversion.pdf Graphic file (type pdf)
 
 <use ./Figs/pointwiseinversion.pdf>
@@ -491,7 +507,7 @@ Package pdftex.def Info: ./Figs/pointwiseinversion.pdf used on input line 79.
 (pdftex.def)             Requested size: 433.62pt x 137.41475pt.
  [19 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/pointwiseinversion.pdf>]
 
-<./Figs/SubCell.pdf, id=326, 540.6087pt x 257.99187pt>
+<./Figs/SubCell.pdf, id=343, 540.6087pt x 257.99187pt>
 File: ./Figs/SubCell.pdf Graphic file (type pdf)
 
 <use ./Figs/SubCell.pdf>
@@ -503,7 +519,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 105--112
  []
 
 [20] [21 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/SubCell.pdf>]
-<./Figs/shiftReflectNotCommuting.pdf, id=357, 693.3835pt x 420.71881pt>
+<./Figs/shiftReflectNotCommuting.pdf, id=373, 693.3835pt x 420.71881pt>
 File: ./Figs/shiftReflectNotCommuting.pdf Graphic file (type pdf)
 
 <use ./Figs/shiftReflectNotCommuting.pdf>
@@ -511,7 +527,7 @@ Package pdftex.def Info: ./Figs/shiftReflectNotCommuting.pdf used on input line
  148.
 (pdftex.def)             Requested size: 433.62pt x 263.10268pt.
 
-<./Figs/shiftReflectCommuting.pdf, id=358, 666.20795pt x 309.45712pt>
+<./Figs/shiftReflectCommuting.pdf, id=374, 666.20795pt x 309.45712pt>
 File: ./Figs/shiftReflectCommuting.pdf Graphic file (type pdf)
 
 <use ./Figs/shiftReflectCommuting.pdf>
@@ -569,14 +585,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--117
 
  []
 
-<./Figs/NRMethod.pdf, id=464, 551.1792pt x 254.8722pt>
+<./Figs/NRMethod.pdf, id=479, 551.1792pt x 254.8722pt>
 File: ./Figs/NRMethod.pdf Graphic file (type pdf)
 
 <use ./Figs/NRMethod.pdf>
 Package pdftex.def Info: ./Figs/NRMethod.pdf used on input line 119.
 (pdftex.def)             Requested size: 433.62pt x 200.51845pt.
 
-<./Figs/NewtonOvershoot.pdf, id=465, 361.35pt x 226.8475pt>
+<./Figs/NewtonOvershoot.pdf, id=480, 361.35pt x 226.8475pt>
 File: ./Figs/NewtonOvershoot.pdf Graphic file (type pdf)
 
 <use ./Figs/NewtonOvershoot.pdf>
@@ -598,29 +614,29 @@ Underfull \hbox (badness 10000) in paragraph at lines 272--274
 
  []
 
-[34] <./Figs/RecPlot.pdf, id=514, 878.32138pt x 240.9pt>
+[34] <./Figs/RecPlot.pdf, id=529, 878.32138pt x 240.9pt>
 File: ./Figs/RecPlot.pdf Graphic file (type pdf)
 
 <use ./Figs/RecPlot.pdf>
 Package pdftex.def Info: ./Figs/RecPlot.pdf used on input line 276.
 (pdftex.def)             Requested size: 433.62pt x 118.9279pt.
  [35 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/RecPlot.pdf>] <./Figs/Fl
-owChart.pdf, id=530, 705.23877pt x 333.15265pt>
+owChart.pdf, id=546, 705.23877pt x 333.15265pt>
 File: ./Figs/FlowChart.pdf Graphic file (type pdf)
 
 <use ./Figs/FlowChart.pdf>
 Package pdftex.def Info: ./Figs/FlowChart.pdf used on input line 296.
 (pdftex.def)             Requested size: 433.62pt x 204.84444pt.
  [36 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/FlowChart.pdf>]
-<./Figs/BifurcationDiagram.pdf, id=560, 371.94157pt x 521.36983pt>
+<./Figs/BifurcationDiagram.pdf, id=576, 371.94157pt x 521.36983pt>
 File: ./Figs/BifurcationDiagram.pdf Graphic file (type pdf)
 
 <use ./Figs/BifurcationDiagram.pdf>
 Package pdftex.def Info: ./Figs/BifurcationDiagram.pdf used on input line 314.
-(pdftex.def)             Requested size: 433.62pt x 607.8284pt.
+(pdftex.def)             Requested size: 371.94066pt x 521.36855pt.
 
 
-LaTeX Warning: Float too large for page by 112.3984pt on input line 316.
+LaTeX Warning: Float too large for page by 25.93855pt on input line 316.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
@@ -630,52 +646,80 @@ LaTeX Warning: `h' float specifier changed to `ht'.
 ] [38 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/BifurcationDiagram.pdf>
 ]
 Chapter 4.
-<./Figs/p85.pdf, id=590, 327.86491pt x 250.0542pt>
-File: ./Figs/p85.pdf Graphic file (type pdf)
- <use ./Figs/p85.pdf>
-Package pdftex.def Info: ./Figs/p85.pdf used on input line 9.
-(pdftex.def)             Requested size: 433.62pt x 330.7288pt.
+<./Figs/p85noBase.pdf, id=606, 328.3467pt x 249.0906pt>
+File: ./Figs/p85noBase.pdf Graphic file (type pdf)
 
-<./Figs/p60.pdf, id=591, 328.3467pt x 249.0906pt>
-File: ./Figs/p60.pdf Graphic file (type pdf)
- <use ./Figs/p60.pdf>
-Package pdftex.def Info: ./Figs/p60.pdf used on input line 14.
+<use ./Figs/p85noBase.pdf>
+Package pdftex.def Info: ./Figs/p85noBase.pdf used on input line 9.
 (pdftex.def)             Requested size: 433.62pt x 328.95262pt.
 
-<./Figs/p32.pdf, id=592, 327.14221pt x 249.5724pt>
-File: ./Figs/p32.pdf Graphic file (type pdf)
- <use ./Figs/p32.pdf>
-Package pdftex.def Info: ./Figs/p32.pdf used on input line 20.
-(pdftex.def)             Requested size: 433.62pt x 330.81892pt.
+<./Figs/p60noBase.pdf, id=607, 328.3467pt x 249.81331pt>
+File: ./Figs/p60noBase.pdf Graphic file (type pdf)
 
-<./Figs/p8.pdf, id=593, 327.624pt x 250.0542pt>
-File: ./Figs/p8.pdf Graphic file (type pdf)
- <use ./Figs/p8.pdf>
-Package pdftex.def Info: ./Figs/p8.pdf used on input line 26.
-(pdftex.def)             Requested size: 433.62pt x 330.98064pt.
-)
-(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\Conclusion.tex [39
+<use ./Figs/p60noBase.pdf>
+Package pdftex.def Info: ./Figs/p60noBase.pdf used on input line 14.
+(pdftex.def)             Requested size: 433.62pt x 329.90704pt.
 
-] [40 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/p85.pdf>] [41 <C:/Users
-/Varchas/Desktop/Reed/Thesis/Thesis/Figs/p60.pdf>] [42 <C:/Users/Varchas/Deskto
-p/Reed/Thesis/Thesis/Figs/p32.pdf>] [43 <C:/Users/Varchas/Desktop/Reed/Thesis/T
-hesis/Figs/p8.pdf>] [44
+<./Figs/p32noBase.pdf, id=608, 328.3467pt x 249.0906pt>
+File: ./Figs/p32noBase.pdf Graphic file (type pdf)
 
-]) [45] [46
+<use ./Figs/p32noBase.pdf>
+Package pdftex.def Info: ./Figs/p32noBase.pdf used on input line 20.
+(pdftex.def)             Requested size: 433.62pt x 328.95262pt.
 
-] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl
-[47
+<./Figs/p8noBase.pdf, id=609, 328.3467pt x 249.0906pt>
+File: ./Figs/p8noBase.pdf Graphic file (type pdf)
 
-] [48]) [49] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux)
+<use ./Figs/p8noBase.pdf>
+Package pdftex.def Info: ./Figs/p8noBase.pdf used on input line 26.
+(pdftex.def)             Requested size: 433.62pt x 328.95262pt.
+ [39
+
+] [40 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/p85noBase.pdf>] [41 <C:
+/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/p60noBase.pdf>] [42 <C:/Users/Va
+rchas/Desktop/Reed/Thesis/Thesis/Figs/p32noBase.pdf>] [43 <C:/Users/Varchas/Des
+ktop/Reed/Thesis/Thesis/Figs/p8noBase.pdf>]
+<./Figs/PeriodicOrbitPO412.pdf, id=674, 1047.915pt x 646.415pt>
+File: ./Figs/PeriodicOrbitPO412.pdf Graphic file (type pdf)
+
+<use ./Figs/PeriodicOrbitPO412.pdf>
+Package pdftex.def Info: ./Figs/PeriodicOrbitPO412.pdf used on input line 37.
+(pdftex.def)             Requested size: 433.62pt x 267.47801pt.
+ [44 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/PeriodicOrbitPO412.pdf>]
+
+<./Figs/TLzBD.pdf, id=698, 782.925pt x 496.85625pt>
+File: ./Figs/TLzBD.pdf Graphic file (type pdf)
+ <use ./Figs/TLzBD.pdf>
+Package pdftex.def Info: ./Figs/TLzBD.pdf used on input line 52.
+(pdftex.def)             Requested size: 433.62pt x 275.18228pt.
+
+<./Figs/phasePortraitTransition.pdf, id=699, 1072.28609pt x 366.80838pt>
+File: ./Figs/phasePortraitTransition.pdf Graphic file (type pdf)
+
+<use ./Figs/phasePortraitTransition.pdf>
+Package pdftex.def Info: ./Figs/phasePortraitTransition.pdf used on input line 
+56.
+(pdftex.def)             Requested size: 433.62pt x 148.33269pt.
+ [45 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/TLzBD.pdf>])
+(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\Conclusion.tex [46 <C:/Users/Varch
+as/Desktop/Reed/Thesis/Thesis/Figs/phasePortraitTransition.pdf>]) [47
+
+] [48
+
+]
+(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl [49
+
+] [50]) [51]
+(C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux)
 
 LaTeX Warning: There were undefined references.
 
  ) 
 Here is how much of TeX's memory you used:
- 3600 strings out of 493921
- 47794 string characters out of 3144870
- 104545 words of memory out of 3000000
- 6760 multiletter control sequences out of 15000+200000
+ 3621 strings out of 493921
+ 48537 string characters out of 3144870
+ 104578 words of memory out of 3000000
+ 6775 multiletter control sequences out of 15000+200000
  20877 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
  29i,16n,45p,1850b,417s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -706,9 +750,9 @@ s/cm/cmtt10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/
 cm/cmtt12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/eu
 ler/eufm10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/s
 ymbols/msbm10.pfb>
-Output written on thesis.pdf (59 pages, 14920515 bytes).
+Output written on thesis.pdf (65 pages, 57905681 bytes).
 PDF statistics:
- 762 PDF objects out of 1000 (max. 8388607)
+ 1292 PDF objects out of 1440 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 121 words of extra memory for PDF output out of 10000 (max. 10000000)
 
