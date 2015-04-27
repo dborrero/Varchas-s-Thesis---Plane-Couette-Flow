@@ -4,10 +4,32 @@
 K.-S. Choi, ``Fluid dynamics: The rough with the smooth,'' {\em Nature},
   vol.~440, no.~7085, pp.~754--754, 2006.
 
+\bibitem{Grassberger2004}
+P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
+  attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
+  Springer, 2004.
+
+\bibitem{Borrero2014}
+D.~Borrero-Echeverry, {\em Subcritical Transition to Turbulence in
+  Taylor-{Couette} Flow}.
+\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
+  Atlanta, GA 30332, 2014.
+
+\bibitem{Nagata1990}
+M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane {Couette}
+  flow: {B}ifurcation from infinity,'' {\em Journal of Fluid Mechanics},
+  vol.~217, pp.~519--527, 1990.
+
+\bibitem{Halcrow2008}
+J.~J. Halcrow, {\em Charting the {S}tate {S}pace of {P}lane {{Couette}} {F}low:
+  {Equilibria}, {R}elative equilibria, and {H}eteroclinic {C}onnections}.
+\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
+  Atlanta, GA 30332, 2008.
+
 \bibitem{Daviaud1992}
 F.~Daviaud, J.~Hegseth, and P.~Berg\'e, ``Subcritical transition to turbulence
-  in plane {Couette} flow,'' {\em Phys. Rev. Lett.}, vol.~69, pp.~2511--2514,
-  Oct. 1992.
+  in plane {Couette} flow,'' {\em Physical Review Letters}, vol.~69,
+  pp.~2511--2514, 1992.
 
 \bibitem{Pope2000}
 S.~Pope, {\em Turbulent Flows}.
@@ -15,21 +37,17 @@ S.~Pope, {\em Turbulent Flows}.
 
 \bibitem{Hopf1948}
 E.~Hopf, ``A mathematical example displaying features of turbulence,'' {\em
-  Commun. Pure Appl. Math.}, vol.~1, no.~4, pp.~303--322, 1948.
+  Communications on Pure and Applied Mathematics}, vol.~1, no.~4, pp.~303--322,
+  1948.
 
 \bibitem{Foias1988}
 C.~Foias, G.~R. Sell, and R.~Temam, ``Inertial manifolds for nonlinear
   evolutionary equations,'' {\em Journal of Differential Equations}, vol.~73,
   no.~2, pp.~309--353, 1988.
 
-\bibitem{Grassberger2004}
-P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
-  attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
-  Springer, 2004.
-
 \bibitem{Lorenz1963}
 E.~N. Lorenz, ``Deterministic nonperiodic flow,'' {\em Journal of the
-  atmospheric sciences}, vol.~20, no.~2, pp.~130--141, 1963.
+  {A}tmospheric {S}ciences}, vol.~20, no.~2, pp.~130--141, 1963.
 
 \bibitem{Aubry1988}
 N.~Aubry, P.~Holmes, J.~L. Lumley, and E.~Stone, ``The dynamics of coherent
@@ -42,34 +60,29 @@ O.~Dauchot and N.~Vioujard, ``Phase space analysis of a dynamical model for the
   European Physical Journal B-Condensed Matter and Complex Systems}, vol.~14,
   no.~2, pp.~377--381, 2000.
 
-\bibitem{Nagata1990}
-M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane {Couette}
-  flow: bifurcation from infinity,'' {\em J. Fluid Mech.}, vol.~217,
-  pp.~519--527, 1990.
-
 \bibitem{Waleffe2001}
 F.~Waleffe, ``Exact coherent structures in channel flow,'' {\em Journal of
   Fluid Mechanics}, vol.~435, pp.~93--102, 5 2001.
 
 \bibitem{Kawahara2001}
 G.~Kawahara and S.~Kida, ``Periodic motion embedded in plane {Couette}
-  turbulence: regeneration cycle and burst,'' {\em J. Fluid Mech.}, vol.~449,
-  pp.~291--300, 2001.
+  turbulence: {R}egeneration cycle and burst,'' {\em Journal of Fluid
+  Mechanics}, vol.~449, pp.~291--300, 2001.
 
 \bibitem{Viswanath2007}
-D.~Viswanath, ``Recurrent motions within plane {Couette} turbulence,'' {\em J.
-  Fluid Mech.}, vol.~580, pp.~339--358, 2007.
+D.~Viswanath, ``Recurrent motions within plane {Couette} turbulence,'' {\em
+  Journal of Fluid Mechanics}, vol.~580, pp.~339--358, 2007.
 
-\bibitem{Borrero2014}
-D.~Borrero-Echeverry, {\em Subcritical Transition to Turbulence in
-  Taylor-{Couette} Flow}.
-\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
-  Atlanta, GA 30332, 2014.
+\bibitem{Hof2004}
+B.~Hof, C.~W.~H. van Doorne, J.~Westerweel, F.~T.~M. Nieuwstadt, H.~Faisst,
+  B.~Eckhardt, H.~Wedin, R.~R. Kerswell, and F.~Waleffe, ``{Experimental
+  Observation of Nonlinear Traveling Waves in Turbulent Pipe Flow},'' {\em
+  {S}cience}, vol.~305, no.~5690, pp.~1594--1598, 2004.
 
-\bibitem{Hof2008}
-B.~Hof, A.~de~Lozar, D.~J. Kuik, and J.~Westerweel, ``Repeller or attractor?
-  selecting the dynamical model for the onset of turbulence in pipe flow,''
-  {\em Phys. Rev. Lett.}, vol.~101, p.~214501, Nov 2008.
+\bibitem{DeLozar2012}
+A.~De~Lozar, F.~Mellibovsky, M.~Avila, and B.~Hof, ``Edge {S}tate in {P}ipe
+  {F}low {E}xperiments,'' {\em Physical {R}eview {L}etters}, vol.~108, no.~21,
+  p.~214502, 2012.
 
 \bibitem{Gibson2008}
 J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
@@ -81,12 +94,6 @@ J.~F. Gibson, ``{Channelflow}: {A} spectral {Navier-Stokes} simulator in
   {C}++,'' tech. rep., U. New Hampshire, 2014.
 \newblock {\tt {Channelflow.org}}.
 
-\bibitem{Halcrow2008}
-J.~J. Halcrow, {\em Charting the state space of plane {{Couette}} flow:
-  {Equilibria}, relative equilibria, and heteroclinic connections}.
-\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
-  Atlanta, GA 30332, 2008.
-
 \bibitem{Granger1995}
 R.~Granger, {\em Fluid Mechanics}.
 \newblock Dover Books on Physics Series, Dover Publications, 1995.
@@ -96,7 +103,8 @@ S.~L. Fischer and S.~P. Fischer, ``Mean corpuscular volume,'' {\em Archives of
   Internal Medicine}, vol.~143, no.~2, pp.~282--283, 1983.
 
 \bibitem{Clarke2007}
-C.~Clarke and B.~Carswell, {\em Principles of astrophysical fluid dynamics}.
+C.~Clarke and B.~Carswell, {\em Principles of {A}strophysical {F}luid
+  {D}ynamics}.
 \newblock Cambridge University Press, 2007.
 
 \bibitem{Rotman1995}
@@ -106,14 +114,15 @@ J.~Rotman, {\em An Introduction to the Theory of Groups}.
 \bibitem{GIBSON2009}
 J.~F. Gibson, J.~Halcrow, and P.~Cvitanovic, ``Equilibrium and travelling-wave
   solutions of plane {Couette} flow,'' {\em Journal of Fluid Mechanics},
-  vol.~638, pp.~243--266, Nov. 2009.
+  vol.~638, pp.~243--266, 2009.
 
 \bibitem{Frisch1995}
-U.~Frisch, {\em Turbulence: the legacy of {A}.{N}. Kolmogorov}.
+U.~Frisch, {\em Turbulence: {T}he {L}egacy of {A}.{N}. Kolmogorov}.
 \newblock Cambridge University Press, 1995.
 
 \bibitem{Peyret2002}
-R.~Peyret, {\em Spectral methods for incompressible viscous flow}, vol.~148.
+R.~Peyret, {\em Spectral {M}ethods for {I}ncompressible {V}iscous {F}low},
+  vol.~148.
 \newblock Springer Science \& Business Media, 2002.
 
 \bibitem{Frigo1998}
@@ -128,31 +137,46 @@ U.~M. Ascher, S.~J. Ruuth, and B.~T. Wetton, ``Implicit-explicit methods for
   Numerical Analysis}, vol.~32, no.~3, pp.~797--823, 1995.
 
 \bibitem{Press2007}
-W.~H. Press, {\em Numerical recipes 3rd edition: The art of scientific
-  computing}.
-\newblock Cambridge university press, 2007.
+W.~H. Press, {\em Numerical {R}ecipes 3rd edition: The {A}rt of {S}cientific
+  {C}omputing}.
+\newblock Cambridge {U}niversity {P}ress, 2007.
 
 \bibitem{Dembo1982}
-R.~S. Dembo, S.~C. Eisenstat, and T.~Steihaug, ``Inexact newton methods,'' {\em
-  SIAM Journal on Numerical analysis}, vol.~19, no.~2, pp.~400--408, 1982.
+R.~S. Dembo, S.~C. Eisenstat, and T.~Steihaug, ``Inexact {N}ewton methods,''
+  {\em SIAM Journal on Numerical analysis}, vol.~19, no.~2, pp.~400--408, 1982.
 
 \bibitem{Saad1986}
-Y.~Saad and M.~H. Schultz, ``Gmres: A generalized minimal residual algorithm
-  for solving nonsymmetric linear systems,'' {\em SIAM Journal on scientific
-  and statistical computing}, vol.~7, no.~3, pp.~856--869, 1986.
+Y.~Saad and M.~H. Schultz, ``{GMRES}: A generalized minimal residual algorithm
+  for solving nonsymmetric linear systems,'' {\em SIAM Journal on {S}cientific
+  and {S}tatistical {C}omputing}, vol.~7, no.~3, pp.~856--869, 1986.
+
+\bibitem{Arnoldi1951}
+W.~E. Arnoldi, ``The {P}rinciple of {M}inimized {I}terations in the {S}olution
+  of the {M}atrix {E}igenvalue {P}roblem,'' {\em Quarterly of Applied
+  Mathematics}, vol.~9, no.~1, pp.~17--29, 1951.
 
 \bibitem{Ipsen1998}
-I.~C. Ipsen and C.~D. Meyer, ``The idea behind krylov methods,'' {\em American
-  Mathematical Monthly}, pp.~889--899, 1998.
+I.~C. Ipsen and C.~D. Meyer, ``The idea behind {K}rylov methods,'' {\em
+  American Mathematical Monthly}, pp.~889--899, 1998.
 
 \bibitem{Trefethen1997}
-L.~N. Trefethen and D.~Bau~III, {\em Numerical linear algebra}, vol.~50.
-\newblock Siam, 1997.
+L.~N. Trefethen and D.~Bau~III, {\em Numerical {L}inear {A}lgebra}, vol.~50.
+\newblock SIAM, 1997.
+
+\bibitem{Hamilton1995}
+J.~M. Hamilton, J.~Kim, and F.~Waleffe, ``Regeneration mechanisms of near-wall
+  turbulence structures,'' {\em Journal of Fluid Mechanics}, vol.~287,
+  pp.~317--348, 1995.
 
 \bibitem{dorf2006sensors}
 R.~C. Dorf, {\em Sensors, Nanoscience, Biomedical Engineering, and Instruments:
   Sensors Nanoscience Biomedical Engineering}.
 \newblock CRC Press, 2006.
+
+\bibitem{Hof2008}
+B.~Hof, A.~de~Lozar, D.~J. Kuik, and J.~Westerweel, ``Repeller or attractor?
+  {S}electing the dynamical model for the onset of turbulence in pipe flow,''
+  {\em Physical Review Letters}, vol.~101, p.~214501, 2008.
 
 \bibitem{Taneda1956}
 S.~Taneda, ``Experimental investigation of the wake behind a sphere at low

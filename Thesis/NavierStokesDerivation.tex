@@ -1,11 +1,6 @@
 \setcounter{secnumdepth}{3}
 \chapter{Equations of Flow}
-    	 	\epigraph{Peace is a lie, there is only passion. \\
-			       Through passion, I gain strength.\\
-			        Through strength, I gain power.\\
-			        Through power, I gain victory.\\
-			        In victory, my chains are broken.\\
-                                        The Force shall set me free.}{Anonymous}
+    	 	\epigraph{Big whorls have little whorls, which feed on their velocity, And little whorls have lesser whorls, and so on to viscosity.}{Lewis Richardson}
 \section{Formalisms}
 %At the heart of fluid dynamics lies the Navier-Stokes equation, first derived by George Stokes in 1845, after a series of refinements leading back to Newton.
 If we were to describe the dynamics of a point particle, we would probably begin by writing the total force on the object as a sum of various contributions - thrust, drag, electric, magnetic, gravitational, etc., so that 
@@ -17,25 +12,25 @@ To relate this back to the {\bf kinematic} variables (position, velocity, etc.),
 \begin{equation}\label{eq:NSL}
 \der{1}{\Vector{p}}{t} = \Vector{F}_{total},
 \end{equation}
-to generate an equation of motion. The trajectory could then be calculated via analytic or numeric integration of \refeq{eq:NSL}. While in principle we can use this approach to describe the behavior of a large collection of particles making up the fluid, practical considerations prevent us from modeling the behavior of each individual particle, for the following reason -- in a milliliter of water, there are approximately $10^{22}$ molecules of water, each with 6 degrees of freedom.\footnote{If we ignore the vibrations of the O-H bonds} Applying \eqref{eq:NSL} to all these particles would result in about $10^{23}$ coupled ordinary differential equations. Such a set of equations would be hard to write down, let alone solve! Clearly, a more intelligent approach is needed. The formalism that I will present here begins by modeling the fluid as a continuum. My derivation is based off that in\rf{Granger1995}. \\
+to generate an equation of motion. The trajectory could then be calculated via analytic or numeric integration of \refeq{eq:NSL}. While in principle we can use this approach to describe the behavior of a large collection of particles making up the fluid, practical considerations prevent us from modeling the behavior of each individual particle, for the following reason -- in a milliliter of water, there are approximately $10^{22}$ water molecules, each with 6 degrees of freedom.\footnote{If we ignore the vibrations of the O-H bonds} Applying \eqref{eq:NSL} to all these particles would result in about $10^{23}$ coupled ordinary differential equations. Such a set of equations would be hard to write down, let alone solve! Clearly, a more intelligent approach is needed. The formalism that I will present here begins by modeling the fluid as a continuum. My derivation is based off that in\rf{Granger1995}. \\
 
 \subsection{The Eulerian Formulation}
 
-When asked to consider the mechanical evolution of some collection of bodies, two obvious methods would be readily apparent - we could either follow a collection of particles on their way through space and time (the {\bf Lagrangian} formulation), or we could situate ourselves at some point in space and observe the properties of particles that pass through the surrounding region (the {\bf control volume}) over time (the {\bf Eulerian} formulation). The Lagrangian formulation will be familiar to anyone with a basic physics education, since it lends itself readily towards analysis of rigid-body motion. When considering fluids, however, the disadvantages of the Lagrangian formulation (noted above) stand in contrast to the ease of analysis afforded by the Eulerian formulation, which remains as easy (or hard) as it was for rigid body motion. For this reason, I will focus on the Eulerian formulation of fluid mechanics.
+When asked to consider the mechanical evolution of some collection of bodies, two obvious methods would be readily apparent - we could either follow a collection of particles on their way through space and time (the {\bf Lagrangian} formulation), or we could situate ourselves at some point in space and observe the properties of particles that pass through the surrounding region (the {\bf control volume}) over time (the {\bf Eulerian} formulation). The Lagrangian formulation will be familiar to anyone with a basic physics education, since it lends itself readily towards analysis of rigid-body motion. When considering fluids, however, the disadvantages of the Lagrangian formulation (noted above) stand in contrast to the ease of analysis afforded by the Eulerian formulation, which remains as easy (or hard) as it was for rigid body motion. 
 
 \subsection{The Fluid Particle}
-A consequence of the Eulerian formulation is that we cannot know the full timeline of any individual particle over its lifetime -- we only know the properties of particles within the control volume. Therefore, the principle quantity in the Eulerian formulation is the {velocity field}\footnote{As opposed to particle trajectories $\Vector{x}(t)$ in the Lagrangian formulation.} $\Vector{v}(\Vector{x},t) = v_x(\Vector{x},t) \Vector{\hat{x}} + v_y (\Vector{x},t)\Vector{\hat{y}} + v_z(\Vector{x},t) \Vector{\hat{z}}$, along with the pressure and density fields, which are the average values of these properties in a control volume surrounding a point. \\
+When we use the Eulerian formulation, we cannot know the full timeline of any individual particle over its lifetime -- we only know the properties of particles within the control volume. Therefore, the principle quantity in the Eulerian formulation is the {velocity field}\footnote{As opposed to particle trajectories $\Vector{x}(t)$ in the Lagrangian formulation.} $\Vector{v}(\Vector{x},t) = v_x(\Vector{x},t) \Vector{\hat{x}} + v_y (\Vector{x},t)\Vector{\hat{y}} + v_z(\Vector{x},t) \Vector{\hat{z}}$, along with the pressure and density fields, which are the average values of these properties in a control volume surrounding a point. \\
 
 A subtle issue arises in doing this, however. Since the velocity field is continuous, it has a well-defined value at every point in space, which we would want to be associated with the velocity of a particle at that point in space. However, there are finite number of particles in any collection of fluid with a finite spatial extent. If these particles have some finite volume, then the formulation assigns multiple velocities to a single particle - and if the particles are infinitesimal, then the formulation assigns velocities to empty space! This issue can be resolved by appealing to the continuum hypothesis, which suggests that a control volume (the `{\bf fluid parcel}') can be chosen such that it is large enough to form a meaningful average of the quantities within, but small enough that the properties do not vary significantly over the parcel, and that from a macroscopic perspective, the properties appear continuous. \\
 
-The reader may ask ``Can such a  parcel even exist?". As an example, let us consider water, with approximately $10^{22}$ molecules per cubic centimeter. Imagine our fluid parcels as tiling the volume with cudes with sides of length $dl$, giving a total volume of $dl^3$ per parcel. First, let us make $dl$ small enough that the macroscopic properties appear continuous - how about one micron? That gives the volume of a fluid particle as one cubic micrometer. For scale, consider that the volume of the human red blood cell ranges from 80-100 cubic micrometers\rf{Fischer1983} - this seems acceptably small for considering, say, the flow around a ship.\footnote{The validity of the continuum hypothesis is clearly dependent on the density of the fluid and the length scale of the phenomenon to be modeled, but holds up even for the sparse gas clouds of protoplanetary disks\rf{Clarke2007} or at the nanoscale{Dorf2006}.} The number of water molecules within each fluid parcel is then 
+The reader may ask ``Can such a  parcel even exist?" As an example, let us consider water, with approximately $10^{22}$ molecules per cubic centimeter. Imagine our fluid parcels as tiling the volume with cubes with sides of length $dl$, giving a total volume of $dl^3$ per parcel. First, let us make $dl$ small enough that the macroscopic properties appear continuous - how about one micron? That gives the volume of a fluid particle as one cubic micrometer. For scale, consider that the volume of the human red blood cell ranges from 80-100 cubic micrometers\rf{Fischer1983} - this seems acceptably small for considering, say, the flow around a ship.\footnote{The validity of the continuum hypothesis is clearly dependent on the density of the fluid and the length scale of the phenomenon to be modeled, but holds up even for the sparse gas clouds of protoplanetary disks\rf{Clarke2007} or at the nanoscale\rf{Dorf2006}.} The number of water molecules within each fluid parcel is then 
 \begin{equation}
 10^{22}dl^3 = 10^{22} \times 10^{-12} = 10^{10},
 \end{equation}   
 or about 10 billion water molecules, which is certainly sufficient to achieve a meaningful average. Having defined a fluid parcel in this way allows us to behave as if these macroscopic variables have well-defined values at every point in space, which greatly simplifies the following analysis. 
 
 \section{Mass Conservation}
-While not formally a part of the Navier-Stokes equation (which is a statement about conservation of linear momentum), conservation of mass is nevertheless essential in solving fluid problems, and will serve as a demonstration of the control volume method. Consider a volume $\Omega$ which is fixed in space, and has some mass density $\rho = \rho(\Vector{x},t)$ and some fluid velocity $\Vector{v} = \Vector{v}(\Vector{x} ,t)$ that are generically functions of time and space, allowing us to define the {\bf mass current density} $\Vector{m} = \Vector{v}\rho$. The mass contained within the volume $\Omega$ is then given by 
+While not formally a part of the Navier-Stokes equations (which are a statement about conservation of linear momentum), conservation of mass is nevertheless essential in solving fluid problems, and will serve as a demonstration of the control volume method. Consider a volume $\Omega$ that is fixed in space and has some mass density $\rho = \rho(\Vector{x},t)$ and a velocity $\Vector{v} = \Vector{v}(\Vector{x} ,t)$ that are generically functions of time and space. This allows us to define the {\bf mass current density} $\Vector{m} = \Vector{v}\rho$. The mass contained within the volume $\Omega$ is then given by 
 \begin{equation}
 M = \int{\Omega}{}{\rho}{dV}.
 \end{equation}
@@ -47,6 +42,7 @@ by the divergence theorem.  Now in classical physics, mass should not appear or 
 \begin{equation}
 \pder{1}{M_{encl}}{t} + \mathcal{M}_{flow} = 0,
 \end{equation}
+so that
 \begin{equation}
 \pder{1}{}{t}\paren{\int{\Omega}{}{\rho}{dV}} + \int{\Omega}{}{\Div{\paren{\rho\Vector{v}}}}{dV} =0.
 \end{equation}
@@ -59,7 +55,7 @@ But $\Omega$ is arbitrary, so the integrand must be zero everywhere, and mass is
 \pder{1}{\rho}{t} + \Div{\paren{\rho\Vector{v}} }= 0.
 \end{equation}
 
-If the flow is (approximately) incompressible, which will be true for small Mach numbers\footnote{The Mach number is the ratio of the fluid velocity to the speed of sound in the fluid. For reference, the speed of sound in water is 1497 ms$^{-1}$ at room temperature and pressure.}, then $\rho$ must be constant, and \refeq{eq:consMassFull} becomes 
+If the flow is (approximately) incompressible, which will be true for small Mach numbers,\footnote{The Mach number is the ratio of the fluid velocity to the speed of sound in the fluid. For reference, the speed of sound in water is 1497 ms$^{-1}$ at room temperature and pressure, so for many practical purposes, water can be considered incompressible.}  $\rho$ must be constant, and \refeq{eq:consMassFull} becomes 
 \begin{equation}\label{eq:consMassIncomp}
 \Div{\Vector{v}} = 0.
 \end{equation}
@@ -69,10 +65,10 @@ If the flow is (approximately) incompressible, which will be true for small Mach
 As mentioned earlier, the Navier-Stokes equations are simply a statement of conservation of linear momentum, along with certain assumptions about stress  and strain, which are presented below. 
 \subsection{Stress}
 
-Stress is a mathematical entity that contains information about the forces acting on an object. As with force, we define positive stress as stress that acts towards the control volume, and negative if it acts away from it. Unlike force however, stress is not a vector, since it encodes both the force on an object, as well as the plane that force acts in. Since there are three directions and three planes of action, a stress entity generally has nine elements, and can be represented as a {\bf second rank tensor}. For example, the viscous stress tensor $\Tensor{T}$ is identified by two subscripts, where the first subscript indicates the plane of action, and the second the direction of action. So $\Tensor{T}_{xy}$ would represent the viscous force on the $(y,z)$ plane acting in the $y$ direction. 
+Stress is a mathematical entity that contains information about the forces acting on an object. As with force, we define positive stress as stress that acts towards the control volume, and negative if it acts away from it. Unlike force however, stress is not a vector, since it encodes both the force on an object, as well as the plane that force acts in. Since there are three directions and three planes of action, a stress entity generally has nine elements, and can be represented as a {\bf second rank tensor}. For example, the viscous stress tensor $\Tensor{T}$ is identified by two subscripts, where the first subscript indicates the plane of action, and the second the direction of action. So $\Tensor{T}_{xy}$ represents the viscous force on the $(y,z)$ plane acting in the $y$ direction. 
 
 \subsection{Strain}
-Now that we can consider the forces on a fluid particle, we need to link these forces back to the observable quantities in the form of strain, a second rank tensor which encodes information about the deformation of the fluid packet. In solids, this is easy - Hooke's Law for elastic substances, for instance, sets the strain proportional to the stress:
+Now that we can consider the forces on a fluid particle, we need to link these forces back to the observable quantities in the form of strain, a second rank tensor which encodes information about how the fluid packet deforms under stress. In solids, this is easy - Hooke's Law for elastic substances, for instance, sets the strain proportional to the stress:
 \begin{equation}
 \Vector{\sigma} = \Tensor{C}\Vector{\epsilon},
 \end{equation}
@@ -126,7 +122,7 @@ and neglecting body forces, we obtain the nondimensional version of \refeq{eq:NS
 \pder{1}{\Vector{u}}{t} + \paren{\Vector{u}\cdot\nabla}\Vector{u} = -\Grad{P} + \frac{1}{\ReN}\nabla^2\Vector{u}\label{eq:NSND},\\
 \nabla\cdot \Vector{u} = 0,
 \end{align}
-where \begin{equation}\label{eq:ReN}\ReN= \frac{UL\rho}{\mu}.\end{equation} In practice, the values of $L$ and $U$ are chosen by convention to reflect the natural scales of the problem at hand.
+where \begin{equation}\label{eq:ReN}\ReN= \frac{UL\rho}{\mu}.\end{equation} In practice, the values of $L$ and $U$ are chosen by convention to reflect the natural length and velocity scales of the problem at hand.
  
 \section{Plane Couette Flow}
 Since \pCf\ is a shear driven flow, we set the pressure gradient to zero and use no-slip boundary conditions at the walls, which sets the surface tangential velocity equal to the surface velocity. The Navier-Stokes equation for \pCf\ is then given by 
@@ -141,7 +137,7 @@ and
 \begin{equation}\label{eq:NPBC}
 \pder{1}{}{y}\Vector{u}(x,\pm1,z,t) = \paren{a,0,b},
 \end{equation}
-for some constant $a$ and $b$ and geometry as pictured in \refFig{fig:planeCouette}. We nondimensionalize by the velocity $V$ of either plate and the half-plate distance $h$, with the Reynolds number
+for some constant $a$ and $b$ and geometry as pictured in \refFig{fig:planeCouette}. We nondimensionalize by the velocity $V$ of either plate and the half-plate distance $h$, so that the Reynolds number is given by
 \begin{equation}
 \ReN = \frac{hV\rho}{\mu}.
 \end{equation} In order to derive the laminar velocity profile shown in \refFig{fig:planeCouetteBulk}, note that at very low \ReN, the right hand side of \refeq{eq:NSPCF} dominates. If we assume that the flow is unidirectional and steady, so that $\Vector{u} = u_x \Vector{\hat{x}}$, symmetry considerations tell us that the velocity field can only be a function of height, so that the Navier-Stokes equation reduces to 
@@ -154,17 +150,17 @@ This has a solution of the form
 \end{equation}
 which corresponds to the laminar flow profile shown in \refFig{fig:planeCouetteBulk}. Consider then a perturbation $\Vector{v}(x,y,z,t)$ away from the laminar state, so that the initial field is $\Vector{u}(x,y,z,t) = \Vector{v} (x,y,z,t)+ y\Vector{\hat{x}}$. Substituting this into \refeq{eq:NSND}, we get 
 \begin{align}
-\pder{1}{\Vector{v}}{\tau} + y\pder{1}{\Vector{v}}{x} + v\Vector{\hat{x}} + \Vector{v}\cdot\Grad{\Vector{v}} &= \frac{1}{\ReN} \nabla^2\Vector{v},\label{eq:PertND}\\
+\pder{1}{\Vector{v}}{\tau} + y\pder{1}{\Vector{v}}{x} + v\Vector{\hat{x}} &+ \paren{\Vector{v}\cdot\nabla}\Vector{v} = \frac{1}{\ReN} \nabla^2\Vector{v},\label{eq:PertND}\\
 \Div{\Vector{v}} &= 0.
 \end{align}
 Adapting the no-slip boundary conditions from \refeq{eq:PCBC} and no-penetration boundary from \refeq{eq:NPBC}, we get
 \begin{align}
-\Vector{v}(x,\pm 1,z,t) = 0,\\
-\pder{1}{}{y}\Vector{v}(x,\pm 1,z,t) = (a,0,b).
+&\Vector{v}(x,\pm 1,z,t) = 0,\\
+\pder{1}{}{y}&\Vector{v}(x,\pm 1,z,t) = (a,0,b).
 \end{align}
-At this point we need to introduce artificial boundary conditions to  render the infinite planar domain into a computationally tractable form. We use the periodic boundary conditions 
+At this point we need to introduce artificial boundary conditions to  render the infinite planar domain computationally tractable. We enforce the periodic boundary conditions 
 \begin{align}
-\Vector{v}(x,y,z,t) = \Vector{v}(x+L_x,y,z,t),\label{eq:periodicBCx},\\
-\Vector{v}(x,y,z,t) = \Vector{v}(x,y,z+L_z,t),\label{eq:periodicBCz},
+\Vector{v}(x,y,z,t) = \Vector{v}(x+L_x,y,z,t),\label{eq:periodicBCx}\\
+\Vector{v}(x,y,z,t) = \Vector{v}(x,y,z+L_z,t),\label{eq:periodicBCz}
 \end{align}
-where $L_x$ and $L_z$ are the lengths of the periodic cell. This gives the complete equation of motion for the perturbing velocity field.  Since the laminar profile is steady, understanding the turbulent field's trajectory in state space now reduces to understanding the behavior of the turbulent perturbation, and the structure of its inertial manifold. \refeq{eq:pertND} is not generally analtyically integrable, so we must tackle it numerically. Before presenting the numerical methods and workflow, however, I will take a slight detour to discuss in detail the symmetries of the \pCf problem, as they are central to this thesis. 
+where $L_x$ and $L_z$ are the lengths of the periodic cell. This gives the complete equation of motion for the perturbing velocity field.  Since the laminar profile is steady, understanding the turbulent field's trajectory in state space now reduces to understanding the behavior of the turbulent perturbation, and the structure of its inertial manifold. \refeq{eq:PertND} is not generally analytically integrable, so we must tackle it numerically. Before presenting the numerical methods and workflow, however, I will take a slight detour to discuss in detail the symmetries of the \pCf\ problem, as they are a central part of the work to follow. 
