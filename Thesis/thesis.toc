@@ -39,8 +39,7 @@
 \contentsline {subsection}{\numberline {4.2.1}Linear Stability Analysis}{51}
 \contentsline {subsection}{\numberline {4.2.2}Return of the State Space}{53}
 \contentsline {section}{\numberline {4.3}Dissipation and Energy Input}{54}
-\contentsline {subsection}{\numberline {4.3.1}A New State Space}{54}
-\contentsline {subsection}{\numberline {4.3.2}The Search for Bifurcations, Part II}{56}
-\contentsline {chapter}{Conclusion}{63}
-\contentsline {section}{\numberline {4.1}More info}{63}
-\contentsline {chapter}{References}{65}
+\contentsline {subsection}{\numberline {4.3.1}A New Projection}{54}
+\contentsline {subsection}{\numberline {4.3.2}The Search for Bifurcations, Part II}{57}
+\contentsline {chapter}{Conclusion}{65}
+\contentsline {chapter}{References}{67}

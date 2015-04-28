@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  27 APR 2015 17:01
+This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  28 APR 2015 10:53
 entering extended mode
 **C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
 (C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/thesis.tex
@@ -786,18 +786,8 @@ Package pdftex.def Info: ./Figs/P8SecondBifurcation.pdf used on input line 110.
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-Missing character: There is no Ã in font cmbx12!
-Missing character: There is no © in font cmbx12!
 Missing character: There is no Ã in font cmr12!
 Missing character: There is no © in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no Ã in font cmr12!
-Missing character: There is no © in font cmr12!
-Missing character: There is no Ã in font cmr10!
-Missing character: There is no © in font cmr10!
 [53
 
  <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/P8FirstBifurcation.pdf>]
@@ -846,133 +836,154 @@ a single page
 >] <./Figs/DIOG.pdf, id=1319, 993.7125pt x 605.26125pt>
 File: ./Figs/DIOG.pdf Graphic file (type pdf)
  <use ./Figs/DIOG.pdf>
-Package pdftex.def Info: ./Figs/DIOG.pdf used on input line 140.
+Package pdftex.def Info: ./Figs/DIOG.pdf used on input line 139.
 (pdftex.def)             Requested size: 433.62pt x 264.1177pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 145--146
+<./Figs/DearGodWhy.pdf, id=1320, 1006.76125pt x 618.31pt>
+File: ./Figs/DearGodWhy.pdf Graphic file (type pdf)
+
+<use ./Figs/DearGodWhy.pdf>
+Package pdftex.def Info: ./Figs/DearGodWhy.pdf used on input line 144.
+(pdftex.def)             Requested size: 433.62pt x 266.31154pt.
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
 
  []
 
-<./Figs/DIUpper.pdf, id=1320, 361.35pt x 222.8325pt>
+
+Underfull \vbox (badness 5970) has occurred while \output is active []
+
+ [56 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/DIOG.pdf>]
+<./Figs/DIUpper.pdf, id=1339, 361.35pt x 222.8325pt>
 File: ./Figs/DIUpper.pdf Graphic file (type pdf)
  <use ./Figs/DIUpper.pdf>
-Package pdftex.def Info: ./Figs/DIUpper.pdf used on input line 149.
+Package pdftex.def Info: ./Figs/DIUpper.pdf used on input line 153.
 (pdftex.def)             Requested size: 433.62pt x 267.40106pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Figs/DITrans.pdf, id=1321, 361.35pt x 222.8325pt>
+<./Figs/DITrans.pdf, id=1340, 361.35pt x 222.8325pt>
 File: ./Figs/DITrans.pdf Graphic file (type pdf)
  <use ./Figs/DITrans.pdf>
-Package pdftex.def Info: ./Figs/DITrans.pdf used on input line 154.
+Package pdftex.def Info: ./Figs/DITrans.pdf used on input line 158.
 (pdftex.def)             Requested size: 433.62pt x 267.40106pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
-<./Figs/DILower.pdf, id=1322, 361.35pt x 222.8325pt>
+<./Figs/DILower.pdf, id=1341, 361.35pt x 222.8325pt>
 File: ./Figs/DILower.pdf Graphic file (type pdf)
  <use ./Figs/DILower.pdf>
-Package pdftex.def Info: ./Figs/DILower.pdf used on input line 159.
+Package pdftex.def Info: ./Figs/DILower.pdf used on input line 163.
 (pdftex.def)             Requested size: 433.62pt x 267.40106pt.
 
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 163--164
+Underfull \hbox (badness 10000) in paragraph at lines 167--168
 
  []
 
-[56 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/DIOG.pdf>]
-<./Figs/areaOrder.pdf, id=1341, 361.35pt x 185.69376pt>
+
+Underfull \vbox (badness 7925) has occurred while \output is active []
+
+ [57 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/DearGodWhy.pdf>]
+<./Figs/areaOrder.pdf, id=1367, 361.35pt x 185.69376pt>
 File: ./Figs/areaOrder.pdf Graphic file (type pdf)
 
 <use ./Figs/areaOrder.pdf>
-Package pdftex.def Info: ./Figs/areaOrder.pdf used on input line 166.
+Package pdftex.def Info: ./Figs/areaOrder.pdf used on input line 170.
 (pdftex.def)             Requested size: 433.62pt x 222.83421pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figs/areaCell.pdf, id=1342, 346.29375pt x 190.7125pt>
+<./Figs/areaCell.pdf, id=1368, 346.29375pt x 190.7125pt>
 File: ./Figs/areaCell.pdf Graphic file (type pdf)
 
 <use ./Figs/areaCell.pdf>
-Package pdftex.def Info: ./Figs/areaCell.pdf used on input line 171.
+Package pdftex.def Info: ./Figs/areaCell.pdf used on input line 175.
 (pdftex.def)             Requested size: 433.62pt x 238.81197pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<./Figs/circumCell.pdf, id=1343, 361.35pt x 192.72pt>
+<./Figs/circumCell.pdf, id=1369, 361.35pt x 192.72pt>
 File: ./Figs/circumCell.pdf Graphic file (type pdf)
 
 <use ./Figs/circumCell.pdf>
-Package pdftex.def Info: ./Figs/circumCell.pdf used on input line 176.
+Package pdftex.def Info: ./Figs/circumCell.pdf used on input line 180.
 (pdftex.def)             Requested size: 433.62pt x 231.26576pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-) (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\Conclusion.tex [57 <C:/Users/Var
-chas/Desktop/Reed/Thesis/Thesis/Figs/DIUpper.pdf>] [58 <C:/Users/Varchas/Deskto
-p/Reed/Thesis/Thesis/Figs/DITrans.pdf>] [59 <C:/Users/Varchas/Desktop/Reed/Thes
-is/Thesis/Figs/DILower.pdf>] [60 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/F
-igs/areaOrder.pdf>] [61 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/areaC
-ell.pdf> <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/circumCell.pdf
+[58 <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/DIUpper.pdf>] [59 <C:/Use
+rs/Varchas/Desktop/Reed/Thesis/Thesis/Figs/DITrans.pdf>] [60 <C:/Users/Varchas/
+Desktop/Reed/Thesis/Thesis/Figs/DILower.pdf>] [61 <C:/Users/Varchas/Desktop/Ree
+d/Thesis/Thesis/Figs/areaOrder.pdf>] [62 <C:/Users/Varchas/Desktop/Reed/Thesis/
+Thesis/Figs/areaCell.pdf> <C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Figs/cir
+cumCell.pdf
 
 pdfTeX warning: pdflatex.EXE (file C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/
 Figs/circumCell.pdf): PDF inclusion: multiple pdfs with page group included in 
 a single page
->] [62
+>]) (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\Conclusion.tex [63
 
-]) [63] [64
+] [64
 
-] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl
-[65
+])
+[65] [66
 
-] [66]) [67] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux) ) 
+] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.bbl [67
+
+] [68])
+[69] (C:\Users\Varchas\Desktop\Reed\Thesis\Thesis\thesis.aux) ) 
 Here is how much of TeX's memory you used:
- 3713 strings out of 493921
- 50407 string characters out of 3144870
- 114765 words of memory out of 3000000
- 6855 multiletter control sequences out of 15000+200000
+ 3719 strings out of 493921
+ 50536 string characters out of 3144870
+ 114777 words of memory out of 3000000
+ 6860 multiletter control sequences out of 15000+200000
  20877 words of font info for 85 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 28i,16n,45p,1973b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Prog
-ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Fil
-es (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files 
-(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x
-86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86
-)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/
-MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiK
-TeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
-s/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/t
-ype1/public/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/am
-sfonts/cm/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmsy8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mti10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmt
-i12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt1
-0.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.
-pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10
-.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb>
-Output written on thesis.pdf (83 pages, 60365868 bytes).
+ 28i,16n,45p,1968b,413s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program File
+s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Program Files 
+(x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx6.pfb><C:/Program Files (x86)
+/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx8.pfb><C:/Program Files (x86)/Mi
+KTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files (x86)/MiKTeX 2
+.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Program Files (x86)/MiKTeX 2.9/
+fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fon
+ts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/typ
+e1/public/amsfonts/cm/cmr12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/
+public/amsfonts/cm/cmr17.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/pub
+lic/amsfonts/cm/cmr6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/
+amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsf
+onts/cm/cmr8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts
+/cm/cmsl12.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/c
+m/cmsy10.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/
+cmsy6.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cms
+y7.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy8.
+pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pf
+b><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb><C:
+/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+
+Output written on thesis.pdf (85 pages, 66068342 bytes).
 PDF statistics:
- 1866 PDF objects out of 2073 (max. 8388607)
+ 1895 PDF objects out of 2073 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 181 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

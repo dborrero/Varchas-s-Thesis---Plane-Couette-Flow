@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.4-1.40.13 (MiKTeX 2.9) (preloaded format=pdflatex 2015.4.15)  27 APR 2015 04:47
+This is XeTeX, Version 3.1415926-2.4-0.9998 (MiKTeX 2.9) (preloaded format=xelatex 2014.3.4)  28 APR 2015 09:03
 entering extended mode
 **C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Results.tex
 (C:/Users/Varchas/Desktop/Reed/Thesis/Thesis/Results.tex
@@ -24,11 +24,11 @@ End of file on the terminal!
 
  
 Here is how much of TeX's memory you used:
- 7 strings out of 493921
- 219 string characters out of 3144870
- 49031 words of memory out of 3000000
- 3400 multiletter control sequences out of 15000+200000
+ 6 strings out of 429035
+ 179 string characters out of 3166908
+ 47509 words of memory out of 3000000
+ 3355 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
- 841 hyphenation exceptions out of 8191
- 5i,0n,1p,76b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 912 hyphenation exceptions out of 8191
+ 5i,0n,1p,75b,8s stack positions out of 5000i,500n,10000p,200000b,50000s
+No pages of output.
