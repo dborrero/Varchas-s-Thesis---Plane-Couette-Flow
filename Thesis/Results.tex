@@ -3,21 +3,22 @@
 
 \section{The Gang of Four}
 
-Four new periodic orbits P85, P60, P32 and P8 (\refFigsss{fig:p85}{fig:p60}{fig:p32}{fig:p8}), also known as the Gang of Four, have been found, with properties that are summarized in \refTab{tab:summary}.  I was unable to find any \ecs\ in the fully unconstrained phase space. 
+Four new periodic orbits P85, P60, P32 and P8 (\refFigsss{fig:p85}{fig:p60}{fig:p32}{fig:p8}), also known as the Gang of Four, have been found, with properties that are summarized in \refTab{tab:summary}.  We were unable to find any \ecs\ in asymmetric subspace. 
 
 \begin{table}[h!]
 \caption{A summary of relevant information regarding the Gang of Four. All of these results are presented at $\ReN = 400$, in the Hamilton-Kim-Waleffe cell\rf{Hamilton1995} with $(L_x,L_z) = (5.51157, 3.76239)$, and grid discretization $(N_x,N_y,N_z)= (48,33,48)$. The label for each orbit is based on its period, which experience shows uniquely defines an orbit. The phase velocities $v_x$ and $v_z$ are in terms of fraction of cell length per period. The largest Floquet exponent and number of unstable Floquet exponents are explained in a later section, as are the mean dissipation and energy input. The symmetry isotropy subgroup of each orbit is also provided. }   \label{tab:summary}
 \begin{center}
-\begin{tabular}{| r |  c | c | c | c | c | c | c | l |}
+\begin{tabular}{r   c  c  c  c  c  c  c  l }
 \toprule
 Label & $T$ & $v_x$ & $v_z$ &  $\lambda_{\textrm{max}}$ & $\#\ \lambda_{\textrm{unstable}}$ & $\bar{D}/\bar{I}$&  Symmetry \\
 \midrule
+\midrule
 P85 & 85.50 & 0 & 0 & 0.0427 & 6 &1.85 & S\\
-\midrule
+
 P60 & 60.86 & 0 & 0 &  0.032749 & 10 & 2.08 & S\\
-\midrule
+
 P32 & 32.00 & 0.5 & 0 &  $0.0200 + 0.0982\imath$ & 7& 1.98 &$S_x$\\
-\midrule
+
 P8 & 8.32 & 0 & $2.29\times 10^{-7}$ & $0.0998 - 0.2605 \imath$ &20& 4.00& $S_z$\\
 \bottomrule
 \end{tabular}
@@ -30,24 +31,24 @@ Visualizing the behavior of fluids is in itself a time-honored discipline, espec
 \refFigsss{fig:p85}{fig:p60}{fig:p32}{fig:p8} are all examples of the first visualization method -- the {\bf orthographic projection} (OP)\rf{Gibson2008}. The OP is constructed by piecing together several representative 2D slices of the state's velocity field -- each of the periodic boundaries, and the mid-plane, and is colored to represent the magnitude and direction of streamwise velocity. The OP allows us to visually interrogate the structure of the state, which can be extremely useful -- for example, it is clear purely from visual interrogation that \refFig{fig:p8} is less ordered than \refFig{fig:p85}. However, the OP cannot deliver much more than this -- for example, it cannot easily tell us much about the differences between the orbits of, say, P8 and P85. For this reason, we use the second, more useful visualization method - the state space projection\rf{Gibson2008}.
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{p85noBase.pdf}}
-\caption{OP of P85. P85 is a fully symmetric orbit with period 85.50 in the HKW cell at $\ReN=400$. Note the extreme symmetry of the prominent streaks visible in the mid-plane. The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away.{Available at {\tt https://youtu.be/r6ac1b54vDk}}}\label{fig:p85}
+\caption{OP of P85. P85 is a fully symmetric orbit with period 85.50 in the HKW cell at $\ReN=400$. Note the extreme symmetry of the prominent streaks visible in the mid-plane. The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away.{Available at {\tt http://goo.gl/hxRp8E}}}\label{fig:p85}
 \end{figure}
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{p60noBase.pdf}}
-\caption{OP of P60. P60 is another fully symmetric orbit with period 60.86 in the HKW cell with $\ReN = 400$. While it displays an ellipsoid streak structure similar to P85, the energy of these streaks is lower.The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away.{Available at {\tt https://www.youtube.com/watch?v=ulyMrSfxW5U}}}\label{fig:p60}
+\caption{OP of P60. P60 is another fully symmetric orbit with period 60.86 in the HKW cell with $\ReN = 400$. While it displays an ellipsoid streak structure similar to P85, the energy of these streaks is lower.The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away.{Available at {\tt http://goo.gl/4fQalm}}}\label{fig:p60}
 \end{figure}
 
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{p32noBase.pdf}}
-\caption{OP of P32. P32 is a streamwise asymmetric periodic orbit fixed by the symmetry group $S_z$, which is functionally a mirror symmetry about the streamwise axis. However, notice that while P32 does not \emph{exactly} maintain rotational symmetry about the streamwise axis, it bear remarkable similarity to P85 and P60. The rotational symmetry residual was $10^{-3}$, which is an few orders of magnitude lower than symmetries that are obviously not satisfied, but is not low enough ($10^{-6}$) to be accepted as a legitimate symmetry.  In the HKW cell at $\ReN=400$, the period is 32.00, and the streamwise relative velocity is $-0.5$ cell lengths per period.The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away. Available at {\tt https://www.youtube.com/watch?v=qDGbxX50bKY}}\label{fig:p32}
+\caption{OP of P32. P32 is a streamwise asymmetric periodic orbit fixed by the symmetry group $S_z$, which is functionally a mirror symmetry about the streamwise axis. However, notice that while P32 does not \emph{exactly} maintain rotational symmetry about the streamwise axis, it bear remarkable similarity to P85 and P60. The rotational symmetry residual was $10^{-3}$, which is an few orders of magnitude lower than symmetries that are obviously not satisfied, but is not low enough ($10^{-6}$) to be accepted as a legitimate symmetry.  In the HKW cell at $\ReN=400$, the period is 32.00, and the streamwise relative velocity is $-0.5$ cell lengths per period.The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away. Available at {\tt http://goo.gl/E8wRLm}}\label{fig:p32}
 \end{figure}
 
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{p8noBase.pdf}}
-\caption{OP of P8. P8 is a spanwise asymmetric periodic orbit fixed by the symmetry group $S_x$, which is functionally a rotation by $\pi$ about the spanwise axis. In the HKW cell at $\ReN = 400$, the period is 8.32, and the spanwise relative velocity is $2.29\times 10^{-7}$ cell lengths per period. This number may seem low, but if it is not accounted for, the NKH solver cannot converge. P8 also has a rather short period, almost an order of magnitude shorter than most orbits recorded in the database at {\tt channelflow.org}. Since the Arnoldi iteration has a time cost that scales linearly with the period, P8 has been the least computationally demanding period orbit to analyze. The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away. Available at {\tt https://youtu.be/-ad0U55T39w}}\label{fig:p8}
+\caption{OP of P8. P8 is a spanwise asymmetric periodic orbit fixed by the symmetry group $S_x$, which is functionally a rotation by $\pi$ about the spanwise axis. In the HKW cell at $\ReN = 400$, the period is 8.32, and the spanwise relative velocity is $2.29\times 10^{-7}$ cell lengths per period. This number may seem low, but if it is not accounted for, the NKH solver cannot converge. P8 also has a rather short period, almost an order of magnitude shorter than most orbits recorded in the database at {\tt channelflow.org}. Since the Arnoldi iteration has a time cost that scales linearly with the period, P8 has been the least computationally demanding period orbit to analyze. The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away. Available at {\tt http://goo.gl/uTDrLw}}\label{fig:p8}
 \end{figure}
 
 
@@ -64,20 +65,20 @@ If we have a set of $k$ basis vectors $\Vector{q}_i$ that are orthonormal and sp
 \end{equation}
 where $c_i = \Vector{v} \cdot \Vector{q}_i$. When $k$ is either 2 or 3, we can visualize the $n$-dimensional trajectory as a 2 or 3 dimensional trajectory instead. While we lose information in making this projection, we can still gain a great deal of valuable information about trajectories. Projecting the four periodic orbits in \refFigRange{fig:p85}{fig:p8} onto a basis constructed from orthonormalizing the initial conditions of each orbit results in the state space projection in \refFig{fig:POStateSpace}.\\
 
- The main issue with the state space projection method, however, is that a state must be {\bf congruent} to a basis to be projected onto it - that is, both the box length and grid discretization must be the same for both the state and the projection basis. Many previous investigations\rf{Halcrow2008,Gibson2008} have important results in the W03 cell, where $(L_x,L_z) = (5.51157,2.51327)$, with corresponding state space projections. In order to compare to these results, I attempted to use \refAlg{alg:parCont} to continue the four periodic orbits into the W03 cell, which leads me to the next important result.
+ The main issue with the state space projection method, however, is that a state must be {\bf congruent} to a basis to be projected onto it - that is, both the box length and grid discretization must be the same for both the state and the projection basis. Many previous investigations\rf{Halcrow2008,Gibson2008} have important results in the W03 cell, where $(L_x,L_z) = (5.51157,2.51327)$, with corresponding state space projections. In order to compare to these results, we attempted to use \refAlg{alg:parCont} to continue the four periodic orbits into the W03 cell, which lead us to the next important result.
 
 \section{Spanwise Continuation}
 
 When \refAlg{alg:parCont} was used to continue P8 down to the W03 cell, the data presented in \refFig{fig:LZBif} was produced.  Initially, the continuation algorithm decreases $L_z$ and increases $T$, but at $L_z \approx 2.8$, the algorithm reverses itself, decreasing $T$ and increasing $L_z$, until $L_z \approx 2.95$, when the algorithm resumes decreasing $L_z$ and increasing $T$. Since we expect that the period of an orbit ought to uniquely define the orbit,\footnote{We generally assume that if two solutions have differing periods, they are distinct, which may seem reasonable - but holes in such a simple criterion are evident almost immediately. For example, two `distinct' orbits with periods $T_1$ and $T_2$ may in fact be the same orbit, with period $|T_2-T_1|$, that has simply repeated more times for one orbit than for the other. This hole can be plugged by any number of methods, most easiest by simply calculating $||\Vector{u}_1(t) - \Vector{u}_2||$ over the entire period. If the norm is never small, then the orbits are distinct. }  the existence of multiple, distinct orbits for $2.8 \leq L_z \leq 2.96$ hints at a bifurcation. 
 \begin{figure}[t]
 \includegraphics[width=\textwidth]{TLzBD}
-\caption{Period as a function of spanwise cell length for P8. The data can be sectioned into three distinct parts. First, the {\bf upper branch} (blue circles), which is the path that the continuation algorithm initially follows in parameter space. Second, the {\bf transition branch} (green diamonds), which occurs after the {\bf first turning point} (red, dashed circle). Third, the {\bf lower branch} (orange rectangles), after the {\bf second turning point} (purple, solid circle). Within the marked rectangular region, multiple distinct solutions exist for the same cell length, hinting at a bifurcation. Searches with higher resolution have pinned down the turning points to the interval $L_z \in[2.8087, 2.8096]$ for the first turning point, and $L_z \in [2.6150,2.6157]$ for the second turning point.}\label{fig:LZBif}
+\caption{Period as a function of spanwise cell length for P8. The data can be sectioned into three distinct parts. First, the {\bf upper branch} (blue circles), which is the path that the continuation algorithm initially follows in parameter space. Second, the {\bf transition branch} (green diamonds), which occurs after the {\bf first turning point} (red, dashed circle). Third, the {\bf lower branch} (orange rectangles), after the {\bf second turning point} (purple, solid circle). Within the marked rectangular region, multiple distinct solutions exist for the same cell length, hinting at a bifurcation. Searches at higher resolution have pinned down the turning points to the interval $L_z \in[2.8087, 2.8096]$ for the first turning point, and $L_z \in [2.6150,2.6157]$ for the second turning point.}\label{fig:LZBif}
 \end{figure}
 \begin{figure}[t]
 \includegraphics[width=\textwidth]{phasePortraitTransition}
 \caption{Phase portrait of the Van Der Pol oscillator and its Hopf bifurcation, with trajectories in white. (a), for negative values of the bifurcation parameter, the single periodic orbit is unstable, so an initial condition that begins near the orbit spirals away from it. (b), when the bifurcation parameter is zero, there is no periodic orbit. (c), for positive values of the bifurcation parameter, the periodic orbit is stable, and initial conditions are attracted into the orbit.}\label{fig:phasePortrait}
 \end{figure}
- The similarity of \refFig{fig:LZBif} to \refFig{fig:bifurcations} is striking, and led me to suspect the possibility that P8 undergoes some form of bifurcation at $L_z \approx 2.8$ and $L_z \approx 2.95$. However, \refAlg{alg:parCont} relaxes the convergence criteria to $10^{-10}$ to speed up the parametric continuation process, and as a result, may have found artificial solutions, so I verified the existence of multiple distinct solutions for $L_z = 2.925$ and $(N_x,N_y,N_z) = (62,53,62)$ to $10^{-13}$. It is important to note that this in and of itself does not necessarily prove that a bifurcation exists -- for example, the continuation algorithm may have simply found \emph{another} periodic orbit's trajectory and hopped onto that. When a bifurcation occurs, the qualitative behavior of solutions pre and post-bifurcation tend to be markedly different. For low-dimensional systems, this is easy to evaluate, since one can visually identify changes in the phase space, as in \refFig{fig:phasePortrait}. For higher-dimensional systems, such an approach is not feasible. 
+ The similarity of \refFig{fig:LZBif} to \refFig{fig:bifurcations} is striking, and led us to suspect the possibility that P8 undergoes some form of bifurcation at $L_z \approx 2.8$ and $L_z \approx 2.95$. However, \refAlg{alg:parCont} relaxes the convergence criteria to $10^{-10}$ to speed up the parametric continuation process, and as a result, may have found artificial solutions, so we verified the existence of multiple distinct solutions for $L_z = 2.925$ and $(N_x,N_y,N_z) = (62,53,62)$ to $10^{-13}$. It is important to note that this in and of itself does not necessarily prove that a bifurcation exists -- for example, the continuation algorithm may have simply found \emph{another} periodic orbit's trajectory and hopped onto that. When a bifurcation occurs, the qualitative behavior of solutions pre and post-bifurcation tend to be markedly different. For low-dimensional systems, this is easy to evaluate, since one can visually identify changes in the phase space, as in \refFig{fig:phasePortrait}. For higher-dimensional systems, such an approach is not feasible. 
 
 \subsection{Linear Stability Analysis}\label{sec:LSA}
 
@@ -123,35 +124,35 @@ Having used linear stability analysis to find the unstable eigenvector, we can u
 
 \begin{figure}[h!]
 \centerline{\includegraphics[scale = 0.9]{E1Poincare}}
-\caption{Poincaré section of \refFig{fig:p8E1}, defined by the surface $e_2 = 0.26$. Notice that the trajectory along the Poincaré section spirals outwards, as we would expect for an unstable manifold with a complex eigenvalue.}\label{fig:E1Poincare}
+\caption{Poincaré section of \refFig{fig:p8E1}, defined by the surface $e_2 = 0.26$. Notice that the trajectory along the Poincare section spirals outwards, as we would expect for an unstable manifold with a complex eigenvalue.}\label{fig:E1Poincare}
 \end{figure}
 
 \section{Dissipation and Energy Input} 
   
 \subsection{A New Projection}
-While \refFig{fig:POStateSpace} seems to indicate that P8 is a special member of the Gang of Four -- an assertion which is backed up by the marked difference in the properties displayed in \refTab{tab:summary} -- the striking dissimilarity in \refFig{fig:POStateSpace} may be an artifact of the projection basis. To address this issue, we can also project onto the {\bf dissipation-energy input} plane, where the dissipation $D$ and energy input $I$ are defined
+While \refFig{fig:POStateSpace} seems to indicate that P8 is a special member of the Gang of Four -- an assertion which is backed up by the marked difference in the properties displayed in \refTab{tab:summary} -- the striking dissimilarity in \refFig{fig:POStateSpace} may be an artifact of the projection basis. To address this issue, we can also project onto the {\bf dissipation-energy input} (DI) plane, where the dissipation $D$ and energy input $I$ are defined
 \begin{align}
 D(t) = \frac{1}{L_xL_yL_z}\int{0}{L_x}{\int{0}{L_y}{\int{0}{L_z}{|\nabla\times\Vector{u}(t)|^2}{\textrm{d}z}}{\textrm{d}y}}{\textrm{d}x},\label{eq:diss}\\
 I(t)  = 1 + \frac{1}{2L_xL_z}\int{0}{L_x}{\int{0}{L_z}{\pder{1}{\Vector{u}_{y}}{y} |_{y=1}+\pder{1}{\Vector{u}_{y}}{y} |_{y=-1}}{\textrm{d}z}}{\textrm{d}x}.\label{eq:einp}
 \end{align} 
-Unlike the state space projection, which is to some extent an artificial projection mechanism, the dissipation-input energy plane projection has real physical meaning, and thus is a more natural projection. Applying \refeqs{eq:diss}{eq:einp} to the Gang of Four results in \refFig{fig:DIGOF},\footnote{Note that for a periodic orbit, the mean dissipation and energy input need to be balanced, which explains why all observed solutions do not stray far away from the line $D(I) = I$.} which suggests that the distinctive features of P8 are likely not artificial. However, a glance at \refFig{fig:turbDI}, which overlays random turbulent trajectories on \refFig{fig:DIGOF} suggests that P8 is the only member of the Gang of Four that does not seem to directly influence turbulent trajectories in any significant way, and that P85 may have a significant influence instead. However, since the Arnoldi iteration scales linearly with the period, analysis of any of the longer orbits would take an unfeasibly long time with my computing resources. As a result, I will continue to limit my analysis to P8.\footnote{For example, a single iteration of \refAlg{alg:parCont} takes about 2 hours for P8, which allowed me to collect the data presented in \refFig{fig:LZBif} in about a week. The same process would have taken more than a month for P32, and several for P60 and P85.}   
+Unlike the state space projection, which is to some extent an artificial projection mechanism, the DI plane projection has real physical meaning, and thus is a more natural projection. Applying \refeqs{eq:diss}{eq:einp} to the Gang of Four results in \refFig{fig:DIGOF},\footnote{Note that for a periodic orbit, the mean dissipation and energy input need to be balanced, which explains why all observed solutions do not stray far away from the line $D(I) = I$.} which suggests that the distinctive features of P8 are likely not artificial. However, a glance at \refFig{fig:turbDI}, which overlays random turbulent trajectories on \refFig{fig:DIGOF} suggests that P8 is the only member of the Gang of Four that does not seem to directly influence turbulent trajectories in any significant way, and that P85 may have a significant influence instead. However, since the Arnoldi iteration scales linearly with the period, analysis of any of the longer orbits would take an unfeasibly long time with our computing resources. As a result, we will limit our analysis to P8.\footnote{For example, a single iteration of \refAlg{alg:parCont} takes about 2 hours for P8, which allowed us to collect the data presented in \refFig{fig:LZBif} in about a week. The same process would have taken more than a month for P32, and several for P60 and P85.}   
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{DIOG}
-\caption{Dissipation versus energy input for the Gang of Four. While the lesser members of the Gang remain clustered towards a input/dissipation of 2, P8 stays at a dissipation/input of 4. Due to P8's low period, the fine details of its orbit cannot be discerned here. The separation observed in \refFig{fig:POStateSpace} is clearly reflected in this physically important projection.}\label{fig:DIGOF}
+\caption{DI projection of the Gang of Four, the Nagata lower branch equilibirum (LB), and the line of equal dissipation-energy input. While the lesser members of the Gang remain clustered towards a input/dissipation of 2, P8 stays at near dissipation/input of 4. Due to P8's low period, the fine details of its orbit cannot be discerned here. The separation observed in \refFig{fig:POStateSpace} is clearly reflected in this physically important projection.}\label{fig:DIGOF}
 \end{figure}
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{DearGodWhy}
-\caption{Dissipation versus energy input for 20 turbulent trajectories (red and blue) beginning from random initial conditions, with perturbations of magnitude $0.3$ overlaid on the Gang of Four and the Nagata upper branch equilibrium. The data implies that P8 contributes very little to the dynamics of turbulence, since turbulent trajectories do not appear to `live' near P8. It does, however, suggest that P85 may have some importance in turbulent transition, since the trajectories only remain`bound' to a narrow area of D-I space while they are within the orbit of P85.}\label{fig:turbDI}
+\caption{DI plane projection of 20 turbulent trajectories (red and blue) beginning from random initial conditions, with perturbations of magnitude $0.3$ overlaid on the Gang of Four, the Nagata upper branch equilibrium, and the line of equal dissipation-energy input. The data implies that P8 contributes very little to the dynamics of turbulence, since turbulent trajectories do not appear to `live' near P8. It does, however, suggest that P85 may have some importance in turbulent transition, since the trajectories only remain `bound' to a narrow area of D-I space while they are within the orbit of P85.}\label{fig:turbDI}
 \end{figure}
 
 \subsection{The Search for Bifurcations, Part II}
-The dissipation-energy input projection has another extremely important benefit -- it is domain-agnostic. This allows us to compare the different branches of \refFig{fig:LZBif} in a more sophisticated manner. Since the full bifurcation diagram spans a vast distance in the dissipation-energy input plane, the projection is divided into three parts, with te upper branch in \refFig{fig:DIUpper}, the transition branch in \refFig{fig:DITrans} and the lower branch in \refFig{fig:DILower}, where the divisions between branches is informed by \refFig{fig:LZBif}. Unfortunately, apart from the expected repulsion of the upper branch from the high dissipation/energy input zone, nothing particularly interesting occurs here.\\
+The DI projection has another extremely important benefit -- it is domain-agnostic. This allows us to compare the different branches of \refFig{fig:LZBif} in a more sophisticated manner. Since the full bifurcation diagram spans a vast distance in the dissipation-energy input plane, the projection is divided into three parts, with te upper branch in \refFig{fig:DIUpper}, the transition branch in \refFig{fig:DITrans} and the lower branch in \refFig{fig:DILower}, where the divisions between branches is informed by \refFig{fig:LZBif}. Unfortunately, apart from the expected repulsion of the upper branch from the high dissipation/energy input zone, nothing particularly interesting occurs here.\\
 
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{DIUpper}
-\caption{Dissipation vs energy input for the upper branch of P8. The HKW solution is the thin blue solution that is continued up to higher dissipation/energy input. However, for finite \ReN, there is a maximum velocity gradient that can be maintained, so the energy input is necessarily bounded, and the orbits begin moving down the dissipation/energy input line, eventually becoming the transition branch. While I was hoping to see an especially meaningful change in the orbit topology, there doesn't seem to be a great deal of change in its general structure during any bifurcation. }\label{fig:DIUpper}
+\caption{DI plane projection of the upper branch of P8. The HKW solution is the thin blue solution that is continued up to higher dissipation/energy input. However, for finite \ReN, there is a maximum velocity gradient that can be maintained, so the energy input is necessarily bounded, and the orbits begin moving down the dissipation/energy input line, eventually becoming the transition branch. While we were hoping to see an especially meaningful change in the orbit topology, there doesn't seem to be a great deal of change in its general structure during any bifurcation. }\label{fig:DIUpper}
 \end{figure}
 
 \begin{figure}[h]
@@ -161,14 +162,14 @@ The dissipation-energy input projection has another extremely important benefit 
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{DILower}
-\caption{The lower branch is even less eventful than the transition branch, and generally mantains its structure through its descent towards the origin of the dissipation/energy input plane. Eventually, it reaches the point where \refAlg{alg:parCont} fails, and the continuation process halts.}\label{fig:DILower}
+\caption{The lower branch is even less eventful than the transition branch, and generally mantains its structure through its descent towards the origin of the DI plane. Eventually, it reaches the point where \refAlg{alg:parCont} fails, and the continuation process halts.}\label{fig:DILower}
 \end{figure}
 
 However, a glance at \refFigss{fig:DIUpper}{fig:DITrans}{fig:DILower} indicates that they are by and large elliptical in shape, so the area enclosed by the orbit can easily be calculated by the singular value decomposition. Applying this method and ordering by traversal down the continuation trajectory gives \refFig{fig:areaOrder}, whereas ordering by $L_z$ gives \refFig{fig:areaCell}. The results of this analysis are promising, since they show structural changes in a physically important projection, which occur near the expected location of the turning points. We can also easily calculate the circumference of each orbit by summing the distance between each individual point over the orbit, and obtain \refFig{fig:circumCell}, which is suggestively similar to \refFig{fig:LZBif}. \\
 
 \begin{figure}[h!]
 \includegraphics[width=\textwidth]{areaOrder}
-\caption{Approximate area of P8 at various $L_z$. Here, the orbits are ordered by traversing \refFig{fig:LZBif}, beginning from the start of the upper branch. The area function begins looking very smooth and Gaussian, but acquires a kink on its way down, after which it behaves in a more complex manner. The fact that the area in the dissipation/energy input plan goes very low is interesting, but probably not indicative of any behavior that has a global effect.}\label{fig:areaOrder}
+\caption{Approximate area of P8 at various $L_z$. Here, the orbits are ordered by traversing \refFig{fig:LZBif}, beginning from the start of the upper branch. The area function begins looking very smooth and Gaussian, but acquires a kink on its way down, after which it behaves in a more complex manner. The fact that the area in the DI plane goes very low is interesting, but probably not indicative of any behavior that has a global effect.}\label{fig:areaOrder}
 \end{figure}
 
 \begin{figure}[h!]
@@ -182,4 +183,4 @@ However, a glance at \refFigss{fig:DIUpper}{fig:DITrans}{fig:DILower} indicates 
 \end{figure}
 
 \clearpage 
-This ends the analysis of the Gang of Four, and of P8 in particular (Though not for lack of material to analyze...). I will now conclude this thesis by giving a quick summary of the key points, discussing the results, and suggesting potential areas of future research. 
+This ends the analysis of the Gang of Four, and of P8 in particular (Though not for lack of material to analyze...). We will now conclude this thesis by giving a quick summary of the key points, discussing the results, and suggesting potential areas of future research. 

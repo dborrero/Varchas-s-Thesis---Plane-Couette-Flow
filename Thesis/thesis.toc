@@ -42,4 +42,6 @@
 \contentsline {subsection}{\numberline {4.3.1}A New Projection}{54}
 \contentsline {subsection}{\numberline {4.3.2}The Search for Bifurcations, Part II}{57}
 \contentsline {chapter}{Conclusion}{65}
+\contentsline {section}{\numberline {5.1}Summary}{65}
+\contentsline {section}{\numberline {5.2}Future Work}{66}
 \contentsline {chapter}{References}{67}
