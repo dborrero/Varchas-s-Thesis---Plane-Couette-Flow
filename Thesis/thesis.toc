@@ -36,11 +36,11 @@
 \contentsline {subsubsection}{\numberline {4.1.1.1}Orthographic Projection}{44}
 \contentsline {subsubsection}{\numberline {4.1.1.2}State Space Projection}{44}
 \contentsline {section}{\numberline {4.2}Spanwise Continuation}{49}
-\contentsline {subsection}{\numberline {4.2.1}Linear Stability Analysis}{50}
+\contentsline {subsection}{\numberline {4.2.1}Linear Stability Analysis}{51}
 \contentsline {subsection}{\numberline {4.2.2}Return of the State Space}{53}
-\contentsline {section}{\numberline {4.3}Dissipation and Energy Input}{55}
-\contentsline {subsection}{\numberline {4.3.1}A New State Space}{55}
-\contentsline {subsection}{\numberline {4.3.2}The Return of the Bifurcation}{56}
-\contentsline {chapter}{Conclusion}{59}
-\contentsline {section}{\numberline {4.1}More info}{59}
-\contentsline {chapter}{References}{61}
+\contentsline {section}{\numberline {4.3}Dissipation and Energy Input}{54}
+\contentsline {subsection}{\numberline {4.3.1}A New State Space}{54}
+\contentsline {subsection}{\numberline {4.3.2}The Search for Bifurcations, Part II}{56}
+\contentsline {chapter}{Conclusion}{63}
+\contentsline {section}{\numberline {4.1}More info}{63}
+\contentsline {chapter}{References}{65}

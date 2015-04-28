@@ -107,6 +107,11 @@ C.~Clarke and B.~Carswell, {\em Principles of {A}strophysical {F}luid
   {D}ynamics}.
 \newblock Cambridge University Press, 2007.
 
+\bibitem{Dorf2006}
+R.~C. Dorf, {\em Sensors, Nanoscience, Biomedical Engineering, and Instruments:
+  Sensors Nanoscience Biomedical Engineering}.
+\newblock CRC Press, 2006.
+
 \bibitem{Rotman1995}
 J.~Rotman, {\em An Introduction to the Theory of Groups}.
 \newblock Graduate Texts in Mathematics, Springer, 1995.
@@ -167,11 +172,6 @@ L.~N. Trefethen and D.~Bau~III, {\em Numerical {L}inear {A}lgebra}, vol.~50.
 J.~M. Hamilton, J.~Kim, and F.~Waleffe, ``Regeneration mechanisms of near-wall
   turbulence structures,'' {\em Journal of Fluid Mechanics}, vol.~287,
   pp.~317--348, 1995.
-
-\bibitem{dorf2006sensors}
-R.~C. Dorf, {\em Sensors, Nanoscience, Biomedical Engineering, and Instruments:
-  Sensors Nanoscience Biomedical Engineering}.
-\newblock CRC Press, 2006.
 
 \bibitem{Hof2008}
 B.~Hof, A.~de~Lozar, D.~J. Kuik, and J.~Westerweel, ``Repeller or attractor?

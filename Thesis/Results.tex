@@ -14,7 +14,7 @@ Label & $T$ & $v_x$ & $v_z$ &  $\lambda_{\textrm{max}}$ & $\#\ \lambda_{\textrm{
 \midrule
 P85 & 85.50 & 0 & 0 & 0.0427 & 6 &1.85 & S\\
 \midrule
-P60 & 60.86 & 0 & 0 & FIND IT&10 & 2.08 & S\\
+P60 & 60.86 & 0 & 0 &  0.032749 & 10 & 2.08 & S\\
 \midrule
 P32 & 32.00 & 0.5 & 0 &  $0.0200 + 0.0982\imath$ & 7& 1.98 &$S_x$\\
 \midrule
@@ -41,7 +41,7 @@ Visualizing the behavior of fluids is in itself a time-honored discipline, espec
 
 \begin{figure}
 \centerline{\includegraphics[width=\textwidth]{p32noBase.pdf}}
-\caption{OP of P32. P32 is a streamwise asymmetric periodic orbit fixed by the symmetry group $S_z$, which is functionally a mirror symmetry about the streamwise axis. In the HKW cell at $\ReN=400$, the period is 32.00, and the streamwise relative velocity is $-0.5$ cell lengths per period.The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away. Available at {\tt https://www.youtube.com/watch?v=qDGbxX50bKY}}\label{fig:p32}
+\caption{OP of P32. P32 is a streamwise asymmetric periodic orbit fixed by the symmetry group $S_z$, which is functionally a mirror symmetry about the streamwise axis. However, notice that while P32 does not \emph{exactly} maintain rotational symmetry about the streamwise axis, it bear remarkable similarity to P85 and P60. The rotational symmetry residual was $10^{-3}$, which is an few orders of magnitude lower than symmetries that are obviously not satisfied, but is not low enough ($10^{-6}$) to be accepted as a legitimate symmetry.  In the HKW cell at $\ReN=400$, the period is 32.00, and the streamwise relative velocity is $-0.5$ cell lengths per period.The velocity field pictured here is the turbulent perturbation only; the laminar flow has been subtracted away. Available at {\tt https://www.youtube.com/watch?v=qDGbxX50bKY}}\label{fig:p32}
 \end{figure}
 
 
@@ -64,20 +64,20 @@ If we have a set of $k$ basis vectors $\Vector{q}_i$ that are orthonormal and sp
 \end{equation}
 where $c_i = \Vector{v} \cdot \Vector{q}_i$. When $k$ is either 2 or 3, we can visualize the $n$-dimensional trajectory as a 2 or 3 dimensional trajectory instead. While we lose information in making this projection, we can still gain a great deal of valuable information about trajectories. Projecting the four periodic orbits in \refFigRange{fig:p85}{fig:p8} onto a basis constructed from orthonormalizing the initial conditions of each orbit results in the state space projection in \refFig{fig:POStateSpace}.\\
 
- The main issue with the state space projection method, however, is that a state must be {\bf congruent} to a basis to be projected onto it - that is, both the box length and grid discretization must be the same for both the state and the projection basis. Many previous investigations\rf{Halcrow2008,Gibson2008} have results in the W03 cell, where $(L_x,L_z) = (5.51157,2.51327)$, with corresponding state space projections. In order to compare to these results, I attempted to use \refAlg{alg:parCont} to continue the four periodic orbits into the W03 cell, which leads me to the next important result.
+ The main issue with the state space projection method, however, is that a state must be {\bf congruent} to a basis to be projected onto it - that is, both the box length and grid discretization must be the same for both the state and the projection basis. Many previous investigations\rf{Halcrow2008,Gibson2008} have important results in the W03 cell, where $(L_x,L_z) = (5.51157,2.51327)$, with corresponding state space projections. In order to compare to these results, I attempted to use \refAlg{alg:parCont} to continue the four periodic orbits into the W03 cell, which leads me to the next important result.
 
 \section{Spanwise Continuation}
 
 When \refAlg{alg:parCont} was used to continue P8 down to the W03 cell, the data presented in \refFig{fig:LZBif} was produced.  Initially, the continuation algorithm decreases $L_z$ and increases $T$, but at $L_z \approx 2.8$, the algorithm reverses itself, decreasing $T$ and increasing $L_z$, until $L_z \approx 2.95$, when the algorithm resumes decreasing $L_z$ and increasing $T$. Since we expect that the period of an orbit ought to uniquely define the orbit,\footnote{We generally assume that if two solutions have differing periods, they are distinct, which may seem reasonable - but holes in such a simple criterion are evident almost immediately. For example, two `distinct' orbits with periods $T_1$ and $T_2$ may in fact be the same orbit, with period $|T_2-T_1|$, that has simply repeated more times for one orbit than for the other. This hole can be plugged by any number of methods, most easiest by simply calculating $||\Vector{u}_1(t) - \Vector{u}_2||$ over the entire period. If the norm is never small, then the orbits are distinct. }  the existence of multiple, distinct orbits for $2.8 \leq L_z \leq 2.96$ hints at a bifurcation. 
 \begin{figure}[t]
 \includegraphics[width=\textwidth]{TLzBD}
-\caption{Period as a function of spanwise cell length for P8. The data can be sectioned into three distinct parts. First, the {\bf upper branch} (blue circles), which is the path that the continuation algorithm initially follows in parameter space. Second, the {\bf transition branch} (green diamonds), which occurs after the {\bf first turning point} (red, dashed circle). Third, the {\bf lower branch} (orange rectangles), after the {\bf second turning point} (purple, solid circle). Within the marked rectangular region, multiple distinct solutions exist for the same cell length, hinting at a bifurcation.}\label{fig:LZBif}
+\caption{Period as a function of spanwise cell length for P8. The data can be sectioned into three distinct parts. First, the {\bf upper branch} (blue circles), which is the path that the continuation algorithm initially follows in parameter space. Second, the {\bf transition branch} (green diamonds), which occurs after the {\bf first turning point} (red, dashed circle). Third, the {\bf lower branch} (orange rectangles), after the {\bf second turning point} (purple, solid circle). Within the marked rectangular region, multiple distinct solutions exist for the same cell length, hinting at a bifurcation. Searches with higher resolution have pinned down the turning points to the interval $L_z \in[2.8087, 2.8096]$ for the first turning point, and $L_z \in [2.6150,2.6157]$ for the second turning point.}\label{fig:LZBif}
 \end{figure}
 \begin{figure}[t]
 \includegraphics[width=\textwidth]{phasePortraitTransition}
 \caption{Phase portrait of the Van Der Pol oscillator and its Hopf bifurcation, with trajectories in white. (a), for negative values of the bifurcation parameter, the single periodic orbit is unstable, so an initial condition that begins near the orbit spirals away from it. (b), when the bifurcation parameter is zero, there is no periodic orbit. (c), for positive values of the bifurcation parameter, the periodic orbit is stable, and initial conditions are attracted into the orbit.}\label{fig:phasePortrait}
 \end{figure}
- The similarity of \refFig{fig:LZBif} to \refFig{fig:bifurcations} is striking, and led me to suspect the possibility that P8 undergoes some form of bifurcation at $L_z \approx 2.8$ and $L_z \approx 2.95$. However, \refAlg{alg:parCont} relaxes the convergence criteria to $10^{10}$ to speed up the parametric continuation process, and as a result, may have found artificial solutions, so I verified the existence of multiple distinct solutions for $L_z = 2.925$ and $(N_x,N_y,N_z) = (62,53,62)$ to $10^{-13}$. However, this in and of itself does not necessarily prove that a bifurcation exists -- for example, the continuation algorithm may have simply found \emph{another} periodic orbit's trajectory and hopped onto that. When a bifurcation occurs, the qualitative behavior of solutions pre and post-bifurcation tend to be markedly different. For low-dimensional systems, this is easy to evaluate, since one can visually identify changes in the phase space, as in \refFig{fig:phasePortrait}. For higher-dimensional systems, such an approach is not feasible. 
+ The similarity of \refFig{fig:LZBif} to \refFig{fig:bifurcations} is striking, and led me to suspect the possibility that P8 undergoes some form of bifurcation at $L_z \approx 2.8$ and $L_z \approx 2.95$. However, \refAlg{alg:parCont} relaxes the convergence criteria to $10^{-10}$ to speed up the parametric continuation process, and as a result, may have found artificial solutions, so I verified the existence of multiple distinct solutions for $L_z = 2.925$ and $(N_x,N_y,N_z) = (62,53,62)$ to $10^{-13}$. It is important to note that this in and of itself does not necessarily prove that a bifurcation exists -- for example, the continuation algorithm may have simply found \emph{another} periodic orbit's trajectory and hopped onto that. When a bifurcation occurs, the qualitative behavior of solutions pre and post-bifurcation tend to be markedly different. For low-dimensional systems, this is easy to evaluate, since one can visually identify changes in the phase space, as in \refFig{fig:phasePortrait}. For higher-dimensional systems, such an approach is not feasible. 
 
 \subsection{Linear Stability Analysis}\label{sec:LSA}
 
@@ -102,18 +102,18 @@ In general, we would expect that as the control parameter changes, the Lyapunov 
 
 \begin{figure}[t]
 \includegraphics[width=\textwidth]{P8FirstBifurcation}
-\caption{Eigenvalues of P8 as a function of $L_z$ at the first turning point. Of interest are the eigenvalues with imaginary part $\approx \pm 0.3$. From left to right, the eigenvalues of $L_z = 2.8088757,$ $2.8087205,$ $2.8087115,$ $2.8096095,$ $2.8116723,$ $2.8147572,$ $2.8184122,$ $2.8221628$ and $2.8257047$. The real part of the eigenvalue likely switches sign at some $L_z \in [2.81476,2.81841]$, compared to the first turning point, which likely occurs for $L_z \in [2.8087205, 2.8096095]$  }\label{fig:P8FirstBifurcation}
+\caption{Eigenvalues of P8 as a function of $L_z$ at the first turning point. When the real part of the eigenvalue switches sign, the associated eigenvector switches stability. Therefore, the line of eigenvalues with imaginary part  $\approx \pm 0.3$ are of special interest.  The real part of the eigenvalue likely switches sign at some $L_z \in [2.81509,2.81857]$, compared to the first turning point, which likely occurs for $L_z \in [2.8087205, 2.8096095]$  }\label{fig:P8FirstBifurcation}
 \end{figure}
 
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{P8SecondBifurcation}
-\caption{Eigenvalues of P8 as a function of $L_z$ at the second turning point. From left to right, the eigenvalues of  $L_z =  2.9612911,$ $2.9614915,$ $2.961412,$ $2.9605641,$ $2.9589117,$ $2.9564639,$ and $2.9532518$. Two sets of eigenvalues have real parts that switch signs, at $L_z \in [2.961412,2.9605641]$ and $L_z \in [ 2.9612911,2.9614915]$. This is consistent with analysis of the turning point, which indicates that the bifurcation occurs for $L_z \in [ 2.9612911, 2.961412]$.}\label{fig:P8SecondBifurcation}
+\caption{Eigenvalues of P8 as a function of $L_z$ at the second turning point. Here, two sets of eigenvalues have real parts that switch signs, first in the invertval $L_z \in [2.96122,2.96137]$ and second in the interval $L_z \in [ 2.96142,2.9615]$. The second stability switch is consistent with the position of the second turning point, which occurs in the interval $L_z \in [2.6150,2.6157]$.}\label{fig:P8SecondBifurcation}
 \end{figure}
 
 \subsection{Return of the State Space}
 
-Having used linear stability analysis to find the unstable eigenvector, we can use the state space projection to visualize the effect of a slight perturbation, as  in \refFig{fig:p8E1}. Here, we see the effect of a slight perturbation along the most unstable eigenvector $P8E1$, with eigenvalue $0.0998 - 0.2605 i$. Now \refFig{fig:p8E1} is noisy, and difficult to analyze. To deal with this, we can construct the {\bf Poincare section} of a trajectory. The Poincare section of a $k$ dimensional trajectory is constructed by keeping track of where the trajectory crosses a $k-1$ dimensional surface. The Poincare section for  $P8E1$, displayed in \refFig{fig:E1Poincare} displays the qualitative behavior we would expect for a complex eigenvalue - the real part is negative and the perturbation grows, the imaginary part is nonzero, and the perturbation spirals around the initial position. Even though the eigenvalue is only valid locally, we can still see that it approximately predicts the behavior of the trajectory - from the imaginary part of the eigenvalue, we can see that it ought to take approximately 25 time units for a full rotation in the Poincare section. \refFig{fig:E1Poincare} suggests that approximately 5 orbits have taken place for a full rotation in the Poincare section, each with periods that are approximately 8 time units. This does not agree exactly,\footnote{Or very well at all, especially since we've just come from having residuals on the order of $10^{-14}$} but one must remember that the Floquet exponents are a \emph{local} model of the orbit, and naturally become less precise the more the perturbation grows.\footnote{As a matter of fact, the pictured spiral is the last spiral the Poincare section trajectory executes, though the trajectory in the full space continues to look qualitatively similar to the original orbit for a long time.}   
+Having used linear stability analysis to find the unstable eigenvector, we can use the state space projection to visualize the effect of a slight perturbation, as  in \refFig{fig:p8E1}. Here, we see the effect of a slight perturbation along the most unstable eigenvector $P8E1$, with eigenvalue $0.0998 - 0.2605 i$. Now \refFig{fig:p8E1} is noisy, and difficult to analyze. To deal with this, we can construct the {\bf Poincaré section} of a trajectory. The Poincaré section of a $k$ dimensional trajectory is constructed by keeping track of where the trajectory crosses a $k-1$ dimensional surface. The Poincaré section for  $P8E1$, displayed in \refFig{fig:E1Poincare} displays the qualitative behavior we would expect for a complex eigenvalue - the real part is negative and the perturbation grows, the imaginary part is nonzero, and the perturbation spirals around the initial position. Even though the eigenvalue is only valid locally, we can still see that it approximately predicts the behavior of the trajectory - from the imaginary part of the eigenvalue, we can see that it ought to take approximately 25 time units for a full rotation in the Poincaré section. \refFig{fig:E1Poincare} suggests that approximately 5 orbits have taken place for a full rotation in the Poincaré section, each with periods that are approximately 8 time units. This does not agree exactly,\footnote{Or very well at all, especially since we've just come from having residuals on the order of $10^{-14}$} but one must remember that the Floquet exponents are a \emph{local} model of the orbit, and naturally become less precise the more the perturbation grows.\footnote{As a matter of fact, the pictured spiral is the last spiral the Poincaré section trajectory executes, though the trajectory in the full space continues to look qualitatively similar to the original orbit for a long time.}   
 
 
 \begin{figure}[h!]
@@ -123,26 +123,58 @@ Having used linear stability analysis to find the unstable eigenvector, we can u
 
 \begin{figure}[h!]
 \centerline{\includegraphics[scale = 0.9]{E1Poincare}}
-\caption{Poincare section of \refFig{fig:p8E1}, defined by the surface $e_2 = 0.26$. Notice that the trajectory along the Poincare section spirals outwards, as we would expect for an unstable manifold with a complex eigenvalue.}\label{fig:E1Poincare}
+\caption{Poincaré section of \refFig{fig:p8E1}, defined by the surface $e_2 = 0.26$. Notice that the trajectory along the Poincaré section spirals outwards, as we would expect for an unstable manifold with a complex eigenvalue.}\label{fig:E1Poincare}
 \end{figure}
 
 \section{Dissipation and Energy Input} 
   
 \subsection{A New State Space}
-While \refFig{fig:POStateSpace} seems to indicate that P8 is a special member of the Gang of Four -- an assertion which is backed up by the marked difference in the properties displayed in \refTab{tab:summary} -- the striking dissimilarty in \refFig{fig:POStateSpace} may be an artifact of the projection basis. To address this issue, we can also project onto the {\bf dissipation-energy input} plane, where the dissipation $D$ and energy input $I$ are defined
+While \refFig{fig:POStateSpace} seems to indicate that P8 is a special member of the Gang of Four -- an assertion which is backed up by the marked difference in the properties displayed in \refTab{tab:summary} -- the striking dissimilarity in \refFig{fig:POStateSpace} may be an artifact of the projection basis. To address this issue, we can also project onto the {\bf dissipation-energy input} plane, where the dissipation $D$ and energy input $I$ are defined
 \begin{align}
-D(t) = \frac{1}{L_xL_yL_z}\int{0}{L_x}{\int{0}{L_y}{\int{0}{L_z}{|\nabla\times\Vector{u}(t)|^2}{\textrm{d}z}}{\textrm{d}y}}{\textrm{d}x},\\
-I(t)  = 1 + \frac{1}{2L_xL_z}\int{0}{L_x}{\int{0}{L_z}{\pder{1}{\Vector{u}_{y}}{y} |_{y=1}+\pder{1}{\Vector{u}_{y}}{y} |_{y=-1}}{\textrm{d}z}}{\textrm{d}x},
+D(t) = \frac{1}{L_xL_yL_z}\int{0}{L_x}{\int{0}{L_y}{\int{0}{L_z}{|\nabla\times\Vector{u}(t)|^2}{\textrm{d}z}}{\textrm{d}y}}{\textrm{d}x},\label{eq:diss}\\
+I(t)  = 1 + \frac{1}{2L_xL_z}\int{0}{L_x}{\int{0}{L_z}{\pder{1}{\Vector{u}_{y}}{y} |_{y=1}+\pder{1}{\Vector{u}_{y}}{y} |_{y=-1}}{\textrm{d}z}}{\textrm{d}x}.\label{eq:einp}
 \end{align} 
-resulting in \refFig{fig:DIGOF},\footnote{Note that for a periodic orbit, the mean dissipation and energy input need to be balanced, which explains why all observed solutions do not stray far away from the line $D(I) = I$.} which suggests that the distinctive features of P8 are likely not artificial.  
+Unlike the state space projection, which is to some extent an artificial projection mechanism, the dissipation-input energy plane projection has real physical meaning, and thus is a more natural projection. Applying \refeqs{eq:diss}{eq:einp} to the Gang of Four results in \refFig{fig:DIGOF},\footnote{Note that for a periodic orbit, the mean dissipation and energy input need to be balanced, which explains why all observed solutions do not stray far away from the line $D(I) = I$.} which suggests that the distinctive features of P8 are likely not artificial.  
 
 \begin{figure}[h]
 \includegraphics[width=\textwidth]{DIOG}
 \caption{Dissipation versus energy input for the Gang of Four. While the lesser members of the Gang remain clustered towards a input/dissipation of 2, P8 stays at a dissipation/input of 4. Due to P8's low period, the fine details of its orbit cannot be discerned here. The separation observed in \refFig{fig:POStateSpace} is clearly reflected in this physically important projection.}\label{fig:DIGOF}
 \end{figure}
 
-\subsection{The Return of the Bifurcation}
+\subsection{The Search for Bifurcations, Part II}
+The dissipation-energy input projection has another extremely important benefit -- it is domain-agnostic. This allows us to compare the different branches of \refFig{fig:LZBif} in a more sophisticated manner. Since the full bifurcation diagram spans a vast distance in the dissipation-energy input plane, the projection is divided into three parts, with te upper branch in \refFig{fig:DIUpper}, the transition branch in \refFig{fig:DITrans} and the lower branch in \refFig{fig:DILower}, where the divisions between branches is informed by \refFig{fig:LZBif}. Unfortunately, apart from the expected repulsion of the upper branch from the high dissipation/energy input zone, nothing particularly interesting occurs here.\\
 
 
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{DIUpper}
+\caption{Dissipation vs energy input for the upper branch of P8. The HKW solution is the thin blue solution that is continued up to higher dissipation/energy input. However, for finite \ReN, there is a maximum velocity gradient that can be maintained, so the energy input is necessarily bounded, and the orbits begin moving down the dissipation/energy input line, eventually becoming the transition branch. While I was hoping to see an especially meaningful change in the orbit topology, there doesn't seem to be a great deal of change in its general structure during any bifurcation. }\label{fig:DIUpper}
+\end{figure}
 
-Alas, at this point we cease our analysis, for all good things must come to and end. This analysis is by no means complete or comprehensive -- there is likely a great deal more to learn regarding the properties of symmetry broken periodic orbits, but due to time constraints, I will cut the analysis short here, and proceed to summarize the work of this thesis, and suggest avenues to research, moving forward. 
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{DITrans}
+\caption{The transition branch continues to move down the dissipation/energy input line. As it does so, its area contracts to a near point, and expands again, at which point it becomes the lower branch. }\label{fig:DITrans}
+\end{figure}
+
+\begin{figure}[h]
+\includegraphics[width=\textwidth]{DILower}
+\caption{The lower branch is even less eventful than the transition branch, and generally mantains its structure through its descent towards the origin of the dissipation/energy input plane. Eventually, it reaches the point where \refAlg{alg:parCont} fails, and the continuation process halts.}\label{fig:DILower}
+\end{figure}
+
+However, a glance at \refFigss{fig:DIUpper}{fig:DITrans}{fig:DILower} indicates that they are by and large elliptical in shape, so the area enclosed by the orbit can easily be calculated by the singular value decomposition. Applying this method and ordering by traversal down the continuation trajectory gives \refFig{fig:areaOrder}, whereas ordering by $L_z$ gives \refFig{fig:areaCell}. The results of this analysis are promising, since they show structural changes in a physically important projection, which occur near the expected location of the turning points. We can also easily calculate the circumference of each orbit by summing the distance between each individual point over the orbit, and obtain \refFig{fig:circumCell}, which is eerily similar to \refFig{fig:LZBif}. \\
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{areaOrder}
+\caption{Approximate area of P8 at various $L_z$. Here, the orbits are ordered by traversing \refFig{fig:LZBif}, beginning from the start of the upper branch. The area function begins looking very smooth and Gaussian, but acquires a kink on its way down, after which it behaves in a more complex manner. The fact that the area in the dissipation/energy input plan goes very low is interesting, but probably not indicative of any behavior that has a global effect.}\label{fig:areaOrder}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{areaCell}
+\caption{When the approximate area of P8 is ordered by $L_z$, the features observed in \refFig{fig:areaOrder} take on more meaning. The kink observed in the downwards slope of the Gaussian coincides almost perfectly with the first turning point of \refFig{fig:LZBif}, and the third peak corresponds to the second turning point. While not conclusive, this does show that the turning points are associated with (admittedly slight) structural changes in a physically important projection. }\label{fig:areaCell}
+\end{figure}
+
+\begin{figure}[h!]
+\includegraphics[width=\textwidth]{circumCell}
+\caption{The circumference of P8 as a function of $L_z$. The similarly to \refFig{fig:LZBif} is noticeable, and is not as trivial as it may sound - the velocity on a trajectory is not certain \emph{a priori}, so a periodic orbit with a small circumference can still have a long period.}\label{fig:circumCell}
+\end{figure}
+
+Alas, at this point I must cease my analysis, for all good things must come to and end. This analysis is by no means complete or comprehensive -- there is likely a great deal more to learn regarding the properties of symmetry broken periodic orbits, but due to time constraints, I will cut the analysis short here, and proceed to summarize the work of this thesis, and suggest avenues for future research. 

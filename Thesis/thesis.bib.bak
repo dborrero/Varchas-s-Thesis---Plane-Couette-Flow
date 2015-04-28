@@ -2,6 +2,16 @@
 % Encoding: UTF-8
 
 
+@Article{Arnoldi1951,
+  Title                    = {The {P}rinciple of {M}inimized {I}terations in the {S}olution of the {M}atrix {E}igenvalue {P}roblem},
+  Author                   = {Arnoldi, Walter Edwin},
+  Journal                  = {Quarterly of Applied Mathematics},
+  Year                     = {1951},
+  Number                   = {1},
+  Pages                    = {17--29},
+  Volume                   = {9}
+}
+
 @Article{Ascher1995,
   Title                    = {Implicit-explicit methods for time-dependent partial differential equations},
   Author                   = {Ascher, Uri M and Ruuth, Steven J and Wetton, Brian TR},
