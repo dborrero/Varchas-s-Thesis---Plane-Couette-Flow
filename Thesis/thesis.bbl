@@ -4,28 +4,6 @@
 K.-S. Choi, ``Fluid dynamics: The rough with the smooth,'' {\em Nature},
   vol.~440, no.~7085, pp.~754--754, 2006.
 
-\bibitem{Grassberger2004}
-P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
-  attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
-  Springer, 2004.
-
-\bibitem{Borrero2014}
-D.~Borrero-Echeverry, {\em Subcritical Transition to Turbulence in
-  Taylor-{Couette} Flow}.
-\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
-  Atlanta, GA 30332, 2014.
-
-\bibitem{Nagata1990}
-M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane {Couette}
-  flow: {B}ifurcation from infinity,'' {\em Journal of Fluid Mechanics},
-  vol.~217, pp.~519--527, 1990.
-
-\bibitem{Halcrow2008}
-J.~J. Halcrow, {\em Charting the {S}tate {S}pace of {P}lane {{Couette}} {F}low:
-  {Equilibria}, {R}elative equilibria, and {H}eteroclinic {C}onnections}.
-\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
-  Atlanta, GA 30332, 2008.
-
 \bibitem{Daviaud1992}
 F.~Daviaud, J.~Hegseth, and P.~Berg\'e, ``Subcritical transition to turbulence
   in plane {Couette} flow,'' {\em Physical Review Letters}, vol.~69,
@@ -45,6 +23,11 @@ C.~Foias, G.~R. Sell, and R.~Temam, ``Inertial manifolds for nonlinear
   evolutionary equations,'' {\em Journal of Differential Equations}, vol.~73,
   no.~2, pp.~309--353, 1988.
 
+\bibitem{Grassberger2004}
+P.~Grassberger and I.~Procaccia, ``Measuring the strangeness of strange
+  attractors,'' in {\em The Theory of Chaotic Attractors}, pp.~170--189,
+  Springer, 2004.
+
 \bibitem{Lorenz1963}
 E.~N. Lorenz, ``Deterministic nonperiodic flow,'' {\em Journal of the
   {A}tmospheric {S}ciences}, vol.~20, no.~2, pp.~130--141, 1963.
@@ -60,6 +43,11 @@ O.~Dauchot and N.~Vioujard, ``Phase space analysis of a dynamical model for the
   European Physical Journal B-Condensed Matter and Complex Systems}, vol.~14,
   no.~2, pp.~377--381, 2000.
 
+\bibitem{Nagata1990}
+M.~Nagata, ``Three-dimensional finite-amplitude solutions in plane {Couette}
+  flow: {B}ifurcation from infinity,'' {\em Journal of Fluid Mechanics},
+  vol.~217, pp.~519--527, 1990.
+
 \bibitem{Waleffe2001}
 F.~Waleffe, ``Exact coherent structures in channel flow,'' {\em Journal of
   Fluid Mechanics}, vol.~435, pp.~93--102, 5 2001.
@@ -72,6 +60,12 @@ G.~Kawahara and S.~Kida, ``Periodic motion embedded in plane {Couette}
 \bibitem{Viswanath2007}
 D.~Viswanath, ``Recurrent motions within plane {Couette} turbulence,'' {\em
   Journal of Fluid Mechanics}, vol.~580, pp.~339--358, 2007.
+
+\bibitem{Borrero2014}
+D.~Borrero-Echeverry, {\em Subcritical Transition to Turbulence in
+  Taylor-{Couette} Flow}.
+\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
+  Atlanta, GA 30332, 2014.
 
 \bibitem{Hof2004}
 B.~Hof, C.~W.~H. van Doorne, J.~Westerweel, F.~T.~M. Nieuwstadt, H.~Faisst,
@@ -93,6 +87,12 @@ J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
 J.~F. Gibson, ``{Channelflow}: {A} spectral {Navier-Stokes} simulator in
   {C}++,'' tech. rep., U. New Hampshire, 2014.
 \newblock {\tt {Channelflow.org}}.
+
+\bibitem{Halcrow2008}
+J.~J. Halcrow, {\em Charting the {S}tate {S}pace of {P}lane {{Couette}} {F}low:
+  {Equilibria}, {R}elative equilibria, and {H}eteroclinic {C}onnections}.
+\newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
+  Atlanta, GA 30332, 2008.
 
 \bibitem{Granger1995}
 R.~Granger, {\em Fluid Mechanics}.

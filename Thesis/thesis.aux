@@ -105,10 +105,10 @@
 \newlabel{fig:rationalTranslation}{{2.2}{23}}
 \newlabel{eq:pscom}{{2.14}{23}}
 \citation{GIBSON2009}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces A simple demonstration that shifts and reflections do not commute in general. a) An object with a dashed outline is translated to the right, and then reflected across the vertical. b) The same object is reflected before it is translated to the right. Notice that the final positions of the object are not the same.}}{25}}
-\newlabel{fig:notabelian}{{2.3}{25}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces When periodic boundary conditions are imposed and translations are restricted to half-period lengths, shifts and reflects commute. a) An object is shifted and then reflected across the vertical. b) The same object is reflected across the vertical and then shifted. The final positions are the same, even if the intermediaries are not.}}{25}}
-\newlabel{fig:abelian}{{2.4}{25}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.3}{\ignorespaces A simple demonstration that shifts and reflections do not commute in general. a) An object with a dashed outline is translated to the right, and then reflected across the vertical. b) The same object is reflected before it is translated to the right. Notice that the final positions of the object are not the same.}}{26}}
+\newlabel{fig:notabelian}{{2.3}{26}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2.4}{\ignorespaces When periodic boundary conditions are imposed and translations are restricted to half-period lengths, shifts and reflects commute. a) An object is shifted and then reflected across the vertical. b) The same object is reflected across the vertical and then shifted. The final positions are the same, even if the intermediaries are not.}}{26}}
+\newlabel{fig:abelian}{{2.4}{26}}
 \citation{Gibson2014}
 \@writefile{toc}{\contentsline {chapter}{Chapter 3: Numerics and Workflow}{27}}
 \@writefile{lof}{\addvspace {10\p@ }}
@@ -169,7 +169,7 @@
 \newlabel{fig:recurrenceMinimum}{{3.3}{38}}
 \newlabel{eq:4DrecurrenceEQ}{{3.50}{38}}
 \newlabel{alg:recBroke}{{4}{38}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces A flow chart that lays out the procedure used to find exact coherent structures. We begin by selecting a random initial state for the trajectory. This initial state can either be found by generating a truly random state, or by applying a small, random perturbation to known exact coherent structures. The desired symmetry constraints are then enforced, and the trajectory is integrated from $t = 0$ to $t=t'$. After every time step, if the state's norm has dropped below some threshold $R$ (I use 0.1), we assume that the trajectory has relaminarized, and find a new initial condition to work with. Once the integration is over, we generate the recurrence diagram according to (3.49\hbox {}), for some $T_{\textrm  {max}}$, and attempt to find any patterns that we would associate with exact coherent structures. If no patterns are found, we find another initial state and repeat the process. If there are some candidate patterns, we calculate the minimum $\mathfrak  {R}$ of that feature. If it is below about $10^{-4}$, we accept it as a potential solution, and pass it to the NKH solver. If $\mathfrak  {R}$ is not low enough, it is likely not a sufficiently good guess to cause the NKH solver to converge in a reasonable time, so we zoom in on the pattern and calculate a refined recurrence graph, until either the minimum value of the pattern is low enough, or it becomes apparent that the pattern is unlikely to produce a meaningful initial guess}}{39}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3.4}{\ignorespaces A flow chart that lays out the procedure used to find exact coherent structures. We begin by selecting a random initial state for the trajectory. This initial state can either be found by generating a truly random state, or by applying a small, random perturbation to known exact coherent structures. The desired symmetry constraints are then enforced, and the trajectory is integrated from $t = 0$ to $t=t'$. After every time step, if the state's norm has dropped below some threshold $R$ (we use 0.1), we assume that the trajectory has relaminarized, and find a new initial condition to work with. Once the integration is over, we generate the recurrence diagram according to (3.49\hbox {}), for some $T_{\textrm  {max}}$, and attempt to find any patterns that we would associate with exact coherent structures. If no patterns are found, we find another initial state and repeat the process. If there are some candidate patterns, we calculate the minimum $\mathfrak  {R}$ of that feature. If it is below about $10^{-4}$, we accept it as a potential solution, and pass it to the NKH solver. If $\mathfrak  {R}$ is not low enough, it is likely not a sufficiently good guess to cause the NKH solver to converge in a reasonable time, so we zoom in on the pattern and calculate a refined recurrence graph, until either the minimum value of the pattern is low enough, or it becomes apparent that the pattern is unlikely to produce a meaningful initial guess}}{39}}
 \newlabel{fig:FlowChart}{{3.4}{39}}
 \@writefile{toc}{\contentsline {section}{\numberline {3.4}Parametric Continuation}{40}}
 \newlabel{alg:parCont}{{5}{40}}
@@ -202,7 +202,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.5}{\ignorespaces 2D state space projection of the Gang of Four and some reference equilibria. The basis vectors for the projection were constructed by orthonormalizing the initial states of each of the periodic orbits. This results in a 4D state space projection, of which we can take 2D slices (of which there are 6), or 3D slices (of which there are 4). The equilibria are fully symmetric, and were found by Halcrow\nobreakspace  {}\cite  {Halcrow2008}. Notice that the P8 orbit is separated by the equilibria from P85, P60 and P32, a feature that holds true in the other 5 2D projections.}}{49}}
 \newlabel{fig:POStateSpace}{{4.5}{49}}
 \@writefile{toc}{\contentsline {section}{\numberline {4.2}Spanwise Continuation}{49}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Period as a function of spanwise cell length for P8. The data can be sectioned into three distinct parts. First, the {\bf  upper branch} (blue circles), which is the path that the continuation algorithm initially follows in parameter space. Second, the {\bf  transition branch} (green diamonds), which occurs after the {\bf  first turning point} (red, dashed circle). Third, the {\bf  lower branch} (orange rectangles), after the {\bf  second turning point} (purple, solid circle). Within the marked rectangular region, multiple distinct solutions exist for the same cell length, hinting at a bifurcation. Searches with higher resolution have pinned down the turning points to the interval $L_z \in [2.8087, 2.8096]$ for the first turning point, and $L_z \in [2.6150,2.6157]$ for the second turning point.}}{50}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.6}{\ignorespaces Period as a function of spanwise cell length for P8. The data can be sectioned into three distinct parts. First, the {\bf  upper branch} (blue circles), which is the path that the continuation algorithm initially follows in parameter space. Second, the {\bf  transition branch} (green diamonds), which occurs after the {\bf  first turning point} (red, dashed circle). Third, the {\bf  lower branch} (orange rectangles), after the {\bf  second turning point} (purple, solid circle). Within the marked rectangular region, multiple distinct solutions exist for the same cell length, hinting at a bifurcation. Searches at higher resolution have pinned down the turning points to the interval $L_z \in [2.8087, 2.8096]$ for the first turning point, and $L_z \in [2.6150,2.6157]$ for the second turning point.}}{50}}
 \newlabel{fig:LZBif}{{4.6}{50}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.7}{\ignorespaces Phase portrait of the Van Der Pol oscillator and its Hopf bifurcation, with trajectories in white. (a), for negative values of the bifurcation parameter, the single periodic orbit is unstable, so an initial condition that begins near the orbit spirals away from it. (b), when the bifurcation parameter is zero, there is no periodic orbit. (c), for positive values of the bifurcation parameter, the periodic orbit is stable, and initial conditions are attracted into the orbit.}}{51}}
 \newlabel{fig:phasePortrait}{{4.7}{51}}
@@ -221,7 +221,7 @@
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.1}A New Projection}{54}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.11}{\ignorespaces The trajectory of a slight perturbation along the most unstable eigenvector, projected onto a difference slice of the same basis as in Figure\nobreakspace  {}4.5\hbox {}. Notice that it keeps the general shape of the orbit that spawned it, at least for short time spans.}}{55}}
 \newlabel{fig:p8E1}{{4.11}{55}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Poincaré section of Figure\nobreakspace  {}4.11\hbox {}, defined by the surface $e_2 = 0.26$. Notice that the trajectory along the Poincaré section spirals outwards, as we would expect for an unstable manifold with a complex eigenvalue.}}{55}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.12}{\ignorespaces Poincaré section of Figure\nobreakspace  {}4.11\hbox {}, defined by the surface $e_2 = 0.26$. Notice that the trajectory along the Poincare section spirals outwards, as we would expect for an unstable manifold with a complex eigenvalue.}}{55}}
 \newlabel{fig:E1Poincare}{{4.12}{55}}
 \newlabel{eq:diss}{{4.4}{55}}
 \newlabel{eq:einp}{{4.5}{55}}
@@ -230,7 +230,7 @@
 \@writefile{lof}{\contentsline {figure}{\numberline {4.14}{\ignorespaces DI plane projection of 20 turbulent trajectories (red and blue) beginning from random initial conditions, with perturbations of magnitude $0.3$ overlaid on the Gang of Four, the Nagata upper branch equilibrium, and the line of equal dissipation-energy input. The data implies that P8 contributes very little to the dynamics of turbulence, since turbulent trajectories do not appear to `live' near P8. It does, however, suggest that P85 may have some importance in turbulent transition, since the trajectories only remain `bound' to a narrow area of D-I space while they are within the orbit of P85.}}{57}}
 \newlabel{fig:turbDI}{{4.14}{57}}
 \@writefile{toc}{\contentsline {subsection}{\numberline {4.3.2}The Search for Bifurcations, Part II}{57}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces DI plane projection of the upper branch of P8. The HKW solution is the thin blue solution that is continued up to higher dissipation/energy input. However, for finite \ensuremath  {Re}, there is a maximum velocity gradient that can be maintained, so the energy input is necessarily bounded, and the orbits begin moving down the dissipation/energy input line, eventually becoming the transition branch. While I was hoping to see an especially meaningful change in the orbit topology, there doesn't seem to be a great deal of change in its general structure during any bifurcation. }}{58}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4.15}{\ignorespaces DI plane projection of the upper branch of P8. The HKW solution is the thin blue solution that is continued up to higher dissipation/energy input. However, for finite \ensuremath  {Re}, there is a maximum velocity gradient that can be maintained, so the energy input is necessarily bounded, and the orbits begin moving down the dissipation/energy input line, eventually becoming the transition branch. While we were hoping to see an especially meaningful change in the orbit topology, there doesn't seem to be a great deal of change in its general structure during any bifurcation. }}{58}}
 \newlabel{fig:DIUpper}{{4.15}{58}}
 \@writefile{lof}{\contentsline {figure}{\numberline {4.16}{\ignorespaces The transition branch continues to move down the dissipation/energy input line. As it does so, its area contracts to a near point, and expands again, at which point it becomes the lower branch. }}{59}}
 \newlabel{fig:DITrans}{{4.16}{59}}
@@ -249,25 +249,25 @@
 \bibstyle{ieeetr}
 \bibdata{thesis}
 \bibcite{Choi2006}{{1}{}{{}}{{}}}
-\bibcite{Grassberger2004}{{2}{}{{}}{{}}}
-\bibcite{Borrero2014}{{3}{}{{}}{{}}}
-\bibcite{Nagata1990}{{4}{}{{}}{{}}}
-\bibcite{Halcrow2008}{{5}{}{{}}{{}}}
-\bibcite{Daviaud1992}{{6}{}{{}}{{}}}
-\bibcite{Pope2000}{{7}{}{{}}{{}}}
-\bibcite{Hopf1948}{{8}{}{{}}{{}}}
-\bibcite{Foias1988}{{9}{}{{}}{{}}}
-\bibcite{Lorenz1963}{{10}{}{{}}{{}}}
-\bibcite{Aubry1988}{{11}{}{{}}{{}}}
-\bibcite{Dauchot2000}{{12}{}{{}}{{}}}
+\bibcite{Daviaud1992}{{2}{}{{}}{{}}}
+\bibcite{Pope2000}{{3}{}{{}}{{}}}
+\bibcite{Hopf1948}{{4}{}{{}}{{}}}
+\bibcite{Foias1988}{{5}{}{{}}{{}}}
+\bibcite{Grassberger2004}{{6}{}{{}}{{}}}
+\bibcite{Lorenz1963}{{7}{}{{}}{{}}}
+\bibcite{Aubry1988}{{8}{}{{}}{{}}}
+\bibcite{Dauchot2000}{{9}{}{{}}{{}}}
+\bibcite{Nagata1990}{{10}{}{{}}{{}}}
+\bibcite{Waleffe2001}{{11}{}{{}}{{}}}
+\bibcite{Kawahara2001}{{12}{}{{}}{{}}}
+\bibcite{Viswanath2007}{{13}{}{{}}{{}}}
 \@writefile{toc}{\contentsline {chapter}{References}{67}}
-\bibcite{Waleffe2001}{{13}{}{{}}{{}}}
-\bibcite{Kawahara2001}{{14}{}{{}}{{}}}
-\bibcite{Viswanath2007}{{15}{}{{}}{{}}}
-\bibcite{Hof2004}{{16}{}{{}}{{}}}
-\bibcite{DeLozar2012}{{17}{}{{}}{{}}}
-\bibcite{Gibson2008}{{18}{}{{}}{{}}}
-\bibcite{Gibson2014}{{19}{}{{}}{{}}}
+\bibcite{Borrero2014}{{14}{}{{}}{{}}}
+\bibcite{Hof2004}{{15}{}{{}}{{}}}
+\bibcite{DeLozar2012}{{16}{}{{}}{{}}}
+\bibcite{Gibson2008}{{17}{}{{}}{{}}}
+\bibcite{Gibson2014}{{18}{}{{}}{{}}}
+\bibcite{Halcrow2008}{{19}{}{{}}{{}}}
 \bibcite{Granger1995}{{20}{}{{}}{{}}}
 \bibcite{Fischer1983}{{21}{}{{}}{{}}}
 \bibcite{Clarke2007}{{22}{}{{}}{{}}}
