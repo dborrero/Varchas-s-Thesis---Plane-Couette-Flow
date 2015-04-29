@@ -120,7 +120,7 @@
   Publisher                = {SIAM}
 }
 
-@Book{dorf2006sensors,
+@Book{Dorf2006,
   Title                    = {Sensors, Nanoscience, Biomedical Engineering, and Instruments: Sensors Nanoscience Biomedical Engineering},
   Author                   = {Dorf, Richard C},
   Publisher                = {CRC Press},
@@ -392,6 +392,18 @@
   Publisher                = {SIAM},
   Year                     = {1997},
   Volume                   = {50}
+}
+
+@Article{VanderPol1926,
+  Title                    = {{LXXXVIII. On “relaxation-oscillations”}},
+  Author                   = {Van der Pol, Balth},
+  Journal                  = {The London, Edinburgh, and Dublin Philosophical Magazine and Journal of Science},
+  Year                     = {1926},
+  Number                   = {11},
+  Pages                    = {978--992},
+  Volume                   = {2},
+
+  Publisher                = {Taylor \& Francis}
 }
 
 @Article{Viswanath2007,
