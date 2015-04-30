@@ -1,0 +1,107 @@
+%% Creator: Inkscape 0.91_64bit, www.inkscape.org
+%% PDF/EPS/PS + LaTeX output extension by Johan Engelen, 2010
+%% Accompanies image file 'P8FirstBifurcation.pdf' (pdf, eps, ps)
+%%
+%% To include the image in your LaTeX document, write
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics{<filename>.pdf}
+%% To scale the image, write
+%%   \def\svgwidth{<desired width>}
+%%   \input{<filename>.pdf_tex}
+%%  instead of
+%%   \includegraphics[width=<desired width>]{<filename>.pdf}
+%%
+%% Images with a different path to the parent latex file can
+%% be accessed with the `import' package (which may need to be
+%% installed) using
+%%   \usepackage{import}
+%% in the preamble, and then including the image with
+%%   \import{<path to file>}{<filename>.pdf_tex}
+%% Alternatively, one can specify
+%%   \graphicspath{{<path to file>/}}
+%% 
+%% For more information, please see info/svg-inkscape on CTAN:
+%%   http://tug.ctan.org/tex-archive/info/svg-inkscape
+%%
+\begingroup%
+  \makeatletter%
+  \providecommand\color[2][]{%
+    \errmessage{(Inkscape) Color is used for the text in Inkscape, but the package 'color.sty' is not loaded}%
+    \renewcommand\color[2][]{}%
+  }%
+  \providecommand\transparent[1]{%
+    \errmessage{(Inkscape) Transparency is used (non-zero) for the text in Inkscape, but the package 'transparent.sty' is not loaded}%
+    \renewcommand\transparent[1]{}%
+  }%
+  \providecommand\rotatebox[2]{#2}%
+  \ifx\svgwidth\undefined%
+    \setlength{\unitlength}{368.38847656bp}%
+    \ifx\svgscale\undefined%
+      \relax%
+    \else%
+      \setlength{\unitlength}{\unitlength * \real{\svgscale}}%
+    \fi%
+  \else%
+    \setlength{\unitlength}{\svgwidth}%
+  \fi%
+  \global\let\svgwidth\undefined%
+  \global\let\svgscale\undefined%
+  \makeatother%
+  \begin{picture}(1,0.53261709)%
+    \put(0,0){\includegraphics[width=\unitlength,page=1]{P8FirstBifurcation.pdf}}%
+    \put(0.12696265,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.14593718,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{0}\textbf{0}\textbf{6}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=2]{P8FirstBifurcation.pdf}}%
+    \put(0.24039073,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.25936524,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{0}\textbf{0}\textbf{4}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=3]{P8FirstBifurcation.pdf}}%
+    \put(0.35381906,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.37279361,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{0}\textbf{0}\textbf{2}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=4]{P8FirstBifurcation.pdf}}%
+    \put(0.59017611,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{0}\textbf{0}\textbf{2}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=5]{P8FirstBifurcation.pdf}}%
+    \put(0.70360448,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{0}\textbf{0}\textbf{4}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=6]{P8FirstBifurcation.pdf}}%
+    \put(0.81703393,0.21068059){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{0}\textbf{0}\textbf{6}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=7]{P8FirstBifurcation.pdf}}%
+    \put(0.93210968,0.23511132){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{R}\textbf{e}}}}%
+    \put(0.96739851,0.23511132){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{[λ]}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=8]{P8FirstBifurcation.pdf}}%
+    \put(0.44553098,0.01205902){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.46450549,0.01205902){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{3}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=9]{P8FirstBifurcation.pdf}}%
+    \put(0.44553098,0.0864088){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.46450549,0.0864088){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{2}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=10]{P8FirstBifurcation.pdf}}%
+    \put(0.44553098,0.16076155){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{-}}}%
+    \put(0.46450549,0.16076155){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{1}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=11]{P8FirstBifurcation.pdf}}%
+    \put(0.46453266,0.30946243){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{1}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=12]{P8FirstBifurcation.pdf}}%
+    \put(0.46453266,0.38381387){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{2}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=13]{P8FirstBifurcation.pdf}}%
+    \put(0.46453266,0.45816634){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{0}\textbf{.}\textbf{3}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=14]{P8FirstBifurcation.pdf}}%
+    \put(0.47946255,0.51304535){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{\textbf{I}\textbf{m}}}}%
+    \put(0.51200973,0.51304535){\color[rgb]{0.4,0.4,0.4}\makebox(0,0)[lb]{\smash{[λ]}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=15]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.39820318){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{0}\textbf{8}\textbf{6}\textbf{9}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=16]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.36364537){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{0}\textbf{8}\textbf{7}\textbf{9}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=17]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.3290875){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{0}\textbf{9}\textbf{8}\textbf{6}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=18]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.29452968){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{1}\textbf{2}\textbf{0}\textbf{3}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=19]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.25997185){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{1}\textbf{5}\textbf{0}\textbf{9}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=20]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.22541402){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{1}\textbf{8}\textbf{5}\textbf{7}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=21]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.19085618){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{2}\textbf{2}\textbf{1}\textbf{1}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=22]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.15629835){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{2}\textbf{5}\textbf{4}\textbf{6}}}}%
+    \put(0,0){\includegraphics[width=\unitlength,page=23]{P8FirstBifurcation.pdf}}%
+    \put(0.02417861,0.12174052){\color[rgb]{0,0,0}\makebox(0,0)[lb]{\smash{\textbf{2}\textbf{.}\textbf{8}\textbf{2}\textbf{8}\textbf{5}\textbf{5}}}}%
+  \end{picture}%
+\endgroup%
