@@ -1,0 +1,74 @@
+
+                NVIDIA Firmware Update Utility Quick Help File
+
+Please see nvflash.doc for more detailed information.
+
+Please type "nvflash --help" for an up to date list of supported EEPROM parts.
+
+-- Primary Commands --
+Update firmware:            nvflash [options] <filename>
+Save firmware to file:      nvflash [options] --save <filename>
+Compare adapter firmware:   nvflash [options] --compare <filename>
+Update TV data:             nvflash [options] --tv <filename>
+Display version:            nvflash [options] --version [<filename>]
+Display firmware bytes:     nvflash [options] --display [bytes]
+Check for supported EEPROM: nvflash [options] --check
+Write protect EEPROM:       nvflash [options] --protecton
+Remove write protect:       nvflash [options] --protectoff
+Change soft straps:         nvflash [options] --straps=<straps>
+Set IEEE 1394 GUID:         nvflash [options] --guid=<guid>
+Set IEEE 1394 GUID source:  nvflash [options] --guidsource=<location>
+List adapters:              nvflash [options] --list
+
+-- Commands and Options -- 
+help         ?            Display this screen.
+save         b <filename> Read EEPROM and save to <filename>.
+compare      k <filename> Read EEPROM and compare with <filename>.
+tv           x <filename> Transfer TV data from file to EEPROM.
+version      v <filename> Display file version and ~CRC32
+                             (if no filename, acts on display adapter).
+display      d [bytes]    Display 256 the first bytes of the EEPROM
+                             (default is 256 bytes)
+check        c            Check for supported EEPROM.
+protecton    w            Write protect EEPROM (only on some EEPROM's).
+protectoff   r            Remove EEPROM write protect (only on some EEPROM's).
+straps       m <straps>   Change soft straps.
+   format is: AND Mask 0, OR Mask 0, AND Mask 1, OR Mask 1
+guid         q <guid>     Set the IEEE 1394 GUID in the firmware image
+                          (GUID is in the form of 16 hex digits).
+guidsource   1 <location> Set the source of the IEEE 1394 GUID.
+                          main       - main EEPROM image
+                          dedicated  - separate serial EEPROM part
+list         a            List all NVIDIA display adapters found in the system.
+nolight      l            Do not light keyboard LEDs.
+overridetype 5            Allow firmware and adapter PCI device ID mismatch.
+overridesub  6            Allow firmware and adapter PCI subsystem ID mismatch.
+reboot       y            Reboot the PC after other tasks completed.
+keepstraps   g            Keep the soft straps already present in the EEPROM
+                          after flashing the new image.
+romstrap     j            Override the ROM strap setting to allow flashing an 
+                          image when grounding the STRAP_SUB_VENDOR pin.
+                          This allows flashing a corrupted or erased EEPROM.  
+                          Note: Make sure there is a physical EEPROM present 
+                          when using this option
+index        i <index>    Force a specific device index.
+fwindex      F <fw index> Index of which firmware image to use from a firmware 
+                          bundle.
+auto         A            When possible, run without user intervention.
+silence      s <level>    Silence level:
+   default  All beeps.
+   #=4 (or 2)   No progress beeps.
+   #=5 (or 1)   No beeps.
+override     o <level>    Override safety check level:
+   default  unknown EEPROM | NV adapter aborts application.
+   level=1  unknown EEPROM acceptable for read operations.
+   level=2  unknown NV adapter acceptable for read operations.
+   level=3  Combined effect of 1,2 (cannot write to unknown EEPROM or adapter).
+
+Use a single dash ("-") to use the single letter version of a command.
+Use a double dash ("--") to use the longer descriptive version of a command.
+Use equals ("=") to specify parameters, with separating commas (",").
+
+-- Sample Usage --
+nvflash --index=1 nv30nz.rom
+

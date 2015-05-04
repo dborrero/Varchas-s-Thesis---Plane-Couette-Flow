@@ -1,0 +1,15 @@
+\beamer@endinputifotherversion {3.27pt}
+\select@language {english}
+\beamer@sectionintoc {1}{The Problem}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Transitions to Turbulence}{5}{0}{1}
+\beamer@sectionintoc {2}{The System}{8}{0}{2}
+\beamer@subsectionintoc {2}{1}{Navier-Stokes}{8}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bulk Flow}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Statistical Methods}{11}{0}{2}
+\beamer@subsectionintoc {2}{4}{Exact Coherent Structures}{14}{0}{2}
+\beamer@sectionintoc {3}{Symmetry}{18}{0}{3}
+\beamer@sectionintoc {4}{The Simulation}{28}{0}{4}
+\beamer@subsectionintoc {4}{1}{Recurrence Graphs}{34}{0}{4}
+\beamer@subsectionintoc {4}{2}{Root Finding}{38}{0}{4}
+\beamer@sectionintoc {5}{Current Results}{41}{0}{5}
+\beamer@sectionintoc {6}{Future Work}{48}{0}{6}

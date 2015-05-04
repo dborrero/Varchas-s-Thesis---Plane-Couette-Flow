@@ -1,0 +1,19 @@
+\beamer@endinputifotherversion {3.27pt}
+\select@language {english}
+\beamer@sectionintoc {1}{The Problem}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Mean Flow}{5}{0}{1}
+\beamer@sectionintoc {2}{The System}{7}{0}{2}
+\beamer@subsectionintoc {2}{1}{Navier-Stokes}{7}{0}{2}
+\beamer@subsectionintoc {2}{2}{Bulk Flow}{9}{0}{2}
+\beamer@subsectionintoc {2}{3}{Perturbations}{12}{0}{2}
+\beamer@sectionintoc {3}{State Space}{13}{0}{3}
+\beamer@subsectionintoc {3}{1}{Hopf's Vision}{13}{0}{3}
+\beamer@subsectionintoc {3}{2}{65,000 dimensions}{16}{0}{3}
+\beamer@sectionintoc {4}{Coherent Structures}{20}{0}{4}
+\beamer@subsectionintoc {4}{1}{Periodic Orbits}{25}{0}{4}
+\beamer@sectionintoc {5}{Symmetry}{31}{0}{5}
+\beamer@sectionintoc {6}{The Simulation}{39}{0}{6}
+\beamer@subsectionintoc {6}{1}{Recurrence Plots}{46}{0}{6}
+\beamer@subsectionintoc {6}{2}{Root Finding}{48}{0}{6}
+\beamer@sectionintoc {7}{The Work}{52}{0}{7}
+\beamer@subsectionintoc {7}{1}{Recurrence Plots}{52}{0}{7}

@@ -1,0 +1,1 @@
+nvflash.exe --protectoff
