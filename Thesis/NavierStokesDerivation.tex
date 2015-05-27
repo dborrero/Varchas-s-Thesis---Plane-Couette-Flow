@@ -48,7 +48,7 @@ so that
 \end{equation}
 Since $\Omega$ is time-independent, the time derivative commutes with the integral, giving 
 \begin{equation}
-\int{\Omega}{}{\pder{1}{\rho}{t} + \Div{\paren{\rho\Vector{v}}}}{dV} = 0.
+\int{\Omega}{}{\paren{\pder{1}{\rho}{t} + \Div{\paren{\rho\Vector{v}}}}}{dV} = 0.
 \end{equation}
 But $\Omega$ is arbitrary, so the integrand must be zero everywhere, and mass is conserved if
 \begin{equation}\label{eq:consMassFull}
@@ -80,7 +80,7 @@ where $\mu$ is the fluid viscosity and $u$ is the velocity.  Stokes extended thi
 \begin{equation}\label{eq:constitutive}
 \Tensor{T}_{ij} = -P\delta_{ij} + \mu\paren{\pder{1}{u_{i}}{x_j} + \pder{1}{u_j}{x_i}},
 \end{equation}
-where $\delta_{ij}$ is the Kronecker delta function\footnote{$\delta_{ij} = 1$ if $i=j$ and $0$ otherwise} and $P$ is the pressure. A fluid obeying Newton's constitutive relation is called a Newtonian fluid. Water, and most gases under normal conditions are Newtonian, but fluids like blood, quicksand and corn starch (to name a few) are not. In this thesis, we will restrict ourselves to Newtonian fluids.
+where $\delta_{ij}$ is the Kronecker delta function\footnote{$\delta_{ij} = 1$ if $i=j$ and $0$ otherwise.} and $P$ is the pressure. A fluid obeying Newton's constitutive relation is called a Newtonian fluid. Water, and most gases under normal conditions are Newtonian, but fluids like blood, quicksand and corn starch in water (to name a few) are not. In this thesis, we will restrict ourselves to Newtonian fluids.
 
 \subsection{Surface Forces}
 Having written down the stress tensor $\Tensor{T}$ as a function of the velocity field, we can now link it to the surface forces on a fluid particle. Recalling that stresses act over $d\Omega$ of the fluid particle, the total surface force from stress is then simply 

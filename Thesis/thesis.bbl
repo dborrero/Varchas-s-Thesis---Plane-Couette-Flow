@@ -67,6 +67,11 @@ D.~Borrero-Echeverry, {\em Subcritical Transition to Turbulence in
 \newblock PhD thesis, Department of Physics, Georgia Institute of Technology,
   Atlanta, GA 30332, 2014.
 
+\bibitem{Gibson2008}
+J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
+  state space in plane {Couette} flow,'' {\em Journal of Fluid Mechanics},
+  vol.~611, pp.~107--130, 2008.
+
 \bibitem{Hof2004}
 B.~Hof, C.~W.~H. van Doorne, J.~Westerweel, F.~T.~M. Nieuwstadt, H.~Faisst,
   B.~Eckhardt, H.~Wedin, R.~R. Kerswell, and F.~Waleffe, ``{Experimental
@@ -77,11 +82,6 @@ B.~Hof, C.~W.~H. van Doorne, J.~Westerweel, F.~T.~M. Nieuwstadt, H.~Faisst,
 A.~De~Lozar, F.~Mellibovsky, M.~Avila, and B.~Hof, ``Edge {S}tate in {P}ipe
   {F}low {E}xperiments,'' {\em Physical {R}eview {L}etters}, vol.~108, no.~21,
   p.~214502, 2012.
-
-\bibitem{Gibson2008}
-J.~F. Gibson, J.~Halcrow, and P.~Cvitanovi{\'c}, ``Visualizing the geometry of
-  state space in plane {Couette} flow,'' {\em Journal of Fluid Mechanics},
-  vol.~611, pp.~107--130, 2008.
 
 \bibitem{Gibson2014}
 J.~F. Gibson, ``{Channelflow}: {A} spectral {Navier-Stokes} simulator in
@@ -164,9 +164,9 @@ W.~E. Arnoldi, ``The {P}rinciple of {M}inimized {I}terations in the {S}olution
 I.~C. Ipsen and C.~D. Meyer, ``The idea behind {K}rylov methods,'' {\em
   American Mathematical Monthly}, pp.~889--899, 1998.
 
-\bibitem{Trefethen1997}
-L.~N. Trefethen and D.~Bau~III, {\em Numerical {L}inear {A}lgebra}, vol.~50.
-\newblock SIAM, 1997.
+\bibitem{Stoer2002}
+J.~Stoer and R.~Bulirsch, {\em Introduction to Numerical Analysis}.
+\newblock Texts in Applied Mathematics, Springer, 2002.
 
 \bibitem{Hamilton1995}
 J.~M. Hamilton, J.~Kim, and F.~Waleffe, ``Regeneration mechanisms of near-wall

@@ -255,21 +255,6 @@
   Volume                   = {305}
 }
 
-@Article{Hof2008,
-  Title                    = {Repeller or Attractor? {S}electing the Dynamical Model for the Onset of Turbulence in Pipe Flow},
-  Author                   = {Hof, Bj\"orn and de Lozar, Alberto and Kuik, Dirk Jan and Westerweel, Jerry},
-  Journal                  = {Physical Review Letters},
-  Year                     = {2008},
-  Pages                    = {214501},
-  Volume                   = {101},
-
-  Doi                      = {10.1103/PhysRevLett.101.214501},
-  Issue                    = {21},
-  Numpages                 = {4},
-  Publisher                = {American Physical Society},
-  Url                      = {http://link.aps.org/doi/10.1103/PhysRevLett.101.214501}
-}
-
 @Article{Hopf1948,
   Title                    = {A mathematical example displaying features of turbulence},
   Author                   = {Hopf, Eberhard},
@@ -374,16 +359,12 @@
   Publisher                = {SIAM}
 }
 
-@Article{Taneda1956,
-  Title                    = {Experimental investigation of the wake behind a sphere at low Reynolds numbers},
-  Author                   = {Taneda, Sadatoshi},
-  Journal                  = {Journal of the Physical Society of Japan},
-  Year                     = {1956},
-  Number                   = {10},
-  Pages                    = {1104--1108},
-  Volume                   = {11},
-
-  Publisher                = {The Physical Society of Japan}
+@Book{Stoer2002,
+  Title                    = {Introduction to Numerical Analysis},
+  Author                   = {Stoer, J. and Bulirsch, R.},
+  Publisher                = {Springer},
+  Year                     = {2002},
+  Series                   = {Texts in Applied Mathematics}
 }
 
 @Book{Trefethen1997,
